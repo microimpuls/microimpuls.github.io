@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Impuls: Screens Class: PopupParentCodeScreen</title>
+	<title>Impuls: Screens Class: VideoScreen</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -65,13 +65,13 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: PopupParentCodeScreen</h1>
+	<h1 class="page-title">Class: VideoScreen</h1>
 <section>
 
 <header>
     
         <h2>
-        PopupParentCodeScreen
+        VideoScreen
         </h2>
         
     
@@ -84,7 +84,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="PopupParentCodeScreen"><span class="type-signature"></span>new PopupParentCodeScreen()</h4>
+    <h4 class="name" id="VideoScreen"><span class="type-signature"></span>new VideoScreen()</h4>
     
     
 </dt>
@@ -92,7 +92,7 @@
 
     
     <div class="description">
-        <p>Окно ввода ПИН-кода для каналов, защищенным родительским контролем</p>
+        <p>Экран подробного описания и управления видео</p>
     </div>
     
 
@@ -136,7 +136,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		popupparentcode.screen.js
+		video.screen.js
 	</dd>
 	
 
@@ -193,7 +193,7 @@
 
     
     <div class="description">
-        <p>Инициализация окна</p>
+        <p>Инициализация экрана видео (сопровождается установкой режима навигации)</p>
     </div>
     
 
@@ -237,7 +237,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		popupparentcode.screen.js
+		video.screen.js
 	</dd>
 	
 
@@ -276,7 +276,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия на кнопку &quot;Назад&quot; (скрытие окна)</p>
+        <p>Обработчик нажатия на кнопку &quot;Назад&quot; (переход к экрану &quot;Кинотеатр&quot;)</p>
     </div>
     
 
@@ -320,7 +320,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		popupparentcode.screen.js
+		video.screen.js
 	</dd>
 	
 
@@ -359,7 +359,8 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия на кнопку &quot;Возврат&quot; (удаление последнего символа в поле ввода)</p>
+        <p>Обработчик нажатия кнопки &quot;Возврат&quot; (в случае работающего плеера - переход в полноэкранный режим плеера, иначе переход
+к экрану &quot;Кинотеатр&quot;</p>
     </div>
     
 
@@ -403,174 +404,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		popupparentcode.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="key_blue"><span class="type-signature"></span>key_blue()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Обработчик нажатия на синюю кнопку (скрытие окна и вызов функционала, установленного на синюю кнопку в
-родительском экране)</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		popupparentcode.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="key_digit"><span class="type-signature"></span>key_digit()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Обработчик нажатия на цифровой кнопки (ввод цифр в поле ввода пин-кода)</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		popupparentcode.screen.js
+		video.screen.js
 	</dd>
 	
 
@@ -609,7 +443,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия на кнопку &quot;ОК&quot; (скрытие окна с вызовом метода, установленного в setCallback())</p>
+        <p>Обработчик нажатия на кнопку &quot;ОК&quot; (запуск функционала, предполагаемого под выбранным действием над видео)</p>
     </div>
     
 
@@ -653,7 +487,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		popupparentcode.screen.js
+		video.screen.js
 	</dd>
 	
 
@@ -692,7 +526,8 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия на кнопку &quot;Выход&quot; (скрытие окна)</p>
+        <p>Обработчик нажатия кнопки &quot;Выход&quot; (в случае работающего плеера - переход в полноэкранный режим плеера, иначе переход
+к экрану &quot;Кинотеатр&quot;</p>
     </div>
     
 
@@ -736,91 +571,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		popupparentcode.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="key_green"><span class="type-signature"></span>key_green()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Обработчик нажатия на зеленую кнопку (скрытие окна и вызов функционала, установленного на зеленую кнопку в
-родительском экране)</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		popupparentcode.screen.js
+		video.screen.js
 	</dd>
 	
 
@@ -859,7 +610,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия на кнопку &quot;Влево&quot; (удаление последнего символа в поле ввода)</p>
+        <p>Обработчик нажатия на кнопку &quot;Влево&quot; (навигация по панели действий, которые можно провести над данным видео)</p>
     </div>
     
 
@@ -903,7 +654,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		popupparentcode.screen.js
+		video.screen.js
 	</dd>
 	
 
@@ -942,7 +693,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия на кнопку &quot;ОК&quot; (скрытие окна и переход на экран главного меню)</p>
+        <p>Обработчик нажатия на кнопку &quot;Меню&quot; (переход к экрану главного меню)</p>
     </div>
     
 
@@ -986,7 +737,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		popupparentcode.screen.js
+		video.screen.js
 	</dd>
 	
 
@@ -1017,7 +768,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="key_red"><span class="type-signature"></span>key_red()</h4>
+    <h4 class="name" id="key_power"><span class="type-signature"></span>key_power()</h4>
     
     
 </dt>
@@ -1025,8 +776,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия на красную кнопку (скрытие окна и вызов функционала, установленного на красную кнопку в
-родительском экране)</p>
+        <p>Обработчик нажатия кнопки &quot;Питание&quot; (переход в спящий режим)</p>
     </div>
     
 
@@ -1070,7 +820,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		popupparentcode.screen.js
+		video.screen.js
 	</dd>
 	
 
@@ -1101,7 +851,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="key_yellow"><span class="type-signature"></span>key_yellow()</h4>
+    <h4 class="name" id="key_right"><span class="type-signature"></span>key_right()</h4>
     
     
 </dt>
@@ -1109,8 +859,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия на желтую кнопку (скрытие окна и вызов функционала, установленного на желтую кнопку в
-родительском экране)</p>
+        <p>Обработчик нажатия на кнопку &quot;Вправо&quot; (навигация по панели действий, которые можно провести над данным видео)</p>
     </div>
     
 
@@ -1154,7 +903,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		popupparentcode.screen.js
+		video.screen.js
 	</dd>
 	
 
@@ -1185,7 +934,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="mouseEnter"><span class="type-signature"></span>mouseEnter()</h4>
+    <h4 class="name" id="playVideoFile"><span class="type-signature"></span>playVideoFile(videoFile)</h4>
     
     
 </dt>
@@ -1193,173 +942,7 @@
 
     
     <div class="description">
-        <p>Обработчик события наведения мышкой на элемент</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		popupparentcode.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="mouseLeave"><span class="type-signature"></span>mouseLeave()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Обработчик события ухода мышки с элемента</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		popupparentcode.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="setCallback"><span class="type-signature"></span>setCallback(f)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Установка метода, который будет вызван после закрытия окна</p>
+        <p>Вопспроизведение выбранного видеофайла</p>
     </div>
     
 
@@ -1394,7 +977,7 @@
 
         <tr>
             
-                <td class="name"><code>f</code></td>
+                <td class="name"><code>videoFile</code></td>
             
 
             <td class="type">
@@ -1405,7 +988,7 @@
 
             
 
-            <td class="description last"><p>метод, который будет вызван после закрытия окна</p></td>
+            <td class="description last"><p>объект видеофайла</p></td>
         </tr>
 
     
@@ -1447,7 +1030,552 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		popupparentcode.screen.js
+		video.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="playVideoOrConfirmPurchase"><span class="type-signature"></span>playVideoOrConfirmPurchase(videoAction, forcePlayVideo)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Попытка запустить видео, в зависимости от его параметров происходит запрос на его покупку, сопровождаемый окном подтверждения,
+либо открытие окна со списком серий, либо запуск плеера</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>videoAction</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>объект, содержащий в себе доступные для данного видео действия (покупка, вопроизведение и т.д.)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>forcePlayVideo</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>флаг, отвечающий за форсирование вопроизведения видео</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		video.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="requestVideoActions"><span class="type-signature"></span>requestVideoActions(forcePlayVideo)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Запрос подробной информации о видео (цены, наличия трейлера, доступных видеофайлов, длительности и т.д.)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>forcePlayVideo</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		video.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="resize"><span class="type-signature"></span>resize(displayWidth, displayHeight)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Отрисовка элементов экрана согласно его размерам</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>displayWidth</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>ширина экрана</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>displayHeight</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>высота экрана</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		video.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setVideo"><span class="type-signature"></span>setVideo(value)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Установка полей экрана видео</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>объект видео</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		video.screen.js
 	</dd>
 	
 
@@ -1486,7 +1614,7 @@
 
     
     <div class="description">
-        <p>Отображение окна (сопровождается очисткой поля ввода)</p>
+        <p>Отображение экрана видео</p>
     </div>
     
 
@@ -1530,7 +1658,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		popupparentcode.screen.js
+		video.screen.js
 	</dd>
 	
 
@@ -1553,6 +1681,109 @@
     
 
     
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="wheel"><span class="type-signature"></span>wheel()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Обработчик скролла</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		video.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
 
     
 </dd>
@@ -1613,7 +1844,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2017-10-06T23:09:17+05:00
+		on 2017-10-06T23:12:07+05:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

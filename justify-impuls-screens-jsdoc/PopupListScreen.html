@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Impuls: Screens Class: HistoryOfPaymentsScreen</title>
+	<title>Impuls: Screens Class: PopupListScreen</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -65,13 +65,13 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: HistoryOfPaymentsScreen</h1>
+	<h1 class="page-title">Class: PopupListScreen</h1>
 <section>
 
 <header>
     
         <h2>
-        HistoryOfPaymentsScreen
+        PopupListScreen
         </h2>
         
     
@@ -84,7 +84,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="HistoryOfPaymentsScreen"><span class="type-signature"></span>new HistoryOfPaymentsScreen()</h4>
+    <h4 class="name" id="PopupListScreen"><span class="type-signature"></span>new PopupListScreen()</h4>
     
     
 </dt>
@@ -92,7 +92,7 @@
 
     
     <div class="description">
-        <p>Экран &quot;История платежей&quot; (содержит в себе список всех финансовых операций абонента)</p>
+        <p>Окно, отображающее список доступных аудиодорожек в экране &quot;Плеер&quot;</p>
     </div>
     
 
@@ -136,7 +136,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		historyofpayments.screen.js
+		popuplist.screen.js
 	</dd>
 	
 
@@ -185,89 +185,6 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="init"><span class="type-signature"></span>init()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Инициализация экрана</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		historyofpayments.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
     <h4 class="name" id="key_back"><span class="type-signature"></span>key_back()</h4>
     
     
@@ -276,7 +193,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Назад&quot; (переход в экран &quot;Баланс&quot;)</p>
+        <p>Обработчик нажатия на кнопку &quot;Назад&quot; (скрытие окна)</p>
     </div>
     
 
@@ -320,90 +237,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		historyofpayments.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="key_backspace"><span class="type-signature"></span>key_backspace()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Возврат&quot; (в случае работающего плеера - переход в полноэкранный режим плеера, иначе переход в главное меню)</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		historyofpayments.screen.js
+		popuplist.screen.js
 	</dd>
 	
 
@@ -442,7 +276,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Вниз&quot; (навигация по списку платежей)</p>
+        <p>Обработчик нажатия на кнопку &quot;Вниз&quot; (навигация по списку)</p>
     </div>
     
 
@@ -486,7 +320,90 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		historyofpayments.screen.js
+		popuplist.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="key_enter"><span class="type-signature"></span>key_enter()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Выбор аудиодорожки</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		popuplist.screen.js
 	</dd>
 	
 
@@ -525,7 +442,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Выход&quot; (в случае работающего плеера - переход в полноэкранный режим плеера, иначе переход в главное меню)</p>
+        <p>Обработчик нажатия на кнопку &quot;Выход&quot; (скрытие окна)</p>
     </div>
     
 
@@ -569,90 +486,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		historyofpayments.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="key_menu"><span class="type-signature"></span>key_menu()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Меню&quot; (переход в экран главного меню)</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		historyofpayments.screen.js
+		popuplist.screen.js
 	</dd>
 	
 
@@ -691,7 +525,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Вверх&quot; (навигация по списку платежей)</p>
+        <p>Обработчик нажатия на кнопку &quot;Вверх&quot; (навигация по списку)</p>
     </div>
     
 
@@ -735,7 +569,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		historyofpayments.screen.js
+		popuplist.screen.js
 	</dd>
 	
 
@@ -766,7 +600,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="refresh"><span class="type-signature"></span>refresh()</h4>
+    <h4 class="name" id="refreshListMenu"><span class="type-signature"></span>refreshListMenu()</h4>
     
     
 </dt>
@@ -774,7 +608,7 @@
 
     
     <div class="description">
-        <p>Перерисовка списка платежей</p>
+        <p>Перерисовка списка</p>
     </div>
     
 
@@ -818,7 +652,406 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		historyofpayments.screen.js
+		popuplist.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setCoordinates"><span class="type-signature"></span>setCoordinates(_left, _bottom)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Установка координат окна</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_left</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>отступ с левого края</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>_bottom</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>отступ от нижнего края</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		popuplist.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setMenuItems"><span class="type-signature"></span>setMenuItems(items)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Установка списка пунктов меню</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>items</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		popuplist.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setSelectedItem"><span class="type-signature"></span>setSelectedItem(index)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Установка выделенного элемента</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>index</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		popuplist.screen.js
 	</dd>
 	
 
@@ -857,7 +1090,7 @@
 
     
     <div class="description">
-        <p>Отображение экрана &quot;История платежей&quot; (сопровождается запросом списка платежей абонента)</p>
+        <p>Отображение окна (сопровождается установкой координат расположения и обновлением списка)</p>
     </div>
     
 
@@ -901,7 +1134,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		historyofpayments.screen.js
+		popuplist.screen.js
 	</dd>
 	
 
@@ -984,7 +1217,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2017-10-06T23:09:16+05:00
+		on 2017-10-06T23:12:07+05:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

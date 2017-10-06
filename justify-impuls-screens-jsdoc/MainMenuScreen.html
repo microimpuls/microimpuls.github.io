@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Impuls: Screens Class: RadioScreen</title>
+	<title>Impuls: Screens Class: MainMenuScreen</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -65,13 +65,13 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: RadioScreen</h1>
+	<h1 class="page-title">Class: MainMenuScreen</h1>
 <section>
 
 <header>
     
         <h2>
-        RadioScreen
+        MainMenuScreen
         </h2>
         
     
@@ -84,7 +84,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="RadioScreen"><span class="type-signature"></span>new RadioScreen()</h4>
+    <h4 class="name" id="MainMenuScreen"><span class="type-signature"></span>new MainMenuScreen()</h4>
     
     
 </dt>
@@ -92,7 +92,8 @@
 
     
     <div class="description">
-        <p>Экран &quot;Радио&quot; (содержит в себе список доступных радиостанций)</p>
+        <p>Экран &quot;Главное меню&quot; (содержит в себе конфигурируемый сервером список (запрашивается в init.js App.data.requestPortalSettings()) 
+главных разделов приложения)</p>
     </div>
     
 
@@ -136,7 +137,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		radio.screen.js
+		mainmenu.screen.js
 	</dd>
 	
 
@@ -176,428 +177,6 @@
 
     
 
-    
-        <h3 class="subsection-title">Members</h3>
-
-        <dl>
-            
-<hr>
-<dt class="name" id="key_backspace">
-    <h4 id="key_backspace"><span class="type-signature"></span>key_backspace<span class="type-signature"> :RadioScreen.key_back|*</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Возврат&quot; (переход в экран &quot;Приложения&quot;)</p>
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">RadioScreen.key_back</span>
-|
-
-<span class="param-type">*</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		radio.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="key_down">
-    <h4 id="key_down"><span class="type-signature"></span>key_down<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Вниз&quot; (навигация в списке радиостанций с залипанием)</p>
-    </div>
-    
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		radio.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="key_exit">
-    <h4 id="key_exit"><span class="type-signature"></span>key_exit<span class="type-signature"> :RadioScreen.key_back|*</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Выход&quot; (переход в экран &quot;Приложения&quot;)</p>
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">RadioScreen.key_back</span>
-|
-
-<span class="param-type">*</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		radio.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="key_left">
-    <h4 id="key_left"><span class="type-signature"></span>key_left<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Влево&quot; (переход на предыдущую страницу списка радиостанций с залипанием)</p>
-    </div>
-    
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		radio.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="key_right">
-    <h4 id="key_right"><span class="type-signature"></span>key_right<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Вправо&quot; (переход на следующую страницу списка радиостанций с залипанием)</p>
-    </div>
-    
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		radio.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="key_up">
-    <h4 id="key_up"><span class="type-signature"></span>key_up<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Вверх&quot; (навигация в списке радиостанций с залипанием)</p>
-    </div>
-    
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		radio.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        </dl>
     
 
     
@@ -607,7 +186,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="getRadiostationsCount"><span class="type-signature"></span>getRadiostationsCount()</h4>
+    <h4 class="name" id="addMenuItem"><span class="type-signature"></span>addMenuItem(title, action, sortOrder)</h4>
     
     
 </dt>
@@ -615,7 +194,7 @@
 
     
     <div class="description">
-        <p>Получение числа радиостанций</p>
+        <p>Добавление пункта меню в список</p>
     </div>
     
 
@@ -624,6 +203,86 @@
     
 
     
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>title</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>название пункта, отображаемое в экране</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>action</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>идентификатор проверяемого пункта</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sortOrder</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>порядковый номер пункта (по умолчанию пункт добавляется в конец списка)</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
     
 
     
@@ -659,7 +318,134 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		radio.screen.js
+		mainmenu.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="checkMenuItemActionExists"><span class="type-signature"></span>checkMenuItemActionExists(action)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Проверка того, присутствует в главном меню тот или иной пункт</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>action</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>идентификатор проверяемого пункта</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		mainmenu.screen.js
 	</dd>
 	
 
@@ -693,7 +479,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Number</span>
+<span class="param-type">boolean</span>
 
 
 
@@ -710,7 +496,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="getSelectedStation"><span class="type-signature"></span>getSelectedStation()</h4>
+    <h4 class="name" id="generateMainMenu"><span class="type-signature"></span>generateMainMenu()</h4>
     
     
 </dt>
@@ -718,7 +504,7 @@
 
     
     <div class="description">
-        <p>Получение радиостанции, находящейся в фокусе</p>
+        <p>Генерация главного меню (отрисовка меню согласно сформированному списку пунктов)</p>
     </div>
     
 
@@ -762,7 +548,90 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		radio.screen.js
+		mainmenu.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getMenuItems"><span class="type-signature"></span>getMenuItems()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Получение списка пунктов главного меню</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		mainmenu.screen.js
 	</dd>
 	
 
@@ -796,7 +665,7 @@
     </dt>
     <dd>
         
-<span class="param-type">*</span>
+<span class="param-type">Array</span>
 
 
 
@@ -805,89 +674,6 @@
 
 
         
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="hide"><span class="type-signature"></span>hide()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Переопределение функции скрытия экрана</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		radio.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
 
     
 </dd>
@@ -904,7 +690,8 @@
 
     
     <div class="description">
-        <p>Инициализация экрана (сопровождается запросом списка радиостанций)</p>
+        <p>Инициализация экрана главного меню (сопровождается запросом статуса аккаунта - после первого запроса статус запрашивается
+каждые 3 минуты)</p>
     </div>
     
 
@@ -948,7 +735,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		radio.screen.js
+		mainmenu.screen.js
 	</dd>
 	
 
@@ -987,7 +774,8 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Назад&quot; (переход в экран &quot;Приложения&quot;)</p>
+        <p>Обработчик нажатия на кнопку &quot;Назад&quot; (для устройств Samsung и LG - выход из приложения, иначе при запущенном плеере
+возврат к полноэкранному режиму)</p>
     </div>
     
 
@@ -1031,7 +819,90 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		radio.screen.js
+		mainmenu.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="key_backspace"><span class="type-signature"></span>key_backspace()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Обработчик нажатия на кнопку &quot;Воврат&quot; (переход к полноэкранному плееру)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		mainmenu.screen.js
 	</dd>
 	
 
@@ -1070,7 +941,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Вниз&quot; (навигация в списке радиостанций)</p>
+        <p>Обработчик нажатия кнопки &quot;Вниз&quot; (навигация по главному меню)</p>
     </div>
     
 
@@ -1114,7 +985,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		radio.screen.js
+		mainmenu.screen.js
 	</dd>
 	
 
@@ -1153,7 +1024,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия кнопки &quot;ОК&quot; (воспроизведение выбранной радиостанции)</p>
+        <p>Обработчик нажатия кнопки &quot;ОК&quot; (открытие экрана согласно пункту, находящемуся в фокусе)</p>
     </div>
     
 
@@ -1197,7 +1068,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		radio.screen.js
+		mainmenu.screen.js
 	</dd>
 	
 
@@ -1228,7 +1099,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="key_menu"><span class="type-signature"></span>key_menu()</h4>
+    <h4 class="name" id="key_exit"><span class="type-signature"></span>key_exit()</h4>
     
     
 </dt>
@@ -1236,7 +1107,8 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Меню&quot; (переход в главное меню)</p>
+        <p>Обработчик нажатия на кнопку &quot;Выход&quot; (для устройств Samsung и LG - выход из приложения, иначе при запущенном плеере
+возврат к полноэкранному режиму)</p>
     </div>
     
 
@@ -1280,7 +1152,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		radio.screen.js
+		mainmenu.screen.js
 	</dd>
 	
 
@@ -1311,7 +1183,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="key_pause"><span class="type-signature"></span>key_pause()</h4>
+    <h4 class="name" id="key_left"><span class="type-signature"></span>key_left()</h4>
     
     
 </dt>
@@ -1319,7 +1191,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Pause&quot; (постановка на паузу проигрывания выбранной радиостанции)</p>
+        <p>Обработчик нажатия кнопки &quot;Влево&quot; (навигация по главному меню)</p>
     </div>
     
 
@@ -1363,90 +1235,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		radio.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="key_play"><span class="type-signature"></span>key_play()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Play&quot; (восстановление проигрывания выбранной радиостанции)</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		radio.screen.js
+		mainmenu.screen.js
 	</dd>
 	
 
@@ -1529,7 +1318,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		radio.screen.js
+		mainmenu.screen.js
 	</dd>
 	
 
@@ -1560,7 +1349,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="key_stop"><span class="type-signature"></span>key_stop()</h4>
+    <h4 class="name" id="key_right"><span class="type-signature"></span>key_right()</h4>
     
     
 </dt>
@@ -1568,7 +1357,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Stop&quot; (остановка проигрывания выбранной радиостанции)</p>
+        <p>Обработчик нажатия кнопки &quot;Вправо&quot; (навигация по главному меню)</p>
     </div>
     
 
@@ -1612,7 +1401,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		radio.screen.js
+		mainmenu.screen.js
 	</dd>
 	
 
@@ -1651,7 +1440,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Вверх&quot; (навигация в списке радиостанций)</p>
+        <p>Обработчик нажатия кнопки &quot;Вверх&quot; (навигация по главному меню)</p>
     </div>
     
 
@@ -1695,256 +1484,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		radio.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="playSelectedStation"><span class="type-signature"></span>playSelectedStation()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Воспроизведение выбранноый радиостанции</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		radio.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="refresh"><span class="type-signature"></span>refresh()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Перерисовка списка радиостанций</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		radio.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="refreshDisplayTime"><span class="type-signature"></span>refreshDisplayTime()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Обновление времени в плашке с часами</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		radio.screen.js
+		mainmenu.screen.js
 	</dd>
 	
 
@@ -1983,7 +1523,7 @@
 
     
     <div class="description">
-        <p>Перевод экрана &quot;Радио&quot; в состояние до инициализации</p>
+        <p>Сброс параметров экрана до состояния до инициализации</p>
     </div>
     
 
@@ -2027,7 +1567,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		radio.screen.js
+		mainmenu.screen.js
 	</dd>
 	
 
@@ -2058,7 +1598,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="resize"><span class="type-signature"></span>resize(displayWidth, displayHeight)</h4>
+    <h4 class="name" id="show"><span class="type-signature"></span>show()</h4>
     
     
 </dt>
@@ -2066,7 +1606,90 @@
 
     
     <div class="description">
-        <p>Установка размеров экрана и его элементов (установка максимального числа элементов в списках)</p>
+        <p>Отображение экрана главного меню</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		mainmenu.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="wheel"><span class="type-signature"></span>wheel(delta)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Обработчик скролла</p>
     </div>
     
 
@@ -2101,7 +1724,7 @@
 
         <tr>
             
-                <td class="name"><code>displayWidth</code></td>
+                <td class="name"><code>delta</code></td>
             
 
             <td class="type">
@@ -2112,25 +1735,7 @@
 
             
 
-            <td class="description last"><p>ширина экрана</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>displayHeight</code></td>
-            
-
-            <td class="type">
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>высота экрана</p></td>
+            <td class="description last"></td>
         </tr>
 
     
@@ -2172,7 +1777,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		radio.screen.js
+		mainmenu.screen.js
 	</dd>
 	
 
@@ -2195,89 +1800,26 @@
     
 
     
-
+    <h5>Returns:</h5>
     
-</dd>
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+
+    </dd>
+</dl>
+
 
         
-            
-<hr>
-<dt>
-    <h4 class="name" id="show"><span class="type-signature"></span>show()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Отображение экрана &quot;Радио&quot; (сопровождается обновлением плашки с часами)</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		radio.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
 
     
 </dd>
@@ -2338,7 +1880,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2017-10-06T23:09:17+05:00
+		on 2017-10-06T23:12:07+05:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

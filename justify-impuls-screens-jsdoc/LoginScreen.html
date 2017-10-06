@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Impuls: Screens Class: VideoScreen</title>
+	<title>Impuls: Screens Class: LoginScreen</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -65,13 +65,13 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: VideoScreen</h1>
+	<h1 class="page-title">Class: LoginScreen</h1>
 <section>
 
 <header>
     
         <h2>
-        VideoScreen
+        LoginScreen
         </h2>
         
     
@@ -84,7 +84,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="VideoScreen"><span class="type-signature"></span>new VideoScreen()</h4>
+    <h4 class="name" id="LoginScreen"><span class="type-signature"></span>new LoginScreen()</h4>
     
     
 </dt>
@@ -92,7 +92,8 @@
 
     
     <div class="description">
-        <p>Экран подробного описания и управления видео</p>
+        <p>Экран &quot;Авторизация&quot; (позволяет войти в сервис под своими учетными данными, полученными в ходе регистрации на сайте 
+оператора/выдачи оператором или в экране &quot;Регистрация&quot;)</p>
     </div>
     
 
@@ -136,7 +137,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		video.screen.js
+		login.screen.js
 	</dd>
 	
 
@@ -185,7 +186,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="init"><span class="type-signature"></span>init()</h4>
+    <h4 class="name" id="askToExit"><span class="type-signature"></span>askToExit(message, callback)</h4>
     
     
 </dt>
@@ -193,7 +194,152 @@
 
     
     <div class="description">
-        <p>Инициализация экрана видео (сопровождается установкой режима навигации)</p>
+        <p>Вызов окна о подтверждении</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>message</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>строка, содержащая в себе действие, которое надо подствердить ии отклонить</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>метод, вызывающийся в после подтверждения или отклонения</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		login.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getAbonementId"><span class="type-signature"></span>getAbonementId()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Получение идентификатора строки для ввода абонемента</p>
     </div>
     
 
@@ -237,7 +383,328 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		video.screen.js
+		login.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>идентификатор</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getInputSelectedId"><span class="type-signature"></span>getInputSelectedId()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Получение идентификатора поля ввода, находящегося в фокусе</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		login.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>идентификатор</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getPasswordId"><span class="type-signature"></span>getPasswordId()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Получение идентификатора строки для ввода пароля</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		login.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>идентификатор</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="init"><span class="type-signature"></span>init()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Инициализация экрана логина</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		login.screen.js
 	</dd>
 	
 
@@ -276,7 +743,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия на кнопку &quot;Назад&quot; (переход к экрану &quot;Кинотеатр&quot;)</p>
+        <p>Обработчик нажатия на кнопку &quot;Назад&quot; (закрытие приложения)</p>
     </div>
     
 
@@ -320,7 +787,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		video.screen.js
+		login.screen.js
 	</dd>
 	
 
@@ -359,8 +826,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Возврат&quot; (в случае работающего плеера - переход в полноэкранный режим плеера, иначе переход
-к экрану &quot;Кинотеатр&quot;</p>
+        <p>Обработчик нажатия на кнопку &quot;Возврат&quot; (удаление символов поле, выделенном фокусом)</p>
     </div>
     
 
@@ -404,7 +870,173 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		video.screen.js
+		login.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="key_digit"><span class="type-signature"></span>key_digit()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Обработчик нажатия на цифровые кнопки (ввод цифр)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		login.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="key_down"><span class="type-signature"></span>key_down()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Обработчик нажатия кнопки &quot;Вниз&quot; (навигация по полям ввода)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		login.screen.js
 	</dd>
 	
 
@@ -443,7 +1075,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия на кнопку &quot;ОК&quot; (запуск функционала, предполагаемого под выбранным действием над видео)</p>
+        <p>Обработчик нажатия на кнопку &quot;ОК&quot; (попытка произвести вход в учетную запись)</p>
     </div>
     
 
@@ -487,7 +1119,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		video.screen.js
+		login.screen.js
 	</dd>
 	
 
@@ -510,6 +1142,26 @@
     
 
     
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
 
     
 </dd>
@@ -526,8 +1178,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Выход&quot; (в случае работающего плеера - переход в полноэкранный режим плеера, иначе переход
-к экрану &quot;Кинотеатр&quot;</p>
+        <p>Обработчик нажатия кнопки &quot;Выход&quot; (закрытие приложения)</p>
     </div>
     
 
@@ -571,7 +1222,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		video.screen.js
+		login.screen.js
 	</dd>
 	
 
@@ -610,7 +1261,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия на кнопку &quot;Влево&quot; (навигация по панели действий, которые можно провести над данным видео)</p>
+        <p>Обработчик нажатия на кнопку &quot;Влево&quot; (удаление символов поле, выделенном фокусом)</p>
     </div>
     
 
@@ -654,90 +1305,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		video.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="key_menu"><span class="type-signature"></span>key_menu()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Обработчик нажатия на кнопку &quot;Меню&quot; (переход к экрану главного меню)</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		video.screen.js
+		login.screen.js
 	</dd>
 	
 
@@ -820,7 +1388,90 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		video.screen.js
+		login.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="key_red"><span class="type-signature"></span>key_red()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Обработчик нажатия на красную кнопку (переход на экран &quot;Регистрация&quot;)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		login.screen.js
 	</dd>
 	
 
@@ -859,7 +1510,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия на кнопку &quot;Вправо&quot; (навигация по панели действий, которые можно провести над данным видео)</p>
+        <p>Обработчик нажатия на кнопку &quot;Вправо&quot; (вызов клавиатуры для выделенного поля ввода)</p>
     </div>
     
 
@@ -903,7 +1554,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		video.screen.js
+		login.screen.js
 	</dd>
 	
 
@@ -934,7 +1585,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="playVideoFile"><span class="type-signature"></span>playVideoFile(videoFile)</h4>
+    <h4 class="name" id="key_up"><span class="type-signature"></span>key_up()</h4>
     
     
 </dt>
@@ -942,7 +1593,7 @@
 
     
     <div class="description">
-        <p>Вопспроизведение выбранного видеофайла</p>
+        <p>Обработчик нажатия кнопки &quot;Вверх&quot; (навигация по полям ввода)</p>
     </div>
     
 
@@ -951,50 +1602,6 @@
     
 
     
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>videoFile</code></td>
-            
-
-            <td class="type">
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>объект видеофайла</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
     
 
     
@@ -1030,7 +1637,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		video.screen.js
+		login.screen.js
 	</dd>
 	
 
@@ -1061,7 +1668,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="playVideoOrConfirmPurchase"><span class="type-signature"></span>playVideoOrConfirmPurchase(videoAction, forcePlayVideo)</h4>
+    <h4 class="name" id="setAbonementId"><span class="type-signature"></span>setAbonementId()</h4>
     
     
 </dt>
@@ -1069,8 +1676,7 @@
 
     
     <div class="description">
-        <p>Попытка запустить видео, в зависимости от его параметров происходит запрос на его покупку, сопровождаемый окном подтверждения,
-либо открытие окна со списком серий, либо запуск плеера</p>
+        <p>Установка идентификатора строки для ввода абонемента</p>
     </div>
     
 
@@ -1079,68 +1685,6 @@
     
 
     
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>videoAction</code></td>
-            
-
-            <td class="type">
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>объект, содержащий в себе доступные для данного видео действия (покупка, вопроизведение и т.д.)</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>forcePlayVideo</code></td>
-            
-
-            <td class="type">
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>флаг, отвечающий за форсирование вопроизведения видео</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
     
 
     
@@ -1176,7 +1720,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		video.screen.js
+		login.screen.js
 	</dd>
 	
 
@@ -1199,6 +1743,30 @@
     
 
     
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>идентификатор</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
 
     
 </dd>
@@ -1207,7 +1775,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="requestVideoActions"><span class="type-signature"></span>requestVideoActions(forcePlayVideo)</h4>
+    <h4 class="name" id="setPasswordId"><span class="type-signature"></span>setPasswordId()</h4>
     
     
 </dt>
@@ -1215,7 +1783,7 @@
 
     
     <div class="description">
-        <p>Запрос подробной информации о видео (цены, наличия трейлера, доступных видеофайлов, длительности и т.д.)</p>
+        <p>Установка идентификатора строки для ввода пароля</p>
     </div>
     
 
@@ -1224,50 +1792,6 @@
     
 
     
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>forcePlayVideo</code></td>
-            
-
-            <td class="type">
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
     
 
     
@@ -1303,7 +1827,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		video.screen.js
+		login.screen.js
 	</dd>
 	
 
@@ -1326,278 +1850,30 @@
     
 
     
-
+    <h5>Returns:</h5>
     
-</dd>
+            
+<div class="param-desc">
+    <p>идентификатор</p>
+</div>
 
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
         
-            
-<hr>
-<dt>
-    <h4 class="name" id="resize"><span class="type-signature"></span>resize(displayWidth, displayHeight)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Отрисовка элементов экрана согласно его размерам</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>displayWidth</code></td>
-            
-
-            <td class="type">
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>ширина экрана</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>displayHeight</code></td>
-            
-
-            <td class="type">
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>высота экрана</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
+<span class="param-type">string</span>
 
 
 
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		video.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
+    </dd>
 </dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
         
-            
-<hr>
-<dt>
-    <h4 class="name" id="setVideo"><span class="type-signature"></span>setVideo(value)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Установка полей экрана видео</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>value</code></td>
-            
-
-            <td class="type">
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>объект видео</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		video.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
 
     
 </dd>
@@ -1614,7 +1890,7 @@
 
     
     <div class="description">
-        <p>Отображение экрана видео</p>
+        <p>Отображение экрана (сопровождается попыткой залогиниться с помощью данных, хранящихся во временной памяти устройства)</p>
     </div>
     
 
@@ -1658,7 +1934,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		video.screen.js
+		login.screen.js
 	</dd>
 	
 
@@ -1741,7 +2017,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		video.screen.js
+		login.screen.js
 	</dd>
 	
 
@@ -1844,7 +2120,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2017-10-06T23:09:17+05:00
+		on 2017-10-06T23:12:07+05:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

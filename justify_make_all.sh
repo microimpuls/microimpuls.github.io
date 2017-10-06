@@ -17,4 +17,4 @@ cd $CWD
 
 cp -R $MW_PORTALS_DIR/docs/out/engine/main/ justify-engine-main-jsdoc
 cp -R $MW_PORTALS_DIR/docs/out/impuls/main/ justify-impuls-main-jsdoc
-cp -R $MW_PORTALS_DIR/docs/out/impuls/screens/ justify-impuls-screen-jsdoc
+cp -R $MW_PORTALS_DIR/docs/out/impuls/screens/ justify-impuls-screens-jsdoc

@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Impuls: Screens Class: GamesRecordsScreen</title>
+	<title>Impuls: Screens Class: HistoryOfPaymentsScreen</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -65,13 +65,13 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: GamesRecordsScreen</h1>
+	<h1 class="page-title">Class: HistoryOfPaymentsScreen</h1>
 <section>
 
 <header>
     
         <h2>
-        GamesRecordsScreen
+        HistoryOfPaymentsScreen
         </h2>
         
     
@@ -84,7 +84,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="GamesRecordsScreen"><span class="type-signature"></span>new GamesRecordsScreen()</h4>
+    <h4 class="name" id="HistoryOfPaymentsScreen"><span class="type-signature"></span>new HistoryOfPaymentsScreen()</h4>
     
     
 </dt>
@@ -92,7 +92,7 @@
 
     
     <div class="description">
-        <p>Экран &quot;Таблица рекордов&quot; (содержит в себе список абонентов, получивших наибольшее количество очков в заданной игре)</p>
+        <p>Экран &quot;История платежей&quot; (содержит в себе список всех финансовых операций абонента)</p>
     </div>
     
 
@@ -136,7 +136,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		gamesrecords.screen.js
+		historyofpayments.screen.js
 	</dd>
 	
 
@@ -193,7 +193,7 @@
 
     
     <div class="description">
-        <p>Инициализация экрана &quot;Таблица рекордов&quot;</p>
+        <p>Инициализация экрана</p>
     </div>
     
 
@@ -237,7 +237,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		gamesrecords.screen.js
+		historyofpayments.screen.js
 	</dd>
 	
 
@@ -260,109 +260,6 @@
     
 
     
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="isEmptyRecordList"><span class="type-signature"></span>isEmptyRecordList()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Проверка на пустоту списка рекордов</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		gamesrecords.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">boolean</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
 </dd>
@@ -379,7 +276,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Выход&quot; (переход в экран &quot;Приложения&quot;)</p>
+        <p>Обработчик нажатия кнопки &quot;Назад&quot; (переход в экран &quot;Баланс&quot;)</p>
     </div>
     
 
@@ -423,7 +320,173 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		gamesrecords.screen.js
+		historyofpayments.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="key_backspace"><span class="type-signature"></span>key_backspace()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Обработчик нажатия кнопки &quot;Возврат&quot; (в случае работающего плеера - переход в полноэкранный режим плеера, иначе переход в главное меню)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		historyofpayments.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="key_down"><span class="type-signature"></span>key_down()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Обработчик нажатия кнопки &quot;Вниз&quot; (навигация по списку платежей)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		historyofpayments.screen.js
 	</dd>
 	
 
@@ -462,7 +525,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Назад&quot; (переход в экран &quot;Игры&quot;)</p>
+        <p>Обработчик нажатия кнопки &quot;Выход&quot; (в случае работающего плеера - переход в полноэкранный режим плеера, иначе переход в главное меню)</p>
     </div>
     
 
@@ -506,7 +569,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		gamesrecords.screen.js
+		historyofpayments.screen.js
 	</dd>
 	
 
@@ -589,7 +652,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		gamesrecords.screen.js
+		historyofpayments.screen.js
 	</dd>
 	
 
@@ -620,7 +683,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="show"><span class="type-signature"></span>show()</h4>
+    <h4 class="name" id="key_up"><span class="type-signature"></span>key_up()</h4>
     
     
 </dt>
@@ -628,7 +691,7 @@
 
     
     <div class="description">
-        <p>Отображение экрана &quot;Таблица рекордов&quot;</p>
+        <p>Обработчик нажатия кнопки &quot;Вверх&quot; (навигация по списку платежей)</p>
     </div>
     
 
@@ -672,7 +735,173 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		gamesrecords.screen.js
+		historyofpayments.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="refresh"><span class="type-signature"></span>refresh()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Перерисовка списка платежей</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		historyofpayments.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="show"><span class="type-signature"></span>show()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Отображение экрана &quot;История платежей&quot; (сопровождается запросом списка платежей абонента)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		historyofpayments.screen.js
 	</dd>
 	
 
@@ -755,7 +984,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2017-10-06T23:09:16+05:00
+		on 2017-10-06T23:12:06+05:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

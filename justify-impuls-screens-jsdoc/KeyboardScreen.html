@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Impuls: Screens Class: EPGScreen</title>
+	<title>Impuls: Screens Class: KeyboardScreen</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -65,13 +65,13 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: EPGScreen</h1>
+	<h1 class="page-title">Class: KeyboardScreen</h1>
 <section>
 
 <header>
     
         <h2>
-        EPGScreen
+        KeyboardScreen
         </h2>
         
     
@@ -84,7 +84,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="EPGScreen"><span class="type-signature"></span>new EPGScreen()</h4>
+    <h4 class="name" id="KeyboardScreen"><span class="type-signature"></span>new KeyboardScreen()</h4>
     
     
 </dt>
@@ -92,7 +92,8 @@
 
     
     <div class="description">
-        <p>Экран &quot;Программа передач&quot; (содержит в себе программу прошедших и будущих передач заданного канала)</p>
+        <p>Окно &quot;Виртуальная клавиатура&quot; (позволяет вводить символы в заданные поля, навигация по кнопкам происходит либо стрелками
+пульта, либо мышкой)</p>
     </div>
     
 
@@ -136,7 +137,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		epg.screen.js
+		keyboard.screen.js
 	</dd>
 	
 
@@ -176,140 +177,6 @@
 
     
 
-    
-        <h3 class="subsection-title">Members</h3>
-
-        <dl>
-            
-<hr>
-<dt class="name" id="key_down">
-    <h4 id="key_down"><span class="type-signature"></span>key_down<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Вниз&quot; (переключение фокуса в списке программ)</p>
-    </div>
-    
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		epg.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="key_up">
-    <h4 id="key_up"><span class="type-signature"></span>key_up<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Вверх&quot; (переключение фокуса в списке программ)</p>
-    </div>
-    
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		epg.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        </dl>
     
 
     
@@ -319,7 +186,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="clearProgramInfo"><span class="type-signature"></span>clearProgramInfo()</h4>
+    <h4 class="name" id="changeMode"><span class="type-signature"></span>changeMode()</h4>
     
     
 </dt>
@@ -327,7 +194,7 @@
 
     
     <div class="description">
-        <p>Очистка описания передачи</p>
+        <p>Перерисовка клавиатуры после смены её режима</p>
     </div>
     
 
@@ -371,7 +238,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		epg.screen.js
+		keyboard.screen.js
 	</dd>
 	
 
@@ -402,7 +269,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="getChannel"><span class="type-signature"></span>getChannel()</h4>
+    <h4 class="name" id="getNextItemIndex"><span class="type-signature"></span>getNextItemIndex(itemIndex, nextMenuIndex)</h4>
     
     
 </dt>
@@ -410,193 +277,7 @@
 
     
     <div class="description">
-        <p>Получение канала, программа передач которого отображается на экране</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		epg.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">*</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="init"><span class="type-signature"></span>init()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Инициализация экрана (установка режима навигации)</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		epg.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="isProgramHasNotification"><span class="type-signature"></span>isProgramHasNotification(pid)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Проверка того, стоит ли на передачу напоминание</p>
+        <p>Получение номера следующей доступной по навигации клавиши</p>
     </div>
     
 
@@ -631,7 +312,7 @@
 
         <tr>
             
-                <td class="name"><code>pid</code></td>
+                <td class="name"><code>itemIndex</code></td>
             
 
             <td class="type">
@@ -642,7 +323,25 @@
 
             
 
-            <td class="description last"><p>идентификатор проверяемой передачи</p></td>
+            <td class="description last"><p>номер клавиши в текущем списке клавиш</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>nextMenuIndex</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>номер списка клавиш, в котором надо искать доступную для перехода клавиши</p></td>
         </tr>
 
     
@@ -684,7 +383,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		epg.screen.js
+		keyboard.screen.js
 	</dd>
 	
 
@@ -710,6 +409,10 @@
     <h5>Returns:</h5>
     
             
+<div class="param-desc">
+    <p>номер искомой клавиши</p>
+</div>
+
 
 
 <dl>
@@ -718,7 +421,7 @@
     </dt>
     <dd>
         
-<span class="param-type">boolean</span>
+<span class="param-type">*</span>
 
 
 
@@ -735,7 +438,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="key_back"><span class="type-signature"></span>key_back()</h4>
+    <h4 class="name" id="getNextMenuIndex"><span class="type-signature"></span>getNextMenuIndex(itemIndex, typingArray)</h4>
     
     
 </dt>
@@ -743,7 +446,618 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Назад&quot; (переход в экран главного меню)</p>
+        <p>Получение номера следующего доступного по навигации списка клавиш</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>itemIndex</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>номер клавиши в текущем списке клавиш</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>typingArray</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>массив номеров списков клавиатуры, в том порядке, в котором их нужно проверять на возможность
+перейти на них</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		keyboard.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>номер искомого списка клавиш</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="gotoMenu"><span class="type-signature"></span>gotoMenu(itemIndex, menuIndex)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Переход на нужный ряд клавиш</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>itemIndex</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>номер клавиши в списке</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>menuIndex</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>номер списка [0-5]</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		keyboard.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="handleKeyboardButton"><span class="type-signature"></span>handleKeyboardButton(tmp, str)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Обработчик нажатия на клавишу</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>tmp</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>уже введенная в поле клавиатуры строка</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>str</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>строка, получившаяся после нажатия</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		keyboard.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="handleKeyboardSystemButton"><span class="type-signature"></span>handleKeyboardSystemButton(tmp)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Обработчик нажатия на системную клавишу</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>tmp</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>уже введенная в поле клавиатуры строка</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		keyboard.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>получившаяся на выходе строка</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">*</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="hide"><span class="type-signature"></span>hide()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Очистка параметров сессии клавиатуры и скрытие окна</p>
     </div>
     
 
@@ -787,7 +1101,173 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		epg.screen.js
+		keyboard.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="init"><span class="type-signature"></span>init()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Иницилизация окна клавиатуры (инициализация списков клавиш, установка коллбэка на скрытие окна)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		keyboard.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="key_back"><span class="type-signature"></span>key_back()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Обработчик нажатия кнопки &quot;Назад&quot; (скрытие окна клавиатуры)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		keyboard.screen.js
 	</dd>
 	
 
@@ -826,7 +1306,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Возврат&quot; (в случае работающего плеера - переход в полноэкранный режим плеера, иначе переход в главное меню)</p>
+        <p>Обработчик нажатия кнопки &quot;Возврат&quot; (функционал клавиши &quot;Стереть&quot;)</p>
     </div>
     
 
@@ -870,7 +1350,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		epg.screen.js
+		keyboard.screen.js
 	</dd>
 	
 
@@ -901,7 +1381,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="key_ch_minus"><span class="type-signature"></span>key_ch_minus()</h4>
+    <h4 class="name" id="key_digit"><span class="type-signature"></span>key_digit(digit)</h4>
     
     
 </dt>
@@ -909,7 +1389,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Канал -&quot; (переключение программы на предыдущий день)</p>
+        <p>Обработчик нажатия кнопки &quot;Цифра&quot; (ввод цифры в поле ввода клавиатуры)</p>
     </div>
     
 
@@ -918,6 +1398,50 @@
     
 
     
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>digit</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>вводимая цифра</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
     
 
     
@@ -953,7 +1477,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		epg.screen.js
+		keyboard.screen.js
 	</dd>
 	
 
@@ -984,7 +1508,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="key_ch_plus"><span class="type-signature"></span>key_ch_plus()</h4>
+    <h4 class="name" id="key_down"><span class="type-signature"></span>key_down()</h4>
     
     
 </dt>
@@ -992,7 +1516,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Канал +&quot; (переключение программы на следующий день)</p>
+        <p>Обработчик нажатия кнопки &quot;Вниз&quot; (навигация по клавиатуре)</p>
     </div>
     
 
@@ -1036,7 +1560,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		epg.screen.js
+		keyboard.screen.js
 	</dd>
 	
 
@@ -1075,7 +1599,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия кнопки &quot;ОК&quot; (Воспроизведение выбранной программы в том случае, если её архив записывается)</p>
+        <p>Обработчик нажатия кнопки &quot;ОК&quot; (нажатие на клавишу в фокусе)</p>
     </div>
     
 
@@ -1119,7 +1643,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		epg.screen.js
+		keyboard.screen.js
 	</dd>
 	
 
@@ -1158,7 +1682,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Выход&quot; (в случае работающего плеера - переход в полноэкранный режим плеера, иначе переход в главное меню)</p>
+        <p>Обработчик нажатия кнопки &quot;Выход&quot; (скрытие окна клавиатуры)</p>
     </div>
     
 
@@ -1202,90 +1726,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		epg.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="key_fwd"><span class="type-signature"></span>key_fwd()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Перемотка вперед&quot; (скролл описания программы)</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		epg.screen.js
+		keyboard.screen.js
 	</dd>
 	
 
@@ -1324,8 +1765,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Влево&quot; (переключение дня программы передач или переход на предыдущий экран в зависимости от режима
-навигации)</p>
+        <p>Обработчик нажатия кнопки &quot;Влево&quot; (навигация по клавиатуре)</p>
     </div>
     
 
@@ -1369,256 +1809,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		epg.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="key_menu"><span class="type-signature"></span>key_menu()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Меню&quot; (переход в главное меню)</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		epg.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="key_power"><span class="type-signature"></span>key_power()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Питание&quot; (переход в спящий режим)</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		epg.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="key_rew"><span class="type-signature"></span>key_rew()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Перемотка назад&quot; (скролл описания программы)</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		epg.screen.js
+		keyboard.screen.js
 	</dd>
 	
 
@@ -1657,7 +1848,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия кнопки &quot;Вправо&quot; (переключение программы на следующий день)</p>
+        <p>Обработчик нажатия кнопки &quot;Вправо&quot; (навигация по клавиатуре)</p>
     </div>
     
 
@@ -1701,7 +1892,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		epg.screen.js
+		keyboard.screen.js
 	</dd>
 	
 
@@ -1732,7 +1923,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="key_yellow"><span class="type-signature"></span>key_yellow()</h4>
+    <h4 class="name" id="key_up"><span class="type-signature"></span>key_up()</h4>
     
     
 </dt>
@@ -1740,8 +1931,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия желтой кнопки (в случае, если передача ещё не прошла и не началась, то происходит установка/снятие
-напоминания с передачи)</p>
+        <p>Обработчик нажатия кнопки &quot;Вверх&quot; (навигация по клавиатуре)</p>
     </div>
     
 
@@ -1785,7 +1975,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		epg.screen.js
+		keyboard.screen.js
 	</dd>
 	
 
@@ -1816,7 +2006,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="loadData"><span class="type-signature"></span>loadData(setCurrentProgram)</h4>
+    <h4 class="name" id="setCallback"><span class="type-signature"></span>setCallback(f)</h4>
     
     
 </dt>
@@ -1824,7 +2014,7 @@
 
     
     <div class="description">
-        <p>Загрузка списка программы передач</p>
+        <p>Установка метода, вызывающегося после закрытия клавиатуры</p>
     </div>
     
 
@@ -1859,7 +2049,7 @@
 
         <tr>
             
-                <td class="name"><code>setCurrentProgram</code></td>
+                <td class="name"><code>f</code></td>
             
 
             <td class="type">
@@ -1870,7 +2060,7 @@
 
             
 
-            <td class="description last"><p>текущая передача</p></td>
+            <td class="description last"><p>метод для установки</p></td>
         </tr>
 
     
@@ -1912,7 +2102,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		epg.screen.js
+		keyboard.screen.js
 	</dd>
 	
 
@@ -1943,7 +2133,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="refresh"><span class="type-signature"></span>refresh()</h4>
+    <h4 class="name" id="setCurrentMode"><span class="type-signature"></span>setCurrentMode(typing, logic, mode)</h4>
     
     
 </dt>
@@ -1951,339 +2141,7 @@
 
     
     <div class="description">
-        <p>Перерисовка списка передач</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		epg.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="refreshProgramInfo"><span class="type-signature"></span>refreshProgramInfo()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Обновление информации о передаче, находящейся в фокусе в правом блоке иноформации</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		epg.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="refreshScreenFooter"><span class="type-signature"></span>refreshScreenFooter()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Обновление нижнего футера с подсказками в зависимости от программы, находящейся в фокусе</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		epg.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="resetDayTimestamps"><span class="type-signature"></span>resetDayTimestamps()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Обновление дат для отображения программы передач</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		epg.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="resize"><span class="type-signature"></span>resize(displayWidth, displayHeight)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Установка размеров экрана и его элементов (установка максимального числа элементов в списках)</p>
+        <p>Установка текущего режима работы клавиатуры</p>
     </div>
     
 
@@ -2318,7 +2176,7 @@
 
         <tr>
             
-                <td class="name"><code>displayWidth</code></td>
+                <td class="name"><code>typing</code></td>
             
 
             <td class="type">
@@ -2329,14 +2187,19 @@
 
             
 
-            <td class="description last"><p>ширина экрана</p></td>
+            <td class="description last"><p>состояние активности клавиш, возможные значения:
+0 - все клавиши активны
+1 - активны только клавиши цифр и сервисные клавиши
+2 - активны только клавиши латинских букв и сервисные клавиши (клавиатура автоматически переведена в латинскую раскладку)
+3 - активны только сервисные клавиши (&quot;Стереть&quot;, &quot;ОК&quot; и перевод курсора)
+4 - активны клавиши цифр, латинских букв и сервисные клавиши (клавиатура автоматически переведена в латинскую раскладку)</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>displayHeight</code></td>
+                <td class="name"><code>logic</code></td>
             
 
             <td class="type">
@@ -2347,7 +2210,35 @@
 
             
 
-            <td class="description last"><p>высота экрана</p></td>
+            <td class="description last"><p>логика ввода символов, возможные значения:
+0 - базовая логика, длина вводимой строки ограничивается только шириной поля ввода клавиатуры (MAX_INPUT_LENGTH)
+1 - логика ввода номера банковской карты (длина ограничена 19 символами и каждые 4 символа вставляется пробел)
+2 - логика ограничивает ввод только по заданной длине строки
+3 - логика ограничивает ввод по заданному числовому ограничению</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>mode</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>режим отображения клавиатуры, возможные значения:
+0 - русская буквенная раскладка в нижнем регистре
+1 - русская буквенная раскладка в верхнем регистре
+2 - русская раскладка дополнительных символов
+3 - латинская буквенная раскладка в нижнем регистре
+4 - латинская буквенная раскладка в верхнем регистре
+5 - латинская раскладка дополнительных символов</p></td>
         </tr>
 
     
@@ -2389,7 +2280,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		epg.screen.js
+		keyboard.screen.js
 	</dd>
 	
 
@@ -2420,7 +2311,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="setChannel"><span class="type-signature"></span>setChannel(value)</h4>
+    <h4 class="name" id="setInitialString"><span class="type-signature"></span>setInitialString(str)</h4>
     
     
 </dt>
@@ -2428,7 +2319,135 @@
 
     
     <div class="description">
-        <p>Установка канала, программа передач которого отображается на экране</p>
+        <p>Установка строки в поле ввода клавиатуры (она может быть не пуста, если пользователь уже попытался ввести
+значения с помощью цифр на пульте до вызова клавиатуры)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>str</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>строка для инициализации поля ввода</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		keyboard.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setMaxInputLength"><span class="type-signature"></span>setMaxInputLength(value)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Установка максимальной длины вводимой через клавиатуры строки</p>
     </div>
     
 
@@ -2474,7 +2493,7 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>максимальная длина строки</p></td>
         </tr>
 
     
@@ -2516,7 +2535,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		epg.screen.js
+		keyboard.screen.js
 	</dd>
 	
 
@@ -2547,7 +2566,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="setNextDate"><span class="type-signature"></span>setNextDate()</h4>
+    <h4 class="name" id="setMaxValue"><span class="type-signature"></span>setMaxValue(value)</h4>
     
     
 </dt>
@@ -2555,90 +2574,7 @@
 
     
     <div class="description">
-        <p>Переход на программу передач следующего дня</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		epg.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="setParentScreen"><span class="type-signature"></span>setParentScreen(value)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Установка родительного экрана - того, откуда была вызвана программа передач</p>
+        <p>Установка максимального числового значения вводимой строки (только для числовых полей)</p>
     </div>
     
 
@@ -2684,7 +2620,7 @@
 
             
 
-            <td class="description last"><p>идентификатор экрана</p></td>
+            <td class="description last"><p>максимальное значение строки</p></td>
         </tr>
 
     
@@ -2726,7 +2662,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		epg.screen.js
+		keyboard.screen.js
 	</dd>
 	
 
@@ -2757,7 +2693,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="setPrevDate"><span class="type-signature"></span>setPrevDate()</h4>
+    <h4 class="name" id="show"><span class="type-signature"></span>show(inputId)</h4>
     
     
 </dt>
@@ -2765,7 +2701,7 @@
 
     
     <div class="description">
-        <p>Переход на программу предач предыдущего дня</p>
+        <p>Отображение окна клавиатуры (обновление констант, установка режима)</p>
     </div>
     
 
@@ -2774,6 +2710,50 @@
     
 
     
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>inputId</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>идентификатор исходного поля ввода, для которого была вызвана клавиатура</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
     
 
     
@@ -2809,7 +2789,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		epg.screen.js
+		keyboard.screen.js
 	</dd>
 	
 
@@ -2840,7 +2820,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="show"><span class="type-signature"></span>show()</h4>
+    <h4 class="name" id="switchMode"><span class="type-signature"></span>switchMode(inputId)</h4>
     
     
 </dt>
@@ -2848,7 +2828,7 @@
 
     
     <div class="description">
-        <p>Отображение экрана &quot;Программа передач&quot; (отрисовка всех элементов и загрузка программы передач)</p>
+        <p>Переключение режима в зависимости от исходного поля ввода</p>
     </div>
     
 
@@ -2857,6 +2837,50 @@
     
 
     
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>inputId</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>идентификатор исходного поля ввода</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
     
 
     
@@ -2892,7 +2916,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		epg.screen.js
+		keyboard.screen.js
 	</dd>
 	
 
@@ -2975,7 +2999,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2017-10-06T23:09:16+05:00
+		on 2017-10-06T23:12:06+05:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

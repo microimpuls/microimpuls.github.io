@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Impuls: Main Class: Settings</title>
+	<title>Impuls: Screens Class: InfoScreen</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -20,7 +20,7 @@
 <div class="navbar navbar-default navbar-fixed-top ">
 <div class="container">
 	<div class="navbar-header">
-		<a class="navbar-brand" href="index.html">Impuls: Main</a>
+		<a class="navbar-brand" href="index.html">Impuls: Screens</a>
 		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
@@ -31,23 +31,9 @@
 		<ul class="nav navbar-nav">
 			
 			<li class="dropdown">
-				<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
-				<ul class="dropdown-menu inline">
-					<li><a href="App.html">App</a></li>
-				</ul>
-			</li>
-			
-			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu inline">
-					<li><a href="Lang.html">Lang</a></li><li><a href="Player.html">Player</a></li><li><a href="Settings.html">Settings</a></li>
-				</ul>
-			</li>
-			
-			<li class="dropdown">
-				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
-				<ul class="dropdown-menu inline">
-					<li><a href="global.html#alert">alert</a></li><li><a href="global.html#OnDeviceKeyEvent">OnDeviceKeyEvent</a></li>
+					<li><a href="AccountScreen.html">AccountScreen</a></li><li><a href="AppsScreen.html">AppsScreen</a></li><li><a href="BalanceScreen.html">BalanceScreen</a></li><li><a href="CategorizedTVScreen.html">CategorizedTVScreen</a></li><li><a href="EPGScreen.html">EPGScreen</a></li><li><a href="FirstLoadingScreen.html">FirstLoadingScreen</a></li><li><a href="GamesRecordsScreen.html">GamesRecordsScreen</a></li><li><a href="GamesScreen.html">GamesScreen</a></li><li><a href="HistoryOfPaymentsScreen.html">HistoryOfPaymentsScreen</a></li><li><a href="InfoScreen.html">InfoScreen</a></li><li><a href="KeyboardScreen.html">KeyboardScreen</a></li><li><a href="LoginScreen.html">LoginScreen</a></li><li><a href="MainMenuScreen.html">MainMenuScreen</a></li><li><a href="NotificationsScreen.html">NotificationsScreen</a></li><li><a href="PaymentScreen.html">PaymentScreen</a></li><li><a href="PlayerScreen.html">PlayerScreen</a></li><li><a href="PopupGenresScreen.html">PopupGenresScreen</a></li><li><a href="PopupInactiveScreen.html">PopupInactiveScreen</a></li><li><a href="PopupListScreen.html">PopupListScreen</a></li><li><a href="PopupMenuScreen.html">PopupMenuScreen</a></li><li><a href="PopupMessageScreen.html">PopupMessageScreen</a></li><li><a href="PopupParentCodeScreen.html">PopupParentCodeScreen</a></li><li><a href="RadioScreen.html">RadioScreen</a></li><li><a href="SettingsScreen.html">SettingsScreen</a></li><li><a href="SignupScreen.html">SignupScreen</a></li><li><a href="TVChannelsScreen.html">TVChannelsScreen</a></li><li><a href="VideoCatalogScreen.html">VideoCatalogScreen</a></li><li><a href="VideoScreen.html">VideoScreen</a></li>
 				</ul>
 			</li>
 			
@@ -79,13 +65,13 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: Settings</h1>
+	<h1 class="page-title">Class: InfoScreen</h1>
 <section>
 
 <header>
     
         <h2>
-        Settings
+        InfoScreen
         </h2>
         
     
@@ -98,7 +84,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="Settings"><span class="type-signature"></span>new Settings()</h4>
+    <h4 class="name" id="InfoScreen"><span class="type-signature"></span>new InfoScreen()</h4>
     
     
 </dt>
@@ -106,7 +92,8 @@
 
     
     <div class="description">
-        <p>Переопределение класса BaseSettings</p>
+        <p>Экран &quot;Информация&quot; (данные абонента, например, имя, номер абонемента, IP-адрес, тип устройства, модель устройства, версия
+прошивки и прочее)</p>
     </div>
     
 
@@ -150,7 +137,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		settings.js
+		info.screen.js
 	</dd>
 	
 
@@ -199,7 +186,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="clearSettings"><span class="type-signature"></span>clearSettings()</h4>
+    <h4 class="name" id="init"><span class="type-signature"></span>init()</h4>
     
     
 </dt>
@@ -207,7 +194,7 @@
 
     
     <div class="description">
-        <p>Сброс пользовательских настроек до дефолтных</p>
+        <p>Инициализация экрана (сопровождается запросом версии фронтенда)</p>
     </div>
     
 
@@ -251,7 +238,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		settings.js
+		info.screen.js
 	</dd>
 	
 
@@ -282,7 +269,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="getAbonement"><span class="type-signature"></span>getAbonement()</h4>
+    <h4 class="name" id="key_back"><span class="type-signature"></span>key_back()</h4>
     
     
 </dt>
@@ -290,7 +277,7 @@
 
     
     <div class="description">
-        <p>Получение номера абонемента текущего пользователя</p>
+        <p>Обработчик нажатия кнопки &quot;Назад&quot; (переход в экран &quot;Мой профиль&quot;)</p>
     </div>
     
 
@@ -334,7 +321,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		settings.js
+		info.screen.js
 	</dd>
 	
 
@@ -357,26 +344,6 @@
     
 
     
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">string</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
 </dd>
@@ -385,7 +352,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="getNumberOfStyleTemplates"><span class="type-signature"></span>getNumberOfStyleTemplates()</h4>
+    <h4 class="name" id="key_backspace"><span class="type-signature"></span>key_backspace()</h4>
     
     
 </dt>
@@ -393,7 +360,7 @@
 
     
     <div class="description">
-        <p>Получение числа доступных шаблонов оформления (сейчас нет других шаблонов кроме основного)</p>
+        <p>Обработчик нажатия кнопки &quot;Возврат&quot; (в случае работающего плеера - переход в полноэкранный режим плеера, иначе переход в главное меню)</p>
     </div>
     
 
@@ -437,7 +404,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		settings.js
+		info.screen.js
 	</dd>
 	
 
@@ -460,26 +427,6 @@
     
 
     
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Number</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
 </dd>
@@ -488,7 +435,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="getPassword"><span class="type-signature"></span>getPassword()</h4>
+    <h4 class="name" id="key_exit"><span class="type-signature"></span>key_exit()</h4>
     
     
 </dt>
@@ -496,7 +443,7 @@
 
     
     <div class="description">
-        <p>Получение пароля текущего пользователя</p>
+        <p>Обработчик нажатия кнопки &quot;Выход&quot; (в случае работающего плеера - переход в полноэкранный режим плеера, иначе переход в главное меню)</p>
     </div>
     
 
@@ -540,7 +487,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		settings.js
+		info.screen.js
 	</dd>
 	
 
@@ -563,26 +510,6 @@
     
 
     
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">string</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
 </dd>
@@ -591,7 +518,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="getStyle"><span class="type-signature"></span>getStyle()</h4>
+    <h4 class="name" id="key_menu"><span class="type-signature"></span>key_menu()</h4>
     
     
 </dt>
@@ -599,7 +526,7 @@
 
     
     <div class="description">
-        <p>Получение номера текущего шаблона оформления (сейчас нет других шаблонов кроме основного)</p>
+        <p>Обработчик нажатия кнопки &quot;Меню&quot; (переход в главное меню)</p>
     </div>
     
 
@@ -643,7 +570,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		settings.js
+		info.screen.js
 	</dd>
 	
 
@@ -666,26 +593,6 @@
     
 
     
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">number</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
 </dd>
@@ -694,7 +601,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="getStyleName"><span class="type-signature"></span>getStyleName()</h4>
+    <h4 class="name" id="key_power"><span class="type-signature"></span>key_power()</h4>
     
     
 </dt>
@@ -702,7 +609,7 @@
 
     
     <div class="description">
-        <p>Получение имени текущего шаблона оформления (сейчас нет других шаблонов кроме основного)</p>
+        <p>Обработчик нажатия кнопки &quot;Питание&quot; (переход в спящий режим)</p>
     </div>
     
 
@@ -746,419 +653,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		settings.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">string</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="getTemplateStyleList"><span class="type-signature"></span>getTemplateStyleList()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Получение списка доступных шаблонов оформления (сейчас нет других шаблонов кроме основного)</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		settings.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Array</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="getTemplateStyleUrl"><span class="type-signature"></span>getTemplateStyleUrl()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Получение пути до css-файла текущего шаблона оформления (сейчас нет других шаблонов кроме основного)</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		settings.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">*</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="getVolume"><span class="type-signature"></span>getVolume()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Получение уровня громкости</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		settings.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">number</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="loadSettings"><span class="type-signature"></span>loadSettings()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Загрузка и установка пользовательских настроек</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		settings.js
+		info.screen.js
 	</dd>
 	
 
@@ -1189,7 +684,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="saveSettings"><span class="type-signature"></span>saveSettings()</h4>
+    <h4 class="name" id="setAccountId"><span class="type-signature"></span>setAccountId(value)</h4>
     
     
 </dt>
@@ -1197,90 +692,7 @@
 
     
     <div class="description">
-        <p>Сохранение заданных параметров настроек во временную память устройства</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		settings.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="setAbonement"><span class="type-signature"></span>setAbonement(value)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Установка номера абонемента текущего пользователя</p>
+        <p>Установка номера аккаунта</p>
     </div>
     
 
@@ -1326,7 +738,7 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>номер аккаунта</p></td>
         </tr>
 
     
@@ -1368,7 +780,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		settings.js
+		info.screen.js
 	</dd>
 	
 
@@ -1399,7 +811,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="setPassword"><span class="type-signature"></span>setPassword(value)</h4>
+    <h4 class="name" id="setActivationDaysLeft"><span class="type-signature"></span>setActivationDaysLeft(value)</h4>
     
     
 </dt>
@@ -1407,7 +819,7 @@
 
     
     <div class="description">
-        <p>Установка пароля текущего пользователя</p>
+        <p>Установка числа дней, оставшихся до деактивации</p>
     </div>
     
 
@@ -1453,7 +865,7 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>число дней, оставшихся до деактивации</p></td>
         </tr>
 
     
@@ -1495,7 +907,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		settings.js
+		info.screen.js
 	</dd>
 	
 
@@ -1526,7 +938,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="setTemplateStyle"><span class="type-signature"></span>setTemplateStyle(style)</h4>
+    <h4 class="name" id="setContractNumber"><span class="type-signature"></span>setContractNumber(value)</h4>
     
     
 </dt>
@@ -1534,134 +946,7 @@
 
     
     <div class="description">
-        <p>Установка текущего шаблона оформления (сейчас нет других шаблонов кроме основного)</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>style</code></td>
-            
-
-            <td class="type">
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		settings.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="setVolume"><span class="type-signature"></span>setVolume(value)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Установка уровня громкости</p>
+        <p>Установка номера контракта</p>
     </div>
     
 
@@ -1707,7 +992,7 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>номер контракта</p></td>
         </tr>
 
     
@@ -1749,7 +1034,1023 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		settings.js
+		info.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setDeviceModel"><span class="type-signature"></span>setDeviceModel(value)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Установка модели устройства</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>модель устройства</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		info.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setDeviceSerial"><span class="type-signature"></span>setDeviceSerial(value)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Установка серийного номера устройства</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>серийный номер устройства</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		info.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setFirmware"><span class="type-signature"></span>setFirmware(value)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Установка названия прошивки</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>название прошивки</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		info.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setIpAddress"><span class="type-signature"></span>setIpAddress(value)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Установка IP-адреса</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>IP-адрес</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		info.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setMacAddress"><span class="type-signature"></span>setMacAddress(value)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Установка MAC-адреса</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>MAC-адрес</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		info.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setMiddlewareVersion"><span class="type-signature"></span>setMiddlewareVersion(value)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Установка версии бекенда</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>версия бекенда</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		info.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setName"><span class="type-signature"></span>setName(value)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Установка имени абонента</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>имя</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		info.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setPortalVersion"><span class="type-signature"></span>setPortalVersion(value)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Установка версии фронтенда</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>версия фронтенда</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		info.screen.js
 	</dd>
 	
 
@@ -1832,7 +2133,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2017-10-06T23:12:04+05:00
+		on 2017-10-06T23:12:06+05:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

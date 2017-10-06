@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Impuls: Screens Class: PopupMessageScreen</title>
+	<title>Impuls: Screens Class: PaymentScreen</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -65,13 +65,13 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: PopupMessageScreen</h1>
+	<h1 class="page-title">Class: PaymentScreen</h1>
 <section>
 
 <header>
     
         <h2>
-        PopupMessageScreen
+        PaymentScreen
         </h2>
         
     
@@ -84,7 +84,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="PopupMessageScreen"><span class="type-signature"></span>new PopupMessageScreen()</h4>
+    <h4 class="name" id="PaymentScreen"><span class="type-signature"></span>new PaymentScreen()</h4>
     
     
 </dt>
@@ -92,7 +92,7 @@
 
     
     <div class="description">
-        <p>Окно, позволяющее показать пользователю какое-либо оповещение или задать вопрос</p>
+        <p>Экран &quot;Оплата&quot; (содержит в себе форму пополнения счета абонента банковской картой)</p>
     </div>
     
 
@@ -136,7 +136,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		popupmessage.screen.js
+		payment.screen.js
 	</dd>
 	
 
@@ -185,6 +185,133 @@
             
 <hr>
 <dt>
+    <h4 class="name" id="callKeyboard"><span class="type-signature"></span>callKeyboard(selectedInput)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Вызод клавиатуры для разных полей ввода</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>selectedInput</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>идентификатор поля ввода, для которого вызывается клавиатура</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		payment.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
     <h4 class="name" id="init"><span class="type-signature"></span>init()</h4>
     
     
@@ -193,7 +320,7 @@
 
     
     <div class="description">
-        <p>Инициализация окна</p>
+        <p>Инициализация экрана &quot;Оплата&quot;</p>
     </div>
     
 
@@ -237,7 +364,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		popupmessage.screen.js
+		payment.screen.js
 	</dd>
 	
 
@@ -276,7 +403,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия на кнопку &quot;Назад&quot; (скрытие окна и вызов метода, установленного в setCallback())</p>
+        <p>Обработчик нажатия на кнопку &quot;Назад&quot; (переход к экрану &quot;Баланс&quot;)</p>
     </div>
     
 
@@ -320,7 +447,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		popupmessage.screen.js
+		payment.screen.js
 	</dd>
 	
 
@@ -351,7 +478,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="key_blue"><span class="type-signature"></span>key_blue()</h4>
+    <h4 class="name" id="key_backspace"><span class="type-signature"></span>key_backspace()</h4>
     
     
 </dt>
@@ -359,8 +486,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия на синюю кнопку (скрытие окна и вызов функционала, установленного на синюю кнопку в
-родительском экране)</p>
+        <p>Обработчик нажатия на кнопку &quot;Возврат&quot; (переход к экрану &quot;Баланс&quot;)</p>
     </div>
     
 
@@ -404,7 +530,173 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		popupmessage.screen.js
+		payment.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="key_digit"><span class="type-signature"></span>key_digit()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Обработчик нажатия на цифровой кнопки (ввод значения в цировое поле)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		payment.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="key_down"><span class="type-signature"></span>key_down()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Обработчик нажатия на кнопку &quot;Вниз&quot; (навигация по полям формы оплаты)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		payment.screen.js
 	</dd>
 	
 
@@ -443,7 +735,8 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия на кнопку &quot;ОК&quot; (ответ &quot;Да&quot; и скрытие окна в режиме вопроса и просто скрытие в режиме по умолчанию)</p>
+        <p>Обработчик нажатия на кнопку &quot;ОК&quot; (вызов клавиатуры, выбор значения или попытка оплаты в зависимости от выделенного
+поля ввода)</p>
     </div>
     
 
@@ -487,7 +780,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		popupmessage.screen.js
+		payment.screen.js
 	</dd>
 	
 
@@ -526,7 +819,8 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия на кнопку &quot;Выход&quot; (скрытие окна)</p>
+        <p>Обработчик нажатия на кнопку &quot;Выход&quot; (в случае работающего плеера - переход в полноэкранный режим плеера, иначе
+переход в экран баланса)</p>
     </div>
     
 
@@ -570,7 +864,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		popupmessage.screen.js
+		payment.screen.js
 	</dd>
 	
 
@@ -601,7 +895,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="key_green"><span class="type-signature"></span>key_green()</h4>
+    <h4 class="name" id="key_left"><span class="type-signature"></span>key_left()</h4>
     
     
 </dt>
@@ -609,8 +903,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия на зеленую кнопку (скрытие окна и вызов функционала, установленного на зеленую кнопку в
-родительском экране)</p>
+        <p>Обработчик нажатия на кнопку &quot;Влево&quot; (навигация по полям формы оплаты или удаление последнего символа)</p>
     </div>
     
 
@@ -654,7 +947,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		popupmessage.screen.js
+		payment.screen.js
 	</dd>
 	
 
@@ -693,7 +986,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия на кнопку &quot;Меню&quot; (скрытие окна)</p>
+        <p>Обработчик нажатия на кнопку &quot;Меню&quot; (переход к экрану главного меню)</p>
     </div>
     
 
@@ -737,7 +1030,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		popupmessage.screen.js
+		payment.screen.js
 	</dd>
 	
 
@@ -768,7 +1061,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="key_red"><span class="type-signature"></span>key_red()</h4>
+    <h4 class="name" id="key_right"><span class="type-signature"></span>key_right()</h4>
     
     
 </dt>
@@ -776,8 +1069,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия на красную кнопку (скрытие окна и вызов функционала, установленного на красную кнопку в
-родительском экране)</p>
+        <p>Обработчик нажатия на кнопку &quot;Вправо&quot; (навигация по полям формы оплаты)</p>
     </div>
     
 
@@ -821,7 +1113,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		popupmessage.screen.js
+		payment.screen.js
 	</dd>
 	
 
@@ -852,7 +1144,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="key_yellow"><span class="type-signature"></span>key_yellow()</h4>
+    <h4 class="name" id="key_up"><span class="type-signature"></span>key_up()</h4>
     
     
 </dt>
@@ -860,8 +1152,7 @@
 
     
     <div class="description">
-        <p>Обработчик нажатия на желтую кнопку (скрытие окна и вызов функционала, установленного на желтую кнопку в
-родительском экране)</p>
+        <p>Обработчик нажатия на кнопку &quot;Вверх&quot; (навигация по полям формы оплаты)</p>
     </div>
     
 
@@ -905,7 +1196,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		popupmessage.screen.js
+		payment.screen.js
 	</dd>
 	
 
@@ -936,7 +1227,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="mouseEnter"><span class="type-signature"></span>mouseEnter()</h4>
+    <h4 class="name" id="refreshHelpbar"><span class="type-signature"></span>refreshHelpbar()</h4>
     
     
 </dt>
@@ -944,7 +1235,7 @@
 
     
     <div class="description">
-        <p>Обработчик события наведения мышкой на элемент</p>
+        <p>Обновление нижнего футера с подсказками</p>
     </div>
     
 
@@ -988,7 +1279,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		popupmessage.screen.js
+		payment.screen.js
 	</dd>
 	
 
@@ -1019,7 +1310,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="mouseLeave"><span class="type-signature"></span>mouseLeave()</h4>
+    <h4 class="name" id="resetCardData"><span class="type-signature"></span>resetCardData()</h4>
     
     
 </dt>
@@ -1027,7 +1318,7 @@
 
     
     <div class="description">
-        <p>Обработчик события ухода мышки с элемента</p>
+        <p>Сброс данных в полях формы оплаты</p>
     </div>
     
 
@@ -1071,7 +1362,7 @@
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		popupmessage.screen.js
+		payment.screen.js
 	</dd>
 	
 
@@ -1102,7 +1393,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="setCallback"><span class="type-signature"></span>setCallback(f)</h4>
+    <h4 class="name" id="setAmount"><span class="type-signature"></span>setAmount()</h4>
     
     
 </dt>
@@ -1110,283 +1401,7 @@
 
     
     <div class="description">
-        <p>Установка метода, который будет вызываться после закрытия окна</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>f</code></td>
-            
-
-            <td class="type">
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>метод, который будет вызываться после закрытия окна</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		popupmessage.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="setMessageText"><span class="type-signature"></span>setMessageText(message, modeValue)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Установка текста сообщения и режима окна</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>message</code></td>
-            
-
-            <td class="type">
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>строка сообщения</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>modeValue</code></td>
-            
-
-            <td class="type">
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>в зависимости от строки сообщения, можно задать режим окна с возможностью либо ответить &quot;Да&quot; или &quot;Нет&quot;,
-либо просто закрыть окно, возможные значения:
-popup-message-close-footer (по умолчанию) - добавлять в футер 1 кнопку &quot;Скрыть&quot; без возможность ответить на вопрос
-popup-message-choice-footer - добавляет в футер кнопки &quot;Да&quot; и &quot;Нет&quot; и позволяет ответить на вопрос, содержащийся в
-строке сообщения</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		popupmessage.screen.js
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="show"><span class="type-signature"></span>show()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Отображение окна (сопровождается обновлением содержимого футера в зависимости от установленного режима)</p>
+        <p>Установка в поле суммы оплаты</p>
     </div>
     
 
@@ -1430,7 +1445,7 @@ popup-message-choice-footer - добавляет в футер кнопки &quo
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		popupmessage.screen.js
+		payment.screen.js
 	</dd>
 	
 
@@ -1461,7 +1476,7 @@ popup-message-choice-footer - добавляет в футер кнопки &quo
             
 <hr>
 <dt>
-    <h4 class="name" id="switchPopupMode"><span class="type-signature"></span>switchPopupMode(value)</h4>
+    <h4 class="name" id="setParentScreen"><span class="type-signature"></span>setParentScreen(value)</h4>
     
     
 </dt>
@@ -1469,7 +1484,7 @@ popup-message-choice-footer - добавляет в футер кнопки &quo
 
     
     <div class="description">
-        <p>Обработка поведение окна, в зависимости от заданного режима</p>
+        <p>Установка родительского экрана</p>
     </div>
     
 
@@ -1515,7 +1530,7 @@ popup-message-choice-footer - добавляет в футер кнопки &quo
 
             
 
-            <td class="description last"><p>ответ, который отдается окном, в случае, если установлен режим вопроса</p></td>
+            <td class="description last"><p>идентификатор родительского экрана</p></td>
         </tr>
 
     
@@ -1557,7 +1572,174 @@ popup-message-choice-footer - добавляет в футер кнопки &quo
 	
 	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
 	<dd class="tag-source">
-		popupmessage.screen.js
+		payment.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setPaymentForm"><span class="type-signature"></span>setPaymentForm()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Отрисовка и установка значений формы оплаты</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		payment.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="show"><span class="type-signature"></span>show()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Отображение экрана &quot;Оплата&quot; (сопровождается запросом суммы оплаты из предыдущего экрана или с сервера, а также
+отрисовкой формы оплаты)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		payment.screen.js
 	</dd>
 	
 
@@ -1640,7 +1822,7 @@ popup-message-choice-footer - добавляет в футер кнопки &quo
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2017-10-06T23:09:16+05:00
+		on 2017-10-06T23:12:07+05:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

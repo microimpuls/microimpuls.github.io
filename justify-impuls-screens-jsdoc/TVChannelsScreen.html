@@ -92,7 +92,11 @@
 
     
     <div class="description">
-        <p>Экран &quot;Телеканалы&quot; (содержит в себе список телеканалов)</p>
+        <p>Экран &quot;Телеканалы&quot; (содержит в себе список телеканалов)
+Данный экран имеет несколько режимов отображения (режим по умолчанию задается через client.js):
+list - экран является списком каналов, где каждая строчка - это соответствие &quot;канал - текущая передача на канале&quot;
+preview - экран представляет собой список каналов с левой стороны и окно плеера с описанием текущей передачи выделенного
+канала</p>
     </div>
     
 
@@ -177,7 +181,3828 @@
     
 
     
+        <h3 class="subsection-title">Members</h3>
 
+        <dl>
+            
+<hr>
+<dt class="name" id="key_down">
+    <h4 id="key_down"><span class="type-signature"></span>key_down<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Обработчик нажатия кнопки &quot;Вниз&quot; (навигация по списку каналов, в случае режима масштабированного плеера сопровождается
+сменой содержимого плеера)</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="key_up">
+    <h4 id="key_up"><span class="type-signature"></span>key_up<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Обработчик нажатия кнопки &quot;Вверх&quot; (навигация по списку каналов, в случае режима масштабированного плеера сопровождается
+сменой содержимого плеера)</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id="changePlayerMode"><span class="type-signature"></span>changePlayerMode()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Смена режима отображения экрана</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="filterChannelListByCategory"><span class="type-signature"></span>filterChannelListByCategory(saveCurrentSelection)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Применить фильтрацию каналов согласно выбранной категории</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>saveCurrentSelection</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>флаг, отвечающий за сохранение фокуса на выделенном канале</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getSelectedCategory"><span class="type-signature"></span>getSelectedCategory()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Получение объекта выделенной категории</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getSelectedChannel"><span class="type-signature"></span>getSelectedChannel()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Получение объекта выделенного канала</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">*</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="hideTextBar"><span class="type-signature"></span>hideTextBar()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Скрытие панели набора текста на экране плеера</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="init"><span class="type-signature"></span>init()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Инициализация экрана &quot;Телеканалы&quot; (сопровождается запросом списка каналов, который после инициализации происходит
+через заданный интервал времени и установкой режима отображения)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="key_back"><span class="type-signature"></span>key_back()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Обработчик нажатия кнопки &quot;Назад&quot; (переход в экран главного меню, сопровождается сменой режима плеера на list)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="key_backspace"><span class="type-signature"></span>key_backspace()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Обработчик нажатия кнопки &quot;Возврат&quot; (переход в режим отображения list; далее в случае включенного плеера - переход
+к полноэкранному режиму, иначе в экрану главного меню)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="key_blue"><span class="type-signature"></span>key_blue()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Обработчик нажатия синей кнопки (добавление/удаление выделенного канала в категорию &quot;Избранное&quot;)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="key_digit"><span class="type-signature"></span>key_digit()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Обработчик нажатия цифровой кнопки (включение канала по его номеру)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="key_enter"><span class="type-signature"></span>key_enter()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Обработчик нажатия кнопки &quot;ОК&quot; (запуск выделенного канала)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="key_exit"><span class="type-signature"></span>key_exit()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Обработчик нажатия кнопки &quot;Выход&quot; (переход в режим отображения list; далее в случае включенного плеера - переход
+к полноэкранному режиму, иначе в экрану главного меню)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="key_green"><span class="type-signature"></span>key_green()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Обработчик нажатия зеленой кнопки (отображение попап-окна выбора категории)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="key_info"><span class="type-signature"></span>key_info()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Обработчик нажатия кнопки &quot;Информация&quot; (при недоступности смены режима отображения данного экрана по какой-либо причине
+(недоступно для устройства или не позволяет режим навигации) - более подробное отображение текущей EPG каждого
+канала, иначе смена режима отображения)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="key_left"><span class="type-signature"></span>key_left()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Обработчик нажатия кнопки &quot;Влево&quot; (в зависимости от режима навигации переход к экрану главного меню, либо
+открытие предыдущей страницы каналов)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="key_menu"><span class="type-signature"></span>key_menu()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Обработчик нажатия кнопки &quot;Меню&quot; (переход к главному меню)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="key_power"><span class="type-signature"></span>key_power()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Обработчик нажатия кнопки &quot;Питание&quot; (переход в спящий режим)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="key_red"><span class="type-signature"></span>key_red()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Обработчик нажатия красной кнопки (в зависимости от режима навигации переход к экрану &quot;Программа передач&quot;, либо
+смена режима отображения экрана)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="key_right"><span class="type-signature"></span>key_right()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Обработчик нажатия кнопки &quot;Вправо&quot; (в зависимости от режима навигации переход к экрану &quot;Программа передач&quot;, либо
+открытие следующей страницы каналов)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="openEpgScreen"><span class="type-signature"></span>openEpgScreen()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Открытие экрана &quot;Программа передач&quot;</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="playSelectedChannel"><span class="type-signature"></span>playSelectedChannel(skipParentalCodeCheck, isScaledPlayer)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Запуск выделенного канала</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>skipParentalCodeCheck</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>флаг, отвечающий за то, запрашивать ли родительский пин-код при запуске канала, доступные
+значения:
+true - не запрашивать
+false - запрашивать</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>isScaledPlayer</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>флаг, передающий информацию о том, в каком режиме нужно воспроизвести канал, доступные значения:
+true - в режиме preview экрана &quot;Телеканалы&quot;
+false - в полноэкранном режиме просмотра</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="refresh"><span class="type-signature"></span>refresh()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Перерисовка списков и плашки с часами</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="refreshChannelList"><span class="type-signature"></span>refreshChannelList(error, interval)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Перерисовка списка каналов после очередного запроса</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>error</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>код ошибки запроса (в случае отсутствия ошибок - 0)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>interval</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>интервал для обновления каналов</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="refreshDisplayTime"><span class="type-signature"></span>refreshDisplayTime()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Перерисовка плашки с часами</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="refreshPlayerModeInfo"><span class="type-signature"></span>refreshPlayerModeInfo()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Обновление информации о текущей программе выделенного канала в режиме отображения preview</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="reset"><span class="type-signature"></span>reset()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Переход экрана к состоянию до инициализации</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="resize"><span class="type-signature"></span>resize(displayWidth, displayHeight)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Масштабирование списков в соответствии с разрешением экрана</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>displayWidth</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>ширина экрана</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>displayHeight</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>высота экрана</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setCategory"><span class="type-signature"></span>setCategory(index)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Установить категорию каналов для фильтрации</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>index</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setCheckLastChannel"><span class="type-signature"></span>setCheckLastChannel(value)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Установка флага, отвечающего за наличие у пользователя последнего просмотренного канала</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>флаг</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setPlayerMode"><span class="type-signature"></span>setPlayerMode()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Переход из режима отображения list к режиму preview</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="show"><span class="type-signature"></span>show()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Отображение экрана &quot;Телеканалы&quot; (сопровождается запуском обновления плашки с часами, перерисовкой списков и установкой
+режима отображения)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="showChannelNumberPad"><span class="type-signature"></span>showChannelNumberPad(digit, invisible)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Отображение плашки набора номера канала для запуска</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>digit</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>invisible</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="showTextBar"><span class="type-signature"></span>showTextBar(value)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Отображение панели набора текста на экране плеера</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>значение, которое необходимо установить в панель набора текста</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="switchToChannel"><span class="type-signature"></span>switchToChannel(number)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Запуск канала по его порядковому номеру</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>number</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="switchToChannelId"><span class="type-signature"></span>switchToChannelId(id)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Запуск канала по его идентификатору</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="switchToNextChannel"><span class="type-signature"></span>switchToNextChannel(previous)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Навигация по каналам в данном экране или переключение канала при полноэкранном просмотре</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>previous</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="unsetPlayerMode"><span class="type-signature"></span>unsetPlayerMode()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Переход из режима отображения preview к режиму list</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		tvchannels.screen.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        </dl>
     
 
     
@@ -233,7 +4058,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2017-10-06T23:12:07+05:00
+		on 2017-10-09T19:22:38+05:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

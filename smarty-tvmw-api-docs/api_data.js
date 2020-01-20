@@ -1414,6 +1414,18 @@ define({ "api": [
             "optional": false,
             "field": "1",
             "description": "<p>Ошибка связи с сервером данных о погоде.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Сервер уже выполняет запрос с погодой для данного города.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "3",
+            "description": "<p>Ошибка на стороне сервера.</p>"
           }
         ]
       }

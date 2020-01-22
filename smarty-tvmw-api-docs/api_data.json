@@ -3603,55 +3603,6 @@
           },
           {
             "group": "Ответ",
-            "type": "Object[]",
-            "optional": false,
-            "field": "ads",
-            "description": "<p>Список рекламных блоков, соответствующих данному каналу. Требует включения параметра TVMIDDLEWARE_ADS_ENABLED в Smarty.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "ads.days",
-            "description": "<p>Перечисление дней (через запятую), в которые необходимо воспроизводить данный рекламный блок.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "ads.begin_time",
-            "description": "<p>Время начала диапазона рекламного блока в формате ЧЧ:ММ:СС.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "ads.end_time",
-            "description": "<p>Время окончания диапазона рекламного блока в формате ЧЧ:ММ:СС.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Object[]",
-            "optional": false,
-            "field": "ads.movies",
-            "description": "<p>Список рекламных роликов в блоке.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "ads.movies.name",
-            "description": "<p>Название ролика.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "ads.movies.url",
-            "description": "<p>Адрес ролика для воспроизведения.</p>"
-          },
-          {
-            "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "error",
@@ -8944,55 +8895,6 @@
             "optional": false,
             "field": "stream_service_id",
             "description": "<p>Идентификатор выбранного стриминг-сервиса.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Object[]",
-            "optional": false,
-            "field": "ads",
-            "description": "<p>Список рекламных блоков, соответствующих данному каналу. Требует включения параметра TVMIDDLEWARE_ADS_ENABLED в Smarty. Null при запросе камеры.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "ads.days",
-            "description": "<p>Перечисление дней (через запятую), в которые необходимо воспроизводить данный рекламный блок.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "ads.begin_time",
-            "description": "<p>Время начала диапазона рекламного блока в формате ЧЧ:ММ:СС.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "ads.end_time",
-            "description": "<p>Время окончания диапазона рекламного блока в формате ЧЧ:ММ:СС.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Object[]",
-            "optional": false,
-            "field": "ads.movies",
-            "description": "<p>Список рекламных роликов в блоке.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "ads.movies.name",
-            "description": "<p>Название ролика.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "ads.movies.url",
-            "description": "<p>Адрес ролика для воспроизведения.</p>"
           },
           {
             "group": "Ответ",

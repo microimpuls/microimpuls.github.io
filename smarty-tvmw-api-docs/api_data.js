@@ -1074,6 +1074,14 @@ define({ "api": [
             "field": "device_uid",
             "defaultValue": "пустой",
             "description": "<p>Уникальный идентификатор устройства, например, MAC-адрес.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "template",
+            "defaultValue": "пустой",
+            "description": "<p>Название шаблона UI, которое используется в данный момент на устройстве.</p>"
           }
         ]
       }

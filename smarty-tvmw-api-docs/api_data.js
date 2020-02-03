@@ -806,6 +806,12 @@ define({ "api": [
             "optional": false,
             "field": "2",
             "description": "<p>Модуль Ads не подключен.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "3",
+            "description": "<p>Ошибка провайдера.</p>"
           }
         ]
       }

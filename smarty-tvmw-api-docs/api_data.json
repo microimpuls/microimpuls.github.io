@@ -694,11 +694,23 @@
           },
           {
             "group": "Parameter",
-            "type": "String",
+            "type": "Object[]",
             "optional": true,
             "field": "ad_context",
             "defaultValue": "пустое",
-            "description": "<p>Дополнительные параметры для рекламного провайдера.</p>"
+            "description": "<p>Дополнительные параметры для рекламного провайдера. Представляет из себя словарь формата {&quot;имя&quot;: &quot;значение&quot;}</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "ad_context.developer_mode",
+            "defaultValue": "0",
+            "description": "<p>Включает режим разработчика для провайдера DirectAd, при этом параметре сервер всегда будет отдавать тестовые данные</p>"
           }
         ]
       }
@@ -812,6 +824,12 @@
             "optional": false,
             "field": "3",
             "description": "<p>Ошибка провайдера.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "4",
+            "description": "<p>Неправильный формат параметра ad_context.</p>"
           }
         ]
       }

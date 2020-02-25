@@ -3188,6 +3188,549 @@
   },
   {
     "type": "get",
+    "url": "/channel/list/search/",
+    "title": "ChannelListSearch: поиск телепередач",
+    "name": "ChannelListSearch",
+    "group": "Channel",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "size": "5..",
+            "optional": false,
+            "field": "search",
+            "description": "<p>Строка поиска. Поиск осуществляется по названию канала.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "icon_width",
+            "description": "<p>Предпочитаемая ширина иконок телеканалов. Имя файла иконки будет: &lt;имя файла&gt;&lt;ширина&gt;_&lt;высота&gt;.&lt;расширение&gt;</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "icon_height",
+            "description": "<p>Предпочитаемая высота иконок телеканалов. Имя файла иконки будет: &lt;имя файла&gt;&lt;ширина&gt;_&lt;высота&gt;.&lt;расширение&gt;</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "compact",
+            "defaultValue": "0",
+            "description": "<p>Флаг, если задан, некоторые поля ответа будут пропущены (используется для оптимизации чтения ответа в приложении).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "account_sort",
+            "defaultValue": "1",
+            "description": "<p>Флаг, если передано значение 0, то сортировка аккаунта будет сброшена.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authkey",
+            "description": "<p>Ключ сессии.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть названия каналов и EPG. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "channels",
+            "description": "<p>Список телеканалов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.id",
+            "description": "<p>Идентификатор канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.name",
+            "description": "<p>Название канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.icon",
+            "description": "<p>URL-адрес иконки канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.category_id",
+            "description": "<p>Идентификатор категории.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.url",
+            "description": "<p>URL-адрес Live-потока телеканала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "channels.has_record",
+            "description": "<p>На канале включена запись передач.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.max_archive_duration",
+            "description": "<p>Максимально доступная глубина записи (в днях).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "channels.is_hidden",
+            "description": "<p>Канал скрыт из списка аккаунта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "channels.is_favorited",
+            "description": "<p>Канал добавлен в избранное аккаунта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "channels.is_parent_control",
+            "description": "<p>На канале включен родительский контроль.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.timeshift_offset",
+            "description": "<p>Канал вещается с часовым сдвигом, указанном в этом поле.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.channel_sort",
+            "description": "<p>Номер канала в списке каналов (для сортировки).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.option1",
+            "description": "<p>Значение параметра канала Option 1.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.option2",
+            "description": "<p>Значение параметра канала Option 2.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.option3",
+            "description": "<p>Значение параметра канала Option 3.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.telemeter",
+            "description": "<p>Телеизмеритель. Если указано, а также указаны параметры измерителя в PortalSettingsList, то приложению необходимо отправлять данные статистики просмотра канала на сервер измерителя.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.telemeter_account_name",
+            "description": "<p>AccountName на сервере измерителя.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.telemeter_tmsec_name",
+            "description": "<p>TmsecName на сервере измерителя.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.telemeter_cat_id",
+            "description": "<p>Категория контента на сервере измерителя.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.telemeter_vc_id",
+            "description": "<p>Идентификатор контента на сервере измерителя.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.telemeter_vc_version",
+            "description": "<p>Версия контента на сервере измерителя.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "channels.hbb",
+            "description": "<p>Список доступных HbbTV-провайдеров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.hbb.type",
+            "description": "<p>Тип провайдера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.hbb.id",
+            "description": "<p>ID провайдера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.hbb.api_key",
+            "description": "<p>Ключ API.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.hbb.channel_id",
+            "description": "<p>ID канала у провайдера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "channels.additional_categories",
+            "description": "<p>Список доп. категорий канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.additional_categories.id",
+            "description": "<p>Идентификатор доп. категории.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.additional_categories.name",
+            "description": "<p>Название доп. категории.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.program_id",
+            "description": "<p>Идентификатор текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_name",
+            "description": "<p>Название текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.program_begin_time",
+            "description": "<p>Начало текущей передачи EPG в формате Unix Timestamp UTC+0.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.program_end_time",
+            "description": "<p>Конец текущей передачи EPG в формате Unix Timestamp UTC+0.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.program_category_id",
+            "description": "<p>Идентификатор категории EPG текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_category",
+            "description": "<p>Название категории EPG текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_description",
+            "description": "<p>Описание текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_preview_url",
+            "description": "<p>URL-адрес обложки текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.program_rating",
+            "description": "<p>Возрастной рейтинг текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.program_meta",
+            "description": "<p>Дополнительные расширенные данные о передаче EPG (в формате JSON).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "channels.program_genres",
+            "description": "<p>Список жанров текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.program_genres.genre_id",
+            "description": "<p>Идентификатор жанра EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_genres.genre_name",
+            "description": "<p>Название жанра EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.next_program_id",
+            "description": "<p>Идентификатор следующей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.next_program_name",
+            "description": "<p>Название следующей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.next_program_begin_time",
+            "description": "<p>Начало следующей передачи EPG в формате Unix Timestamp UTC+0.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.next_program_end_time",
+            "description": "<p>Конец следующей передачи EPG в формате Unix Timestamp UTC+0.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.next_program_category_id",
+            "description": "<p>Идентификатор категории EPG следующей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.next_program_category",
+            "description": "<p>Название категории EPG следующей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.next_program_description",
+            "description": "<p>Описание следующей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.next_program_preview_url",
+            "description": "<p>URL-адрес обложки следующей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.next_program_rating",
+            "description": "<p>Возрастной рейтинг следующей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.next_program_meta",
+            "description": "<p>Дополнительные расширенные данные о следующей передаче EPG (в формате JSON).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "channels.next_program_genres",
+            "description": "<p>Список жанров следующей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.next_program_genres.genre_id",
+            "description": "<p>Идентификатор жанра EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.next_program_genres.genre_name",
+            "description": "<p>Название жанра EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "channels.show_in_all",
+            "description": "<p>Отображать канал в категории Все.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.pause_live_tv_shift",
+            "description": "<p>Временной сдвиг для функции Pause Live TV.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки, действие выполнено успешно.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Channel"
+  },
+  {
+    "type": "get",
     "url": "/premiere/list",
     "title": "ChannelPremieres: список нескольких ближайших премьер на канале",
     "name": "ChannelPremieres",

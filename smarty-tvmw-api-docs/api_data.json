@@ -9499,6 +9499,102 @@
   },
   {
     "type": "get",
+    "url": "/provider/list",
+    "title": "ProviderList: список провайдеров",
+    "name": "ProviderList",
+    "group": "Provider",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authkey",
+            "description": "<p>Ключ сессии.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "providers",
+            "description": "<p>Список провайдеров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "providers.id",
+            "description": "<p>Идентификатор провайдера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "providers.name",
+            "description": "<p>Название провайдера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1",
+              "2"
+            ],
+            "optional": false,
+            "field": "providers.type",
+            "description": "<p>Тип провайдера: 0 - интеграция с биллингом 1 - Megogo 2 - Tvzavr</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки, действие выполнено успешно.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Provider"
+  },
+  {
+    "type": "get",
     "url": "/radio/list",
     "title": "RadioList: список радиостанций",
     "name": "RadioList",
@@ -11500,6 +11596,21 @@
           {
             "group": "Parameter",
             "type": "String",
+            "optional": true,
+            "field": "provider",
+            "defaultValue": "пустой",
+            "description": "<p>Название провайдера.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "provider_id",
+            "description": "<p>ID провайдера. Приоритетнее, чем название, если указано оба.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
             "allowedValues": [
               "created_at",
               "premiere_date",
@@ -11558,15 +11669,6 @@
     },
     "success": {
       "fields": {
-        "Success 200": [
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "provider",
-            "description": "<p>Провайдер.</p>"
-          }
-        ],
         "Ответ": [
           {
             "group": "Ответ",
@@ -11857,7 +11959,7 @@
             "group": "Коды ошибок error",
             "optional": false,
             "field": "1",
-            "description": "<p>Провайдер не найден (если установлен параметр ).</p>"
+            "description": "<p>Провайдер не найден (если установлен параметр).</p>"
           }
         ]
       }

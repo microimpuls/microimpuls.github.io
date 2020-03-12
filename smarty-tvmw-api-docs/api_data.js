@@ -689,8 +689,7 @@ define({ "api": [
             "type": "String",
             "optional": true,
             "field": "device_uid",
-            "defaultValue": "пустое",
-            "description": "<p>Уникальный идентификатор устройства.</p>"
+            "description": "<p>Уникальный идентификатор (либо mac-адрес) устройства.</p>"
           },
           {
             "group": "Parameter",

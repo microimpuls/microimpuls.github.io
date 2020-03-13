@@ -7670,6 +7670,20 @@ define({ "api": [
             "group": "Ответ",
             "type": "String",
             "optional": false,
+            "field": "clients.api_key",
+            "description": "<p>Ключ API оператора.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "clients.api_url",
+            "description": "<p>URL API для оператора, если поле пустое -- необходимо использовать этот же URL.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
             "field": "clients.redirect_to_portal_url",
             "description": "<p>Адрес портала, на который необходимо сделать редирект приложения в случае, если поле заполнено.</p>"
           }

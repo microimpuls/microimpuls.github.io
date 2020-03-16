@@ -219,7 +219,7 @@ define({ "api": [
             ],
             "optional": true,
             "field": "allow_login_by_device_uid",
-            "defaultValue": "0",
+            "defaultValue": "1",
             "description": "<p>Разрешить авторизацию по UID устройства (без логина и пароля).</p>"
           },
           {

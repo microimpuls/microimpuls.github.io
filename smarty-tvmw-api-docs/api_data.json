@@ -356,7 +356,7 @@
   },
   {
     "type": "get",
-    "url": "/actor/list",
+    "url": "/actor/list/",
     "title": "ActorList: список актеров",
     "name": "ActorList",
     "group": "Actor",
@@ -839,7 +839,7 @@
   },
   {
     "type": "get",
-    "url": "/application/detail",
+    "url": "/application/detail/",
     "title": "ApplicationDetail: информация о приложении",
     "name": "ApplicationDetail",
     "group": "Application",
@@ -970,7 +970,7 @@
   },
   {
     "type": "get",
-    "url": "/application/exchange_data",
+    "url": "/application/exchange_data/",
     "title": "ApplicationExchangeData: данные о курсах валют для виджета курсов валют",
     "name": "ApplicationExchangeData",
     "group": "Application",
@@ -1061,7 +1061,7 @@
   },
   {
     "type": "get",
-    "url": "/application/list",
+    "url": "/application/list/",
     "title": "ApplicationList: список внешних приложений",
     "name": "ApplicationList",
     "group": "Application",
@@ -1231,7 +1231,7 @@
   },
   {
     "type": "get",
-    "url": "/application/rss_data",
+    "url": "/application/rss_data/",
     "title": "ApplicationRSSData: данные из новостной ленты",
     "name": "ApplicationRSSData",
     "group": "Application",
@@ -1329,7 +1329,7 @@
   },
   {
     "type": "get",
-    "url": "/application/weather_data",
+    "url": "/application/weather_data/",
     "title": "ApplicationWeatherData: данные о погоде для погодного виджета",
     "name": "ApplicationWeatherData",
     "group": "Application",
@@ -1894,7 +1894,7 @@
   },
   {
     "type": "get",
-    "url": "/camera/city/list",
+    "url": "/camera/city/list/",
     "title": "CameraCityList: список городов, в которых есть камеры",
     "name": "CameraCityList",
     "group": "Camera",
@@ -1978,7 +1978,7 @@
   },
   {
     "type": "get",
-    "url": "/camera/list",
+    "url": "/camera/list/",
     "title": "CameraList: список камер",
     "name": "CameraList",
     "group": "Camera",
@@ -2242,7 +2242,7 @@
   },
   {
     "type": "get",
-    "url": "/camera/url",
+    "url": "/camera/url/",
     "title": "CameraUrl: получение адреса потока камеры",
     "name": "CameraUrl",
     "group": "Camera",
@@ -2341,7 +2341,7 @@
   },
   {
     "type": "get",
-    "url": "/camera/category/list",
+    "url": "/camera/category/list/",
     "title": "CameraCategoryList: список категорий камер",
     "name": "CameraCategoryList",
     "group": "Category",
@@ -2561,7 +2561,7 @@
   },
   {
     "type": "get",
-    "url": "/channel/icon/list",
+    "url": "/channel/icon/list/",
     "title": "ChannelIconList: список URL-адресов иконок всех телеканалов",
     "name": "ChannelIconList",
     "group": "Channel",
@@ -2645,7 +2645,7 @@
   },
   {
     "type": "get",
-    "url": "/channel/list",
+    "url": "/channel/list/",
     "title": "ChannelList: список телеканалов",
     "name": "ChannelList",
     "group": "Channel",
@@ -3730,7 +3730,7 @@
   },
   {
     "type": "get",
-    "url": "/premiere/list",
+    "url": "/premiere/list/",
     "title": "ChannelPremieres: список нескольких ближайших премьер на канале",
     "name": "ChannelPremieres",
     "group": "Channel",
@@ -3921,7 +3921,7 @@
   },
   {
     "type": "get",
-    "url": "/channel/programs",
+    "url": "/channel/programs/",
     "title": "ChannelPrograms: список текущей и нескольких ближайших следующих телепередач EPG на канале",
     "name": "ChannelPrograms",
     "group": "Channel",
@@ -4305,7 +4305,7 @@
   },
   {
     "type": "get",
-    "url": "/customer/info",
+    "url": "/customer/info/",
     "title": "CustomerInfo: получение информации об абоненте",
     "name": "CustomerInfo",
     "group": "Customer",
@@ -4671,7 +4671,7 @@
   },
   {
     "type": "get",
-    "url": "/game/score/list",
+    "url": "/game/score/list/",
     "title": "GameScoreList: список заработанных очков в игре",
     "name": "GameScoreList",
     "group": "Game",
@@ -4754,7 +4754,7 @@
   },
   {
     "type": "get",
-    "url": "/game/score/save",
+    "url": "/game/score/save/",
     "title": "GameScoreSave: сохранить очередной результат игры",
     "name": "GameScoreSave",
     "group": "Game",
@@ -4869,7 +4869,7 @@
   },
   {
     "type": "get",
-    "url": "/game/scoreboard/list",
+    "url": "/game/scoreboard/list/",
     "title": "GameScoreboardList: таблица рекордов игры",
     "name": "GameScoreboardList",
     "group": "Game",
@@ -4993,7 +4993,7 @@
   },
   {
     "type": "get",
-    "url": "/genre/list",
+    "url": "/genre/list/",
     "title": "GenreList: список жанров VOD",
     "name": "GenreList",
     "group": "Genre",
@@ -5122,7 +5122,7 @@
   },
   {
     "type": "get",
-    "url": "/noauth/genre/list",
+    "url": "/noauth/genre/list/",
     "title": "NoAuthGenreList: список жанров (доступен без авторизации)",
     "name": "NoAuthGenreList",
     "group": "Genre",
@@ -5489,7 +5489,7 @@
   },
   {
     "type": "get",
-    "url": "/hbb/channel/info",
+    "url": "/hbb/channel/info/",
     "title": "HbbChannelInfo: Информация о HBB-провайдере на канале.",
     "name": "HbbChannelInfo",
     "group": "Hbb",
@@ -6786,7 +6786,7 @@
   },
   {
     "type": "post",
-    "url": "/payment/saved_card/pay",
+    "url": "/payment/saved_card/pay/",
     "title": "PaymentSavedCardPay: оплата сохранённой карты",
     "name": "PayBySavedCard",
     "group": "Payment",
@@ -6932,7 +6932,7 @@
   },
   {
     "type": "post",
-    "url": "/payment/create",
+    "url": "/payment/create/",
     "title": "PaymentCreate: создание платежа для абонента",
     "name": "PaymentCreate",
     "group": "Payment",
@@ -7100,7 +7100,7 @@
   },
   {
     "type": "get",
-    "url": "/payment/list",
+    "url": "/payment/list/",
     "title": "PaymentList: список финансовых операций абонента",
     "name": "PaymentList",
     "group": "Payment",
@@ -7191,7 +7191,7 @@
   },
   {
     "type": "post",
-    "url": "/payment/merchant_url",
+    "url": "/payment/merchant_url/",
     "title": "PaymentMerchantUrl: запрос URL страницы платежа мерчанта",
     "name": "PaymentMerchantUrl",
     "group": "Payment",
@@ -7302,7 +7302,7 @@
   },
   {
     "type": "post",
-    "url": "/payment/process",
+    "url": "/payment/process/",
     "title": "PaymentProcess: передача платежных данных шлюзу",
     "name": "PaymentProcess",
     "group": "Payment",
@@ -7483,7 +7483,7 @@
   },
   {
     "type": "post",
-    "url": "/payment/saved_card/list",
+    "url": "/payment/saved_card/list/",
     "title": "PaymentSavedCardList: запрос списка сохранённых пользователем карт",
     "name": "PaymentSavedCardList",
     "group": "Payment",
@@ -8098,7 +8098,7 @@
   },
   {
     "type": "get",
-    "url": "/program/category/channel/list",
+    "url": "/program/category/channel/list/",
     "title": "ProgramCategoryChannelList: список телеканалов с передачами в заданной категории \"ТВ по интересам\"",
     "name": "ProgramCategoryChannelList",
     "group": "ProgramCategory",
@@ -8629,7 +8629,7 @@
   },
   {
     "type": "get",
-    "url": "/program/category/list",
+    "url": "/program/category/list/",
     "title": "ProgramCategoryList: список категорий передач \"ТВ по интересам\"",
     "name": "ProgramCategoryList",
     "group": "ProgramCategory",
@@ -8728,7 +8728,7 @@
   },
   {
     "type": "get",
-    "url": "/program/genre/list",
+    "url": "/program/genre/list/",
     "title": "ProgramGenreList: список жанров телепрограмм",
     "name": "ProgramGenreList",
     "group": "ProgramGenre",
@@ -8820,7 +8820,7 @@
   },
   {
     "type": "get",
-    "url": "/program/detail",
+    "url": "/program/detail/",
     "title": "ProgramDetail: подробная информация о передаче (beta)",
     "name": "ProgramDetail",
     "group": "Program",
@@ -8933,7 +8933,7 @@
   },
   {
     "type": "get",
-    "url": "/program/list",
+    "url": "/program/list/",
     "title": "ProgramList: список телепередач в заданный промежуток времени",
     "name": "ProgramList",
     "group": "Program",
@@ -9512,7 +9512,7 @@
   },
   {
     "type": "get",
-    "url": "/provider/list",
+    "url": "/provider/list/",
     "title": "ProviderList: список провайдеров",
     "name": "ProviderList",
     "group": "Provider",
@@ -9608,7 +9608,7 @@
   },
   {
     "type": "get",
-    "url": "/radio/list",
+    "url": "/radio/list/",
     "title": "RadioList: список радиостанций",
     "name": "RadioList",
     "group": "Radio",
@@ -9749,7 +9749,7 @@
   },
   {
     "type": "get",
-    "url": "/settings/save",
+    "url": "/settings/save/",
     "title": "SettingsSave: сохранение настроек аккаунта",
     "name": "SettingsSave",
     "group": "Settings",
@@ -9944,7 +9944,7 @@
   },
   {
     "type": "get",
-    "url": "/noauth/video/detail",
+    "url": "/noauth/video/detail/",
     "title": "NoAuthVideoDetail: подробная информация о фильме (доступно без авторизации)",
     "name": "NoAuthVideoDetail",
     "group": "Video",
@@ -10314,7 +10314,7 @@
   },
   {
     "type": "get",
-    "url": "/noauth/video/list",
+    "url": "/noauth/video/list/",
     "title": "NoAuthVideoList: список фильмов (доступен без авторизации)",
     "name": "NoAuthVideoList",
     "group": "Video",
@@ -10771,7 +10771,7 @@
   },
   {
     "type": "get",
-    "url": "/noauth/video/url",
+    "url": "/noauth/video/url/",
     "title": "NoAuthVideoUrl: получение адреса потока фильма (доступно без авторизации, только для трейлеров)",
     "name": "NoAuthVideoUrl",
     "group": "Video",
@@ -10903,7 +10903,7 @@
   },
   {
     "type": "get",
-    "url": "/video/action",
+    "url": "/video/action/",
     "title": "VideoAction: покупка или аренда фильма",
     "name": "VideoAction",
     "group": "Video",
@@ -11013,7 +11013,7 @@
   },
   {
     "type": "get",
-    "url": "/video/detail",
+    "url": "/video/detail/",
     "title": "VideoDetail: подробная информация о фильме",
     "name": "VideoDetail",
     "group": "Video",
@@ -11983,7 +11983,7 @@
   },
   {
     "type": "get",
-    "url": "/video/rating/set",
+    "url": "/video/rating/set/",
     "title": "VideoRatingSet: выставление оценки фильма",
     "name": "VideoRatingSet",
     "group": "Video",
@@ -12167,7 +12167,7 @@
   },
   {
     "type": "get",
-    "url": "/video/subscription/cancel",
+    "url": "/video/subscription/cancel/",
     "title": "VideoSubscriptionCancel: отмена подписки",
     "name": "VideoSubscriptionCancel",
     "group": "Video",
@@ -12225,7 +12225,7 @@
   },
   {
     "type": "get",
-    "url": "/video/subscription/list",
+    "url": "/video/subscription/list/",
     "title": "VideoSubscriptionList: список доступных подписок",
     "name": "VideoSubscriptionList",
     "group": "Video",

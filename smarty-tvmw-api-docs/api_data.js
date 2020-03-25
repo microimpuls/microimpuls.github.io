@@ -8846,7 +8846,7 @@ define({ "api": [
   {
     "type": "get",
     "url": "/program/detail/",
-    "title": "ProgramDetail: подробная информация о передаче (beta)",
+    "title": "ProgramDetail: подробная информация о передаче",
     "name": "ProgramDetail",
     "group": "Program",
     "parameter": {
@@ -8858,6 +8858,14 @@ define({ "api": [
             "optional": false,
             "field": "pid",
             "description": "<p>Идентификатор передачи.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "cid",
+            "defaultValue": "0",
+            "description": "<p>Идентификатор канала.</p>"
           },
           {
             "group": "Parameter",
@@ -8936,6 +8944,66 @@ define({ "api": [
             "optional": false,
             "field": "error",
             "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "short_name",
+            "description": "<p>Краткое название передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "category",
+            "description": "<p>Название категории передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "preview",
+            "description": "<p>URL картинки передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "rating",
+            "description": "<p>Возрастной рейтинг.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "meta",
+            "description": "<p>Дополнительная информация о передаче в формате JSON.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "url",
+            "description": "<p>URL потока архивной записи передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "has_record",
+            "description": "<p>Существует ли запись передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "position",
+            "description": "<p>Последняя сохраненная позиция просмотра в секундах от начала передачи.</p>"
           }
         ]
       }

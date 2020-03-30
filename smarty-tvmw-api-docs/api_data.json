@@ -866,6 +866,14 @@
             "optional": false,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть название приложения.</p>"
           }
         ]
       }
@@ -1105,6 +1113,14 @@
             "field": "template",
             "defaultValue": "пустой",
             "description": "<p>Название шаблона UI, которое используется в данный момент на устройстве.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть названия приложений.</p>"
           }
         ]
       }

@@ -8881,7 +8881,7 @@ define({ "api": [
             "optional": false,
             "field": "cid",
             "defaultValue": "0",
-            "description": "<p>Идентификатор канала.</p>"
+            "description": "<p>Идентификатор канала (необходим для получения корректного значения поля has_record).</p>"
           },
           {
             "group": "Parameter",

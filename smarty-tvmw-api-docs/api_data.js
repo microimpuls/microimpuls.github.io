@@ -656,7 +656,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/tvmiddleware/ads/list/",
+    "url": "/ads/list/",
     "title": "AdsList: список рекламных блоков для канала",
     "name": "AdsList",
     "group": "Ads",

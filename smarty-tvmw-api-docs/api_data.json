@@ -506,7 +506,7 @@
   },
   {
     "type": "get",
-    "url": "/noauth/actor/list",
+    "url": "/noauth/actor/list/",
     "title": "NoAuthActorList список актеров (доступен без авторизации)",
     "name": "NoAuthActorList",
     "group": "Actor",
@@ -4120,7 +4120,7 @@
   },
   {
     "type": "get",
-    "url": "/channel/url",
+    "url": "/channel/url/",
     "title": "ChannelUrl: получение адреса потока телеканала",
     "name": "ChannelUrl",
     "group": "Channel",
@@ -9638,7 +9638,7 @@
   },
   {
     "type": "get",
-    "url": "/program/url",
+    "url": "/program/url/",
     "title": "ProgramUrl: получение адреса потока архивной записи",
     "name": "ProgramUrl",
     "group": "Program",

@@ -2460,6 +2460,17 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "subscribe_svod",
+            "description": "<p>Принудительно создаёт подписку megogo, если есть ассоциированный с тарифом обработчик API.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
             "optional": false,
             "field": "tariff_id",
             "description": "<p>Идентификатор тарифного пакета в Smarty.</p>"

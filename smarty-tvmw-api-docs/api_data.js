@@ -11447,6 +11447,13 @@ define({ "api": [
             "group": "Ответ",
             "type": "String",
             "optional": false,
+            "field": "screenshot_b_big",
+            "description": "<p>URL на размытый кадр из фильма большого размера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
             "field": "description",
             "description": "<p>Описание фильма.</p>"
           },

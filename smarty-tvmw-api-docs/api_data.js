@@ -7905,6 +7905,143 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/portal/client/search/",
+    "title": "PortalClientSearch: поиск дочерних Client ID",
+    "name": "PortalClientSearch",
+    "group": "Portal",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "search",
+            "description": "<p>Строка, по которой необходимо искать дочерние Client ID</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "api_key",
+            "description": "<p>API key.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "device",
+            "description": "<p>Системное название типа устройства.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "clients",
+            "description": "<p>Список дочерних Client ID.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "clients.id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "clients.name",
+            "description": "<p>Название оператора.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "clients.logo_url",
+            "description": "<p>URL логотипа оператора.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "clients.api_key",
+            "description": "<p>Ключ API оператора.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "clients.api_url",
+            "description": "<p>URL API для оператора, если поле пустое -- необходимо использовать этот же URL.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "clients.external_client_id",
+            "description": "<p>Внешний client ID оператора.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "clients.redirect_to_portal_url",
+            "description": "<p>Адрес портала, на который необходимо сделать редирект приложения в случае, если поле заполнено.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "clients.uid",
+            "description": "<p>Кодовый номер для быстрого поиска оператора в режиме мета-виджета.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Client ID не найден или не верный api_key.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Не передан параметр search.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Portal"
+  },
+  {
+    "type": "get",
     "url": "/portal/settings/list/",
     "title": "PortalSettingsList: получение настроек портала",
     "name": "PortalSettingsList",

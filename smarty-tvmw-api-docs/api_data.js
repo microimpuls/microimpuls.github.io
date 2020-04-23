@@ -12834,6 +12834,84 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "Object[]",
+            "optional": true,
+            "field": "audio_tracks",
+            "description": "<p>Список доступных звуковых дорожек у фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": true,
+            "field": "audio_tracks.index",
+            "description": "<p>Идентификатор аудиотрека. Используется для выбора звуковой дорожки и передается параметром в URL на стрим.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "audio_tracks.is_active",
+            "description": "<p>При значении 1 эта аудиодорожка активна.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": true,
+            "field": "audio_tracks.lang",
+            "description": "<p>Язык звуковой дорожки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": true,
+            "field": "audio_tracks.display_name",
+            "description": "<p>Отображаемое название языка звуковой дорожки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": true,
+            "field": "subtitles",
+            "description": "<p>Список доступных субтитров у фильм.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": true,
+            "field": "subtitles.index",
+            "description": "<p>Идентификатор субтитров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "allowedValues": [
+              "srt",
+              "smi"
+            ],
+            "optional": true,
+            "field": "subtitles.type",
+            "description": "<p>Тип субтитров. srt – текстовый формат субтитров программы SubRip (Используется на Web) smi – текстовый формат субтитров, основанный на SGML. (поддерживается в Smart TV)</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": true,
+            "field": "subtitles.lang",
+            "description": "<p>Язык субтитров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": true,
+            "field": "subtitles.url",
+            "description": "<p>Ссылка на файл субтитров.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "error",

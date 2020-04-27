@@ -5738,6 +5738,85 @@
   },
   {
     "type": "get",
+    "url": "/health/check/",
+    "title": "HealthCheck: проверка сессии аккаунта",
+    "name": "HealthCheck",
+    "group": "Health",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "check_db_conn",
+            "defaultValue": "0",
+            "description": "<p>Флаг осуществления проверки соединения в базами данных</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "usage",
+            "description": "<p>Значение нагрузки на сервер. Определяется как максимальное из отношений средней загрузки к максимальной средней загрузке и использованной памяти к максимальной использованой памяти. Максимальная средняя загрузка и максимальная использованная память задаются в конфигурационном файле.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "alive",
+            "description": "<p>Активны ли подключения к базам данных. Будет передан если check_db_conn=1</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "errors",
+            "description": "<p>Описание ошибок подключения к базам данных. Будет передан если check_db_conn=1</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Health"
+  },
+  {
+    "type": "get",
     "url": "/legal/document/accept/",
     "title": "LegalDocumentAccept: акцепт правового документа",
     "name": "LegalDocumentAccept",

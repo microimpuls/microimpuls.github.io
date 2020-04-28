@@ -5793,7 +5793,7 @@ define({ "api": [
             "group": "Ответ",
             "type": "String[]",
             "optional": false,
-            "field": "errors",
+            "field": "connection_errors",
             "description": "<p>Описание ошибок подключения к базам данных. Будет передан если check_db_conn=1</p>"
           }
         ]
@@ -5807,6 +5807,12 @@ define({ "api": [
             "optional": false,
             "field": "0",
             "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Параметры MAX_LA и MAX_USED_MEM в настройках Smarty не заданны или заданы некорректно.</p>"
           }
         ]
       }

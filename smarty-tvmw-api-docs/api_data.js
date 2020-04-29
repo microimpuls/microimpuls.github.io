@@ -8441,6 +8441,13 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "mvision_server_url",
+            "description": "<p>URL внешнего сервера MVision.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Number",
             "allowedValues": [
               "0",

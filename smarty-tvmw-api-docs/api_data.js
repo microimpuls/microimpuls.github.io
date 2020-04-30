@@ -754,6 +754,13 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "ads.display_order",
+            "description": "<p>Порядок показа роликов, 0 - по порядку, 1 - в случайно порядке.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "ads.provider",

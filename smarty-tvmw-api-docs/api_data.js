@@ -7731,7 +7731,7 @@ define({ "api": [
   {
     "type": "get",
     "url": "/portal/client/detail/",
-    "title": "PortalClientDetail: список дочерних Client ID",
+    "title": "PortalClientDetail: информация от дочернем Client ID",
     "name": "PortalClientDetail",
     "group": "Portal",
     "parameter": {

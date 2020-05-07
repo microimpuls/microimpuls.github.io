@@ -1878,7 +1878,7 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
@@ -7768,8 +7768,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "device",
+            "defaultValue": "пустой",
             "description": "<p>Системное название типа устройства.</p>"
           }
         ]
@@ -7833,6 +7834,13 @@
             "optional": false,
             "field": "uid",
             "description": "<p>Кодовый номер для быстрого поиска оператора в режиме мета-виджета.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
           }
         ]
       }
@@ -7897,8 +7905,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "device",
+            "defaultValue": "пустой",
             "description": "<p>Системное название типа устройства.</p>"
           }
         ]
@@ -7969,6 +7978,13 @@
             "optional": false,
             "field": "clients.uid",
             "description": "<p>Кодовый номер для быстрого поиска оператора в режиме мета-виджета.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
           }
         ]
       }
@@ -8491,6 +8507,13 @@
             "optional": false,
             "field": "available_country_phone_codes.country_code",
             "description": "<p>Телефонный код страны.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
           }
         ]
       }

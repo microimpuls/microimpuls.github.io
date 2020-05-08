@@ -665,31 +665,10 @@
         "Parameter": [
           {
             "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "api_key",
-            "description": "<p>API key.</p>"
-          },
-          {
-            "group": "Parameter",
             "type": "String",
             "optional": true,
             "field": "channel_id",
             "description": "<p>ID канала, для которого запрашиваются рекламные блоки</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device_uid",
-            "description": "<p>Уникальный идентификатор (либо mac-адрес) устройства.</p>"
           },
           {
             "group": "Parameter",
@@ -710,6 +689,35 @@
             "field": "ad_context.developer_mode",
             "defaultValue": "0",
             "description": "<p>Включает режим разработчика для провайдера DirectAd, при этом параметре сервер всегда будет отдавать тестовые данные</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "description": "<p>Уникальный идентификатор (либо mac-адрес) устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authkey",
+            "description": "<p>Ключ сессии.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
           }
         ]
       }
@@ -755,6 +763,10 @@
           {
             "group": "Ответ",
             "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
             "optional": false,
             "field": "ads.display_order",
             "description": "<p>Порядок показа роликов, 0 - по порядку, 1 - в случайно порядке.</p>"
@@ -4670,6 +4682,13 @@
             "group": "Ответ",
             "type": "Number",
             "optional": false,
+            "field": "games.account",
+            "description": "<p>Номер абонемента аккаунта, кому принадлежит рекорд.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
             "field": "error",
             "description": "<p>Код ошибки.</p>"
           }
@@ -4975,6 +4994,13 @@
             "optional": false,
             "field": "self-score",
             "description": "<p>Личный рекорд аккаунта (максимальное количество очков в игре).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "rank",
+            "description": "<p>Место в таблице рекордов.</p>"
           },
           {
             "group": "Ответ",
@@ -7522,6 +7548,13 @@
           },
           {
             "group": "Ответ",
+            "type": "Object",
+            "optional": false,
+            "field": "form_data",
+            "description": "<p>Форма платёжного шлюза, пустой объект, если не используется.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "error",
@@ -8324,6 +8357,13 @@
             "group": "Ответ",
             "type": "String",
             "optional": false,
+            "field": "custom_api_url",
+            "description": "<p>Переопределение адреса API.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
             "field": "custom_css_url",
             "description": "<p>URL на внешний CSS-файл для возможности переопределения стиля интерфейса, либо пустая строка.</p>"
           },
@@ -8684,6 +8724,13 @@
           {
             "group": "Ответ",
             "type": "Number",
+            "optional": false,
+            "field": "programs.channel_sort",
+            "description": "<p>Номер канала в списке каналов (для сортировки).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
             "allowedValues": [
               "0",
               "1"
@@ -8768,35 +8815,35 @@
             "group": "Ответ",
             "type": "Object[]",
             "optional": false,
-            "field": "channels.hbb",
+            "field": "programs.hbb",
             "description": "<p>Список доступных HbbTV-провайдеров.</p>"
           },
           {
             "group": "Ответ",
             "type": "Number",
             "optional": false,
-            "field": "channels.hbb.type",
+            "field": "programs.hbb.type",
             "description": "<p>Тип провайдера.</p>"
           },
           {
             "group": "Ответ",
             "type": "Number",
             "optional": false,
-            "field": "channels.hbb.id",
+            "field": "programs.hbb.id",
             "description": "<p>ID провайдера.</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
-            "field": "channels.hbb.api_key",
+            "field": "programs.hbb.api_key",
             "description": "<p>Ключ API.</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
-            "field": "channels.hbb.channel_id",
+            "field": "programs.hbb.channel_id",
             "description": "<p>ID канала у провайдера.</p>"
           },
           {

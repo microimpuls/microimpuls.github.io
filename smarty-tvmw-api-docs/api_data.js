@@ -2244,10 +2244,150 @@ define({ "api": [
           },
           {
             "group": "Ответ",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "cameras.program_meta",
             "description": "<p>Дополнительные расширенные данные о передаче EPG (в формате JSON).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "cameras.program_meta.extra_name",
+            "description": "<p>Подзаголовок.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "cameras.program_meta.extra_description",
+            "description": "<p>Дополнительное описание.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "cameras.program_meta.genres",
+            "description": "<p>Список жанров как они представлены в источнике EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "cameras.program_meta.participants",
+            "description": "<p>Список участников, принимавших участие в производстве.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "cameras.program_meta.participants.actor",
+            "description": "<p>Список актеров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "cameras.program_meta.participants.composer",
+            "description": "<p>Список композиторов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "cameras.program_meta.participants.director",
+            "description": "<p>Список режиссёров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "cameras.program_meta.participants.producer",
+            "description": "<p>Список продюсеров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "cameras.program_meta.countries",
+            "description": "<p>Список стран, участвовавших в производстве.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "cameras.program_meta.productions",
+            "description": "<p>Список студий занятых производством.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "cameras.program_meta.year",
+            "description": "<p>Год выпуска. Для сериалов указывается два года в формате YYYY-YYYY.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "cameras.program_meta.previews",
+            "description": "<p>Список ссылок на изображения превью.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "cameras.program_meta.tags",
+            "description": "<p>Список тегов как они представлены в источнике EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Boolean",
+            "optional": false,
+            "field": "cameras.program_meta.live",
+            "description": "<p>Прямой эфир.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "cameras.program_meta.sport_type",
+            "description": "<p>Для спортивных передач: название спорта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "cameras.program_meta.championship",
+            "description": "<p>Для спортивных передач: название чемпионата.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "cameras.program_meta.sport_rival1",
+            "description": "<p>Для спортивных передач: первая команда в чемпионате.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "cameras.program_meta.sport_rival2",
+            "description": "<p>Для спортивных передач: вторая команда в чемпионате.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "cameras.program_meta.kinopoisk",
+            "description": "<p>Рейтинг кинопоиска.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "cameras.program_meta.imdb",
+            "description": "<p>Рейтинг IMDB.</p>"
           },
           {
             "group": "Ответ",
@@ -3059,10 +3199,150 @@ define({ "api": [
           },
           {
             "group": "Ответ",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "channels.program_meta",
             "description": "<p>Дополнительные расширенные данные о передаче EPG (в формате JSON).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_meta.extra_name",
+            "description": "<p>Подзаголовок.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_meta.extra_description",
+            "description": "<p>Дополнительное описание.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.program_meta.genres",
+            "description": "<p>Список жанров как они представлены в источнике EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "channels.program_meta.participants",
+            "description": "<p>Список участников, принимавших участие в производстве.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.program_meta.participants.actor",
+            "description": "<p>Список актеров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.program_meta.participants.composer",
+            "description": "<p>Список композиторов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.program_meta.participants.director",
+            "description": "<p>Список режиссёров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.program_meta.participants.producer",
+            "description": "<p>Список продюсеров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.program_meta.countries",
+            "description": "<p>Список стран, участвовавших в производстве.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.program_meta.productions",
+            "description": "<p>Список студий занятых производством.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_meta.year",
+            "description": "<p>Год выпуска. Для сериалов указывается два года в формате YYYY-YYYY.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.program_meta.previews",
+            "description": "<p>Список ссылок на изображения превью.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.program_meta.tags",
+            "description": "<p>Список тегов как они представлены в источнике EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Boolean",
+            "optional": false,
+            "field": "channels.program_meta.live",
+            "description": "<p>Прямой эфир.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_meta.sport_type",
+            "description": "<p>Для спортивных передач: название спорта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_meta.championship",
+            "description": "<p>Для спортивных передач: название чемпионата.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_meta.sport_rival1",
+            "description": "<p>Для спортивных передач: первая команда в чемпионате.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_meta.sport_rival2",
+            "description": "<p>Для спортивных передач: вторая команда в чемпионате.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_meta.kinopoisk",
+            "description": "<p>Рейтинг кинопоиска.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_meta.imdb",
+            "description": "<p>Рейтинг IMDB.</p>"
           },
           {
             "group": "Ответ",
@@ -3150,10 +3430,150 @@ define({ "api": [
           },
           {
             "group": "Ответ",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "channels.next_program_meta",
             "description": "<p>Дополнительные расширенные данные о следующей передаче EPG (в формате JSON).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.next_program_meta.extra_name",
+            "description": "<p>Подзаголовок.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.next_program_meta.extra_description",
+            "description": "<p>Дополнительное описание.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.next_program_meta.genres",
+            "description": "<p>Список жанров как они представлены в источнике EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "channels.next_program_meta.participants",
+            "description": "<p>Список участников, принимавших участие в производстве.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.next_program_meta.participants.actor",
+            "description": "<p>Список актеров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.next_program_meta.participants.composer",
+            "description": "<p>Список композиторов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.next_program_meta.participants.director",
+            "description": "<p>Список режиссёров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.next_program_meta.participants.producer",
+            "description": "<p>Список продюсеров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.next_program_meta.countries",
+            "description": "<p>Список стран, участвовавших в производстве.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.next_program_meta.productions",
+            "description": "<p>Список студий занятых производством.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.next_program_meta.year",
+            "description": "<p>Год выпуска. Для сериалов указывается два года в формате YYYY-YYYY.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.next_program_meta.previews",
+            "description": "<p>Список ссылок на изображения превью.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.next_program_meta.tags",
+            "description": "<p>Список тегов как они представлены в источнике EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Boolean",
+            "optional": false,
+            "field": "channels.next_program_meta.live",
+            "description": "<p>Прямой эфир.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.next_program_meta.sport_type",
+            "description": "<p>Для спортивных передач: название спорта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.next_program_meta.championship",
+            "description": "<p>Для спортивных передач: название чемпионата.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.next_program_meta.sport_rival1",
+            "description": "<p>Для спортивных передач: первая команда в чемпионате.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.next_program_meta.sport_rival2",
+            "description": "<p>Для спортивных передач: вторая команда в чемпионате.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.next_program_meta.kinopoisk",
+            "description": "<p>Рейтинг кинопоиска.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.next_program_meta.imdb",
+            "description": "<p>Рейтинг IMDB.</p>"
           },
           {
             "group": "Ответ",
@@ -3602,10 +4022,150 @@ define({ "api": [
           },
           {
             "group": "Ответ",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "channels.program_meta",
             "description": "<p>Дополнительные расширенные данные о передаче EPG (в формате JSON).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_meta.extra_name",
+            "description": "<p>Подзаголовок.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_meta.extra_description",
+            "description": "<p>Дополнительное описание.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.program_meta.genres",
+            "description": "<p>Список жанров как они представлены в источнике EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "channels.program_meta.participants",
+            "description": "<p>Список участников, принимавших участие в производстве.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.program_meta.participants.actor",
+            "description": "<p>Список актеров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.program_meta.participants.composer",
+            "description": "<p>Список композиторов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.program_meta.participants.director",
+            "description": "<p>Список режиссёров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.program_meta.participants.producer",
+            "description": "<p>Список продюсеров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.program_meta.countries",
+            "description": "<p>Список стран, участвовавших в производстве.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.program_meta.productions",
+            "description": "<p>Список студий занятых производством.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_meta.year",
+            "description": "<p>Год выпуска. Для сериалов указывается два года в формате YYYY-YYYY.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.program_meta.previews",
+            "description": "<p>Список ссылок на изображения превью.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.program_meta.tags",
+            "description": "<p>Список тегов как они представлены в источнике EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Boolean",
+            "optional": false,
+            "field": "channels.program_meta.live",
+            "description": "<p>Прямой эфир.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_meta.sport_type",
+            "description": "<p>Для спортивных передач: название спорта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_meta.championship",
+            "description": "<p>Для спортивных передач: название чемпионата.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_meta.sport_rival1",
+            "description": "<p>Для спортивных передач: первая команда в чемпионате.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_meta.sport_rival2",
+            "description": "<p>Для спортивных передач: вторая команда в чемпионате.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_meta.kinopoisk",
+            "description": "<p>Рейтинг кинопоиска.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_meta.imdb",
+            "description": "<p>Рейтинг IMDB.</p>"
           },
           {
             "group": "Ответ",
@@ -3693,10 +4253,150 @@ define({ "api": [
           },
           {
             "group": "Ответ",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "channels.next_program_meta",
             "description": "<p>Дополнительные расширенные данные о следующей передаче EPG (в формате JSON).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.next_program_meta.extra_name",
+            "description": "<p>Подзаголовок.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.next_program_meta.extra_description",
+            "description": "<p>Дополнительное описание.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.next_program_meta.genres",
+            "description": "<p>Список жанров как они представлены в источнике EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "channels.next_program_meta.participants",
+            "description": "<p>Список участников, принимавших участие в производстве.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.next_program_meta.participants.actor",
+            "description": "<p>Список актеров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.next_program_meta.participants.composer",
+            "description": "<p>Список композиторов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.next_program_meta.participants.director",
+            "description": "<p>Список режиссёров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.next_program_meta.participants.producer",
+            "description": "<p>Список продюсеров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.next_program_meta.countries",
+            "description": "<p>Список стран, участвовавших в производстве.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.next_program_meta.productions",
+            "description": "<p>Список студий занятых производством.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.next_program_meta.year",
+            "description": "<p>Год выпуска. Для сериалов указывается два года в формате YYYY-YYYY.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.next_program_meta.previews",
+            "description": "<p>Список ссылок на изображения превью.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.next_program_meta.tags",
+            "description": "<p>Список тегов как они представлены в источнике EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Boolean",
+            "optional": false,
+            "field": "channels.next_program_meta.live",
+            "description": "<p>Прямой эфир.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.next_program_meta.sport_type",
+            "description": "<p>Для спортивных передач: название спорта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.next_program_meta.championship",
+            "description": "<p>Для спортивных передач: название чемпионата.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.next_program_meta.sport_rival1",
+            "description": "<p>Для спортивных передач: первая команда в чемпионате.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.next_program_meta.sport_rival2",
+            "description": "<p>Для спортивных передач: вторая команда в чемпионате.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.next_program_meta.kinopoisk",
+            "description": "<p>Рейтинг кинопоиска.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.next_program_meta.imdb",
+            "description": "<p>Рейтинг IMDB.</p>"
           },
           {
             "group": "Ответ",
@@ -3927,6 +4627,146 @@ define({ "api": [
             "optional": false,
             "field": "premieres.program_meta",
             "description": "<p>Дополнительная информация о премьере в формате JSON.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "premieres.program_meta.extra_name",
+            "description": "<p>Подзаголовок.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "premieres.program_meta.extra_description",
+            "description": "<p>Дополнительное описание.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "premieres.program_meta.genres",
+            "description": "<p>Список жанров как они представлены в источнике EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "premieres.program_meta.participants",
+            "description": "<p>Список участников, принимавших участие в производстве.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "premieres.program_meta.participants.actor",
+            "description": "<p>Список актеров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "premieres.program_meta.participants.composer",
+            "description": "<p>Список композиторов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "premieres.program_meta.participants.director",
+            "description": "<p>Список режиссёров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "premieres.program_meta.participants.producer",
+            "description": "<p>Список продюсеров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "premieres.program_meta.countries",
+            "description": "<p>Список стран, участвовавших в производстве.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "premieres.program_meta.productions",
+            "description": "<p>Список студий занятых производством.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "premieres.program_meta.year",
+            "description": "<p>Год выпуска. Для сериалов указывается два года в формате YYYY-YYYY.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "premieres.program_meta.previews",
+            "description": "<p>Список ссылок на изображения превью.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "premieres.program_meta.tags",
+            "description": "<p>Список тегов как они представлены в источнике EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Boolean",
+            "optional": false,
+            "field": "premieres.program_meta.live",
+            "description": "<p>Прямой эфир.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "premieres.program_meta.sport_type",
+            "description": "<p>Для спортивных передач: название спорта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "premieres.program_meta.championship",
+            "description": "<p>Для спортивных передач: название чемпионата.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "premieres.program_meta.sport_rival1",
+            "description": "<p>Для спортивных передач: первая команда в чемпионате.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "premieres.program_meta.sport_rival2",
+            "description": "<p>Для спортивных передач: вторая команда в чемпионате.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "premieres.program_meta.kinopoisk",
+            "description": "<p>Рейтинг кинопоиска.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "premieres.program_meta.imdb",
+            "description": "<p>Рейтинг IMDB.</p>"
           },
           {
             "group": "Ответ",
@@ -6898,6 +7738,146 @@ define({ "api": [
             "optional": false,
             "field": "notifications.program_meta",
             "description": "<p>Дополнительная информация о передаче в формате JSON.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "notifications.program_meta.extra_name",
+            "description": "<p>Подзаголовок.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "notifications.program_meta.extra_description",
+            "description": "<p>Дополнительное описание.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "notifications.program_meta.genres",
+            "description": "<p>Список жанров как они представлены в источнике EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "notifications.program_meta.participants",
+            "description": "<p>Список участников, принимавших участие в производстве.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "notifications.program_meta.participants.actor",
+            "description": "<p>Список актеров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "notifications.program_meta.participants.composer",
+            "description": "<p>Список композиторов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "notifications.program_meta.participants.director",
+            "description": "<p>Список режиссёров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "notifications.program_meta.participants.producer",
+            "description": "<p>Список продюсеров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "notifications.program_meta.countries",
+            "description": "<p>Список стран, участвовавших в производстве.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "notifications.program_meta.productions",
+            "description": "<p>Список студий занятых производством.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "notifications.program_meta.year",
+            "description": "<p>Год выпуска. Для сериалов указывается два года в формате YYYY-YYYY.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "notifications.program_meta.previews",
+            "description": "<p>Список ссылок на изображения превью.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "notifications.program_meta.tags",
+            "description": "<p>Список тегов как они представлены в источнике EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Boolean",
+            "optional": false,
+            "field": "notifications.program_meta.live",
+            "description": "<p>Прямой эфир.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "notifications.program_meta.sport_type",
+            "description": "<p>Для спортивных передач: название спорта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "notifications.program_meta.championship",
+            "description": "<p>Для спортивных передач: название чемпионата.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "notifications.program_meta.sport_rival1",
+            "description": "<p>Для спортивных передач: первая команда в чемпионате.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "notifications.program_meta.sport_rival2",
+            "description": "<p>Для спортивных передач: вторая команда в чемпионате.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "notifications.program_meta.kinopoisk",
+            "description": "<p>Рейтинг кинопоиска.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "notifications.program_meta.imdb",
+            "description": "<p>Рейтинг IMDB.</p>"
           }
         ]
       }
@@ -8981,6 +9961,146 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.program_meta.extra_name",
+            "description": "<p>Подзаголовок.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.program_meta.extra_description",
+            "description": "<p>Дополнительное описание.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "programs.program_meta.genres",
+            "description": "<p>Список жанров как они представлены в источнике EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "programs.program_meta.participants",
+            "description": "<p>Список участников, принимавших участие в производстве.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "programs.program_meta.participants.actor",
+            "description": "<p>Список актеров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "programs.program_meta.participants.composer",
+            "description": "<p>Список композиторов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "programs.program_meta.participants.director",
+            "description": "<p>Список режиссёров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "programs.program_meta.participants.producer",
+            "description": "<p>Список продюсеров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "programs.program_meta.countries",
+            "description": "<p>Список стран, участвовавших в производстве.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "programs.program_meta.productions",
+            "description": "<p>Список студий занятых производством.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.program_meta.year",
+            "description": "<p>Год выпуска. Для сериалов указывается два года в формате YYYY-YYYY.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "programs.program_meta.previews",
+            "description": "<p>Список ссылок на изображения превью.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "programs.program_meta.tags",
+            "description": "<p>Список тегов как они представлены в источнике EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Boolean",
+            "optional": false,
+            "field": "programs.program_meta.live",
+            "description": "<p>Прямой эфир.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.program_meta.sport_type",
+            "description": "<p>Для спортивных передач: название спорта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.program_meta.championship",
+            "description": "<p>Для спортивных передач: название чемпионата.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.program_meta.sport_rival1",
+            "description": "<p>Для спортивных передач: первая команда в чемпионате.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.program_meta.sport_rival2",
+            "description": "<p>Для спортивных передач: вторая команда в чемпионате.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.program_meta.kinopoisk",
+            "description": "<p>Рейтинг кинопоиска.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.program_meta.imdb",
+            "description": "<p>Рейтинг IMDB.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Object[]",
             "optional": false,
             "field": "programs.program_genres",
@@ -9069,6 +10189,146 @@ define({ "api": [
             "optional": false,
             "field": "programs.next_program_meta",
             "description": "<p>Дополнительная информация о следующей передаче в формате JSON.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.next_program_meta.extra_name",
+            "description": "<p>Подзаголовок.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.next_program_meta.extra_description",
+            "description": "<p>Дополнительное описание.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "programs.next_program_meta.genres",
+            "description": "<p>Список жанров как они представлены в источнике EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "programs.next_program_meta.participants",
+            "description": "<p>Список участников, принимавших участие в производстве.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "programs.next_program_meta.participants.actor",
+            "description": "<p>Список актеров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "programs.next_program_meta.participants.composer",
+            "description": "<p>Список композиторов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "programs.next_program_meta.participants.director",
+            "description": "<p>Список режиссёров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "programs.next_program_meta.participants.producer",
+            "description": "<p>Список продюсеров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "programs.next_program_meta.countries",
+            "description": "<p>Список стран, участвовавших в производстве.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "programs.next_program_meta.productions",
+            "description": "<p>Список студий занятых производством.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.next_program_meta.year",
+            "description": "<p>Год выпуска. Для сериалов указывается два года в формате YYYY-YYYY.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "programs.next_program_meta.previews",
+            "description": "<p>Список ссылок на изображения превью.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "programs.next_program_meta.tags",
+            "description": "<p>Список тегов как они представлены в источнике EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Boolean",
+            "optional": false,
+            "field": "programs.next_program_meta.live",
+            "description": "<p>Прямой эфир.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.next_program_meta.sport_type",
+            "description": "<p>Для спортивных передач: название спорта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.next_program_meta.championship",
+            "description": "<p>Для спортивных передач: название чемпионата.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.next_program_meta.sport_rival1",
+            "description": "<p>Для спортивных передач: первая команда в чемпионате.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.next_program_meta.sport_rival2",
+            "description": "<p>Для спортивных передач: вторая команда в чемпионате.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.next_program_meta.kinopoisk",
+            "description": "<p>Рейтинг кинопоиска.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.next_program_meta.imdb",
+            "description": "<p>Рейтинг IMDB.</p>"
           },
           {
             "group": "Ответ",
@@ -9909,6 +11169,146 @@ define({ "api": [
             "optional": false,
             "field": "results.program_meta",
             "description": "<p>Дополнительная информация о передаче в формате JSON.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "results.program_meta.extra_name",
+            "description": "<p>Подзаголовок.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "results.program_meta.extra_description",
+            "description": "<p>Дополнительное описание.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "results.program_meta.genres",
+            "description": "<p>Список жанров как они представлены в источнике EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "results.program_meta.participants",
+            "description": "<p>Список участников, принимавших участие в производстве.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "results.program_meta.participants.actor",
+            "description": "<p>Список актеров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "results.program_meta.participants.composer",
+            "description": "<p>Список композиторов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "results.program_meta.participants.director",
+            "description": "<p>Список режиссёров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "results.program_meta.participants.producer",
+            "description": "<p>Список продюсеров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "results.program_meta.countries",
+            "description": "<p>Список стран, участвовавших в производстве.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "results.program_meta.productions",
+            "description": "<p>Список студий занятых производством.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "results.program_meta.year",
+            "description": "<p>Год выпуска. Для сериалов указывается два года в формате YYYY-YYYY.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "results.program_meta.previews",
+            "description": "<p>Список ссылок на изображения превью.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "results.program_meta.tags",
+            "description": "<p>Список тегов как они представлены в источнике EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Boolean",
+            "optional": false,
+            "field": "results.program_meta.live",
+            "description": "<p>Прямой эфир.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "results.program_meta.sport_type",
+            "description": "<p>Для спортивных передач: название спорта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "results.program_meta.championship",
+            "description": "<p>Для спортивных передач: название чемпионата.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "results.program_meta.sport_rival1",
+            "description": "<p>Для спортивных передач: первая команда в чемпионате.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "results.program_meta.sport_rival2",
+            "description": "<p>Для спортивных передач: вторая команда в чемпионате.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "results.program_meta.kinopoisk",
+            "description": "<p>Рейтинг кинопоиска.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "results.program_meta.imdb",
+            "description": "<p>Рейтинг IMDB.</p>"
           },
           {
             "group": "Ответ",

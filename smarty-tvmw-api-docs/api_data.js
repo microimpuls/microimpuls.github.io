@@ -422,6 +422,14 @@ define({ "api": [
             "field": "lang",
             "defaultValue": "пустое",
             "description": "<p>Язык, на котором необходимо вернуть имена актеров. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "vid",
+            "defaultValue": "пустое",
+            "description": "<p>Идентификатор фильма. Если параметр не передан, то будут отображены все актеры.</p>"
           }
         ]
       }
@@ -572,6 +580,14 @@ define({ "api": [
             "field": "lang",
             "defaultValue": "пустое",
             "description": "<p>Язык, на котором необходимо вернуть имена актеров. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "vid",
+            "defaultValue": "пустое",
+            "description": "<p>Идентификатор фильма. Если параметр не передан, то будут отображены все актеры.</p>"
           }
         ]
       }

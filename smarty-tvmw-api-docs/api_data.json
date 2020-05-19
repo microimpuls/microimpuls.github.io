@@ -14532,5 +14532,169 @@
     "version": "1.40.0",
     "filename": "../../../tvmiddleware/api.py",
     "groupTitle": "Video"
+  },
+  {
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authkey",
+            "description": "<p>Ключ сессии.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть имя актера.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "aid",
+            "description": "<p>Идентификатор актера.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Идентификатор актера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>Имя актера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "photo",
+            "description": "<p>URL-адрес на фотографию актера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "country",
+            "description": "<p>Страна рождения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "gender",
+            "description": "<p>Пол.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "birthdate",
+            "description": "<p>Дата рождения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "profession",
+            "description": "<p>Профессия.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "biography",
+            "description": "<p>Биография.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "genres",
+            "description": "<p>жанры фильмов, в которых снимался актер.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "genres.id",
+            "description": "<p>Идентификатор жанра.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "genres.name",
+            "description": "<p>Название жанра.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "genres.is_category",
+            "description": "<p>Является ли жанр категорией.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки, действие выполнено успешно.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Актер не найден.</p>"
+          }
+        ]
+      }
+    },
+    "type": "",
+    "url": "",
+    "version": "0.0.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "group": "_home_gitlab_runner_builds_3bfe827a_0_microimpuls_smarty_tvmiddleware_api_py",
+    "groupTitle": "_home_gitlab_runner_builds_3bfe827a_0_microimpuls_smarty_tvmiddleware_api_py",
+    "name": ""
   }
 ]

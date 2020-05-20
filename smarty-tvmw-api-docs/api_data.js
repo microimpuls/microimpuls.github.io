@@ -357,7 +357,7 @@ define({ "api": [
   {
     "type": "get",
     "url": "/actor/detail/",
-    "title": "ActorDetail информация об аередаче",
+    "title": "ActorDetail информация об актере",
     "name": "ActorDetail",
     "group": "Actor",
     "parameter": {

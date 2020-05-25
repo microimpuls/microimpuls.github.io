@@ -6793,7 +6793,7 @@ define({ "api": [
   {
     "type": "get",
     "url": "/health/check/",
-    "title": "HealthCheck: проверка сессии аккаунта",
+    "title": "HealthCheck: информация о текущей нагрузке",
     "name": "HealthCheck",
     "group": "Health",
     "parameter": {

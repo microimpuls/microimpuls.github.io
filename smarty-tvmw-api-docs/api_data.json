@@ -2210,20 +2210,6 @@
           },
           {
             "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
             "type": "Number",
             "optional": false,
             "field": "city_id",
@@ -2235,6 +2221,32 @@
             "optional": false,
             "field": "category_id",
             "description": "<p>ID категории.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "reject_multicast",
+            "defaultValue": "0",
+            "description": "<p>Флаг, если передано значение 1, то ссылки на мультикаст не будут возвращены.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authkey",
+            "description": "<p>Ключ сессии.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
           },
           {
             "group": "Parameter",
@@ -3052,6 +3064,18 @@
             "field": "account_sort",
             "defaultValue": "1",
             "description": "<p>Флаг, если передано значение 0, то сортировка аккаунта будет сброшена.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "reject_multicast",
+            "defaultValue": "0",
+            "description": "<p>Флаг, если передано значение 1, то ссылки на мультикаст не будут возвращены.</p>"
           },
           {
             "group": "Parameter",
@@ -9796,6 +9820,18 @@
             "field": "compact",
             "defaultValue": "0",
             "description": "<p>При значении 1 из ответа сервера будут исключены дополнительные поля, например, информация о следующей передаче.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "reject_multicast",
+            "defaultValue": "0",
+            "description": "<p>Флаг, если передано значение 1, то ссылки на мультикаст не будут возвращены.</p>"
           },
           {
             "group": "Parameter",

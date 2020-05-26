@@ -12385,6 +12385,18 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "1",
+              "2",
+              "3"
+            ],
+            "optional": false,
+            "field": "video_source",
+            "description": "<p>Источник видео. 1 - Внутренний источник. 2 - Внешний провайдер фильмов. 3 - архивное EPG.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Object[]",
             "optional": false,
             "field": "actors_info",
@@ -12554,6 +12566,42 @@ define({ "api": [
             "field": "premiere",
             "defaultValue": "0",
             "description": "<p>Фильтр по премьерам. При значении 1 в выборку попадут только те фильмы, дата премьеры которых не ранее количества дней, заданного константой TVMIDDLEWARE_VIDEO_PREMIERE_DAYS в настройках Smarty.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "source_internal",
+            "defaultValue": "1",
+            "description": "<p>Фильтр по источнику фильмов. При значении 1 в выборку попадут обьекты у которых не указан внешний источник. При значении 0 из выборки будут исключены объекты у которых не указан внешний источник.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "source_external",
+            "defaultValue": "1",
+            "description": "<p>Фильтр по источнику фильмов. При значении 1 в выборку попадут обьекты у которых внешним источником является провайдер фильмов. При значении 0 из выборки будут исключены объекты у которых внешним источником является провайдер фильмов.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "source_epg",
+            "defaultValue": "0",
+            "description": "<p>Фильтр по источнику фильмов. При значении 1 в выборку попадут обьекты из архивов EPG. При значении 0 из выборки будут исключены объекты  из архивов EPG.</p>"
           },
           {
             "group": "Parameter",
@@ -12881,6 +12929,18 @@ define({ "api": [
             "optional": false,
             "field": "videos.is_purchased",
             "description": "<p>Куплен ли фильм абонентом.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "1",
+              "2",
+              "3"
+            ],
+            "optional": false,
+            "field": "videos.video_source",
+            "description": "<p>Источник видео. 1 - Внутренний источник. 2 - Внешний провайдер фильмов. 3 - архивное EPG.</p>"
           },
           {
             "group": "Ответ",
@@ -13527,6 +13587,18 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "1",
+              "2",
+              "3"
+            ],
+            "optional": false,
+            "field": "video_source",
+            "description": "<p>Источник видео. 1 - Внутренний источник. 2 - Внешний провайдер фильмов. 3 - архивное EPG.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Object[]",
             "optional": false,
             "field": "actors_info",
@@ -13674,6 +13746,42 @@ define({ "api": [
             "field": "premiere",
             "defaultValue": "0",
             "description": "<p>Фильтр по премьерам. При значении 1 в выборку попадут только те фильмы, дата премьеры которых не ранее количества дней, заданного константой TVMIDDLEWARE_VIDEO_PREMIERE_DAYS в настройках Smarty.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "source_internal",
+            "defaultValue": "1",
+            "description": "<p>Фильтр по источнику фильмов. При значении 1 в выборку попадут обьекты у которых не указан внешний источник. При значении 0 из выборки будут исключены объекты у которых не указан внешний источник.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "source_external",
+            "defaultValue": "1",
+            "description": "<p>Фильтр по источнику фильмов. При значении 1 в выборку попадут обьекты у которых внешним источником является провайдер фильмов. При значении 0 из выборки будут исключены объекты у которых внешним источником является провайдер фильмов.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "source_epg",
+            "defaultValue": "0",
+            "description": "<p>Фильтр по источнику фильмов. При значении 1 в выборку попадут обьекты из архивов EPG. При значении 0 из выборки будут исключены объекты  из архивов EPG.</p>"
           },
           {
             "group": "Parameter",
@@ -14094,6 +14202,18 @@ define({ "api": [
             "optional": false,
             "field": "videos.is_purchased",
             "description": "<p>Куплен ли фильм абонентом.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "1",
+              "2",
+              "3"
+            ],
+            "optional": false,
+            "field": "videos.video_source",
+            "description": "<p>Источник видео. 1 - Внутренний источник. 2 - Внешний провайдер фильмов. 3 - архивное EPG.</p>"
           },
           {
             "group": "Ответ",

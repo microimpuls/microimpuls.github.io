@@ -3285,6 +3285,18 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1",
+              "2"
+            ],
+            "optional": false,
+            "field": "channels.aspect_ratio",
+            "description": "<p>Соотношение сторон данного канала. 0 - Авто. 1 - 16:9. 2 - 4:3.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Object[]",
             "optional": false,
             "field": "channels.hbb",
@@ -4105,6 +4117,18 @@ define({ "api": [
             "optional": false,
             "field": "channels.telemeter_vc_version",
             "description": "<p>Версия контента на сервере измерителя.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1",
+              "2"
+            ],
+            "optional": false,
+            "field": "channels.aspect_ratio",
+            "description": "<p>Соотношение сторон данного канала. 0 - Авто. 1 - 16:9. 2 - 4:3.</p>"
           },
           {
             "group": "Ответ",
@@ -10084,6 +10108,18 @@ define({ "api": [
             "optional": false,
             "field": "programs.telemeter_vc_version",
             "description": "<p>Версия контента на сервере измерителя.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1",
+              "2"
+            ],
+            "optional": false,
+            "field": "programs.aspect_ratio",
+            "description": "<p>Соотношение сторон данной передачи. 0 - Авто. 1 - 16:9. 2 - 4:3.</p>"
           },
           {
             "group": "Ответ",

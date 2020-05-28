@@ -424,8 +424,22 @@ define({ "api": [
             "group": "Ответ",
             "type": "String",
             "optional": false,
+            "field": "name_orig",
+            "description": "<p>Имя актера на оригинальном языке.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
             "field": "photo",
             "description": "<p>URL-адрес на фотографию актера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "screenshot_b_big",
+            "description": "<p>URL-адрес на размытый кадр с актером.</p>"
           },
           {
             "group": "Ответ",

@@ -7094,6 +7094,14 @@
             "field": "authkey",
             "defaultValue": "пустое",
             "description": "<p>Авторизационный ключ сессии.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть имя и текст правового документа. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -7228,6 +7236,14 @@
             "field": "authkey",
             "defaultValue": "пустое",
             "description": "<p>Авторизационный ключ сессии.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть имена правовых документов. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }

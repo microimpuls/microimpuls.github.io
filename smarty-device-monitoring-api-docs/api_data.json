@@ -850,5 +850,86 @@
     "version": "1.0.0",
     "filename": "../../../device_monitoring/api.py",
     "groupTitle": "DeviceMonitoring"
+  },
+  {
+    "type": "post",
+    "url": "/password/generate/",
+    "title": "PasswordGenerate: создание на сервере пароля для входа в панель администратора на устройстве",
+    "name": "Password",
+    "group": "DeviceMonitoring",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "uid",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "public_key",
+            "description": "<p>Публичный ключ RSA.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "password",
+            "description": "<p>Пароль, зашифрованный публичным ключом, перекодированный с помощью base64.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": true,
+            "field": "error_message",
+            "description": "<p>Текст ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Отсутствует или неверный обязательный параметр, подробнее в error_message.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Ключ неверный или не поддерживается.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "filename": "../../../device_monitoring/api.py",
+    "groupTitle": "DeviceMonitoring"
   }
 ]

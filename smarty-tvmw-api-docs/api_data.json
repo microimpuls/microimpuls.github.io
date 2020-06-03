@@ -9761,6 +9761,13 @@
           },
           {
             "group": "Ответ",
+            "type": "Object",
+            "optional": false,
+            "field": "portal_config",
+            "description": "<p>Конфигурация портала.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Object[]",
             "optional": false,
             "field": "available_country_phone_codes",

@@ -6911,6 +6911,13 @@ define({ "api": [
             "optional": false,
             "field": "connection_errors",
             "description": "<p>Описание ошибок подключения к базам данных. Будет передан если check_db_conn=1</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "reserved_server_addresses",
+            "description": "<p>Список резервных адресов Smarty</p>"
           }
         ]
       }

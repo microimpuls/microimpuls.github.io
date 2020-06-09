@@ -1990,7 +1990,7 @@ define({ "api": [
             "group": "Коды ошибок error",
             "optional": false,
             "field": "4",
-            "description": "<p>Неверный API key.</p>"
+            "description": "<p>Неверный API key или client_id.</p>"
           },
           {
             "group": "Коды ошибок error",
@@ -2208,6 +2208,145 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/camera/detail",
+    "title": "CameraDetail: подробная информация о камере",
+    "name": "CameraDetail",
+    "group": "Camera",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "cid",
+            "description": "<p>Идентификатор камеры.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authkey",
+            "description": "<p>Ключ сессии.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>идентификатор камеры.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "actions",
+            "description": "<p>Варианты просмотра или покупки доступа к камере. Формируется исходя из тарифных пакетов, доступных абоненту/аккаунту, и подключенных для данной камеры.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "actions.action",
+            "description": "<p>Имя действия, одно из зарезервированных значений: get_camera_url – получить адрес потока; subscribe – купить подписку на пакет.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "actions.tariff_id",
+            "description": "<p>Идентификатор тарифного пакета.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "actions.caption",
+            "description": "<p>Название действия для отображения в интерфейсе.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "actions.price",
+            "description": "<p>Стоимость покупки за полный период.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Boolean",
+            "optional": false,
+            "field": "actions.periodical",
+            "description": "<p>Флаг того, что действие будет возобновляемым.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "actions.activation_price",
+            "description": "<p>Стоимость покупки с учетом платежного периода аккаунта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>Название камеры.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Метод не совместим со старым биллингом.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Camera"
+  },
+  {
+    "type": "get",
     "url": "/camera/list/",
     "title": "CameraList: список камер",
     "name": "CameraList",
@@ -2343,6 +2482,17 @@ define({ "api": [
             "optional": false,
             "field": "cameras.has_record",
             "description": "<p>На камере включена запись передач.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "cameras.has_subscription",
+            "description": "<p>На камеру оформлена подписка.</p>"
           },
           {
             "group": "Ответ",
@@ -2943,6 +3093,266 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/channel/action",
+    "title": "ChannelAction: подписка на канал или получение ссылки на него",
+    "name": "ChannelAction",
+    "group": "Channel",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "cid",
+            "description": "<p>Идентификатор канала.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "action",
+            "description": "<p>Действие. Должно быть значением из списка actions из ChannelDetail.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "tariff_id",
+            "description": "<p>Тариф, по которому производится по.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authkey",
+            "description": "<p>Ключ сессии.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "result",
+            "description": "<p>Результат выполнения действия.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки, действие выполнено успешно.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Ошибка при выполнении действия.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Недостаточно средств для совершения покупки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "3",
+            "description": "<p>Покупка уже была совершена ранее или в покупке нет необходимости.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "4",
+            "description": "<p>Канал недоступен пользователю.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "5",
+            "description": "<p>Требуется подписка.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Channel"
+  },
+  {
+    "type": "get",
+    "url": "/channel/detail",
+    "title": "ChannelDetail: подробная информация о канале",
+    "name": "ChannelDetail",
+    "group": "Channel",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "cid",
+            "description": "<p>Идентификатор телеканала.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authkey",
+            "description": "<p>Ключ сессии.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>идентификатор канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "actions",
+            "description": "<p>Варианты просмотра или покупки канала. Формируется исходя из тарифных пакетов, доступных абоненту/аккаунту, и подключенных для данного канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "actions.action",
+            "description": "<p>Имя действия, одно из зарезервированных значений: get_channel_url – получить адрес потока; subscribe – купить подписку на пакет.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "actions.tariff_id",
+            "description": "<p>Идентификатор тарифного пакета.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "actions.caption",
+            "description": "<p>Название действия для отображения в интерфейсе.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "actions.price",
+            "description": "<p>Стоимость покупки за полный период.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Boolean",
+            "optional": false,
+            "field": "actions.periodical",
+            "description": "<p>Флаг того, что действие будет возобновляемым.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "actions.activation_price",
+            "description": "<p>Стоимость покупки с учетом платежного периода аккаунта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>Название канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Метод не совместим со старым биллингом.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Channel"
+  },
+  {
+    "type": "get",
     "url": "/channel/icon/list/",
     "title": "ChannelIconList: список URL-адресов иконок всех телеканалов",
     "name": "ChannelIconList",
@@ -3208,6 +3618,17 @@ define({ "api": [
             "optional": false,
             "field": "channels.is_favorited",
             "description": "<p>Канал добавлен в избранное аккаунта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "channels.has_subscription",
+            "description": "<p>На канал имеется подписка.</p>"
           },
           {
             "group": "Ответ",
@@ -4043,6 +4464,17 @@ define({ "api": [
             "optional": false,
             "field": "channels.is_favorited",
             "description": "<p>Канал добавлен в избранное аккаунта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "channels.has_subscription",
+            "description": "<p>На канал имеется подписка.</p>"
           },
           {
             "group": "Ответ",
@@ -5613,7 +6045,7 @@ define({ "api": [
           },
           {
             "group": "Ответ",
-            "type": "String",
+            "type": "Number",
             "optional": false,
             "field": "tariffs.period",
             "description": "<p>Период подписки.</p>"
@@ -5638,17 +6070,63 @@ define({ "api": [
           },
           {
             "group": "Ответ",
-            "type": "String",
+            "type": "Object[]",
             "optional": false,
-            "field": "monthly_payment",
-            "description": "<p>Ежемесячный платеж.</p>"
+            "field": "subscriptions",
+            "description": "<p>Список подписок.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "subscriptions.tariff_id",
+            "description": "<p>ID тарифа.</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
-            "field": "annual_payment",
-            "description": "<p>Ежегодный платеж.</p>"
+            "field": "subscriptions.start_date",
+            "description": "<p>Начало действия.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "subscriptions.end_date",
+            "description": "<p>Окончание действия.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "subscriptions.is_periodical",
+            "description": "<p>Является ли периодической.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "subscriptions.price",
+            "description": "<p>Стоимость (за срок, указанный в настройках тарифа).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "payment_sum",
+            "description": "<p>Сумма платежа за установленный период.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "payment_period",
+            "description": "<p>Платёжный период.</p>"
           },
           {
             "group": "Ответ",
@@ -5681,6 +6159,490 @@ define({ "api": [
             "optional": false,
             "field": "1",
             "description": "<p>Возникла ошибка получения данных из внешнего биллинга.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Customer"
+  },
+  {
+    "type": "get",
+    "url": "/customer/tariff/list",
+    "title": "CustomerTariffList: получение списка доступных тарифных пакетов",
+    "name": "CustomerTariffList",
+    "group": "Customer",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authkey",
+            "description": "<p>Ключ сессии.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "tariffs",
+            "description": "<p>Список тарифных пакетов (подключенных и доступных для подключения).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.id",
+            "description": "<p>Идентификатор тарифа.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "tariffs.name",
+            "description": "<p>Название.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "tariffs.description",
+            "description": "<p>Описание.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.period",
+            "description": "<p>Период подписки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.price",
+            "description": "<p>Стоимость подписки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "tariffs.currency",
+            "description": "<p>Валюта подписки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.basic_tariff_priority",
+            "description": "<p>Приоритет базового пакета.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Boolean",
+            "optional": false,
+            "field": "tariffs.is_assigned",
+            "description": "<p>Подключен.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Возникла ошибка получения данных из внешнего биллинга.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Customer"
+  },
+  {
+    "type": "get",
+    "url": "/customer/tariff/subscribe",
+    "title": "CustomerTariffSubscribe: оформление подписки на тарифный пакет",
+    "name": "CustomerTariffSubscribe",
+    "group": "Customer",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "tariff_id",
+            "description": "<p>Идентификатор тарифа.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authkey",
+            "description": "<p>Ключ сессии.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Данный тариф не доступен или не существует, либо уже подключен.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Недостаточно средств.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "3",
+            "description": "<p>Тариф уже подключен.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Customer"
+  },
+  {
+    "type": "get",
+    "url": "/customer/tariff/subscription/cost",
+    "title": "CustomerTariffSubscriptionCost: получение стоимости подписки на тарифный пакет",
+    "name": "CustomerTariffSubscriptionCost",
+    "group": "Customer",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "tariff_id",
+            "description": "<p>Идентификатор тарифа.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authkey",
+            "description": "<p>Ключ сессии.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "price",
+            "description": "<p>Стоимость подписки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "balance",
+            "description": "<p>Баланс после подключения.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Данный тариф не доступен или не существует.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Customer"
+  },
+  {
+    "type": "get",
+    "url": "/customer/tariff/subscription/list",
+    "title": "CustomerTariffSubscriptionList: получение списка действующих подписок",
+    "name": "CustomerTariffSubscriptionList",
+    "group": "Customer",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authkey",
+            "description": "<p>Ключ сессии.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "subscriptions",
+            "description": "<p>Список тарифных пакетов (подключенных и доступных для подключения).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "subscriptions.id",
+            "description": "<p>Идентификатор подписки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "subscriptions.tariff_id",
+            "description": "<p>Идентификатор тарифа.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "subscriptions.tariff_name",
+            "description": "<p>Название тарифа.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "subscriptions.start_date",
+            "description": "<p>Дата начала периода действия.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "subscriptions.end_date",
+            "description": "<p>Дата окончания периода действия.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "subscriptions.price",
+            "description": "<p>Стоимость.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "subscriptions.currency",
+            "description": "<p>Валюта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "subscriptions.is_preiodical",
+            "description": "<p>Является периодической.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "subscriptions.api_name",
+            "description": "<p>Источник подписки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Данный тариф не доступен или не существует.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Customer"
+  },
+  {
+    "type": "get",
+    "url": "/customer/tariff/unsubscribe",
+    "title": "CustomerTariffUnsubscribe: отключение подписки на тарифный пакет",
+    "name": "CustomerTariffUnsubscribe",
+    "group": "Customer",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "tariff_id",
+            "description": "<p>Идентификатор тарифа.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authkey",
+            "description": "<p>Ключ сессии.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Данный тариф не подключен.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Тариф является базовым, его отключение недоступно.</p>"
           }
         ]
       }
@@ -6903,7 +7865,7 @@ define({ "api": [
             ],
             "optional": false,
             "field": "alive",
-            "description": "<p>Активны ли подключения к базам данных. Будет передан если check_db_conn=1</p>"
+            "description": "<p>Не превышают ли показатели нагрузки заданные максимальные значения. Если передан check_db_conn=1 учитывается также наличие подключения к базам данных.</p>"
           },
           {
             "group": "Ответ",
@@ -9768,6 +10730,17 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "use_new_billing_logic",
+            "description": "<p>Флаг, устанавливающий, что у оператора используется новая логика биллига (на подписках).</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Object",
             "optional": false,
             "field": "portal_config",
@@ -10043,6 +11016,17 @@ define({ "api": [
             "optional": false,
             "field": "programs.is_parent_control",
             "description": "<p>На канале установлен родительский контроль.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "programs.has_subscription",
+            "description": "<p>На канал имеется подписка.</p>"
           },
           {
             "group": "Ответ",
@@ -12763,7 +13747,7 @@ define({ "api": [
               "1"
             ],
             "optional": true,
-            "field": "purchased",
+            "field": "get_purchased",
             "defaultValue": "0",
             "description": "<p>Фильтр по факту купленности. При значении 1 в выборку попадут только обьекты, которые куплены абонентом. При значении 0 факт купленности не будет проверяться.</p>"
           },
@@ -13943,7 +14927,7 @@ define({ "api": [
               "1"
             ],
             "optional": true,
-            "field": "purchased",
+            "field": "get_purchased",
             "defaultValue": "0",
             "description": "<p>Фильтр по факту купленности. При значении 1 в выборку попадут только обьекты, которые куплены абонентом. При значении 0 факт купленности не будет проверяться.</p>"
           },
@@ -14223,6 +15207,17 @@ define({ "api": [
             "optional": false,
             "field": "videos.is_announcement",
             "description": "<p>Является анонсом.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "videos.has_subscription",
+            "description": "<p>Если ли подписка (через тарифы, не прямая покупка).</p>"
           },
           {
             "group": "Ответ",

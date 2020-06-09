@@ -998,6 +998,65 @@
           },
           {
             "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "subscriptions",
+            "description": "<p>Список активных подписок.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "subscriptions.tariff_id",
+            "description": "<p>ID тарифа.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "subscriptions.api_config_id",
+            "description": "<p>ID внешнего API (null, если не задано).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "subscriptions.price",
+            "description": "<p>Стоимость подписки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Date",
+            "allowedValues": [
+              "yyyy-mm-dd"
+            ],
+            "optional": false,
+            "field": "subscriptions.start_date",
+            "description": "<p>Начало действия.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Date",
+            "allowedValues": [
+              "yyyy-mm-dd"
+            ],
+            "optional": false,
+            "field": "subscriptions.end_date",
+            "description": "<p>Окончание действия подписки (null, если подписка бесконечная).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "subscriptions.is_periodical",
+            "description": "<p>Является ли подписка периодической.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "error",
@@ -2075,6 +2134,97 @@
           },
           {
             "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "subscriptions",
+            "description": "<p>Список активных подписок.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "subscriptions.tariff_id",
+            "description": "<p>ID тарифа.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "subscriptions.api_config_id",
+            "description": "<p>ID внешнего API (null, если не задано).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "subscriptions.price",
+            "description": "<p>Стоимость подписки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Date",
+            "allowedValues": [
+              "yyyy-mm-dd"
+            ],
+            "optional": false,
+            "field": "subscriptions.start_date",
+            "description": "<p>Начало действия.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Date",
+            "allowedValues": [
+              "yyyy-mm-dd"
+            ],
+            "optional": false,
+            "field": "subscriptions.end_date",
+            "description": "<p>Окончание действия подписки (null, если подписка бесконечная).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "subscriptions.is_periodical",
+            "description": "<p>Является ли подписка периодической.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Date",
+            "allowedValues": [
+              "yyyy-mm-dd"
+            ],
+            "optional": false,
+            "field": "subscriptions.price_expiration",
+            "description": "<p>Окончание действия цены (null, если отсутствует).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "subscriptions.is_price_overridden",
+            "description": "<p>Используется ли переопределение цены.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "subscriptions.is_closed",
+            "description": "<p>Является ли подписка закрытой.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "balance",
@@ -2125,6 +2275,136 @@
             "optional": false,
             "field": "1",
             "description": "<p>Абонент не найден.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../billing/api.py",
+    "groupTitle": "Customer"
+  },
+  {
+    "type": "post",
+    "url": "/customer/merchant_url",
+    "title": "CustomerMerchantUrl: запрос URL страницы платежа мерчанта",
+    "name": "CustomerMerchantUrl",
+    "group": "Customer",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "customer_id",
+            "description": "<p>Customer ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "size": "..64",
+            "optional": false,
+            "field": "ext_id",
+            "description": "<p>Уникальный идентификатор абонента в биллинговой системе провайдера. Должен быть передан либо ext_id, либо customer_id.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "merchant_type",
+            "defaultValue": "пустое",
+            "description": "<p>Тип мерчанта.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "amount",
+            "description": "<p>Сумма платежа.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "signature",
+            "description": "<p>Подпись.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "url",
+            "description": "<p>URL мерчанта, пустой, если перенаправление не требуется и нужно использовать внутреннюю форму приложения. Доступные параметры: %transaction_id%,%success_url%,%fail_url%.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "merchant_name",
+            "description": "<p>имя мерчтанта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "error_message",
+            "description": "<p>Текст ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Абонент не найден.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Некорректная сумма платежа.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "3",
+            "description": "<p>Мерчант не найден.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "4",
+            "description": "<p>Ошибка создания ссылки.</p>"
           }
         ]
       }
@@ -2435,6 +2715,359 @@
   },
   {
     "type": "post",
+    "url": "/customer/payment/create/",
+    "title": "CustomerPaymentCreate: создание платежа для абонента",
+    "name": "CustomerPaymentCreate",
+    "group": "Customer",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "customer_id",
+            "description": "<p>Customer ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "size": "..64",
+            "optional": false,
+            "field": "ext_id",
+            "description": "<p>Уникальный идентификатор абонента в биллинговой системе провайдера. Должен быть передан либо ext_id, либо customer_id.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "merchant_type",
+            "defaultValue": "пустое",
+            "description": "<p>Тип мерчанта.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "amount",
+            "description": "<p>Сумма платежа.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "signature",
+            "description": "<p>Подпись.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "payments.payment_id",
+            "description": "<p>Внешний ID платежа (ID, используемый в шлюзе).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "payments.transaction_id",
+            "description": "<p>Внутренний ID платежа (ID, используемый в Smarty).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "payments.session_id",
+            "description": "<p>ID платёжной сессии.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "error_message",
+            "description": "<p>Текст ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Неизвестная ошибка.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Внутренняя ошибка платежного шлюза.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "3",
+            "description": "<p>Внешнаяя ошибка платежного шлюза (Пример - сетевая ошибка).</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "4",
+            "description": "<p>Неверные параметры запроса.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "5",
+            "description": "<p>Ошибка платежного инструмента.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "6",
+            "description": "<p>Подозрение на мошеничество.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "7",
+            "description": "<p>Недостаточно средств.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "8",
+            "description": "<p>Лимит операции.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "9",
+            "description": "<p>Ошибка авторизации.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "10",
+            "description": "<p>Абонент не найден.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../billing/api.py",
+    "groupTitle": "Customer"
+  },
+  {
+    "type": "post",
+    "url": "/customer/payment/process/",
+    "title": "CustomerPaymentProcess: передача платежных данных шлюзу",
+    "name": "CustomerPaymentProcess",
+    "group": "Customer",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "customer_id",
+            "description": "<p>Customer ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "size": "..64",
+            "optional": false,
+            "field": "ext_id",
+            "description": "<p>Уникальный идентификатор абонента в биллинговой системе провайдера. Должен быть передан либо ext_id, либо customer_id.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "payment_id",
+            "description": "<p>Внешний ID платежа (ID, используемый в шлюзе).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "transaction_id",
+            "description": "<p>Внутренний ID платежа (ID, используемый в Smarty).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "merchant_type",
+            "defaultValue": "пустое",
+            "description": "<p>Тип мерчанта.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "card_number",
+            "description": "<p>номер карты. Передается через POST.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "card_holder",
+            "description": "<p>имя владельца карты. Передается через POST.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "card_expire",
+            "description": "<p>Срок действия карты. Передается через POST.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "card_cvv",
+            "description": "<p>cvv карты. Передается через POST.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "payments.payment_id",
+            "description": "<p>Ext id транзакции.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "error_message",
+            "description": "<p>Текст ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Неизвестная ошибка.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Внутренняя ошибка платежного шлюза.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "3",
+            "description": "<p>Внешнаяя ошибка платежного шлюза (Пример - сетевая ошибка).</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "4",
+            "description": "<p>Неверные параметры запроса.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "5",
+            "description": "<p>Ошибка платежного инструмента.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "6",
+            "description": "<p>Подозрение на мошеничество.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "7",
+            "description": "<p>Недостаточно средств.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "8",
+            "description": "<p>Лимит операции.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "9",
+            "description": "<p>Ошибка авторизации.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "10",
+            "description": "<p>Абонент не найден.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../billing/api.py",
+    "groupTitle": "Customer"
+  },
+  {
+    "type": "post",
     "url": "/customer/tariff/assign",
     "title": "CustomerTariffAssign: подключение тарифного пакета абоненту",
     "name": "CustomerTariffAssign",
@@ -2638,6 +3271,386 @@
   },
   {
     "type": "post",
+    "url": "/customer/tariffsubscription/create/",
+    "title": "CustomerTariffSubscriptionCreate: подключение подписки абоненту",
+    "name": "CustomerTariffSubscriptionCreate",
+    "group": "Customer",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "customer_id",
+            "description": "<p>Customer ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "size": "..64",
+            "optional": false,
+            "field": "ext_id",
+            "description": "<p>Уникальный идентификатор абонента в биллинговой системе провайдера. Должен быть передан либо ext_id, либо customer_id.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "tariff_id",
+            "description": "<p>Идентификатор тарифного пакета в Smarty.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "price",
+            "description": "<p>Сумма списания в валюте тарифа. Если не указано, то используется сумма, указанная в тарифе. Автоматически выставляет флаг переопределения цены.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "duration",
+            "description": "<p>Продолжительность подписки в днях. Делает подписку непериодической, если указан.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Date",
+            "allowedValues": [
+              "yyyy-mm-dd"
+            ],
+            "optional": true,
+            "field": "price_expiration",
+            "description": "<p>Дата окончания действия переопределённой цены. Нельзя использовать без указания параметра price.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Date",
+            "allowedValues": [
+              "yyyy-mm-dd"
+            ],
+            "optional": true,
+            "field": "end_date",
+            "description": "<p>Дата окончания подписки. Приоритетнее, чем duration.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "signature",
+            "description": "<p>Подпись.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffsubscription_id",
+            "description": "<p>Идентификатор подписки в Smarty.</p>"
+          }
+        ],
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "error_message",
+            "description": "<p>Текст ошибки. Пустой, если error = 0.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Абонент не найден.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Тарифный пакет не найден.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "3",
+            "description": "<p>Ошибка при создании подписки.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../billing/api.py",
+    "groupTitle": "Customer"
+  },
+  {
+    "type": "post",
+    "url": "/customer/tariffsubscription/delete",
+    "title": "CustomerTariffSubscriptionDelete: удаление подписки",
+    "name": "CustomerTariffSubscriptionDelete",
+    "group": "Customer",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>ID подписки.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "signature",
+            "description": "<p>Подпись.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "error_message",
+            "description": "<p>Текст ошибки. Пустой, если error = 0.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Подписка не найдена.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Неизвестная ошибка.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../billing/api.py",
+    "groupTitle": "Customer"
+  },
+  {
+    "type": "post",
+    "url": "/customer/transaction/list",
+    "title": "CustomerTransactionList: Cписок доступных тарифных опций в Smarty",
+    "name": "CustomerTransactionList",
+    "group": "Customer",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "customer_id",
+            "description": "<p>Customer ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "size": "..64",
+            "optional": false,
+            "field": "ext_id",
+            "description": "<p>Уникальный идентификатор абонента в биллинговой системе провайдера. Должен быть передан либо ext_id, либо customer_id.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "size": "0-100",
+            "optional": true,
+            "field": "limit",
+            "defaultValue": "100",
+            "description": "<p>Ограничение на количество операций на одну страницу выборки. Максимальное значение 100.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "size": "1..",
+            "optional": true,
+            "field": "page",
+            "defaultValue": "1",
+            "description": "<p>Номер страницы выборки.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "signature",
+            "description": "<p>Подпись.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "payments",
+            "description": "<p>Список транзакций.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "payments.transaction_id",
+            "description": "<p>Внутренний ID платежа (ID, используемый в Smarty).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "payments.amount",
+            "description": "<p>Сумма транзакции.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "payments.source",
+            "description": "<p>Источник транзакции.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "payments.datetime",
+            "description": "<p>Дата и время проведения транзакции.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "payments.comment",
+            "description": "<p>Примечание к транзакции.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "payments.processed",
+            "description": "<p>Завершена ли транзакция.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "error_message",
+            "description": "<p>Текст ошибки. Пустой, если error = 0.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Абонент не найден.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../billing/api.py",
+    "groupTitle": "Customer"
+  },
+  {
+    "type": "post",
     "url": "/session/list",
     "title": "SessionList: Список текущих сессий",
     "name": "SessionList",
@@ -2739,6 +3752,327 @@
   },
   {
     "type": "post",
+    "url": "/tariff/additional/list",
+    "title": "TariffAdditionalList: Cписок доступных дополнительных тарифных пакетов в Smarty",
+    "name": "TariffAdditionalList",
+    "group": "Tariff",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "signature",
+            "description": "<p>Подпись.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "tariffs",
+            "description": "<p>Список доступных дополнительных тарифных пакетов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.id",
+            "description": "<p>Идентификатор тарифного пакета.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "tariffs.name",
+            "description": "<p>Название.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Decimal",
+            "optional": false,
+            "field": "tariffs.period",
+            "description": "<p>Период оплаты. Если 0, то тариф является системным.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Decimal",
+            "optional": false,
+            "field": "tariffs.price",
+            "description": "<p>Стоимость подписки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.currency_id",
+            "description": "<p>Валюта (0 - RUB, 1 - EUR, 2 - USD).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.sessions_count",
+            "description": "<p>Максимальное количество одновременных сессий для дополнительных устройств.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.basic_sessions_count",
+            "description": "<p>Максимальное количество одновременных сессий для базовых устройств.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "tariffs.ip_restriction",
+            "description": "<p>Режим ограничения по IP-адресу для одновременных сессий (0 - отключено, 1 - включено, сессии разрешены только с одинакового IP-адреса).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "tariffs.channels",
+            "description": "<p>Список телеканалов в тарифном пакете.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.channels.id",
+            "description": "<p>Идентификатор канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "tariffs.channels.name",
+            "description": "<p>Название канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "tariffs.channels.icon",
+            "description": "<p>URL иконки канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "error_message",
+            "description": "<p>Текст ошибки. Пустой, если error = 0.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../billing/api.py",
+    "groupTitle": "Tariff"
+  },
+  {
+    "type": "post",
+    "url": "/tariff/basic/list",
+    "title": "TariffBasicList: Cписок доступных базовых тарифных пакетов в Smarty",
+    "name": "TariffBasicList",
+    "group": "Tariff",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "signature",
+            "description": "<p>Подпись.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "tariffs",
+            "description": "<p>Список доступных базовых тарифных пакетов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.id",
+            "description": "<p>Идентификатор тарифного пакета.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "tariffs.name",
+            "description": "<p>Название.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Decimal",
+            "optional": false,
+            "field": "tariffs.period",
+            "description": "<p>Период оплаты. Если 0, то тариф является системным.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Decimal",
+            "optional": false,
+            "field": "tariffs.price",
+            "description": "<p>Стоимость подписки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.currency_id",
+            "description": "<p>Валюта (0 - RUB, 1 - EUR, 2 - USD).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.basic_tariff_priority",
+            "description": "<p>Приоритет/признак принадлежности тарифа к базовому пакету. 10 - наивысший, 1 - наименьший. Базовый тариф с наивысшим приоритетом автоматически подключается абоненту при регистрации.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.sessions_count",
+            "description": "<p>Максимальное количество одновременных сессий для дополнительных устройств.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.basic_sessions_count",
+            "description": "<p>Максимальное количество одновременных сессий для базовых устройств.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "tariffs.ip_restriction",
+            "description": "<p>Режим ограничения по IP-адресу для одновременных сессий (0 - отключено, 1 - включено, сессии разрешены только с одинакового IP-адреса).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "tariffs.channels",
+            "description": "<p>Список телеканалов в тарифном пакете.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.channels.id",
+            "description": "<p>Идентификатор канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "tariffs.channels.name",
+            "description": "<p>Название канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "tariffs.channels.icon",
+            "description": "<p>URL иконки канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "error_message",
+            "description": "<p>Текст ошибки. Пустой, если error = 0.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../billing/api.py",
+    "groupTitle": "Tariff"
+  },
+  {
+    "type": "post",
     "url": "/tariff/create",
     "title": "TariffCreate: создание тарифного пакета",
     "name": "TariffCreate",
@@ -2757,8 +4091,8 @@
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": "type",
-            "description": "<p>Тип оплачиваемого периода. 0 - ежемесячная оплата, 1 - ежегодная, 2 - не учитывать при оплате (скрытый).</p>"
+            "field": "period",
+            "description": "<p>Период оплаты. Если 0, то тариф -- системный.</p>"
           },
           {
             "group": "Parameter",
@@ -3086,15 +4420,10 @@
           },
           {
             "group": "Ответ",
-            "type": "Number",
-            "allowedValues": [
-              "0",
-              "1",
-              "2"
-            ],
+            "type": "Decimal",
             "optional": false,
-            "field": "tariffs.type",
-            "description": "<p>Тип (0 - ежемесячная подписка, 1 - ежегодная подписка, 2 - системный).</p>"
+            "field": "tariffs.period",
+            "description": "<p>Период оплаты. Если 0, то тариф является системным.</p>"
           },
           {
             "group": "Ответ",
@@ -3230,8 +4559,8 @@
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": "type",
-            "description": "<p>Тип оплачиваемого периода. 0 - ежемесячная оплата, 1 - ежегодная, 2 - не учитывать при оплате (скрытый).</p>"
+            "field": "period",
+            "description": "<p>Период оплаты. Если 0, то тариф -- системный.</p>"
           },
           {
             "group": "Parameter",
@@ -3418,6 +4747,135 @@
             "optional": false,
             "field": "1",
             "description": "<p>Тарифный пакет не найден.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../billing/api.py",
+    "groupTitle": "Tariff"
+  },
+  {
+    "type": "post",
+    "url": "/tariff/option/list",
+    "title": "TariffOptionList: Cписок доступных тарифных опций в Smarty",
+    "name": "TariffOptionList",
+    "group": "Tariff",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "signature",
+            "description": "<p>Подпись.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "tariffs",
+            "description": "<p>Список доступных тарифных опций.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.id",
+            "description": "<p>Идентификатор тарифного пакета.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "tariffs.name",
+            "description": "<p>Название.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Decimal",
+            "optional": false,
+            "field": "tariffs.period",
+            "description": "<p>Период оплаты. Если 0, то тариф является системным.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Decimal",
+            "optional": false,
+            "field": "tariffs.price",
+            "description": "<p>Стоимость подписки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.currency_id",
+            "description": "<p>Валюта (0 - RUB, 1 - EUR, 2 - USD).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.sessions_count",
+            "description": "<p>Максимальное количество одновременных сессий для дополнительных устройств.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.basic_sessions_count",
+            "description": "<p>Максимальное количество одновременных сессий для базовых устройств.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "tariffs.ip_restriction",
+            "description": "<p>Режим ограничения по IP-адресу для одновременных сессий (0 - отключено, 1 - включено, сессии разрешены только с одинакового IP-адреса).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "error_message",
+            "description": "<p>Текст ошибки. Пустой, если error = 0.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
           }
         ]
       }

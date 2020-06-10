@@ -872,7 +872,7 @@
             "type": "String",
             "optional": false,
             "field": "public_key",
-            "description": "<p>Публичный ключ RSA.</p>"
+            "description": "<p>Публичный ключ RSA. Формат ключа - Privacy-Enhanced Mail. Первая строка начинается с '-----BEGIN'.</p>"
           }
         ]
       }

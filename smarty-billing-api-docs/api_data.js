@@ -83,7 +83,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/account/create",
+    "url": "/account/create/",
     "title": "AccountCreate: создание аккаунта",
     "name": "AccountCreate",
     "group": "Account",
@@ -373,7 +373,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/account/deactivate",
+    "url": "/account/deactivate/",
     "title": "AccountDeactivate: деактивация аккаунта",
     "name": "AccountDeactivate",
     "group": "Account",
@@ -455,7 +455,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/account/delete",
+    "url": "/account/delete/",
     "title": "AccountDelete: удаление аккаунта",
     "name": "AccountDelete",
     "group": "Account",
@@ -537,7 +537,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/account/device/create",
+    "url": "/account/device/create/",
     "title": "AccountDeviceCreate: привязка устройства к аккаунту",
     "name": "AccountDeviceCreate",
     "group": "Account",
@@ -675,7 +675,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/account/device/delete",
+    "url": "/account/device/delete/",
     "title": "AccountDeviceDelete: удаление привязанного устройства",
     "name": "AccountDeviceDelete",
     "group": "Account",
@@ -757,7 +757,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/account/info",
+    "url": "/account/info/",
     "title": "AccountInfo: получение информации об аккаунте",
     "name": "AccountInfo",
     "group": "Account",
@@ -1096,7 +1096,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/account/message/create",
+    "url": "/account/message/create/",
     "title": "AccountMessageCreate: Создание сообщения для аккаунта",
     "name": "AccountMessageCreate",
     "group": "Account",
@@ -1221,7 +1221,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/account/modify",
+    "url": "/account/modify/",
     "title": "AccountModify: изменение аккаунта",
     "name": "AccountModify",
     "group": "Account",
@@ -1471,7 +1471,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/account/tariff/assign",
+    "url": "/account/tariff/assign/",
     "title": "AccountTariffAssign: подключение тарифного пакета аккаунта",
     "name": "AccountTariffAssign",
     "group": "Account",
@@ -1566,7 +1566,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/account/tariff/remove",
+    "url": "/account/tariff/remove/",
     "title": "AccountTariffRemove: отключение тарифного пакета у аккаунта",
     "name": "AccountTariffRemove",
     "group": "Account",
@@ -2285,7 +2285,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/customer/merchant_url",
+    "url": "/customer/merchant_url/",
     "title": "CustomerMerchantUrl: запрос URL страницы платежа мерчанта",
     "name": "CustomerMerchantUrl",
     "group": "Customer",
@@ -3068,7 +3068,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/customer/tariff/assign",
+    "url": "/customer/tariff/assign/",
     "title": "CustomerTariffAssign: подключение тарифного пакета абоненту",
     "name": "CustomerTariffAssign",
     "group": "Customer",
@@ -3175,7 +3175,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/customer/tariff/remove",
+    "url": "/customer/tariff/remove/",
     "title": "CustomerTariffRemove: отключение тарифного пакета у абонента",
     "name": "CustomerTariffRemove",
     "group": "Customer",
@@ -3416,7 +3416,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/customer/tariffsubscription/delete",
+    "url": "/customer/tariffsubscription/delete/",
     "title": "CustomerTariffSubscriptionDelete: удаление подписки",
     "name": "CustomerTariffSubscriptionDelete",
     "group": "Customer",
@@ -3497,7 +3497,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/customer/transaction/list",
+    "url": "/customer/transaction/list/",
     "title": "CustomerTransactionList: Cписок доступных тарифных опций в Smarty",
     "name": "CustomerTransactionList",
     "group": "Customer",
@@ -3651,7 +3651,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/session/list",
+    "url": "/session/list/",
     "title": "SessionList: Список текущих сессий",
     "name": "SessionList",
     "group": "Session",
@@ -3752,7 +3752,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/tariff/additional/list",
+    "url": "/tariff/additional/list/",
     "title": "TariffAdditionalList: Cписок доступных дополнительных тарифных пакетов в Smarty",
     "name": "TariffAdditionalList",
     "group": "Tariff",
@@ -3909,7 +3909,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/tariff/basic/list",
+    "url": "/tariff/basic/list/",
     "title": "TariffBasicList: Cписок доступных базовых тарифных пакетов в Smarty",
     "name": "TariffBasicList",
     "group": "Tariff",
@@ -4073,7 +4073,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/tariff/create",
+    "url": "/tariff/create/",
     "title": "TariffCreate: создание тарифного пакета",
     "name": "TariffCreate",
     "group": "Tariff",
@@ -4289,7 +4289,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/tariff/delete",
+    "url": "/tariff/delete/",
     "title": "TariffDelete: удаление тарифного пакета",
     "name": "TariffDelete",
     "group": "Tariff",
@@ -4370,7 +4370,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/tariff/list",
+    "url": "/tariff/list/",
     "title": "TariffList: Cписок доступных тарифных пакетов в Smarty",
     "name": "TariffList",
     "group": "Tariff",
@@ -4534,7 +4534,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/tariff/modify",
+    "url": "/tariff/modify/",
     "title": "TariffModify: изменение тарифного пакета",
     "name": "TariffModify",
     "group": "Tariff",
@@ -4757,7 +4757,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/tariff/option/list",
+    "url": "/tariff/option/list/",
     "title": "TariffOptionList: Cписок доступных тарифных опций в Smarty",
     "name": "TariffOptionList",
     "group": "Tariff",
@@ -4980,7 +4980,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/tariff/streamservice/remove",
+    "url": "/tariff/streamservice/remove/",
     "title": "TariffStreamServiceRemove: отвязка стриминг-сервиса от тарифного пакета",
     "name": "TariffStreamServiceRemove",
     "group": "Tariff",

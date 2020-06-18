@@ -6311,7 +6311,7 @@
   },
   {
     "type": "get",
-    "url": "/customer/tariff/subscribe",
+    "url": "/customer/tariff/subscribe/",
     "title": "CustomerTariffSubscribe: оформление подписки на тарифный пакет",
     "name": "CustomerTariffSubscribe",
     "group": "Customer",
@@ -6392,7 +6392,7 @@
   },
   {
     "type": "get",
-    "url": "/customer/tariff/subscription/cost",
+    "url": "/customer/tariff/subscription/cost/",
     "title": "CustomerTariffSubscriptionCost: получение стоимости подписки на тарифный пакет",
     "name": "CustomerTariffSubscriptionCost",
     "group": "Customer",
@@ -6613,7 +6613,7 @@
   },
   {
     "type": "get",
-    "url": "/customer/tariff/unsubscribe",
+    "url": "/customer/tariff/unsubscribe/",
     "title": "CustomerTariffUnsubscribe: отключение подписки на тарифный пакет",
     "name": "CustomerTariffUnsubscribe",
     "group": "Customer",

@@ -6087,6 +6087,13 @@
           },
           {
             "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.basic_tariff_priority",
+            "description": "<p>Приоритет базового пакета.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Object[]",
             "optional": false,
             "field": "subscriptions",
@@ -6186,8 +6193,8 @@
   },
   {
     "type": "get",
-    "url": "/customer/t",
-    "title": "ariff/list CustomerTariffList: получение списка доступных тарифных пакетов",
+    "url": "/customer/tariff/list",
+    "title": "CustomerTariffList: получение списка доступных тарифных пакетов",
     "name": "CustomerTariffList",
     "group": "Customer",
     "parameter": {

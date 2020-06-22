@@ -5936,6 +5936,13 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "currency",
+            "description": "<p>Валюта пользователя.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Object",
             "optional": false,
             "field": "payments",

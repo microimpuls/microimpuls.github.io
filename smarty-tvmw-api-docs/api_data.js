@@ -1792,6 +1792,14 @@ define({ "api": [
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, который будет использован при формировании сообщений для абонента.</p>"
           }
         ]
       }
@@ -2066,6 +2074,12 @@ define({ "api": [
             "optional": false,
             "field": "15",
             "description": "<p>Логин для устройства с данной группой не разрешён для данного аккаунта.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "16",
+            "description": "<p>Недопустимое значение параметра lang.</p>"
           }
         ]
       }

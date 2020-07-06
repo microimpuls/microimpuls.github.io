@@ -10887,9 +10887,9 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "category_id",
-            "description": "<p>Идентификатор категории передач.</p>"
+            "description": "<p>Идентификатор категории передач, если не передан - возвращаются все каналы.</p>"
           },
           {
             "group": "Parameter",

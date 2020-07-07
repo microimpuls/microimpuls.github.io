@@ -861,9 +861,17 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": true,
+            "optional": false,
             "field": "channel_id",
             "description": "<p>ID канала, для которого запрашиваются рекламные блоки</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "mediahills_id",
+            "defaultValue": "пустое",
+            "description": "<p>MediaHills ID канала, для которого запрашиваются рекламные блоки</p>"
           },
           {
             "group": "Parameter",

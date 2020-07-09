@@ -1875,6 +1875,13 @@ define({ "api": [
             "group": "Ответ",
             "type": "String",
             "optional": false,
+            "field": "currency",
+            "description": "<p>Валюта абонента.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
             "field": "ip_address",
             "description": "<p>IP-адрес абонента (с которого на сервер Smarty пришел запрос).</p>"
           },
@@ -5955,13 +5962,6 @@ define({ "api": [
             "optional": false,
             "field": "balance",
             "description": "<p>Остаток денежных средств на счете пользователя.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "currency",
-            "description": "<p>Валюта пользователя.</p>"
           },
           {
             "group": "Ответ",

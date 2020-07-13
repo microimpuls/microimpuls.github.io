@@ -8083,6 +8083,137 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/noauth/legal/document/detail/",
+    "title": "LegalDocumentDetailNoAuth: просмотр правового документа без авторизации",
+    "name": "LegalDocumentDetail",
+    "group": "LegalDocument",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Идентификатор документа.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "api_key",
+            "description": "<p>API key.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть имя и текст правового документа. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Идентификатор документа.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>Название документа.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "version",
+            "description": "<p>Версия документа.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "need_acceptance",
+            "description": "<p>Флаг, означающий необходимость акцепта документа.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "html_content",
+            "description": "<p>Содержимое документа, может содержать HTML.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Документ не найден.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "LegalDocument"
+  },
+  {
+    "type": "get",
     "url": "/legal/document/detail/",
     "title": "LegalDocumentDetail: просмотр правового документа",
     "name": "LegalDocumentDetail",
@@ -8198,137 +8329,6 @@ define({ "api": [
             "optional": false,
             "field": "is_accepted",
             "description": "<p>Флаг, означающий наличие акцепта для текущей версии документа для переданного device_uid или аккаунта (вычисляется из authkey).</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "error",
-            "description": "<p>Код ошибки.</p>"
-          }
-        ]
-      }
-    },
-    "error": {
-      "fields": {
-        "Коды ошибок error": [
-          {
-            "group": "Коды ошибок error",
-            "optional": false,
-            "field": "0",
-            "description": "<p>Нет ошибки.</p>"
-          },
-          {
-            "group": "Коды ошибок error",
-            "optional": false,
-            "field": "1",
-            "description": "<p>Документ не найден.</p>"
-          }
-        ]
-      }
-    },
-    "version": "1.40.0",
-    "filename": "../../../tvmiddleware/api.py",
-    "groupTitle": "LegalDocument"
-  },
-  {
-    "type": "get",
-    "url": "/noauth/legal/document/detail/",
-    "title": "LegalDocumentDetailNoAuth: просмотр правового документа без авторизации",
-    "name": "LegalDocumentDetail",
-    "group": "LegalDocument",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "id",
-            "description": "<p>Идентификатор документа.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "api_key",
-            "description": "<p>API key.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device",
-            "defaultValue": "пустое",
-            "description": "<p>Системное название типа устройства.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device_uid",
-            "defaultValue": "пустое",
-            "description": "<p>Уникальный идентификатор устройства.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "lang",
-            "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть имя и текст правового документа. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "fields": {
-        "Ответ": [
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "id",
-            "description": "<p>Идентификатор документа.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "name",
-            "description": "<p>Название документа.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "version",
-            "description": "<p>Версия документа.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "allowedValues": [
-              "0",
-              "1"
-            ],
-            "optional": false,
-            "field": "need_acceptance",
-            "description": "<p>Флаг, означающий необходимость акцепта документа.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "html_content",
-            "description": "<p>Содержимое документа, может содержать HTML.</p>"
           },
           {
             "group": "Ответ",
@@ -10292,6 +10292,125 @@ define({ "api": [
     "version": "1.40.0",
     "filename": "../../../tvmiddleware/api.py",
     "groupTitle": "Payment"
+  },
+  {
+    "type": "get",
+    "url": "/noauth/portal/client/tariff/list/",
+    "title": "NoAuthTariffList: список тарифных пакетов",
+    "name": "NoAuthTariffList",
+    "group": "Portal",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "api_key",
+            "description": "<p>API key.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "tariffs",
+            "description": "<p>Список тарифных пакетов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.id",
+            "description": "<p>Идентификатор тарифа.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "tariffs.name",
+            "description": "<p>Название тарифа.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "tariffs.description",
+            "description": "<p>Описание тарифа.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.period",
+            "description": "<p>Период тарифа.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.channels_count",
+            "description": "<p>Количество каналов, доступных по тарифу.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.price",
+            "description": "<p>Стоимость тарифа.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.basic_tariff_priority",
+            "description": "<p>Приоритет базового пакета.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Portal"
   },
   {
     "type": "get",

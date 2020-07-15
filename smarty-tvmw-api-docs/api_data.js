@@ -3137,7 +3137,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/channel/action",
+    "url": "/channel/action/",
     "title": "ChannelAction: подписка на канал или получение ссылки на него",
     "name": "ChannelAction",
     "group": "Channel",
@@ -3258,7 +3258,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/channel/detail",
+    "url": "/channel/detail/",
     "title": "ChannelDetail: подробная информация о канале",
     "name": "ChannelDetail",
     "group": "Channel",
@@ -10292,8 +10292,8 @@ define({ "api": [
   {
     "type": "get",
     "url": "/noauth/portal/client/tariff/list/",
-    "title": "NoAuthTariffList: список тарифных пакетов",
-    "name": "NoAuthTariffList",
+    "title": "NoAuthPortalClientTariffList: список тарифных пакетов",
+    "name": "NoAuthPortalClientTariffList",
     "group": "Portal",
     "parameter": {
       "fields": {

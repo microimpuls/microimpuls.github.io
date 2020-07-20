@@ -12206,6 +12206,231 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/program/category/record/list/",
+    "title": "ProgramCategoryRecordList: список подборок в заданной категории \"ТВ по интересам\"",
+    "name": "ProgramCategoryRecordList",
+    "group": "ProgramCategory",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "category_id",
+            "description": "<p>Идентификатор категории передач, если не передан - возвращаются все подборки.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "icon_width",
+            "description": "<p>Предпочитаемая ширина иконки канала.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "icon_height",
+            "description": "<p>Предпочитаемая высота иконки канала.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authkey",
+            "description": "<p>Ключ сессии.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть названия каналов и EPG. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "selections",
+            "description": "<p>Список подборок.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "selections.selection_id",
+            "description": "<p>ID подборки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "selections.short_name",
+            "description": "<p>Краткое название передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "selections.category",
+            "description": "<p>Название категории EPG текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "selections.preview",
+            "description": "<p>URL картинки передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "selections.rating",
+            "description": "<p>Возрастной рейтинг.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": false,
+            "field": "selections.channel",
+            "description": "<p>Информация о канале.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "selections.channel.id",
+            "description": "<p>ID канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "selections.channel.name",
+            "description": "<p>Название канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "selections.channel.icon",
+            "description": "<p>URL иконки канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": true,
+            "field": "selections.record",
+            "description": "<p>Информация о записи, если она единственная в подборке.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "selections.record.program_id",
+            "description": "<p>Идентификатор передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "selections.record.begin_time",
+            "description": "<p>Время начала передачи в Unix Timestamp (UTC+0).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "selections.record.end_time",
+            "description": "<p>Время окончания передачи в Unix Timestamp (UTC+0).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "selections.record.name",
+            "description": "<p>Название передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "selections.record.description",
+            "description": "<p>Описание передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "selections.record.meta",
+            "description": "<p>Дополнительная информация о передаче в формате JSON.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "selections.record.url",
+            "description": "<p>URL потока архивной записи передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "selections.record.position",
+            "description": "<p>Последняя сохраненная позиция просмотра в секундах от начала передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "ProgramCategory"
+  },
+  {
+    "type": "get",
     "url": "/program/genre/list/",
     "title": "ProgramGenreList: список жанров телепрограмм",
     "name": "ProgramGenreList",

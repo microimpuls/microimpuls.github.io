@@ -10291,8 +10291,112 @@
   },
   {
     "type": "get",
+    "url": "/noauth/portal/client/channel/list/",
+    "title": "NoAuthPortalClientChannelList: список телеканалов (доступен без авторизации)",
+    "name": "NoAuthPortalClientChannelList",
+    "group": "Portal",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "api_key",
+            "description": "<p>API key.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "tariff_id",
+            "description": "<p>Идентификатор тарифа.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "channels",
+            "description": "<p>Список каналов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.name",
+            "description": "<p>Название канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.icon",
+            "description": "<p>URL-адрес иконки канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.category",
+            "description": "<p>Идентификатор категории канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Параметр tariff_id не передан или задан некорректно.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Portal"
+  },
+  {
+    "type": "get",
     "url": "/noauth/portal/client/tariff/list/",
-    "title": "NoAuthPortalClientTariffList: список тарифных пакетов",
+    "title": "NoAuthPortalClientTariffList: список тарифных пакетов (доступен без авторизации)",
     "name": "NoAuthPortalClientTariffList",
     "group": "Portal",
     "parameter": {

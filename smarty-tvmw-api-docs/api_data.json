@@ -15970,6 +15970,13 @@
             "group": "Ответ",
             "type": "String",
             "optional": false,
+            "field": "actions.promo_image_url",
+            "description": "<p>URL промо изображения ассета.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
             "field": "name",
             "description": "<p>Название фильма.</p>"
           },

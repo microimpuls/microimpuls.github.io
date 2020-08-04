@@ -1013,10 +1013,10 @@
           },
           {
             "group": "Ответ",
-            "type": "String",
+            "type": "Number",
             "optional": false,
             "field": "ads.movies.duration",
-            "description": "<p>Адрес ролика для воспроизведения.</p>"
+            "description": "<p>Длительность ролика в секундах.</p>"
           },
           {
             "group": "Ответ",

@@ -15926,6 +15926,13 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "Decimal",
+            "optional": false,
+            "field": "actions.cost",
+            "description": "<p>Сумма списания с баланса при активации.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "actions.url",

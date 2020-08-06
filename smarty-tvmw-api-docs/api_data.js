@@ -11413,6 +11413,18 @@ define({ "api": [
           },
           {
             "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "consider_program_category",
+            "defaultValue": "1",
+            "description": "<p>Флаг, если передано значение 0, то категория текущей передачи не учитывается при формировании списка каналов. Доступно только если параметр конфигурации TVMW_CONSIDER_PROGRAM_CATEGORY имеет значение True.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
             "optional": false,
             "field": "authkey",

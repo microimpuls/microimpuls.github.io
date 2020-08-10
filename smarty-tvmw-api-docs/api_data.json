@@ -11000,6 +11000,17 @@
               "1"
             ],
             "optional": false,
+            "field": "show_archive",
+            "description": "<p>Показывать ли раздел &quot;Архив&quot;.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
             "field": "show_videocatalog",
             "description": "<p>Показывать ли раздел &quot;Видеотека&quot;.</p>"
           },

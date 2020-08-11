@@ -11432,7 +11432,19 @@ define({ "api": [
             "optional": true,
             "field": "consider_program_category",
             "defaultValue": "1",
-            "description": "<p>Флаг, если передано значение 0, то категория текущей передачи не учитывается при формировании списка каналов. Доступно только если параметр конфигурации TVMW_CONSIDER_PROGRAM_CATEGORY имеет значение True.</p>"
+            "description": "<p>Флаг, если передано значение 0, то категория текущей (следующей) передачи не учитывается при формировании списка каналов. Доступно только если параметр конфигурации TVMW_CONSIDER_PROGRAM_CATEGORY имеет значение True.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "consider_epg_channel_category",
+            "defaultValue": "1",
+            "description": "<p>Флаг, если передано значение 0, то при формировании списка каналов учитывается только категория текущей (следующей) передачи. Доступно только если параметр конфигурации TVMW_CONSIDER_PROGRAM_CATEGORY имеет значение True.</p>"
           },
           {
             "group": "Parameter",

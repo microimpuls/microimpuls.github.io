@@ -3771,6 +3771,13 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.lcn_number",
+            "description": "<p>Логический номер канала (LCN).</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Object[]",
             "optional": false,
             "field": "channels.hbb",
@@ -4615,6 +4622,13 @@ define({ "api": [
             "optional": false,
             "field": "channels.aspect_ratio",
             "description": "<p>Соотношение сторон данного канала. 0 - Авто. 1 - 16:9. 2 - 4:3. 3 - На весь экран.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.lcn_number",
+            "description": "<p>Логический номер канала (LCN).</p>"
           },
           {
             "group": "Ответ",
@@ -11721,6 +11735,13 @@ define({ "api": [
             "optional": false,
             "field": "programs.aspect_ratio",
             "description": "<p>Соотношение сторон данной передачи. 0 - Авто. 1 - 16:9. 2 - 4:3. 3 - На весь экран.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.lcn_number",
+            "description": "<p>Логический номер канала (LCN).</p>"
           },
           {
             "group": "Ответ",

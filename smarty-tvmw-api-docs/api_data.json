@@ -12297,6 +12297,18 @@
             "field": "lang",
             "defaultValue": "пустое",
             "description": "<p>Язык, на котором необходимо вернуть названия категорий. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "only_records_categories",
+            "defaultValue": "0",
+            "description": "<p>Вернуть только категории с с архивными записями.</p>"
           }
         ]
       }

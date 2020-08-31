@@ -6229,6 +6229,124 @@ define({ "api": [
     "groupTitle": "Customer"
   },
   {
+    "type": "post",
+    "url": "/customer/info/set/",
+    "title": "CustomerInfoSet: изменение данных абонента",
+    "name": "CustomerInfoSet",
+    "group": "Customer",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "size": "..256",
+            "optional": true,
+            "field": "firstname",
+            "defaultValue": "пустое",
+            "description": "<p>Имя абонента.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "size": "..256",
+            "optional": true,
+            "field": "lastname",
+            "defaultValue": "пустое",
+            "description": "<p>Фамилия абонента.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "size": "..24",
+            "optional": true,
+            "field": "mobile_phone_number",
+            "defaultValue": "пустое",
+            "description": "<p>Номер мобильного телефона абонента.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "size": "..254",
+            "optional": true,
+            "field": "email",
+            "defaultValue": "пустое",
+            "description": "<p>Адрес email абонента.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": false,
+            "field": "error_messages",
+            "description": "<p>Описания ошибок.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": true,
+            "field": "error_message.firstname",
+            "description": "<p>Описания ошибок firstname.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": true,
+            "field": "error_message.lastname",
+            "description": "<p>Описания ошибок lastname.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": true,
+            "field": "error_message.mobile_phone_number",
+            "description": "<p>Описания ошибок mobile_phone_number.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": true,
+            "field": "error_message.email",
+            "description": "<p>Описания ошибок email.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Переданные параметры абонента некорректны. Подробности в error_messages.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Customer"
+  },
+  {
     "type": "get",
     "url": "/customer/tariff/list",
     "title": "CustomerTariffList: получение списка доступных тарифных пакетов",

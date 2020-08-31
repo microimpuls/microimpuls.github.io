@@ -1,5 +1,89 @@
 define({ "api": [
   {
+    "type": "post",
+    "url": "/account/parent_code/set/",
+    "title": "AccountParentCodeSet: изменение ПИН-кода аккаунта",
+    "name": "AccountParentCodeSet",
+    "group": "Account",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "size": "..16",
+            "optional": true,
+            "field": "old_pin",
+            "description": "<p>Старый (текущий) ПИН-код. Если ПИН-код у аккаунта не задан, то не передавать или оставить пустым.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "size": "..16",
+            "optional": false,
+            "field": "new_pin",
+            "description": "<p>Новый ПИН-код.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": false,
+            "field": "error_messages",
+            "description": "<p>Описания ошибок.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": true,
+            "field": "error_message.old_pin",
+            "description": "<p>Описания ошибок old_pin.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": true,
+            "field": "error_message.new_pin",
+            "description": "<p>Описания ошибок new_pin.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Переданные параметры некорректны. Подробности в error_messages.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Account"
+  },
+  {
     "type": "get",
     "url": "/account/register/",
     "title": "AccountRegister: регистрация аккаунта",

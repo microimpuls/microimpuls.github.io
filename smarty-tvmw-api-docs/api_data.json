@@ -85,6 +85,82 @@
   },
   {
     "type": "get",
+    "url": "/account/password/change/",
+    "title": "AccountPasswordChange: смена пароля",
+    "name": "AccountPasswordChange",
+    "group": "Account",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "old_password",
+            "description": "<p>Текущий пароль.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "new_password",
+            "description": "<p>Новый пароль.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authkey",
+            "description": "<p>Ключ сессии.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Ошибка в параметрах.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Ошибка смены пароля.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Account"
+  },
+  {
+    "type": "get",
     "url": "/account/register/",
     "title": "AccountRegister: регистрация аккаунта",
     "name": "AccountRegister",

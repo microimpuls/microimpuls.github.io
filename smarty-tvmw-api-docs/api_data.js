@@ -6023,14 +6023,14 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
           },
@@ -9668,14 +9668,14 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
           },
@@ -9814,14 +9814,14 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
           },
@@ -10091,14 +10091,14 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
           },
@@ -10202,14 +10202,14 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
           },
@@ -10390,14 +10390,14 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
           },

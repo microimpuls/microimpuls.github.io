@@ -6133,6 +6133,20 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "email",
+            "description": "<p>Адрес email пользователя.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "mobile_phone_number",
+            "description": "<p>Номер мобильного телефона пользователя.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Object",
             "optional": false,
             "field": "payments",

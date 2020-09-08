@@ -1503,6 +1503,20 @@ define({ "api": [
             "group": "Parameter",
             "type": "Number",
             "optional": false,
+            "field": "vtariff_id",
+            "description": "<p>Идентификатор виртуального тарифного пакета в Smarty.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "tariff_ext_id",
+            "description": "<p>Идентификатор виртуального или обычного тарифного пакета в Smarty.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
           },
@@ -1593,6 +1607,20 @@ define({ "api": [
             "optional": false,
             "field": "tariff_id",
             "description": "<p>Идентификатор тарифного пакета в Smarty.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "vtariff_id",
+            "description": "<p>Идентификатор виртуального тарифного пакета в Smarty.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "tariff_ext_id",
+            "description": "<p>Идентификатор виртуального или обычного тарифного пакета в Smarty.</p>"
           },
           {
             "group": "Parameter",
@@ -3112,6 +3140,20 @@ define({ "api": [
             "group": "Parameter",
             "type": "Number",
             "optional": false,
+            "field": "vtariff_id",
+            "description": "<p>Идентификатор виртуального тарифного пакета в Smarty.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "tariff_ext_id",
+            "description": "<p>Идентификатор виртуального или обычного тарифного пакета в Smarty.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
           },
@@ -3203,6 +3245,20 @@ define({ "api": [
             "optional": false,
             "field": "tariff_id",
             "description": "<p>Идентификатор тарифного пакета в Smarty.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "vtariff_id",
+            "description": "<p>Идентификатор виртуального тарифного пакета в Smarty.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "tariff_ext_id",
+            "description": "<p>Идентификатор виртуального или обычного тарифного пакета в Smarty.</p>"
           },
           {
             "group": "Parameter",

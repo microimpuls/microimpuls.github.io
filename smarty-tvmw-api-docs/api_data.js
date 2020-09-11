@@ -6273,6 +6273,13 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "tariffs.currency",
+            "description": "<p>Валюта подписки.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "tariffs.period",

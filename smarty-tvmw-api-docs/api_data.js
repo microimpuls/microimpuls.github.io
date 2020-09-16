@@ -6058,7 +6058,13 @@ define({ "api": [
             "group": "Коды ошибок error",
             "optional": false,
             "field": "1",
-            "description": "<p>Передан неверный content_type.</p>"
+            "description": "<p>Передан неверный параметр.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Ошибка сохранения данных.</p>"
           }
         ]
       }
@@ -16937,6 +16943,18 @@ define({ "api": [
               "1"
             ],
             "optional": true,
+            "field": "is_viewing",
+            "defaultValue": "0",
+            "description": "<p>Фильтр по факту текущего просмотра. При значении 1 в выборку попадут только обьекты в процессе просмотра. При значении 0 факт добавления в избранное не будет проверяться.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
             "field": "tariff",
             "defaultValue": "0",
             "description": "<p>Возвращает фильмы, входящие в определённый тариф.</p>"
@@ -17299,6 +17317,13 @@ define({ "api": [
             "optional": false,
             "field": "videos.video_source",
             "description": "<p>Источник видео. 1 - Внутренний источник. 2 - Внешний провайдер фильмов. 3 - архивное EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "videos.progress",
+            "description": "<p>Прогресс просмотра фильма.</p>"
           },
           {
             "group": "Ответ",

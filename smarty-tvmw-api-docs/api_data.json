@@ -6731,6 +6731,12 @@
             "optional": false,
             "field": "4",
             "description": "<p>Неправильно настроен внутренний api.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "105",
+            "description": "<p>Ошибка обработчика API.</p>"
           }
         ]
       }
@@ -7027,6 +7033,12 @@
             "optional": false,
             "field": "4",
             "description": "<p>Неправильно настроен внутренний api.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "105",
+            "description": "<p>Ошибка обработчика API.</p>"
           }
         ]
       }

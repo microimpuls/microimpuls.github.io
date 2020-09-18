@@ -4475,6 +4475,17 @@
           {
             "group": "Ответ",
             "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "channels.ads_available",
+            "description": "<p>Флаг указывает что для канала на данный момент включена реклама.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
             "optional": false,
             "field": "error",
             "description": "<p>Код ошибки.</p>"
@@ -5325,6 +5336,17 @@
             "optional": false,
             "field": "channels.pause_live_tv_shift",
             "description": "<p>Временной сдвиг для функции Pause Live TV.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "channels.ads_available",
+            "description": "<p>Флаг указывает что для канала на данный момент включена реклама.</p>"
           },
           {
             "group": "Ответ",
@@ -12638,6 +12660,17 @@
             "optional": false,
             "field": "programs.pause_live_tv_shift",
             "description": "<p>Временной сдвиг для функции Pause Live TV.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "programs.ads_available",
+            "description": "<p>Флаг указывает что для канала на данный момент включена реклама.</p>"
           },
           {
             "group": "Ответ",

@@ -308,7 +308,7 @@ define({ "api": [
         "Ответ": [
           {
             "group": "Ответ",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "abonement",
             "description": "<p>Абонемент созданного аккаунта.</p>"

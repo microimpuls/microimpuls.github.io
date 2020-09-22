@@ -12821,6 +12821,24 @@
           {
             "group": "Parameter",
             "type": "Number",
+            "size": "0-100",
+            "optional": true,
+            "field": "limit",
+            "defaultValue": "100",
+            "description": "<p>Ограничение на количество фильмов на одну страницу выборки. Максимальное значение 100.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "size": "1..",
+            "optional": true,
+            "field": "page",
+            "defaultValue": "1",
+            "description": "<p>Номер страницы выборки.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
             "optional": true,
             "field": "category_id",
             "description": "<p>Идентификатор категории передач, если не передан - возвращаются все подборки.</p>"

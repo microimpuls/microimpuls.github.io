@@ -9941,6 +9941,110 @@
   },
   {
     "type": "post",
+    "url": "/payment/complete/",
+    "title": "PaymentComplete: инициация проверки статуса платежа",
+    "name": "PaymentComplete",
+    "group": "Payment",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "session_id",
+            "description": "<p>ID платежной сессии. Передается через POST.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "transaction_id",
+            "description": "<p>Внутренний ID платежа (ID, используемый в Smarty). Передается через POST.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "merchant_type",
+            "defaultValue": "пустое",
+            "description": "<p>Тип мерчанта. Передается через POST.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "status",
+            "description": "<p>Статус транзакции. 0 - необработана, 1 - подтверждена, 2 - ошибка.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Транзакция, соответствующая переданному ID, не найдена.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Ошибка платежного шлюза.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Payment"
+  },
+  {
+    "type": "post",
     "url": "/payment/create/",
     "title": "PaymentCreate: создание платежа для абонента",
     "name": "PaymentCreate",
@@ -10019,6 +10123,13 @@
             "optional": false,
             "field": "payments.session_id",
             "description": "<p>ID платёжной сессии.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "payments.redirect_url",
+            "description": "<p>URL для перенаправления на форму ввода данных на платежном шлюзе.</p>"
           },
           {
             "group": "Ответ",

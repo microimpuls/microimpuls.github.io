@@ -6156,6 +6156,20 @@
             "group": "Ответ",
             "type": "String",
             "optional": false,
+            "field": "firstname",
+            "description": "<p>Имя абонента.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "lastname",
+            "description": "<p>Фамилия абонента.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
             "field": "balance",
             "description": "<p>Остаток денежных средств на счете пользователя.</p>"
           },

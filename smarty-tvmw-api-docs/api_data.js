@@ -17952,9 +17952,9 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "vfid",
-            "description": "<p>Идентификатор ассета.</p>"
+            "description": "<p>Идентификатор ассета. Не используется при запросе фильмов из внешнего источника.</p>"
           },
           {
             "group": "Parameter",

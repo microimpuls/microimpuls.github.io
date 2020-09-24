@@ -14601,6 +14601,13 @@ define({ "api": [
             "group": "Ответ",
             "type": "String",
             "optional": false,
+            "field": "contents.video.screenshot_big",
+            "description": "<p>URL на кадр из фильма большого размера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
             "field": "contents.video.screenshot_b_big",
             "description": "<p>URL на размытый кадр из фильма большого размера.</p>"
           },
@@ -16648,6 +16655,13 @@ define({ "api": [
             "group": "Ответ",
             "type": "String",
             "optional": false,
+            "field": "screenshot_big",
+            "description": "<p>URL на кадр из фильма большого размера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
             "field": "screenshot_b_big",
             "description": "<p>URL на размытый кадр из фильма большого размера.</p>"
           },
@@ -16918,6 +16932,12 @@ define({ "api": [
             "optional": false,
             "field": "0",
             "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Нет такого видео.</p>"
           }
         ]
       }
@@ -17251,6 +17271,13 @@ define({ "api": [
             "optional": false,
             "field": "videos.thumbnail_big",
             "description": "<p>URL на обложку фильма большого размера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "videos.screenshot_big",
+            "description": "<p>URL на кадр из фильма большого размера.</p>"
           },
           {
             "group": "Ответ",

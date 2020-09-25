@@ -15855,6 +15855,12 @@
             "optional": false,
             "field": "0",
             "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Видео не существует.</p>"
           }
         ]
       }
@@ -16492,6 +16498,12 @@
             "optional": false,
             "field": "2",
             "description": "<p>Ошибка получения адреса потока от провайдера (онлайн-кинотеатра).</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "3",
+            "description": "<p>Для данного устройства нет доступа.</p>"
           }
         ]
       }
@@ -16602,6 +16614,12 @@
             "optional": false,
             "field": "3",
             "description": "<p>Покупка уже была совершена ранее.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "4",
+            "description": "<p>Для данного устройства нет доступа.</p>"
           }
         ]
       }
@@ -18267,6 +18285,12 @@
             "optional": false,
             "field": "2",
             "description": "<p>Ошибка получения адреса потока от провайдера (онлайн-кинотеатра).</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "3",
+            "description": "<p>Для данного устройства нет доступа.</p>"
           }
         ]
       }

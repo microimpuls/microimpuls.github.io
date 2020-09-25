@@ -10454,6 +10454,138 @@
   },
   {
     "type": "post",
+    "url": "/payment/pares/process/",
+    "title": "PaymentPAResProcess: обработка результатов 3ds аутентификации",
+    "name": "PaymentPAResProcess",
+    "group": "Payment",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "session_id",
+            "description": "<p>ID платежной сессии. Передается через POST.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "transaction_id",
+            "description": "<p>Внутренний ID платежа (ID, используемый в Smarty). Передается через POST.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "merchant_type",
+            "defaultValue": "пустое",
+            "description": "<p>Тип мерчанта Передается через POST.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "card_number",
+            "description": "<p>номер карты. Передается через POST.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "card_holder",
+            "description": "<p>имя владельца карты. Передается через POST.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "card_expire",
+            "description": "<p>Срок действия карты. Передается через POST.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "card_cvv",
+            "description": "<p>cvv карты. Передается через POST.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "pares",
+            "description": "<p>Результат 3ds аутентификации. Передается через POST.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Транзакция, соответствующая переданному ID, не найдена.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Ошибка платежного шлюза.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Payment"
+  },
+  {
+    "type": "post",
     "url": "/payment/process/",
     "title": "PaymentProcess: передача платежных данных шлюзу",
     "name": "PaymentProcess",

@@ -5989,6 +5989,107 @@
   },
   {
     "type": "get",
+    "url": "/content/position/delete/",
+    "title": "ContentPositionDelete: удаление позиции просмотра контента (передачи или фильма)",
+    "name": "ContentPositionDelete",
+    "group": "ContentPosition",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "allowedValues": [
+              "program",
+              "video"
+            ],
+            "optional": false,
+            "field": "content_type",
+            "description": "<p>Тип контента.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "content_id",
+            "description": "<p>Идентификатор контента.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "asset_id",
+            "defaultValue": "пустой",
+            "description": "<p>Идентификатор ассета/серии. Обязательно передавать это поле для content_type=video.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "authkey",
+            "description": "<p>Ключ сессии.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки, напоминание сохранено успешно.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Передан неверный параметр.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Ошибка сохранения данных.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "ContentPosition"
+  },
+  {
+    "type": "get",
     "url": "/content/position/set/",
     "title": "ContentPositionSet: сохранение позиции просмотра контента (передачи или фильма)",
     "name": "ContentPositionSet",
@@ -6020,7 +6121,7 @@
             "optional": true,
             "field": "asset_id",
             "defaultValue": "пустой",
-            "description": "<p>Идентификатор ассета/серии. Обязательно передавать это поле для сохранения меток просмотра для content_type=video.</p>"
+            "description": "<p>Идентификатор ассета/серии. Обязательно передавать это поле для content_type=video.</p>"
           },
           {
             "group": "Parameter",

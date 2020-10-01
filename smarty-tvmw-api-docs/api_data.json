@@ -14685,6 +14685,13 @@
         "Ответ": [
           {
             "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "name",
+            "description": "<p>Название подборки.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Object[]",
             "optional": false,
             "field": "contents",
@@ -15332,23 +15339,30 @@
           },
           {
             "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "selections.promo_image",
+            "description": "<p>URL-адрес промо-изображения.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Number",
             "optional": false,
-            "field": "providers.id",
+            "field": "selections.id",
             "description": "<p>Идентификатор подборки.</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
-            "field": "providers.name",
+            "field": "selections.name",
             "description": "<p>Название подборки.</p>"
           },
           {
             "group": "Ответ",
             "type": "Number",
             "optional": false,
-            "field": "providers.count",
+            "field": "selections.count",
             "description": "<p>Количество контента в подборке.</p>"
           },
           {
@@ -15358,7 +15372,7 @@
               "0"
             ],
             "optional": false,
-            "field": "providers.type",
+            "field": "selections.type",
             "description": "<p>Тип подборки. 0 - Ручная.</p>"
           },
           {

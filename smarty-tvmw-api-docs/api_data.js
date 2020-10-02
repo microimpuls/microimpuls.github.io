@@ -14685,10 +14685,34 @@ define({ "api": [
         "Ответ": [
           {
             "group": "Ответ",
-            "type": "Number",
+            "type": "String",
+            "optional": false,
+            "field": "promo_image",
+            "description": "<p>URL-адрес промо-изображения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
             "optional": false,
             "field": "name",
             "description": "<p>Название подборки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "count",
+            "description": "<p>Количество контента в подборке.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0"
+            ],
+            "optional": false,
+            "field": "type",
+            "description": "<p>Тип подборки. 0 - Ручная. 1 - Сгенерированная.</p>"
           },
           {
             "group": "Ответ",
@@ -15373,7 +15397,7 @@ define({ "api": [
             ],
             "optional": false,
             "field": "selections.type",
-            "description": "<p>Тип подборки. 0 - Ручная.</p>"
+            "description": "<p>Тип подборки. 0 - Ручная. 1 - Сгенерированная.</p>"
           },
           {
             "group": "Ответ",

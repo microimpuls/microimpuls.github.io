@@ -6246,6 +6246,18 @@ define({ "api": [
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "show_virtual_tariffs",
+            "defaultValue": "0",
+            "description": "<p>Выводить виртуальные тарифы в списке.</p>"
           }
         ]
       }
@@ -6392,6 +6404,17 @@ define({ "api": [
             "optional": false,
             "field": "tariffs.id",
             "description": "<p>Идентификатор тарифа.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "tariffs.is_virtual",
+            "description": "<p>Является ли тариф виртуальным.</p>"
           },
           {
             "group": "Ответ",
@@ -6672,7 +6695,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/customer/tariff/list",
+    "url": "/customer/tariff/list/",
     "title": "CustomerTariffList: получение списка доступных тарифных пакетов",
     "name": "CustomerTariffList",
     "group": "Customer",
@@ -6807,9 +6830,16 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "tariff_id",
-            "description": "<p>Идентификатор тарифа.</p>"
+            "description": "<p>Идентификатор тарифа. Должен быть передан либо параметр tariff_id, либо virtual_tariff_id.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "virtual_tariff_id",
+            "description": "<p>Идентификатор виртуального тарифа.</p>"
           },
           {
             "group": "Parameter",
@@ -6874,6 +6904,12 @@ define({ "api": [
             "optional": false,
             "field": "105",
             "description": "<p>Ошибка обработчика API.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "120",
+            "description": "<p>Не передан ни tariff_id, ни virtual_tariff_id.</p>"
           }
         ]
       }
@@ -6894,7 +6930,7 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "tariff_id",
             "description": "<p>Идентификатор тарифа.</p>"
           },
@@ -6973,7 +7009,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/customer/tariff/subscription/list",
+    "url": "/customer/tariff/subscription/list/",
     "title": "CustomerTariffSubscriptionList: получение списка действующих подписок",
     "name": "CustomerTariffSubscriptionList",
     "group": "Customer",
@@ -7115,9 +7151,16 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "tariff_id",
-            "description": "<p>Идентификатор тарифа.</p>"
+            "description": "<p>Идентификатор тарифа. Должен быть передан либо параметр tariff_id, либо virtual_tariff_id.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "virtual_tariff_id",
+            "description": "<p>Идентификатор виртуального тарифа.</p>"
           },
           {
             "group": "Parameter",
@@ -7176,6 +7219,12 @@ define({ "api": [
             "optional": false,
             "field": "105",
             "description": "<p>Ошибка обработчика API.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "120",
+            "description": "<p>Не передан ни tariff_id, ни virtual_tariff_id.</p>"
           }
         ]
       }

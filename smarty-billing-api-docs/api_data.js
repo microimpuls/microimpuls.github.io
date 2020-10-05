@@ -2433,6 +2433,12 @@ define({ "api": [
             "optional": false,
             "field": "4",
             "description": "<p>Ошибка создания ссылки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "723",
+            "description": "<p>Некорректная конфигурация платёжного шлюза.</p>"
           }
         ]
       }
@@ -2906,6 +2912,12 @@ define({ "api": [
             "optional": false,
             "field": "10",
             "description": "<p>Абонент не найден.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "723",
+            "description": "<p>Некорректная конфигурация платёжного шлюза.</p>"
           }
         ]
       }

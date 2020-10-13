@@ -1,7 +1,7 @@
 [
   {
     "type": "post",
-    "url": "/account/activate",
+    "url": "/account/activate/",
     "title": "AccountActivate: активация аккаунта",
     "name": "AccountActivate",
     "group": "Account",
@@ -1919,6 +1919,18 @@
           {
             "group": "Parameter",
             "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "send_sms",
+            "defaultValue": "0",
+            "description": "<p>Включает отправку SMS клиенту.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
             "optional": false,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
@@ -3474,6 +3486,12 @@
             "optional": false,
             "field": "3",
             "description": "<p>Ошибка при создании подписки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "100",
+            "description": "<p>Не используется подписочная модель.</p>"
           }
         ]
       }
@@ -3555,6 +3573,12 @@
             "optional": false,
             "field": "2",
             "description": "<p>Неизвестная ошибка.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "100",
+            "description": "<p>Не используется подписочная модель.</p>"
           }
         ]
       }
@@ -4368,7 +4392,7 @@
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "id",
+            "field": "tariff_id",
             "description": "<p>Идентификатор тарифного пакета.</p>"
           },
           {
@@ -4954,7 +4978,7 @@
   },
   {
     "type": "post",
-    "url": "/tariff/streamservice/assign",
+    "url": "/tariff/streamservice/assign/",
     "title": "TariffStreamServiceAssign: привязка стриминг-сервиса к тарифному пакету",
     "name": "TariffStreamServiceAssign",
     "group": "Tariff",

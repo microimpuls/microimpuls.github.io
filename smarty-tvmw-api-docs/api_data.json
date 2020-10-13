@@ -109,9 +109,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -127,6 +127,22 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -243,6 +259,14 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -362,9 +386,17 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
+            "field": "device_model",
+            "defaultValue": "пустой",
+            "description": "<p>Модель устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -385,17 +417,17 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
-            "field": "device_model",
-            "defaultValue": "пустой",
-            "description": "<p>Модель устройства.</p>"
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": true,
-            "field": "device_uid",
-            "defaultValue": "пустой",
-            "description": "<p>Уникальный идентификатор устройства.</p>"
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -525,10 +557,17 @@
         "Parameter": [
           {
             "group": "Parameter",
-            "type": "String",
+            "type": "Number",
             "optional": false,
+            "field": "aid",
+            "description": "<p>Идентификатор актера.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -549,16 +588,17 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
-            "field": "lang",
+            "field": "device_uid",
             "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть имя актера.</p>"
+            "description": "<p>Уникальный идентификатор устройства.</p>"
           },
           {
             "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "aid",
-            "description": "<p>Идентификатор актера.</p>"
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -704,28 +744,6 @@
         "Parameter": [
           {
             "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device",
-            "defaultValue": "пустое",
-            "description": "<p>Системное название типа устройства.</p>"
-          },
-          {
-            "group": "Parameter",
             "type": "Number",
             "size": "0-100",
             "optional": true,
@@ -756,19 +774,49 @@
           },
           {
             "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "lang",
-            "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть имена актеров. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
-          },
-          {
-            "group": "Parameter",
             "type": "Number",
             "optional": true,
             "field": "vid",
             "defaultValue": "пустое",
             "description": "<p>Идентификатор фильма. Если параметр не передан, то будут отображены все актеры.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -863,28 +911,6 @@
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "api_key",
-            "description": "<p>API key.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device",
-            "defaultValue": "пустое",
-            "description": "<p>Системное название типа устройства.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
             "size": "0-100",
             "optional": true,
             "field": "limit",
@@ -914,19 +940,49 @@
           },
           {
             "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "lang",
-            "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть имена актеров. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
-          },
-          {
-            "group": "Parameter",
             "type": "Number",
             "optional": true,
             "field": "vid",
             "defaultValue": "пустое",
             "description": "<p>Идентификатор фильма. Если параметр не передан, то будут отображены все актеры.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "api_key",
+            "description": "<p>API key.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -1062,10 +1118,19 @@
           },
           {
             "group": "Parameter",
+            "type": "Number",
+            "size": "-11..11",
+            "optional": true,
+            "field": "timezone",
+            "defaultValue": "пустое",
+            "description": "<p>Часовой пояс. Если передан, то рекламные блоки будут фильтроваться по текущему времени.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -1084,12 +1149,11 @@
           },
           {
             "group": "Parameter",
-            "type": "Number",
-            "size": "-11..11",
+            "type": "String",
             "optional": true,
-            "field": "timezone",
+            "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Часовой пояс. Если передан, то рекламные блоки будут фильтроваться по текущему времени.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -1253,9 +1317,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -1268,9 +1332,25 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть название приложения.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -1379,34 +1459,6 @@
     "title": "ApplicationExchangeData: данные о курсах валют для виджета курсов валют",
     "name": "ApplicationExchangeData",
     "group": "Application",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device",
-            "defaultValue": "пустое",
-            "description": "<p>Системное название типа устройства.</p>"
-          }
-        ]
-      }
-    },
     "success": {
       "fields": {
         "Ответ": [
@@ -1462,23 +1514,16 @@
     },
     "version": "1.40.0",
     "filename": "../../../tvmiddleware/api.py",
-    "groupTitle": "Application"
-  },
-  {
-    "type": "get",
-    "url": "/application/list/",
-    "title": "ApplicationList: список внешних приложений",
-    "name": "ApplicationList",
-    "group": "Application",
+    "groupTitle": "Application",
     "parameter": {
       "fields": {
         "Parameter": [
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -1500,9 +1545,30 @@
             "type": "String",
             "optional": true,
             "field": "device_uid",
-            "defaultValue": "пустой",
-            "description": "<p>Уникальный идентификатор устройства, например, MAC-адрес.</p>"
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
           },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "get",
+    "url": "/application/list/",
+    "title": "ApplicationList: список внешних приложений",
+    "name": "ApplicationList",
+    "group": "Application",
+    "parameter": {
+      "fields": {
+        "Parameter": [
           {
             "group": "Parameter",
             "type": "String",
@@ -1515,9 +1581,39 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть названия приложений.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -1661,9 +1757,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -1679,6 +1775,22 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -1760,9 +1872,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -1778,6 +1890,22 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -1890,7 +2018,7 @@
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "abonement",
             "defaultValue": "пустой",
             "description": "<p>Абонемент (логин) аккаунта. Если для аккаунта разрешена авторизация только по абонементу, то достаточно передать только это поле.</p>"
@@ -1898,7 +2026,7 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "password",
             "defaultValue": "пустой",
             "description": "<p>Пароль аккаунта.</p>"
@@ -1906,7 +2034,7 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "device_uid",
             "defaultValue": "пустой",
             "description": "<p>Уникальный идентификатор устройства. Если для аккаунта разрешена авторизация только по Device UID, то достаточно передать только это поле.</p>"
@@ -1956,7 +2084,7 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
@@ -2263,34 +2391,6 @@
     "title": "Logout: завершение сессии",
     "name": "Logout",
     "group": "Authorization",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device",
-            "defaultValue": "пустое",
-            "description": "<p>Системное название типа устройства.</p>"
-          }
-        ]
-      }
-    },
     "success": {
       "fields": {
         "Ответ": [
@@ -2318,23 +2418,16 @@
     },
     "version": "1.40.0",
     "filename": "../../../tvmiddleware/api.py",
-    "groupTitle": "Authorization"
-  },
-  {
-    "type": "get",
-    "url": "/camera/city/list/",
-    "title": "CameraCityList: список городов, в которых есть камеры",
-    "name": "CameraCityList",
-    "group": "Camera",
+    "groupTitle": "Authorization",
     "parameter": {
       "fields": {
         "Parameter": [
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -2350,10 +2443,33 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
-    },
+    }
+  },
+  {
+    "type": "get",
+    "url": "/camera/city/list/",
+    "title": "CameraCityList: список городов, в которых есть камеры",
+    "name": "CameraCityList",
+    "group": "Camera",
     "success": {
       "fields": {
         "Ответ": [
@@ -2402,7 +2518,51 @@
     },
     "version": "1.40.0",
     "filename": "../../../tvmiddleware/api.py",
-    "groupTitle": "Camera"
+    "groupTitle": "Camera",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    }
   },
   {
     "type": "get",
@@ -2423,9 +2583,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -2441,6 +2601,22 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -2588,9 +2764,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -2611,9 +2787,17 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть EPG. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -3004,9 +3188,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -3022,6 +3206,22 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -3080,10 +3280,18 @@
         "Parameter": [
           {
             "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "city",
+            "defaultValue": "пустое",
+            "description": "<p>ID города.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -3091,14 +3299,6 @@
             "optional": false,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": true,
-            "field": "city",
-            "defaultValue": "пустое",
-            "description": "<p>ID города.</p>"
           },
           {
             "group": "Parameter",
@@ -3112,9 +3312,17 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть названия категорий. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -3189,42 +3397,6 @@
     "title": "CategoryList: список категорий",
     "name": "CategoryList",
     "group": "Category",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device",
-            "defaultValue": "пустое",
-            "description": "<p>Системное название типа устройства.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "lang",
-            "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть названия категорий. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
-          }
-        ]
-      }
-    },
     "success": {
       "fields": {
         "Ответ": [
@@ -3287,7 +3459,51 @@
     },
     "version": "1.40.0",
     "filename": "../../../tvmiddleware/api.py",
-    "groupTitle": "Category"
+    "groupTitle": "Category",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    }
   },
   {
     "type": "get",
@@ -3322,9 +3538,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -3340,6 +3556,22 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -3429,9 +3661,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -3447,6 +3679,22 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -3555,34 +3803,6 @@
     "title": "ChannelIconList: список URL-адресов иконок всех телеканалов",
     "name": "ChannelIconList",
     "group": "Channel",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device",
-            "defaultValue": "пустое",
-            "description": "<p>Системное название типа устройства.</p>"
-          }
-        ]
-      }
-    },
     "success": {
       "fields": {
         "Ответ": [
@@ -3631,7 +3851,51 @@
     },
     "version": "1.40.0",
     "filename": "../../../tvmiddleware/api.py",
-    "groupTitle": "Channel"
+    "groupTitle": "Channel",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    }
   },
   {
     "type": "get",
@@ -3702,9 +3966,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -3725,9 +3989,17 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть названия каналов и EPG. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -4567,9 +4839,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -4590,9 +4862,17 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть названия каналов и EPG. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -5422,9 +5702,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -5445,9 +5725,17 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть названия и описания передач. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -5752,9 +6040,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -5775,9 +6063,17 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть названия и описания передач. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -5922,9 +6218,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -5940,6 +6236,22 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -6025,9 +6337,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -6043,6 +6355,22 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -6133,9 +6461,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -6151,6 +6479,22 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -6227,6 +6571,18 @@
           },
           {
             "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "show_virtual_tariffs",
+            "defaultValue": "0",
+            "description": "<p>Выводить виртуальные тарифы в списке.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
             "optional": true,
             "field": "authkey",
@@ -6235,7 +6591,7 @@
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": true,
+            "optional": false,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
           },
@@ -6249,15 +6605,19 @@
           },
           {
             "group": "Parameter",
-            "type": "Number",
-            "allowedValues": [
-              "0",
-              "1"
-            ],
+            "type": "String",
             "optional": true,
-            "field": "show_virtual_tariffs",
-            "defaultValue": "0",
-            "description": "<p>Выводить виртуальные тарифы в списке.</p>"
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -6699,34 +7059,6 @@
     "title": "CustomerTariffList: получение списка доступных тарифных пакетов",
     "name": "CustomerTariffList",
     "group": "Customer",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device",
-            "defaultValue": "пустое",
-            "description": "<p>Системное название типа устройства.</p>"
-          }
-        ]
-      }
-    },
     "success": {
       "fields": {
         "Ответ": [
@@ -6816,7 +7148,51 @@
     },
     "version": "1.40.0",
     "filename": "../../../tvmiddleware/api.py",
-    "groupTitle": "Customer"
+    "groupTitle": "Customer",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    }
   },
   {
     "type": "get",
@@ -6844,9 +7220,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -6862,6 +7238,22 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -6937,9 +7329,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -6955,6 +7347,22 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -7013,34 +7421,6 @@
     "title": "CustomerTariffSubscriptionList: получение списка действующих подписок",
     "name": "CustomerTariffSubscriptionList",
     "group": "Customer",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device",
-            "defaultValue": "пустое",
-            "description": "<p>Системное название типа устройства.</p>"
-          }
-        ]
-      }
-    },
     "success": {
       "fields": {
         "Ответ": [
@@ -7137,7 +7517,51 @@
     },
     "version": "1.40.0",
     "filename": "../../../tvmiddleware/api.py",
-    "groupTitle": "Customer"
+    "groupTitle": "Customer",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    }
   },
   {
     "type": "get",
@@ -7165,9 +7589,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -7183,6 +7607,22 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -7239,34 +7679,6 @@
     "title": "GameList: список игр",
     "name": "GameList",
     "group": "Game",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device",
-            "defaultValue": "пустое",
-            "description": "<p>Системное название типа устройства.</p>"
-          }
-        ]
-      }
-    },
     "success": {
       "fields": {
         "Ответ": [
@@ -7336,23 +7748,16 @@
     },
     "version": "1.40.0",
     "filename": "../../../tvmiddleware/api.py",
-    "groupTitle": "Game"
-  },
-  {
-    "type": "get",
-    "url": "/game/score/list/",
-    "title": "GameScoreList: список заработанных очков в игре",
-    "name": "GameScoreList",
-    "group": "Game",
+    "groupTitle": "Game",
     "parameter": {
       "fields": {
         "Parameter": [
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -7368,10 +7773,33 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
-    },
+    }
+  },
+  {
+    "type": "get",
+    "url": "/game/score/list/",
+    "title": "GameScoreList: список заработанных очков в игре",
+    "name": "GameScoreList",
+    "group": "Game",
     "success": {
       "fields": {
         "Ответ": [
@@ -7419,7 +7847,51 @@
     },
     "version": "1.40.0",
     "filename": "../../../tvmiddleware/api.py",
-    "groupTitle": "Game"
+    "groupTitle": "Game",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    }
   },
   {
     "type": "get",
@@ -7447,9 +7919,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -7465,6 +7937,22 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -7562,9 +8050,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -7580,6 +8068,22 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -7691,9 +8195,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -7714,9 +8218,17 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть названия жанров. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -7808,6 +8320,18 @@
           {
             "group": "Parameter",
             "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "categories",
+            "defaultValue": "0",
+            "description": "<p>При значении 0 - возвращает обычные жанры, 1 - жанры-категории</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
             "optional": false,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
@@ -7829,15 +8353,11 @@
           },
           {
             "group": "Parameter",
-            "type": "Number",
-            "allowedValues": [
-              "0",
-              "1"
-            ],
+            "type": "String",
             "optional": true,
-            "field": "categories",
-            "defaultValue": "0",
-            "description": "<p>При значении 0 - возвращает обычные жанры, 1 - жанры-категории</p>"
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
           },
           {
             "group": "Parameter",
@@ -7845,7 +8365,7 @@
             "optional": true,
             "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть названия жанров. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -7960,7 +8480,7 @@
             "type": "Object[]",
             "optional": false,
             "field": "log_events",
-            "description": "<p>Список событий (body).</p>"
+            "description": "<p>POST параметр. Список событий (body).</p>"
           }
         ]
       }
@@ -8336,7 +8856,14 @@
             "type": "String",
             "optional": false,
             "field": "error_info",
-            "description": "<p>Информация об ошибке в формате JSON.</p>"
+            "description": "<p>POST параметр. Информация об ошибке в формате JSON.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "log_events",
+            "description": "<p>POST параметр. Список событий (body).</p>"
           }
         ],
         "Ответ": [
@@ -8506,6 +9033,22 @@
           },
           {
             "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства. Должен быть передан либо device_uid, либо authkey.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "defaultValue": "пустое",
+            "description": "<p>Авторизационный ключ сессии. Должен быть передан либо device_uid, либо authkey.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Number",
             "optional": false,
             "field": "client_id",
@@ -8530,17 +9073,9 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
-            "field": "device_uid",
+            "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Уникальный идентификатор устройства. Должен быть передан либо device_uid, либо authkey.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "authkey",
-            "defaultValue": "пустое",
-            "description": "<p>Авторизационный ключ сессии. Должен быть передан либо device_uid, либо authkey.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -8610,6 +9145,14 @@
           },
           {
             "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "defaultValue": "пустое",
+            "description": "<p>Авторизационный ключ сессии.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Number",
             "optional": false,
             "field": "client_id",
@@ -8642,17 +9185,9 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
-            "field": "authkey",
-            "defaultValue": "пустое",
-            "description": "<p>Авторизационный ключ сессии.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
             "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть имя и текст правового документа. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -8753,6 +9288,14 @@
         "Parameter": [
           {
             "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "defaultValue": "пустое",
+            "description": "<p>Авторизационный ключ сессии.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Number",
             "optional": false,
             "field": "client_id",
@@ -8768,8 +9311,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "device",
+            "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
           },
           {
@@ -8784,17 +9328,9 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
-            "field": "authkey",
-            "defaultValue": "пустое",
-            "description": "<p>Авторизационный ключ сессии.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
             "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть имена правовых документов. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -8930,7 +9466,7 @@
             "optional": true,
             "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть имя и текст правового документа. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -9015,50 +9551,6 @@
     "title": "NoAuthLegalDocumentList: список правовых документов без авторизации",
     "name": "NoAuthLegalDocumentList",
     "group": "LegalDocument",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "api_key",
-            "description": "<p>API key.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device",
-            "defaultValue": "пустое",
-            "description": "<p>Системное название типа устройства.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device_uid",
-            "defaultValue": "пустое",
-            "description": "<p>Уникальный идентификатор устройства.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "lang",
-            "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть имя и текст правового документа. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
-          }
-        ]
-      }
-    },
     "success": {
       "fields": {
         "Ответ": [
@@ -9125,7 +9617,51 @@
     },
     "version": "1.40.0",
     "filename": "../../../tvmiddleware/api.py",
-    "groupTitle": "LegalDocument"
+    "groupTitle": "LegalDocument",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "api_key",
+            "description": "<p>API key.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    }
   },
   {
     "type": "get",
@@ -9146,9 +9682,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -9164,6 +9700,22 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -9216,9 +9768,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -9234,6 +9786,22 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -9337,34 +9905,6 @@
     "title": "MessageList: список сообщений",
     "name": "MessageList",
     "group": "Message",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device",
-            "defaultValue": "пустое",
-            "description": "<p>Системное название типа устройства.</p>"
-          }
-        ]
-      }
-    },
     "success": {
       "fields": {
         "Ответ": [
@@ -9445,7 +9985,51 @@
     },
     "version": "1.40.0",
     "filename": "../../../tvmiddleware/api.py",
-    "groupTitle": "Message"
+    "groupTitle": "Message",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    }
   },
   {
     "type": "get",
@@ -9481,9 +10065,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -9499,6 +10083,22 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -9551,9 +10151,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -9569,6 +10169,22 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -9628,9 +10244,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -9651,9 +10267,17 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть названия каналов и EPG. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -9970,13 +10594,27 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
+            "field": "card_id",
+            "description": "<p>POST параметр. Идентификатор карты.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "amount",
+            "description": "<p>POST параметр. Сумма платежа.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "authkey",
             "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": true,
+            "optional": false,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
           },
@@ -9992,23 +10630,17 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
-            "field": "merchant_type",
+            "field": "device_uid",
             "defaultValue": "пустое",
-            "description": "<p>Тип мерчанта.</p>"
+            "description": "<p>Уникальный идентификатор устройства.</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": true,
-            "field": "card_id",
-            "description": "<p>Идентификатор карты.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": true,
-            "field": "amount",
-            "description": "<p>Сумма платежа.</p>"
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -10114,6 +10746,28 @@
         "Parameter": [
           {
             "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "session_id",
+            "description": "<p>POST параметр. ID платежной сессии.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "transaction_id",
+            "description": "<p>POST параметр. Внутренний ID платежа (ID, используемый в Smarty).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "merchant_type",
+            "defaultValue": "пустое",
+            "description": "<p>POST параметр. Тип мерчанта.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
             "optional": true,
             "field": "authkey",
@@ -10122,7 +10776,7 @@
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": true,
+            "optional": false,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
           },
@@ -10136,25 +10790,19 @@
           },
           {
             "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "session_id",
-            "description": "<p>ID платежной сессии. Передается через POST.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "transaction_id",
-            "description": "<p>Внутренний ID платежа (ID, используемый в Smarty). Передается через POST.</p>"
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": true,
-            "field": "merchant_type",
+            "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Тип мерчанта. Передается через POST.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -10220,31 +10868,9 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
-            "field": "authkey",
-            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": true,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
             "field": "template",
             "defaultValue": "пустое",
-            "description": "<p>Имя шаблона (если есть поддержка шлюзом).</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device",
-            "defaultValue": "пустое",
-            "description": "<p>Системное название типа устройства.</p>"
+            "description": "<p>POST параметр. Имя шаблона (если есть поддержка шлюзом).</p>"
           },
           {
             "group": "Parameter",
@@ -10259,7 +10885,45 @@
             "type": "Number",
             "optional": false,
             "field": "amount",
-            "description": "<p>Cумма платежа. Передается через POST</p>"
+            "description": "<p>POST параметр. Cумма платежа.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -10412,9 +11076,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -10430,6 +11094,22 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -10504,13 +11184,28 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
+            "field": "merchant_type",
+            "defaultValue": "пустое",
+            "description": "<p>Тип мерчанта.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "amount",
+            "description": "<p>POST параметр. Сумма платежа.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "authkey",
             "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": true,
+            "optional": false,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
           },
@@ -10526,16 +11221,17 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
-            "field": "merchant_type",
+            "field": "device_uid",
             "defaultValue": "пустое",
-            "description": "<p>Тип мерчанта.</p>"
+            "description": "<p>Уникальный идентификатор устройства.</p>"
           },
           {
             "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "amount",
-            "description": "<p>Сумма платежа.</p>"
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -10613,6 +11309,63 @@
         "Parameter": [
           {
             "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "session_id",
+            "description": "<p>POST параметр. ID платежной сессии.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "transaction_id",
+            "description": "<p>POST параметр. Внутренний ID платежа (ID, используемый в Smarty).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "merchant_type",
+            "defaultValue": "пустое",
+            "description": "<p>POST параметр. Тип мерчанта</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "card_number",
+            "description": "<p>POST параметр. номер карты.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "card_holder",
+            "description": "<p>POST параметр. имя владельца карты.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "card_expire",
+            "description": "<p>POST параметр. Срок действия карты.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "card_cvv",
+            "description": "<p>POST параметр. cvv карты.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "pares",
+            "description": "<p>POST параметр. Результат 3ds аутентификации.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
             "optional": true,
             "field": "authkey",
@@ -10621,7 +11374,7 @@
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": true,
+            "optional": false,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
           },
@@ -10635,60 +11388,19 @@
           },
           {
             "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "session_id",
-            "description": "<p>ID платежной сессии. Передается через POST.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "transaction_id",
-            "description": "<p>Внутренний ID платежа (ID, используемый в Smarty). Передается через POST.</p>"
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": true,
-            "field": "merchant_type",
+            "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Тип мерчанта Передается через POST.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "card_number",
-            "description": "<p>номер карты. Передается через POST.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "card_holder",
-            "description": "<p>имя владельца карты. Передается через POST.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "card_expire",
-            "description": "<p>Срок действия карты. Передается через POST.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "card_cvv",
-            "description": "<p>cvv карты. Передается через POST.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "pares",
-            "description": "<p>Результат 3ds аутентификации. Передается через POST.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -10745,39 +11457,17 @@
         "Parameter": [
           {
             "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "authkey",
-            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": true,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device",
-            "defaultValue": "пустое",
-            "description": "<p>Системное название типа устройства.</p>"
-          },
-          {
-            "group": "Parameter",
             "type": "Number",
             "optional": false,
             "field": "payment_id",
-            "description": "<p>Внешний ID платежа (ID, используемый в шлюзе).</p>"
+            "description": "<p>POST параметр. Внешний ID платежа (ID, используемый в шлюзе).</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
             "optional": true,
             "field": "transaction_id",
-            "description": "<p>Внутренний ID платежа (ID, используемый в Smarty).</p>"
+            "description": "<p>POST параметр. Внутренний ID платежа (ID, используемый в Smarty).</p>"
           },
           {
             "group": "Parameter",
@@ -10792,28 +11482,66 @@
             "type": "Number",
             "optional": false,
             "field": "card_number",
-            "description": "<p>номер карты. Передается через POST.</p>"
+            "description": "<p>POST параметр. Номер карты.</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
             "optional": false,
             "field": "card_holder",
-            "description": "<p>имя владельца карты. Передается через POST.</p>"
+            "description": "<p>POST параметр. Имя владельца карты.</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
             "optional": false,
             "field": "card_expire",
-            "description": "<p>Срок действия карты. Передается через POST.</p>"
+            "description": "<p>POST параметр. Срок действия карты.</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
             "optional": false,
             "field": "card_cvv",
-            "description": "<p>cvv карты. Передается через POST.</p>"
+            "description": "<p>POST параметр. cvv карты.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -10936,7 +11664,15 @@
             "type": "String",
             "optional": false,
             "field": "card_id",
-            "description": "<p>Идентификатор карты.</p>"
+            "description": "<p>POST параметр. Идентификатор карты.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "merchant_type",
+            "defaultValue": "пустое",
+            "description": "<p>Тип мерчанта.</p>"
           },
           {
             "group": "Parameter",
@@ -10948,7 +11684,7 @@
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": true,
+            "optional": false,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
           },
@@ -10964,9 +11700,17 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
-            "field": "merchant_type",
+            "field": "device_uid",
             "defaultValue": "пустое",
-            "description": "<p>Тип мерчанта.</p>"
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -11024,13 +11768,21 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
+            "field": "merchant_type",
+            "defaultValue": "пустое",
+            "description": "<p>Тип мерчанта.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "authkey",
             "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": true,
+            "optional": false,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
           },
@@ -11046,9 +11798,17 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
-            "field": "merchant_type",
+            "field": "device_uid",
             "defaultValue": "пустое",
-            "description": "<p>Тип мерчанта.</p>"
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -11145,6 +11905,13 @@
             "group": "Parameter",
             "type": "Number",
             "optional": false,
+            "field": "tariff_id",
+            "description": "<p>Идентификатор тарифа.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
           },
@@ -11157,18 +11924,27 @@
           },
           {
             "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "tariff_id",
-            "description": "<p>Идентификатор тарифа.</p>"
-          },
-          {
-            "group": "Parameter",
             "type": "String",
             "optional": true,
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -11242,34 +12018,6 @@
     "title": "NoAuthPortalClientTariffList: список тарифных пакетов (доступен без авторизации)",
     "name": "NoAuthPortalClientTariffList",
     "group": "Portal",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "api_key",
-            "description": "<p>API key.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device",
-            "defaultValue": "пустое",
-            "description": "<p>Системное название типа устройства.</p>"
-          }
-        ]
-      }
-    },
     "success": {
       "fields": {
         "Ответ": [
@@ -11353,7 +12101,51 @@
     },
     "version": "1.40.0",
     "filename": "../../../tvmiddleware/api.py",
-    "groupTitle": "Portal"
+    "groupTitle": "Portal",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "api_key",
+            "description": "<p>API key.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    }
   },
   {
     "type": "get",
@@ -11397,8 +12189,24 @@
             "type": "String",
             "optional": true,
             "field": "device",
-            "defaultValue": "пустой",
+            "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -11512,34 +12320,6 @@
     "title": "PortalClientList: список дочерних Client ID",
     "name": "PortalClientList",
     "group": "Portal",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "api_key",
-            "description": "<p>API key.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device",
-            "defaultValue": "пустой",
-            "description": "<p>Системное название типа устройства.</p>"
-          }
-        ]
-      }
-    },
     "success": {
       "fields": {
         "Ответ": [
@@ -11636,7 +12416,51 @@
     },
     "version": "1.40.0",
     "filename": "../../../tvmiddleware/api.py",
-    "groupTitle": "Portal"
+    "groupTitle": "Portal",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "api_key",
+            "description": "<p>API key.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    }
   },
   {
     "type": "get",
@@ -11671,9 +12495,26 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "device",
+            "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -11781,41 +12622,6 @@
     "title": "PortalSettingsList: получение настроек портала",
     "name": "PortalSettingsList",
     "group": "Portal",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "api_key",
-            "description": "<p>API key.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "device",
-            "description": "<p>Системное название типа устройства.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device_uid",
-            "defaultValue": "пустой",
-            "description": "<p>Уникальный идентификатор устройства, например, MAC-адрес.</p>"
-          }
-        ]
-      }
-    },
     "success": {
       "fields": {
         "Ответ": [
@@ -12207,7 +13013,51 @@
     },
     "version": "1.40.0",
     "filename": "../../../tvmiddleware/api.py",
-    "groupTitle": "Portal"
+    "groupTitle": "Portal",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "api_key",
+            "description": "<p>API key.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    }
   },
   {
     "type": "get",
@@ -12298,9 +13148,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -12321,9 +13171,17 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть названия каналов и EPG. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -13116,10 +13974,22 @@
         "Parameter": [
           {
             "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "only_records_categories",
+            "defaultValue": "0",
+            "description": "<p>Вернуть только категории с с архивными записями.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -13140,21 +14010,17 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
-            "field": "lang",
+            "field": "device_uid",
             "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть названия категорий. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+            "description": "<p>Уникальный идентификатор устройства.</p>"
           },
           {
             "group": "Parameter",
-            "type": "Number",
-            "allowedValues": [
-              "0",
-              "1"
-            ],
+            "type": "String",
             "optional": true,
-            "field": "only_records_categories",
-            "defaultValue": "0",
-            "description": "<p>Вернуть только категории с с архивными записями.</p>"
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -13267,9 +14133,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -13290,9 +14156,17 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть названия каналов и EPG. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -13465,42 +14339,6 @@
     "title": "ProgramGenreList: список жанров телепрограмм",
     "name": "ProgramGenreList",
     "group": "ProgramGenre",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device",
-            "defaultValue": "пустое",
-            "description": "<p>Системное название типа устройства.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "lang",
-            "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть названия жанров. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
-          }
-        ]
-      }
-    },
     "success": {
       "fields": {
         "Ответ": [
@@ -13549,7 +14387,51 @@
     },
     "version": "1.40.0",
     "filename": "../../../tvmiddleware/api.py",
-    "groupTitle": "ProgramGenre"
+    "groupTitle": "ProgramGenre",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    }
   },
   {
     "type": "get",
@@ -13578,9 +14460,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -13601,9 +14483,17 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть название и описание фильмов. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -13787,9 +14677,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -13810,9 +14700,17 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть названия и описания передач. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -13990,9 +14888,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -14013,9 +14911,17 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть названия и описания передач. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -14386,9 +15292,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -14404,6 +15310,22 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -14457,34 +15379,6 @@
     "title": "ProviderList: список провайдеров",
     "name": "ProviderList",
     "group": "Provider",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device",
-            "defaultValue": "пустое",
-            "description": "<p>Системное название типа устройства.</p>"
-          }
-        ]
-      }
-    },
     "success": {
       "fields": {
         "Ответ": [
@@ -14545,7 +15439,51 @@
     },
     "version": "1.40.0",
     "filename": "../../../tvmiddleware/api.py",
-    "groupTitle": "Provider"
+    "groupTitle": "Provider",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    }
   },
   {
     "type": "get",
@@ -14580,9 +15518,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -14603,9 +15541,17 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть названия радиостанций. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -14690,6 +15636,130 @@
   },
   {
     "type": "get",
+    "url": "/noauth/selection/list/",
+    "title": "NoAuthSelectionList: список подборок",
+    "name": "NoAuthSelectionList",
+    "group": "Selection",
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "selections",
+            "description": "<p>Список подборок.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "selections.promo_image",
+            "description": "<p>URL-адрес промо-изображения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "selections.id",
+            "description": "<p>Идентификатор подборки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "selections.name",
+            "description": "<p>Название подборки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "selections.count",
+            "description": "<p>Количество контента в подборке.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0"
+            ],
+            "optional": false,
+            "field": "selections.type",
+            "description": "<p>Тип подборки. 0 - Ручная. 1 - Сгенерированная.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки, действие выполнено успешно.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "api_key",
+            "description": "<p>API key.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "get",
     "url": "/selection/detail/",
     "title": "SelectionDetail: список подборок",
     "name": "SelectionDetail",
@@ -14707,9 +15777,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -14725,6 +15795,22 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -15364,7 +16450,7 @@
     },
     "version": "1.40.0",
     "filename": "../../../tvmiddleware/api.py",
-    "groupTitle": "Selection"
+    "groupTitle": ""
   },
   {
     "type": "get",
@@ -15372,37 +16458,16 @@
     "title": "SelectionList: список подборок",
     "name": "SelectionList",
     "group": "Selection",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device",
-            "defaultValue": "пустое",
-            "description": "<p>Системное название типа устройства.</p>"
-          }
-        ]
-      }
-    },
     "success": {
       "fields": {
         "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
           {
             "group": "Ответ",
             "type": "Object[]",
@@ -15447,13 +16512,6 @@
             "optional": false,
             "field": "selections.type",
             "description": "<p>Тип подборки. 0 - Ручная. 1 - Сгенерированная.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "error",
-            "description": "<p>Код ошибки.</p>"
           }
         ]
       }
@@ -15472,7 +16530,51 @@
     },
     "version": "1.40.0",
     "filename": "../../../tvmiddleware/api.py",
-    "groupTitle": "Selection"
+    "groupTitle": "",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    }
   },
   {
     "type": "get",
@@ -15531,10 +16633,57 @@
           },
           {
             "group": "Parameter",
+            "type": "Object[]",
+            "optional": true,
+            "field": "channels_sort",
+            "description": "<p>POST параметр. Пользовательская сортировка каналов</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "channels_sort.id",
+            "description": "<p>Идентификатор канала</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "channels_sort.is_parent_control",
+            "description": "<p>Флаг, использовать ли для канала защиту PIN кодом</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "channels_sort.is_favorited",
+            "description": "<p>Флаг, является ли канал изранным для пользователя</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "channels_sort.is_hidden",
+            "description": "<p>Флаг, нужно ли скрыть данный канал для пользователя</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -15550,6 +16699,22 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -15687,6 +16852,14 @@
           },
           {
             "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства. Является необходимым полем для получения данных от сторонних провайдеров (онлайн-кинотеатров).</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Number",
             "optional": false,
             "field": "client_id",
@@ -15703,9 +16876,9 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
-            "field": "device",
+            "field": "device_uid",
             "defaultValue": "пустое",
-            "description": "<p>Системное название типа устройства.</p>"
+            "description": "<p>Уникальный идентификатор устройства.</p>"
           },
           {
             "group": "Parameter",
@@ -15713,7 +16886,7 @@
             "optional": true,
             "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть название и описание фильмов. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -16069,28 +17242,6 @@
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "api_key",
-            "description": "<p>API key.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device",
-            "defaultValue": "пустое",
-            "description": "<p>Системное название типа устройства.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
             "size": "0-100",
             "optional": true,
             "field": "limit",
@@ -16289,11 +17440,41 @@
           },
           {
             "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "api_key",
+            "description": "<p>API key.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
             "optional": true,
             "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть названия и описания фильмов. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -16602,6 +17783,14 @@
           },
           {
             "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства. Является необходимым полем для получения данных от сторонних провайдеров (онлайн-кинотеатров).</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Number",
             "optional": false,
             "field": "client_id",
@@ -16618,9 +17807,17 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
-            "field": "device",
+            "field": "device_uid",
             "defaultValue": "пустое",
-            "description": "<p>Системное название типа устройства.</p>"
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -16734,9 +17931,17 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства. Является необходимым полем для получения данных от сторонних провайдеров (онлайн-кинотеатров).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -16749,9 +17954,17 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
-            "field": "device",
+            "field": "device_uid",
             "defaultValue": "пустое",
-            "description": "<p>Системное название типа устройства.</p>"
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -16851,9 +18064,17 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства. Является необходимым полем для получения данных от сторонних провайдеров (онлайн-кинотеатров).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -16866,9 +18087,9 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
-            "field": "device",
+            "field": "device_uid",
             "defaultValue": "пустое",
-            "description": "<p>Системное название типа устройства.</p>"
+            "description": "<p>Уникальный идентификатор устройства.</p>"
           },
           {
             "group": "Parameter",
@@ -16876,7 +18097,7 @@
             "optional": true,
             "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть название и описание фильмов. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -16903,7 +18124,7 @@
             "type": "String",
             "optional": false,
             "field": "actions.action",
-            "description": "<p>Имя действия. Задается через ценовую категорию и используется обработчиком API поставщика. Зарезервированные возможные виды действий: get_video_url - просмотр ассета фильма; get_trailer_url - просмотр трейлера.</p>"
+            "description": "<p>Имя действия. Задается через ценовую категорию и используется обработчиком API поставщика. Зарезервированные возможные виды действий: get_video_url - просмотр ассета фильма; get_trailer_url - просмотр трейлера; buy_in_subscription - покупка подписки на фильм</p>"
           },
           {
             "group": "Ответ",
@@ -17549,9 +18770,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -17572,9 +18793,17 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "lang",
             "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть названия и описания фильмов. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -17950,9 +19179,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -17968,6 +19197,22 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -18050,9 +19295,9 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -18068,6 +19313,22 @@
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }
@@ -18312,9 +19573,17 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства. Является необходимым полем для получения данных от сторонних провайдеров (онлайн-кинотеатров).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "authkey",
-            "description": "<p>Ключ сессии.</p>"
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
           },
           {
             "group": "Parameter",
@@ -18327,9 +19596,17 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
-            "field": "device",
+            "field": "device_uid",
             "defaultValue": "пустое",
-            "description": "<p>Системное название типа устройства.</p>"
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
           }
         ]
       }

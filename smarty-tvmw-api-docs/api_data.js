@@ -10889,6 +10889,18 @@ define({ "api": [
           },
           {
             "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "autopayment_enable",
+            "defaultValue": "0",
+            "description": "<p>POST параметр. Флаг включения автоплатежа.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
             "optional": true,
             "field": "authkey",

@@ -15648,86 +15648,20 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/noauth/selection/list/",
-    "title": "NoAuthSelectionList: список подборок",
-    "name": "NoAuthSelectionList",
+    "url": "/noauth/selection/detail/",
+    "title": "NoAuthSelectionDetail: список подборок",
+    "name": "NoAuthSelectionDetail",
     "group": "Selection",
-    "success": {
-      "fields": {
-        "Ответ": [
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "error",
-            "description": "<p>Код ошибки.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Object[]",
-            "optional": false,
-            "field": "selections",
-            "description": "<p>Список подборок.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "selections.promo_image",
-            "description": "<p>URL-адрес промо-изображения.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "selections.id",
-            "description": "<p>Идентификатор подборки.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "selections.name",
-            "description": "<p>Название подборки.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "selections.count",
-            "description": "<p>Количество контента в подборке.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "allowedValues": [
-              "0"
-            ],
-            "optional": false,
-            "field": "selections.type",
-            "description": "<p>Тип подборки. 0 - Ручная. 1 - Сгенерированная.</p>"
-          }
-        ]
-      }
-    },
-    "error": {
-      "fields": {
-        "Коды ошибок error": [
-          {
-            "group": "Коды ошибок error",
-            "optional": false,
-            "field": "0",
-            "description": "<p>Нет ошибки, действие выполнено успешно.</p>"
-          }
-        ]
-      }
-    },
-    "version": "1.40.0",
-    "filename": "../../../tvmiddleware/api.py",
-    "groupTitle": "",
     "parameter": {
       "fields": {
         "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "selection_id",
+            "description": "<p>ID подборки</p>"
+          },
           {
             "group": "Parameter",
             "type": "Number",
@@ -15768,68 +15702,17 @@ define({ "api": [
           }
         ]
       }
-    }
-  },
-  {
-    "type": "get",
-    "url": "/selection/detail/",
-    "title": "SelectionDetail: список подборок",
-    "name": "SelectionDetail",
-    "group": "Selection",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "selection_id",
-            "description": "<p>ID подборки</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "authkey",
-            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device",
-            "defaultValue": "пустое",
-            "description": "<p>Системное название типа устройства.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device_uid",
-            "defaultValue": "пустое",
-            "description": "<p>Уникальный идентификатор устройства.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "lang",
-            "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
-          }
-        ]
-      }
     },
     "success": {
       "fields": {
         "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
           {
             "group": "Ответ",
             "type": "String",
@@ -16431,6 +16314,803 @@ define({ "api": [
             "optional": false,
             "field": "contents.application.attrs",
             "description": "<p>Дополнительные аттрибуты приложения списком в формате &quot;ключ&quot; - &quot;значение&quot;.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки, действие выполнено успешно.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Подборки с таким id не существует.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": ""
+  },
+  {
+    "type": "get",
+    "url": "/noauth/selection/list/",
+    "title": "NoAuthSelectionList: список подборок",
+    "name": "NoAuthSelectionList",
+    "group": "Selection",
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "promo_image",
+            "description": "<p>URL-адрес промо-изображения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>Название подборки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "count",
+            "description": "<p>Количество контента в подборке.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0"
+            ],
+            "optional": false,
+            "field": "type",
+            "description": "<p>Тип подборки. 0 - Ручная. 1 - Сгенерированная.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "contents",
+            "description": "<p>Список элементов подборки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": true,
+            "field": "contents.channel",
+            "description": "<p>Канал.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.channel.id",
+            "description": "<p>Идентификатор канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "contents.channel.actions",
+            "description": "<p>Варианты просмотра или покупки канала. Формируется исходя из тарифных пакетов, доступных абоненту/аккаунту, и подключенных для данного канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.channel.actions.action",
+            "description": "<p>Имя действия, одно из зарезервированных значений: get_channel_url – получить адрес потока; subscribe – купить подписку на пакет.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.channel.actions.tariff_id",
+            "description": "<p>Идентификатор тарифного пакета.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.channel.actions.caption",
+            "description": "<p>Название действия для отображения в интерфейсе.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.channel.actions.price",
+            "description": "<p>Стоимость покупки за полный период.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Boolean",
+            "optional": false,
+            "field": "contents.channel.actions.periodical",
+            "description": "<p>Флаг того, что действие будет возобновляемым.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.channel.actions.activation_price",
+            "description": "<p>Стоимость покупки с учетом платежного периода аккаунта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.channel.name",
+            "description": "<p>Название канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": true,
+            "field": "contents.program",
+            "description": "<p>Передача.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.program.id",
+            "description": "<p>Идентификатор передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.program.name",
+            "description": "<p>Название передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.program.description",
+            "description": "<p>Описание передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.program.begin_time",
+            "description": "<p>Время начала передачи в Unix Timestamp (UTC+0).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.program.end_time",
+            "description": "<p>Время окончания передачи в Unix Timestamp (UTC+0).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": true,
+            "field": "contents.video",
+            "description": "<p>Фильм.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.video.id",
+            "description": "<p>Идентификатор фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.name",
+            "description": "<p>Название фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.name_orig",
+            "description": "<p>Оригинальное название фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.thumbnail_small",
+            "description": "<p>URL на обложку фильма уменьшенного размера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.thumbnail_big",
+            "description": "<p>URL на обложку фильма большого размера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.screenshot_big",
+            "description": "<p>URL на кадр из фильма большого размера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.screenshot_b_big",
+            "description": "<p>URL на размытый кадр из фильма большого размера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.description",
+            "description": "<p>Описание фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.video.year",
+            "description": "<p>Год выпуска.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.actors",
+            "description": "<p>Актёры фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.director",
+            "description": "<p>Режиссёры фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.genres",
+            "description": "<p>Жанры фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.countries",
+            "description": "<p>Страны производства.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.genres_kinopoisk",
+            "description": "<p>Жанры фильма с сервиса Кинопоиск.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "contents.video.is_parent_control",
+            "description": "<p>Для фильма включен родительский контроль.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "contents.video.is_package",
+            "description": "<p>Является пакетом фильмов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "contents.video.is_season",
+            "description": "<p>Является сериалом.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "contents.video.is_announcement",
+            "description": "<p>Является анонсом.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.video.rating",
+            "description": "<p>Возрастной рейтинг фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Double",
+            "optional": false,
+            "field": "contents.video.kinopoisk_rating",
+            "description": "<p>Рейтинг фильма на Кинопоиске.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Double",
+            "optional": false,
+            "field": "contents.video.imdb_rating",
+            "description": "<p>Рейтинг фильма на IMDB.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Double",
+            "optional": false,
+            "field": "contents.video.average_customers_rating",
+            "description": "<p>Средний рейтинг пользоватетелей.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.video.duration",
+            "description": "<p>Длительность фильма в минутах (для отображения).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.provider",
+            "description": "<p>Поставщик фильма (например, название онлайн-кинотеатра).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.language",
+            "description": "<p>Язык фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "1",
+              "2",
+              "3"
+            ],
+            "optional": false,
+            "field": "contents.video.video_source",
+            "description": "<p>Источник видео. 1 - Внутренний источник. 2 - Внешний провайдер фильмов. 3 - архивное EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": true,
+            "field": "contents.camera",
+            "description": "<p>Камера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.camera.id",
+            "description": "<p>Идентификатор камеры.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.camera.name",
+            "description": "<p>Имя камеры.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.camera.icon",
+            "description": "<p>URL-адрес иконки камеры.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.camera.category_id",
+            "description": "<p>Идентификатор категории.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.camera.city_name",
+            "description": "<p>Название города.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.camera.channel_sort",
+            "description": "<p>Номер камеры в списке.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.camera.option1",
+            "description": "<p>Значение параметра канала Option 1.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.camera.option2",
+            "description": "<p>Значение параметра канала Option 2.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.camera.option3",
+            "description": "<p>Значение параметра канала Option 3.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "contents.camera.has_subscription",
+            "description": "<p>На камеру оформлена подписка.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": true,
+            "field": "contents.radio",
+            "description": "<p>Радиостанция.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.radio.id",
+            "description": "<p>Идентификатор радиостанции.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.radio.name",
+            "description": "<p>Название радиостанции.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.radio.url",
+            "description": "<p>Адрес потока.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.radio.logo_url",
+            "description": "<p>URL-адрес логотипа радиостанции.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.radio.channel_name",
+            "description": "<p>Название радиостанции из справочника.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.radio.description",
+            "description": "<p>Описание.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": true,
+            "field": "contents.ad",
+            "description": "<p>Рекламный ролик.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.ad.name",
+            "description": "<p>Название ролика.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.ad.url",
+            "description": "<p>URL-адрес ролика.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": true,
+            "field": "contents.application",
+            "description": "<p>Приложение.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.application.id",
+            "description": "<p>Идентификатор приложения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.application.name",
+            "description": "<p>Название приложения для абонента.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.application.system_name",
+            "description": "<p>Системное название приложения или имя класса экрана.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7"
+            ],
+            "optional": false,
+            "field": "contents.application.type",
+            "description": "<p>Тип приложения. Возможные значения: 0 - Внешнее Web-приложение; 1 - Внутренний экран; 2 - Ссылка на раздел VOD; 3 - URL-адрес видеопотока; 4 - Экранный виджет; 5 - Настройки Android; 6 - Каталог приложений Android; 7 - Приложение для Android (Android appId).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.application.url",
+            "description": "<p>URL-адрес приложения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "contents.application.show_in_main_menu",
+            "description": "<p>Необходимо ли показывать приложение в главном экране интерфейса абонентского приложения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.application.css_style",
+            "description": "<p>Стиль CSS для кнопки приложения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.application.icon",
+            "description": "<p>URL-адрес иконки приложения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.application.icon_focus",
+            "description": "<p>URL-адрес иконки приложения в фокусе.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "contents.application.attrs",
+            "description": "<p>Дополнительные аттрибуты приложения списком в формате &quot;ключ&quot; - &quot;значение&quot;.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки, действие выполнено успешно.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "api_key",
+            "description": "<p>API key.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "get",
+    "url": "/selection/detail/",
+    "title": "SelectionDetail: список подборок",
+    "name": "SelectionDetail",
+    "group": "Selection",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "selection_id",
+            "description": "<p>ID подборки</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "promo_image",
+            "description": "<p>URL-адрес промо-изображения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>Название подборки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "count",
+            "description": "<p>Количество контента в подборке.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0"
+            ],
+            "optional": false,
+            "field": "type",
+            "description": "<p>Тип подборки. 0 - Ручная. 1 - Сгенерированная.</p>"
           },
           {
             "group": "Ответ",
@@ -16438,6 +17118,577 @@ define({ "api": [
             "optional": false,
             "field": "error",
             "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "contents",
+            "description": "<p>Список элементов подборки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": true,
+            "field": "contents.channel",
+            "description": "<p>Канал.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.channel.id",
+            "description": "<p>Идентификатор канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "contents.channel.actions",
+            "description": "<p>Варианты просмотра или покупки канала. Формируется исходя из тарифных пакетов, доступных абоненту/аккаунту, и подключенных для данного канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.channel.actions.action",
+            "description": "<p>Имя действия, одно из зарезервированных значений: get_channel_url – получить адрес потока; subscribe – купить подписку на пакет.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.channel.actions.tariff_id",
+            "description": "<p>Идентификатор тарифного пакета.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.channel.actions.caption",
+            "description": "<p>Название действия для отображения в интерфейсе.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.channel.actions.price",
+            "description": "<p>Стоимость покупки за полный период.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Boolean",
+            "optional": false,
+            "field": "contents.channel.actions.periodical",
+            "description": "<p>Флаг того, что действие будет возобновляемым.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.channel.actions.activation_price",
+            "description": "<p>Стоимость покупки с учетом платежного периода аккаунта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.channel.name",
+            "description": "<p>Название канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": true,
+            "field": "contents.program",
+            "description": "<p>Передача.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.program.id",
+            "description": "<p>Идентификатор передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.program.name",
+            "description": "<p>Название передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.program.description",
+            "description": "<p>Описание передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.program.begin_time",
+            "description": "<p>Время начала передачи в Unix Timestamp (UTC+0).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.program.end_time",
+            "description": "<p>Время окончания передачи в Unix Timestamp (UTC+0).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": true,
+            "field": "contents.video",
+            "description": "<p>Фильм.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.video.id",
+            "description": "<p>Идентификатор фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.name",
+            "description": "<p>Название фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.name_orig",
+            "description": "<p>Оригинальное название фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.thumbnail_small",
+            "description": "<p>URL на обложку фильма уменьшенного размера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.thumbnail_big",
+            "description": "<p>URL на обложку фильма большого размера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.screenshot_big",
+            "description": "<p>URL на кадр из фильма большого размера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.screenshot_b_big",
+            "description": "<p>URL на размытый кадр из фильма большого размера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.description",
+            "description": "<p>Описание фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.video.year",
+            "description": "<p>Год выпуска.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.actors",
+            "description": "<p>Актёры фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.director",
+            "description": "<p>Режиссёры фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.genres",
+            "description": "<p>Жанры фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.countries",
+            "description": "<p>Страны производства.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.genres_kinopoisk",
+            "description": "<p>Жанры фильма с сервиса Кинопоиск.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "contents.video.is_parent_control",
+            "description": "<p>Для фильма включен родительский контроль.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "contents.video.is_package",
+            "description": "<p>Является пакетом фильмов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "contents.video.is_season",
+            "description": "<p>Является сериалом.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "contents.video.is_announcement",
+            "description": "<p>Является анонсом.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.video.rating",
+            "description": "<p>Возрастной рейтинг фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Double",
+            "optional": false,
+            "field": "contents.video.kinopoisk_rating",
+            "description": "<p>Рейтинг фильма на Кинопоиске.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Double",
+            "optional": false,
+            "field": "contents.video.imdb_rating",
+            "description": "<p>Рейтинг фильма на IMDB.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Double",
+            "optional": false,
+            "field": "contents.video.average_customers_rating",
+            "description": "<p>Средний рейтинг пользоватетелей.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.video.duration",
+            "description": "<p>Длительность фильма в минутах (для отображения).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.provider",
+            "description": "<p>Поставщик фильма (например, название онлайн-кинотеатра).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.language",
+            "description": "<p>Язык фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "1",
+              "2",
+              "3"
+            ],
+            "optional": false,
+            "field": "contents.video.video_source",
+            "description": "<p>Источник видео. 1 - Внутренний источник. 2 - Внешний провайдер фильмов. 3 - архивное EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": true,
+            "field": "contents.camera",
+            "description": "<p>Камера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.camera.id",
+            "description": "<p>Идентификатор камеры.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.camera.name",
+            "description": "<p>Имя камеры.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.camera.icon",
+            "description": "<p>URL-адрес иконки камеры.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.camera.category_id",
+            "description": "<p>Идентификатор категории.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.camera.city_name",
+            "description": "<p>Название города.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.camera.channel_sort",
+            "description": "<p>Номер камеры в списке.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.camera.option1",
+            "description": "<p>Значение параметра канала Option 1.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.camera.option2",
+            "description": "<p>Значение параметра канала Option 2.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.camera.option3",
+            "description": "<p>Значение параметра канала Option 3.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "contents.camera.has_subscription",
+            "description": "<p>На камеру оформлена подписка.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": true,
+            "field": "contents.radio",
+            "description": "<p>Радиостанция.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.radio.id",
+            "description": "<p>Идентификатор радиостанции.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.radio.name",
+            "description": "<p>Название радиостанции.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.radio.url",
+            "description": "<p>Адрес потока.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.radio.logo_url",
+            "description": "<p>URL-адрес логотипа радиостанции.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.radio.channel_name",
+            "description": "<p>Название радиостанции из справочника.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.radio.description",
+            "description": "<p>Описание.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": true,
+            "field": "contents.ad",
+            "description": "<p>Рекламный ролик.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.ad.name",
+            "description": "<p>Название ролика.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.ad.url",
+            "description": "<p>URL-адрес ролика.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": true,
+            "field": "contents.application",
+            "description": "<p>Приложение.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.application.id",
+            "description": "<p>Идентификатор приложения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.application.name",
+            "description": "<p>Название приложения для абонента.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.application.system_name",
+            "description": "<p>Системное название приложения или имя класса экрана.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7"
+            ],
+            "optional": false,
+            "field": "contents.application.type",
+            "description": "<p>Тип приложения. Возможные значения: 0 - Внешнее Web-приложение; 1 - Внутренний экран; 2 - Ссылка на раздел VOD; 3 - URL-адрес видеопотока; 4 - Экранный виджет; 5 - Настройки Android; 6 - Каталог приложений Android; 7 - Приложение для Android (Android appId).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.application.url",
+            "description": "<p>URL-адрес приложения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "contents.application.show_in_main_menu",
+            "description": "<p>Необходимо ли показывать приложение в главном экране интерфейса абонентского приложения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.application.css_style",
+            "description": "<p>Стиль CSS для кнопки приложения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.application.icon",
+            "description": "<p>URL-адрес иконки приложения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.application.icon_focus",
+            "description": "<p>URL-адрес иконки приложения в фокусе.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "contents.application.attrs",
+            "description": "<p>Дополнительные аттрибуты приложения списком в формате &quot;ключ&quot; - &quot;значение&quot;.</p>"
           }
         ]
       }
@@ -16482,37 +17733,23 @@ define({ "api": [
           },
           {
             "group": "Ответ",
-            "type": "Object[]",
-            "optional": false,
-            "field": "selections",
-            "description": "<p>Список подборок.</p>"
-          },
-          {
-            "group": "Ответ",
             "type": "String",
             "optional": false,
-            "field": "selections.promo_image",
+            "field": "promo_image",
             "description": "<p>URL-адрес промо-изображения.</p>"
           },
           {
             "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "selections.id",
-            "description": "<p>Идентификатор подборки.</p>"
-          },
-          {
-            "group": "Ответ",
             "type": "String",
             "optional": false,
-            "field": "selections.name",
+            "field": "name",
             "description": "<p>Название подборки.</p>"
           },
           {
             "group": "Ответ",
             "type": "Number",
             "optional": false,
-            "field": "selections.count",
+            "field": "count",
             "description": "<p>Количество контента в подборке.</p>"
           },
           {
@@ -16522,8 +17759,579 @@ define({ "api": [
               "0"
             ],
             "optional": false,
-            "field": "selections.type",
+            "field": "type",
             "description": "<p>Тип подборки. 0 - Ручная. 1 - Сгенерированная.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "contents",
+            "description": "<p>Список элементов подборки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": true,
+            "field": "contents.channel",
+            "description": "<p>Канал.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.channel.id",
+            "description": "<p>Идентификатор канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "contents.channel.actions",
+            "description": "<p>Варианты просмотра или покупки канала. Формируется исходя из тарифных пакетов, доступных абоненту/аккаунту, и подключенных для данного канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.channel.actions.action",
+            "description": "<p>Имя действия, одно из зарезервированных значений: get_channel_url – получить адрес потока; subscribe – купить подписку на пакет.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.channel.actions.tariff_id",
+            "description": "<p>Идентификатор тарифного пакета.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.channel.actions.caption",
+            "description": "<p>Название действия для отображения в интерфейсе.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.channel.actions.price",
+            "description": "<p>Стоимость покупки за полный период.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Boolean",
+            "optional": false,
+            "field": "contents.channel.actions.periodical",
+            "description": "<p>Флаг того, что действие будет возобновляемым.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.channel.actions.activation_price",
+            "description": "<p>Стоимость покупки с учетом платежного периода аккаунта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.channel.name",
+            "description": "<p>Название канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": true,
+            "field": "contents.program",
+            "description": "<p>Передача.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.program.id",
+            "description": "<p>Идентификатор передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.program.name",
+            "description": "<p>Название передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.program.description",
+            "description": "<p>Описание передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.program.begin_time",
+            "description": "<p>Время начала передачи в Unix Timestamp (UTC+0).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.program.end_time",
+            "description": "<p>Время окончания передачи в Unix Timestamp (UTC+0).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": true,
+            "field": "contents.video",
+            "description": "<p>Фильм.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.video.id",
+            "description": "<p>Идентификатор фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.name",
+            "description": "<p>Название фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.name_orig",
+            "description": "<p>Оригинальное название фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.thumbnail_small",
+            "description": "<p>URL на обложку фильма уменьшенного размера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.thumbnail_big",
+            "description": "<p>URL на обложку фильма большого размера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.screenshot_big",
+            "description": "<p>URL на кадр из фильма большого размера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.screenshot_b_big",
+            "description": "<p>URL на размытый кадр из фильма большого размера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.description",
+            "description": "<p>Описание фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.video.year",
+            "description": "<p>Год выпуска.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.actors",
+            "description": "<p>Актёры фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.director",
+            "description": "<p>Режиссёры фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.genres",
+            "description": "<p>Жанры фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.countries",
+            "description": "<p>Страны производства.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.genres_kinopoisk",
+            "description": "<p>Жанры фильма с сервиса Кинопоиск.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "contents.video.is_parent_control",
+            "description": "<p>Для фильма включен родительский контроль.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "contents.video.is_package",
+            "description": "<p>Является пакетом фильмов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "contents.video.is_season",
+            "description": "<p>Является сериалом.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "contents.video.is_announcement",
+            "description": "<p>Является анонсом.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.video.rating",
+            "description": "<p>Возрастной рейтинг фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Double",
+            "optional": false,
+            "field": "contents.video.kinopoisk_rating",
+            "description": "<p>Рейтинг фильма на Кинопоиске.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Double",
+            "optional": false,
+            "field": "contents.video.imdb_rating",
+            "description": "<p>Рейтинг фильма на IMDB.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Double",
+            "optional": false,
+            "field": "contents.video.average_customers_rating",
+            "description": "<p>Средний рейтинг пользоватетелей.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.video.duration",
+            "description": "<p>Длительность фильма в минутах (для отображения).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.provider",
+            "description": "<p>Поставщик фильма (например, название онлайн-кинотеатра).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.video.language",
+            "description": "<p>Язык фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "1",
+              "2",
+              "3"
+            ],
+            "optional": false,
+            "field": "contents.video.video_source",
+            "description": "<p>Источник видео. 1 - Внутренний источник. 2 - Внешний провайдер фильмов. 3 - архивное EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": true,
+            "field": "contents.camera",
+            "description": "<p>Камера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.camera.id",
+            "description": "<p>Идентификатор камеры.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.camera.name",
+            "description": "<p>Имя камеры.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.camera.icon",
+            "description": "<p>URL-адрес иконки камеры.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.camera.category_id",
+            "description": "<p>Идентификатор категории.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.camera.city_name",
+            "description": "<p>Название города.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.camera.channel_sort",
+            "description": "<p>Номер камеры в списке.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.camera.option1",
+            "description": "<p>Значение параметра канала Option 1.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.camera.option2",
+            "description": "<p>Значение параметра канала Option 2.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.camera.option3",
+            "description": "<p>Значение параметра канала Option 3.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "contents.camera.has_subscription",
+            "description": "<p>На камеру оформлена подписка.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": true,
+            "field": "contents.radio",
+            "description": "<p>Радиостанция.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.radio.id",
+            "description": "<p>Идентификатор радиостанции.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.radio.name",
+            "description": "<p>Название радиостанции.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.radio.url",
+            "description": "<p>Адрес потока.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.radio.logo_url",
+            "description": "<p>URL-адрес логотипа радиостанции.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.radio.channel_name",
+            "description": "<p>Название радиостанции из справочника.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.radio.description",
+            "description": "<p>Описание.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": true,
+            "field": "contents.ad",
+            "description": "<p>Рекламный ролик.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.ad.name",
+            "description": "<p>Название ролика.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.ad.url",
+            "description": "<p>URL-адрес ролика.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": true,
+            "field": "contents.application",
+            "description": "<p>Приложение.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.application.id",
+            "description": "<p>Идентификатор приложения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.application.name",
+            "description": "<p>Название приложения для абонента.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.application.system_name",
+            "description": "<p>Системное название приложения или имя класса экрана.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7"
+            ],
+            "optional": false,
+            "field": "contents.application.type",
+            "description": "<p>Тип приложения. Возможные значения: 0 - Внешнее Web-приложение; 1 - Внутренний экран; 2 - Ссылка на раздел VOD; 3 - URL-адрес видеопотока; 4 - Экранный виджет; 5 - Настройки Android; 6 - Каталог приложений Android; 7 - Приложение для Android (Android appId).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.application.url",
+            "description": "<p>URL-адрес приложения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "contents.application.show_in_main_menu",
+            "description": "<p>Необходимо ли показывать приложение в главном экране интерфейса абонентского приложения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.application.css_style",
+            "description": "<p>Стиль CSS для кнопки приложения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.application.icon",
+            "description": "<p>URL-адрес иконки приложения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.application.icon_focus",
+            "description": "<p>URL-адрес иконки приложения в фокусе.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "contents.application.attrs",
+            "description": "<p>Дополнительные аттрибуты приложения списком в формате &quot;ключ&quot; - &quot;значение&quot;.</p>"
           }
         ]
       }

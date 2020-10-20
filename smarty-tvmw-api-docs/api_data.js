@@ -19235,6 +19235,20 @@ define({ "api": [
           },
           {
             "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "year",
+            "description": "<p>Фильтр по году выхода. Можно передать несколько значений.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "country",
+            "description": "<p>Фильтр по стране производства. Можно передать несколько значений.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
             "allowedValues": [
               "created_at",
@@ -20533,6 +20547,20 @@ define({ "api": [
             "field": "is_viewing",
             "defaultValue": "0",
             "description": "<p>Фильтр по факту текущего просмотра. При значении 1 в выборку попадут только обьекты в процессе просмотра. При значении 0 факт добавления в избранное не будет проверяться.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "year",
+            "description": "<p>Фильтр по году выхода. Можно передать несколько значений.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "country",
+            "description": "<p>Фильтр по стране производства. Можно передать несколько значений.</p>"
           },
           {
             "group": "Parameter",

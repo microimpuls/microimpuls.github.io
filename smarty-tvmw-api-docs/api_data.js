@@ -19249,6 +19249,13 @@ define({ "api": [
           },
           {
             "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "genre",
+            "description": "<p>Фильтр по идентификатору жанра. Можно передать несколько значений.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
             "allowedValues": [
               "created_at",
@@ -20561,6 +20568,13 @@ define({ "api": [
             "optional": true,
             "field": "country",
             "description": "<p>Фильтр по стране производства. Можно передать несколько значений.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "genre",
+            "description": "<p>Фильтр по идентификатору жанра. Можно передать несколько значений.</p>"
           },
           {
             "group": "Parameter",

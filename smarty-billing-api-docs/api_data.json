@@ -3910,13 +3910,6 @@
             "group": "Ответ",
             "type": "Number",
             "optional": false,
-            "field": "tariffs.currency_id",
-            "description": "<p>Валюта (0 - RUB, 1 - EUR, 2 - USD).</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
             "field": "tariffs.sessions_count",
             "description": "<p>Максимальное количество одновременных сессий для дополнительных устройств.</p>"
           },
@@ -4062,13 +4055,6 @@
             "optional": false,
             "field": "tariffs.price",
             "description": "<p>Стоимость подписки.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "tariffs.currency_id",
-            "description": "<p>Валюта (0 - RUB, 1 - EUR, 2 - USD).</p>"
           },
           {
             "group": "Ответ",
@@ -4268,13 +4254,6 @@
             "optional": false,
             "field": "available_for_inactive_accounts",
             "description": "<p>Доступен только для неактивных аккаунтов.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "currency_id",
-            "description": "<p>Валюта. Возможные значения: 0 - RUB; 1 - EUR; 2 - USD; 3 - AMD.</p>"
           },
           {
             "group": "Parameter",
@@ -4528,13 +4507,6 @@
             "group": "Ответ",
             "type": "Number",
             "optional": false,
-            "field": "tariffs.currency_id",
-            "description": "<p>Валюта (0 - RUB, 1 - EUR, 2 - USD).</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
             "field": "tariffs.basic_tariff_priority",
             "description": "<p>Приоритет/признак принадлежности тарифа к базовому пакету. 10 - наивысший, 1 - наименьший, 0 - не является базовым тарифом. Базовый тариф с наивысшим приоритетом автоматически подключается абоненту при регистрации.</p>"
           },
@@ -4740,13 +4712,6 @@
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
-            "field": "currency_id",
-            "description": "<p>Валюта. Возможные значения: 0 - RUB; 1 - EUR; 2 - USD; 3 - AMD.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
             "allowedValues": [
               "0",
               "1"
@@ -4910,13 +4875,6 @@
             "optional": false,
             "field": "tariffs.price",
             "description": "<p>Стоимость подписки.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "tariffs.currency_id",
-            "description": "<p>Валюта (0 - RUB, 1 - EUR, 2 - USD).</p>"
           },
           {
             "group": "Ответ",

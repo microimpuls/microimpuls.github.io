@@ -7208,14 +7208,14 @@ define({ "api": [
             "type": "Number",
             "optional": true,
             "field": "tariff_id",
-            "description": "<p>Идентификатор тарифа. Должен быть передан либо параметр tariff_id, либо virtual_tariff_id.</p>"
+            "description": "<p>Идентификатор тарифа. Должен быть передан либо параметр tariff_id, либо virtual_tariff_id. Можно передать несколько значений.</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
             "optional": true,
             "field": "virtual_tariff_id",
-            "description": "<p>Идентификатор виртуального тарифа.</p>"
+            "description": "<p>Идентификатор виртуального тарифа. Можно передать несколько значений.</p>"
           },
           {
             "group": "Parameter",
@@ -7271,7 +7271,7 @@ define({ "api": [
             "group": "Коды ошибок error",
             "optional": false,
             "field": "1",
-            "description": "<p>Данный тариф не доступен или не существует, либо уже подключен.</p>"
+            "description": "<p>Один или несколько из переданных тарифов не доступны, не существуют, либо уже подключены.</p>"
           },
           {
             "group": "Коды ошибок error",
@@ -7290,6 +7290,12 @@ define({ "api": [
             "optional": false,
             "field": "4",
             "description": "<p>Неправильно настроен внутренний api.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "5",
+            "description": "<p>Невозможно подключить больше одного базового тарифа.</p>"
           },
           {
             "group": "Коды ошибок error",
@@ -7324,7 +7330,7 @@ define({ "api": [
             "type": "Number",
             "optional": true,
             "field": "tariff_id",
-            "description": "<p>Идентификатор тарифа.</p>"
+            "description": "<p>Идентификатор тарифа. Можно передать несколько значений.</p>"
           },
           {
             "group": "Parameter",
@@ -7400,7 +7406,7 @@ define({ "api": [
             "group": "Коды ошибок error",
             "optional": false,
             "field": "1",
-            "description": "<p>Данный тариф не доступен или не существует.</p>"
+            "description": "<p>Один или несколько из переданных тарийов не доступны или не существуют.</p>"
           },
           {
             "group": "Коды ошибок error",
@@ -7577,14 +7583,14 @@ define({ "api": [
             "type": "Number",
             "optional": true,
             "field": "tariff_id",
-            "description": "<p>Идентификатор тарифа. Должен быть передан либо параметр tariff_id, либо virtual_tariff_id.</p>"
+            "description": "<p>Идентификатор тарифа. Должен быть передан либо параметр tariff_id, либо virtual_tariff_id. Можно передать несколько значений.</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
             "optional": true,
             "field": "virtual_tariff_id",
-            "description": "<p>Идентификатор виртуального тарифа.</p>"
+            "description": "<p>Идентификатор виртуального тарифа. Можно передать несколько значений.</p>"
           },
           {
             "group": "Parameter",
@@ -7640,13 +7646,13 @@ define({ "api": [
             "group": "Коды ошибок error",
             "optional": false,
             "field": "1",
-            "description": "<p>Данный тариф не подключен.</p>"
+            "description": "<p>Один или несколько из переданных тарифов не подключены.</p>"
           },
           {
             "group": "Коды ошибок error",
             "optional": false,
             "field": "2",
-            "description": "<p>Тариф является базовым, его отключение недоступно.</p>"
+            "description": "<p>Один из переданных тарифов является базовым, его отключение недоступно.</p>"
           },
           {
             "group": "Коды ошибок error",

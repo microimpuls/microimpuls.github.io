@@ -6799,13 +6799,6 @@ define({ "api": [
           },
           {
             "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "tariffs.currency",
-            "description": "<p>Валюта подписки.</p>"
-          },
-          {
-            "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "tariffs.period",
@@ -7103,13 +7096,6 @@ define({ "api": [
             "optional": false,
             "field": "tariffs.price",
             "description": "<p>Стоимость подписки.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "tariffs.currency",
-            "description": "<p>Валюта подписки.</p>"
           },
           {
             "group": "Ответ",
@@ -7478,13 +7464,6 @@ define({ "api": [
             "optional": false,
             "field": "subscriptions.price",
             "description": "<p>Стоимость.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "subscriptions.currency",
-            "description": "<p>Валюта.</p>"
           },
           {
             "group": "Ответ",

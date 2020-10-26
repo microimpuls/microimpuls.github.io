@@ -21602,6 +21602,13 @@
           },
           {
             "group": "Ответ",
+            "type": "String",
+            "optional": true,
+            "field": "subtitles.display_name",
+            "description": "<p>Отображаемое название языка субтитров.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "error",

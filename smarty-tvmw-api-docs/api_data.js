@@ -19922,6 +19922,14 @@ define({ "api": [
           },
           {
             "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "show_reviews",
+            "defaultValue": "0",
+            "description": "<p>Показывать отзывы от стороннего провайдера.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
             "optional": true,
             "field": "device",
@@ -20345,6 +20353,44 @@ define({ "api": [
             "optional": false,
             "field": "actors_info.birthdate",
             "description": "<p>Дата рождения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "reviews",
+            "description": "<p>Отзывы и комментарии.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "reviews.text",
+            "description": "<p>Отзывы и комментарии.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "reviews.user_name",
+            "description": "<p>Имя пользователя, который оставил отзыв.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "reviews.user_avatar",
+            "description": "<p>Ссылка на внешний ресурс, где находится аватарка пользователя, который оставивил отзыв.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Date",
+            "allowedValues": [
+              "\"yyyy-mm-dd hh:mm\""
+            ],
+            "optional": false,
+            "field": "reviews.date",
+            "description": "<p>Дата, когда был оставлен отзыв.</p>"
           },
           {
             "group": "Ответ",

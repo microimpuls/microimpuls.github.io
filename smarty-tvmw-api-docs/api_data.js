@@ -4838,6 +4838,22 @@ define({ "api": [
           },
           {
             "group": "Parameter",
+            "type": "Number",
+            "size": "1..",
+            "optional": true,
+            "field": "limit",
+            "description": "<p>Ограничение на количество телеканалов на одну страницу выборки. Если параметр не передан, результат будет возвращен целиком.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "size": "1..",
+            "optional": true,
+            "field": "page",
+            "description": "<p>Номер страницы выборки. Если параметр не передан, результат будет возвращен целиком.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
             "optional": true,
             "field": "authkey",
@@ -14881,6 +14897,23 @@ define({ "api": [
             "field": "skip_unavailable",
             "defaultValue": "0",
             "description": "<p>Флаг, если значение 1, то в выборке будут пропущены уже прошедшие передачи, для которых нет архивной записи.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "size": "1..",
+            "optional": true,
+            "field": "limit",
+            "description": "<p>Ограничение на количество телепередач на одну страницу выборки. Максимальное значение и значение по умолчанию определяется параметром конфигурации TVMIDDLEWARE_PROGRAM_LIST_SEARCH_LIMIT_RESULTS_TO.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "size": "1..",
+            "optional": true,
+            "field": "page",
+            "defaultValue": "1",
+            "description": "<p>Номер страницы выборки.</p>"
           },
           {
             "group": "Parameter",

@@ -16361,7 +16361,7 @@ define({ "api": [
   {
     "type": "get",
     "url": "/noauth/selection/list/",
-    "title": "NoAuthSelectionList: список подборок",
+    "title": "NoAuthSelectionList: список подборок (исключая скрытые)",
     "name": "NoAuthSelectionList",
     "group": "Selection",
     "success": {
@@ -17736,7 +17736,7 @@ define({ "api": [
   {
     "type": "get",
     "url": "/selection/list/",
-    "title": "SelectionList: список подборок",
+    "title": "SelectionList: список подборок (исключая скрытые)",
     "name": "SelectionList",
     "group": "Selection",
     "success": {

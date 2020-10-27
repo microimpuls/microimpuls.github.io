@@ -4784,7 +4784,7 @@
   {
     "type": "get",
     "url": "/channel/list/search/",
-    "title": "ChannelListSearch: поиск телепередач",
+    "title": "ChannelListSearch: поиск телеканалов",
     "name": "ChannelListSearch",
     "group": "Channel",
     "parameter": {
@@ -4796,7 +4796,7 @@
             "size": "5..",
             "optional": false,
             "field": "search",
-            "description": "<p>Строка поиска. Поиск осуществляется по названию канала.</p>"
+            "description": "<p>Строка поиска. Поиск осуществляется по вхождению подстроки в название канала.</p>"
           },
           {
             "group": "Parameter",

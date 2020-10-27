@@ -21588,6 +21588,13 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "String",
+            "optional": true,
+            "field": "ext_apikey",
+            "description": "<p>Токен авторизации пользователя во внешней системе провайдера. Может использоваться для отправки статистики с клиентского приложения.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Object[]",
             "optional": true,
             "field": "audio_tracks",

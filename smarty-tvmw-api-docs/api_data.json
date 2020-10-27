@@ -12923,6 +12923,17 @@
               "1"
             ],
             "optional": false,
+            "field": "start_stat_enabled",
+            "description": "<p>Необходимо ли отправлять данные просмотров на сервер Start для контента Start (если настроена соответствующая интеграция).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
             "field": "mvision_stat_enabled",
             "description": "<p>Необходимо ли отправлять данные телеметрии на сервер Smarty MVision.</p>"
           },

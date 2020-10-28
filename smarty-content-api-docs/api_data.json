@@ -26,23 +26,21 @@
             "group": "Parameter",
             "type": "Date",
             "allowedValues": [
-              "YYYY-MM-DD",
-              "hh:mm:ss"
+              "YYYY-MM-DDThh:mm:ss.sTZD"
             ],
             "optional": false,
             "field": "date_start",
-            "description": "<p>Дата начала сеанса.</p>"
+            "description": "<p>Дата начала сеанса. Формат ISO-8601.</p>"
           },
           {
             "group": "Parameter",
             "type": "Date",
             "allowedValues": [
-              "YYYY-MM-DD",
-              "hh:mm:ss"
+              "YYYY-MM-DDThh:mm:ss.sTZD"
             ],
             "optional": true,
             "field": "date_end",
-            "description": "<p>Дата окончания сеанса. Если не указано, высчитывается исходя из длительности фильма или ассета.</p>"
+            "description": "<p>Дата окончания сеанса. Формат ISO-8601. Если не указано, высчитывается исходя из длительности фильма или ассета.</p>"
           },
           {
             "group": "Parameter",

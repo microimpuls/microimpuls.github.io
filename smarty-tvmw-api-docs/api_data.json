@@ -15703,28 +15703,34 @@
             "type": "Number",
             "optional": false,
             "field": "seances.id",
-            "description": "<p>ID санса.</p>"
+            "description": "<p>ID сеанса.</p>"
           },
           {
             "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "seances.vid",
-            "description": "<p>ID video.</p>"
+            "description": "<p>ID видео.</p>"
           },
           {
             "group": "Ответ",
-            "type": "Number",
+            "type": "Date",
+            "allowedValues": [
+              "YYYY-MM-DDThh:mm:ss.sTZD"
+            ],
             "optional": false,
             "field": "seances.date_start",
-            "description": "<p>ID video.</p>"
+            "description": "<p>Дата начала сеанса. Формат ISO-8601.</p>"
           },
           {
             "group": "Ответ",
-            "type": "Number",
+            "type": "Date",
+            "allowedValues": [
+              "YYYY-MM-DDThh:mm:ss.sTZD"
+            ],
             "optional": false,
             "field": "seances.date_end",
-            "description": "<p>ID video.</p>"
+            "description": "<p>Дата окончания сеанса. Формат ISO-8601.</p>"
           }
         ]
       }
@@ -15788,6 +15794,285 @@
         ]
       }
     }
+  },
+  {
+    "type": "post",
+    "url": "/seance/url/",
+    "title": "SeanceUrl: получение url для сеанса",
+    "name": "SeanceUrl",
+    "group": "Seance",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "code",
+            "description": "<p>Код билета.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "sid",
+            "description": "<p>ID сеанса. Должен быть передан либо код, либо ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "exclude_service_id",
+            "description": "<p>Идентификатор стриминг-сервиса, который будет исключен из маршрутизации. Используется для реализации отказоустойчивости на уровне приложения для перебора видео-серверов. Чтобы передать несколько параметров exclude_service_id, нужно записать их через запятую.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Date",
+            "allowedValues": [
+              "YYYY-MM-DDThh:mm:ss.sTZD"
+            ],
+            "optional": false,
+            "field": "begin_time",
+            "description": "<p>Дата начала сеанса. Формат ISO-8601.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "position",
+            "description": "<p>Позиция видео.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "uri",
+            "description": "<p>Адрес потока.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "stream_service_id",
+            "description": "<p>Идентификатор выбранного стриминг-сервиса.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "ext_id",
+            "description": "<p>Идентификатор фильма во внешней системе / онлайн-кинотеатре. Может использоваться для отправки статистики с клиентского приложения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "ext_partner_id",
+            "description": "<p>Идентификатор партнера во внешней системе / онлайн-кинотеатре. Может использоваться для отправки статистики с клиентского приложения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": true,
+            "field": "ext_auth_token",
+            "description": "<p>Токен авторизации пользователя во внешней системе провайдера. Может использоваться для отправки статистики с клиентского приложения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": true,
+            "field": "ext_apikey",
+            "description": "<p>Токен авторизации пользователя во внешней системе провайдера. Может использоваться для отправки статистики с клиентского приложения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": true,
+            "field": "audio_tracks",
+            "description": "<p>Список доступных звуковых дорожек у фильма.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": true,
+            "field": "audio_tracks.index",
+            "description": "<p>Идентификатор аудиотрека. Используется для выбора звуковой дорожки и передается параметром в URL на стрим.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "audio_tracks.is_active",
+            "description": "<p>При значении 1 эта аудиодорожка активна.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": true,
+            "field": "audio_tracks.lang",
+            "description": "<p>Язык звуковой дорожки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": true,
+            "field": "audio_tracks.display_name",
+            "description": "<p>Отображаемое название языка звуковой дорожки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": true,
+            "field": "subtitles",
+            "description": "<p>Список доступных субтитров у фильм.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": true,
+            "field": "subtitles.index",
+            "description": "<p>Идентификатор субтитров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "allowedValues": [
+              "srt",
+              "smi"
+            ],
+            "optional": true,
+            "field": "subtitles.type",
+            "description": "<p>Тип субтитров. srt – текстовый формат субтитров программы SubRip (Используется на Web) smi – текстовый формат субтитров, основанный на SGML. (поддерживается в Smart TV)</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": true,
+            "field": "subtitles.lang",
+            "description": "<p>Язык субтитров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": true,
+            "field": "subtitles.url",
+            "description": "<p>Ссылка на файл субтитров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": true,
+            "field": "subtitles.display_name",
+            "description": "<p>Отображаемое название языка субтитров.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Ошибка в параметрах.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Сеанс не найден.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "3",
+            "description": "<p>Сеанс уже прошел.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "4",
+            "description": "<p>Билет уже активирован.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "5",
+            "description": "<p>Билет не активирован.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "6",
+            "description": "<p>Ошибка доступа.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "7",
+            "description": "<p>Сеанс не начался.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Seance"
   },
   {
     "type": "get",

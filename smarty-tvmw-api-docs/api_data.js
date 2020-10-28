@@ -240,6 +240,13 @@ define({ "api": [
           },
           {
             "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "password",
+            "description": "<p>Пароль аккаунта.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Number",
             "optional": false,
             "field": "client_id",

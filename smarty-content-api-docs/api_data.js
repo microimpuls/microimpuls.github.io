@@ -124,7 +124,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/seance/create/",
+    "url": "/seance/ticket/create/",
     "title": "SeanceTicketCreate: создание билета для сеанса",
     "name": "SeanceTicketCreate",
     "group": "Seance",

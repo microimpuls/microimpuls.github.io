@@ -1,6 +1,6 @@
 [
   {
-    "type": "get",
+    "type": "post",
     "url": "/seance/create/",
     "title": "SeanceCreate: создание сеанса",
     "name": "SeanceCreate",
@@ -121,7 +121,7 @@
     }
   },
   {
-    "type": "get",
+    "type": "post",
     "url": "/seance/ticket/create/",
     "title": "SeanceTicketCreate: создание билета для сеанса",
     "name": "SeanceTicketCreate",
@@ -235,7 +235,7 @@
     "groupTitle": "Seance"
   },
   {
-    "type": "get",
+    "type": "post",
     "url": "/video/create/",
     "title": "VideoCreate: создание фильма",
     "name": "VideoCreate",

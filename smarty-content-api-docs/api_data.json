@@ -20,7 +20,7 @@
             "type": "Number",
             "optional": true,
             "field": "vfid",
-            "description": "<p>ID ассета.</p>"
+            "description": "<p>ID ассета. Если не указано для внутренних фильмов, то будет браться первый ассет из списка.</p>"
           },
           {
             "group": "Parameter",

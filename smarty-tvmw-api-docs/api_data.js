@@ -15804,6 +15804,104 @@ define({ "api": [
   },
   {
     "type": "post",
+    "url": "/seance/revoke/",
+    "title": "SeanceRevoke: вернуть билет за сеанс",
+    "name": "SeanceRevoke",
+    "group": "Seance",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "code",
+            "description": "<p>Код билета.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "sid",
+            "description": "<p>ID сеанса. Должен быть передан либо код, либо ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Ошибка в параметрах.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Сеанс не найден.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "3",
+            "description": "<p>Билет не найден.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Seance"
+  },
+  {
+    "type": "post",
     "url": "/seance/url/",
     "title": "SeanceUrl: получение url для сеанса",
     "name": "SeanceUrl",
@@ -16073,6 +16171,12 @@ define({ "api": [
             "optional": false,
             "field": "7",
             "description": "<p>Сеанс не начался.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "8",
+            "description": "<p>Билет не активирован так как данный сеанс уже доступен.</p>"
           }
         ]
       }
@@ -20753,7 +20857,7 @@ define({ "api": [
             "type": "Number",
             "optional": true,
             "field": "vfid",
-            "description": "<p>Идентификатор ассета. Не используется при запросе фильмов из внешнего источника.</p>"
+            "description": "<p>Идентификатор ассета. Если не указано для внутреннего фильма, то берется первый по списку.</p>"
           },
           {
             "group": "Parameter",

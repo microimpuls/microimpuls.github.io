@@ -6923,6 +6923,13 @@
             "group": "Ответ",
             "type": "Number",
             "optional": false,
+            "field": "activation_days_left",
+            "description": "<p>Количество оставшихся дней подписки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
             "field": "error",
             "description": "<p>Код ошибки.</p>"
           }

@@ -16047,7 +16047,7 @@ define({ "api": [
             "group": "Коды ошибок error",
             "optional": false,
             "field": "4",
-            "description": "<p>Билет уже активирован.</p>"
+            "description": "<p>Билет уже активирован на другой аккаунт.</p>"
           },
           {
             "group": "Коды ошибок error",

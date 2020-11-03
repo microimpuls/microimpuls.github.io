@@ -16177,6 +16177,12 @@ define({ "api": [
             "optional": false,
             "field": "8",
             "description": "<p>Билет не активирован так как данный сеанс уже доступен.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "9",
+            "description": "<p>Ошибка проверки статуса во внешнем биллинге.</p>"
           }
         ]
       }

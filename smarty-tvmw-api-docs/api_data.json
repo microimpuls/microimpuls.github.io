@@ -15721,6 +15721,13 @@
           },
           {
             "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "seances.video_name",
+            "description": "<p>Название видео.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Date",
             "allowedValues": [
               "YYYY-MM-DDThh:mm:ss.sTZD"

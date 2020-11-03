@@ -15690,7 +15690,7 @@ define({ "api": [
     "groupTitle": "Radio"
   },
   {
-    "type": "post",
+    "type": "get",
     "url": "/seance/list/",
     "title": "SeanceList: получение списка доступных сеансов",
     "name": "SeanceList",
@@ -15810,7 +15810,7 @@ define({ "api": [
     }
   },
   {
-    "type": "post",
+    "type": "get",
     "url": "/seance/revoke/",
     "title": "SeanceRevoke: вернуть билет за сеанс",
     "name": "SeanceRevoke",
@@ -15908,7 +15908,7 @@ define({ "api": [
     "groupTitle": "Seance"
   },
   {
-    "type": "post",
+    "type": "get",
     "url": "/seance/url/",
     "title": "SeanceUrl: получение url для сеанса",
     "name": "SeanceUrl",

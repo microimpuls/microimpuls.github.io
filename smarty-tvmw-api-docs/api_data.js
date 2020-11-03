@@ -2384,6 +2384,12 @@ define({ "api": [
             "optional": false,
             "field": "15",
             "description": "<p>Логин для устройства с данной группой не разрешён для данного аккаунта.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "16",
+            "description": "<p>Ошибка запроса authkey из внешнего биллинга.</p>"
           }
         ]
       }

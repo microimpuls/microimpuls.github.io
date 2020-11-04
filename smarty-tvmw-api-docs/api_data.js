@@ -6561,6 +6561,12 @@ define({ "api": [
             "optional": false,
             "field": "2",
             "description": "<p>Ошибка сохранения данных.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "3",
+            "description": "<p>Для данного контента обязателен параметр asset_id.</p>"
           }
         ]
       }

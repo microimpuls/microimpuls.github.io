@@ -15733,6 +15733,13 @@
           },
           {
             "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "seances.vfid",
+            "description": "<p>ID ассета видео. Если ассета нет, то поле пустое.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "seances.video_name",

@@ -15707,6 +15707,62 @@ define({ "api": [
     "title": "SeanceList: получение списка доступных сеансов",
     "name": "SeanceList",
     "group": "Seance",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "show_past",
+            "defaultValue": "0",
+            "description": "<p>Показать прошедшие сеансы.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    },
     "success": {
       "fields": {
         "Ответ": [
@@ -15782,51 +15838,7 @@ define({ "api": [
     },
     "version": "1.40.0",
     "filename": "../../../tvmiddleware/api.py",
-    "groupTitle": "Seance",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "authkey",
-            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device",
-            "defaultValue": "пустое",
-            "description": "<p>Системное название типа устройства.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device_uid",
-            "defaultValue": "пустое",
-            "description": "<p>Уникальный идентификатор устройства.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "lang",
-            "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
-          }
-        ]
-      }
-    }
+    "groupTitle": "Seance"
   },
   {
     "type": "get",
@@ -20027,7 +20039,7 @@ define({ "api": [
             "optional": true,
             "field": "is_viewing",
             "defaultValue": "0",
-            "description": "<p>Фильтр по факту текущего просмотра. При значении 1 в выборку попадут только обьекты в процессе просмотра. При значении 0 факт добавления в избранное не будет проверяться.</p>"
+            "description": "<p>Фильтр по факту текущего просмотра. При значении 1 в выборку попадут только обьекты в процессе просмотра. При значении 0 факт нахождения объекта в процессе просмотра не будет проверяться.</p>"
           },
           {
             "group": "Parameter",
@@ -20093,7 +20105,7 @@ define({ "api": [
             "optional": true,
             "field": "order",
             "defaultValue": "пустой",
-            "description": "<p>Сортировка, возможные параметры:<br/> <code>-created_at</code> - по дате добавления в каталог, сначала самые новые;<br/> <code>created_at</code> - по дате добавления в каталог, сначала самые старые;<br/> <code>-premiere_date</code> - по дате премьеры, сначала самые новые;<br/> <code>premiere_date</code> - по дате премьеры, сначала самые старые;<br/> <code>-year</code> - по дате выхода фильма, сначала самые новые;<br/> <code>year</code> - по дате выхода фильма, сначала самые старые;<br/> <code>-name</code> - по названию, в обратном алфавитном порядке;<br/> <code>name</code> - по названию, в алфавитном порядке;<br/> <code>-average_customers_rating</code> - по рейтингу абонентов, сначала самые популярные;<br/> <code>average_customers_rating</code> - по рейтингу абонентов, сначала самые непопулярные;<br/> <code>-kinopoisk_rating</code> - по рейтингу Кинопоиска, сначала самые популярные;<br/> <code>kinopoisk_rating</code> - по рейтингу Кинопоиска, сначала самые непопулярные;<br/> <code>-imdb_rating</code> - по рейтингу IMDB, сначала самые популярные;<br/> <code>imdb_rating</code> - по рейтингу IMDB, сначала самые непопулярные;<br/> <code>-view_datetime</code> - по дате проcмотра, сначала самые ранние (только при запросе с флагом <code>viewed_only=1</code>);<br/> <code>view_datetime</code> - по дате проcмотра, сначала самые поздние (только при запросе с флагом <code>viewed_only=1</code>).</p>"
+            "description": "<p>Сортировка, возможные параметры:<br/> <code>-created_at</code> - по дате добавления в каталог, сначала самые новые;<br/> <code>created_at</code> - по дате добавления в каталог, сначала самые старые;<br/> <code>-premiere_date</code> - по дате премьеры, сначала самые новые;<br/> <code>premiere_date</code> - по дате премьеры, сначала самые старые;<br/> <code>-year</code> - по дате выхода фильма, сначала самые новые;<br/> <code>year</code> - по дате выхода фильма, сначала самые старые;<br/> <code>-name</code> - по названию, в обратном алфавитном порядке;<br/> <code>name</code> - по названию, в алфавитном порядке;<br/> <code>-average_customers_rating</code> - по рейтингу абонентов, сначала самые популярные;<br/> <code>average_customers_rating</code> - по рейтингу абонентов, сначала самые непопулярные;<br/> <code>-kinopoisk_rating</code> - по рейтингу Кинопоиска, сначала самые популярные;<br/> <code>kinopoisk_rating</code> - по рейтингу Кинопоиска, сначала самые непопулярные;<br/> <code>-imdb_rating</code> - по рейтингу IMDB, сначала самые популярные;<br/> <code>imdb_rating</code> - по рейтингу IMDB, сначала самые непопулярные;<br/> <code>-view_datetime</code> - по дате проcмотра, сначала самые ранние (только при запросе с флагом <code>viewed_only=1</code> или <code>is_viewing=1</code>);<br/> <code>view_datetime</code> - по дате проcмотра, сначала самые поздние (только при запросе с флагом <code>viewed_only=1</code> или <code>is_viewing=1</code>).</p>"
           },
           {
             "group": "Parameter",

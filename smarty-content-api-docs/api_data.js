@@ -240,6 +240,435 @@ define({ "api": [
     "title": "VideoCreate: создание фильма",
     "name": "VideoCreate",
     "group": "Video",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>Название.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name_lang1",
+            "description": "<p>Название.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name_lang2",
+            "description": "<p>Название.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name_lang3",
+            "description": "<p>Название.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name_lang4",
+            "description": "<p>Название.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name_lang5",
+            "description": "<p>Название.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name_orig",
+            "description": "<p>Оригинальное название.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "description",
+            "description": "<p>Описание.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "description_lang1",
+            "description": "<p>Описание.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "description_lang2",
+            "description": "<p>Описание.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "description_lang3",
+            "description": "<p>Описание.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "description_lang4",
+            "description": "<p>Описание.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "description_lang5",
+            "description": "<p>Описание.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "year",
+            "description": "<p>Год выхода.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "countries",
+            "description": "<p>Страны, через запятую.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "countries_lang1",
+            "description": "<p>Страны, через запятую.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "countries_lang2",
+            "description": "<p>Страны, через запятую.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "countries_lang3",
+            "description": "<p>Страны, через запятую.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "countries_lang4",
+            "description": "<p>Страны, через запятую.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "countries_lang5",
+            "description": "<p>Страны, через запятую.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "director",
+            "description": "<p>Режиссер.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "director_lang1",
+            "description": "<p>Режиссер.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "director_lang2",
+            "description": "<p>Режиссер.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "director_lang3",
+            "description": "<p>Режиссер.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "director_lang4",
+            "description": "<p>Режиссер.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "director_lang5",
+            "description": "<p>Режиссер.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "genres_kinopoisk",
+            "description": "<p>Жанры в кинопоиске, через запятую.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "uri",
+            "description": "<p>Статичная ссылка на видео.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "language",
+            "description": "<p>Язык.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "language_lang1",
+            "description": "<p>Язык.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "language_lang2",
+            "description": "<p>Язык.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "language_lang3",
+            "description": "<p>Язык.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "language_lang4",
+            "description": "<p>Язык.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "language_lang5",
+            "description": "<p>Язык.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "rating",
+            "defaultValue": "0",
+            "description": "<p>Возрастной рейтинг.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "kinopoisk_id",
+            "description": "<p>ID фильма в системе кинопоиска.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "kinopoisk_rating",
+            "defaultValue": "0",
+            "description": "<p>Рейтинг в системе кинопоиска.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "imdb_rating",
+            "defaultValue": "0",
+            "description": "<p>Рейтинг в системе IMDB.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "average_customers_rating",
+            "defaultValue": "0",
+            "description": "<p>Рейтинг пользователей.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "duration",
+            "defaultValue": "0",
+            "description": "<p>Длительность в минутах.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "ext_id",
+            "description": "<p>ID фильма в системе внешнего провайдера.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Date",
+            "allowedValues": [
+              "YYYY-MM-DDThh:mm:ss.sTZD"
+            ],
+            "optional": true,
+            "field": "premiere_date",
+            "description": "<p>Дата премьеры. Формат ISO-8601.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Date",
+            "allowedValues": [
+              "YYYY-MM-DDThh:mm:ss.sTZD"
+            ],
+            "optional": true,
+            "field": "published_from",
+            "description": "<p>Дата начала публикации. Формат ISO-8601.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Date",
+            "allowedValues": [
+              "YYYY-MM-DDThh:mm:ss.sTZD"
+            ],
+            "optional": true,
+            "field": "published_to",
+            "description": "<p>Дата окончания публикации. Формат ISO-8601.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "parent_control",
+            "defaultValue": "0",
+            "description": "<p>Родительский контроль.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "is_announcement",
+            "defaultValue": "0",
+            "description": "<p>Является анонсом.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "copyright_holder",
+            "description": "<p>ID правообладателя в системе Smarty.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "external_api_config",
+            "description": "<p>ID обработчика API в системе Smarty.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "price_category",
+            "description": "<p>ID ценовой категории в системе Smarty.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number[]",
+            "optional": false,
+            "field": "genres",
+            "description": "<p>Список ID жанров в системе Smarty.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number[]",
+            "optional": true,
+            "field": "stream_services",
+            "description": "<p>Список ID стриминг сервисов в системе Smarty.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number[]",
+            "optional": true,
+            "field": "tariffs",
+            "description": "<p>Список ID тарифов в системе Smarty.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number[]",
+            "optional": true,
+            "field": "actors_set",
+            "description": "<p>Список ID актёров в системе Smarty.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number[]",
+            "optional": true,
+            "field": "available_on",
+            "description": "<p>Список ID проигрывающих устройств в системе Smarty.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number[]",
+            "optional": true,
+            "field": "package_videos",
+            "description": "<p>Список ID видео в системе Smarty, которые будут входить в пакет видео.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "signature",
+            "description": "<p>Подпись.</p>"
+          }
+        ]
+      }
+    },
     "success": {
       "fields": {
         "Ответ": [
@@ -270,26 +699,6 @@ define({ "api": [
     "version": "1.40.0",
     "filename": "../../../content/api.py",
     "groupTitle": "Video",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "signature",
-            "description": "<p>Подпись.</p>"
-          }
-        ]
-      }
-    },
     "error": {
       "fields": {
         "Коды ошибок error": [

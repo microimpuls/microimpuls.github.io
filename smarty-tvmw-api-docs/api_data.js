@@ -20439,6 +20439,20 @@ define({ "api": [
           {
             "group": "Ответ",
             "type": "Number",
+            "optional": false,
+            "field": "videos.position",
+            "description": "<p>Сохраненная позиция просмотра с прошлой сессии, в секундах. Возвращается если указан флаг is_viewing.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "videos.position_asset_id",
+            "description": "<p>Идентификатор ассета/серии, для которого сохранена позиция. Возвращается если указан флаг is_viewing.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
             "allowedValues": [
               "1",
               "2",
@@ -20453,7 +20467,7 @@ define({ "api": [
             "type": "Number",
             "optional": false,
             "field": "videos.progress",
-            "description": "<p>Прогресс просмотра фильма.</p>"
+            "description": "<p>Прогресс просмотра фильма. Возвращается если указан флаг is_viewing.</p>"
           },
           {
             "group": "Ответ",

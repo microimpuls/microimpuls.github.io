@@ -20466,13 +20466,6 @@ define({ "api": [
             "group": "Ответ",
             "type": "Number",
             "optional": false,
-            "field": "videos.progress",
-            "description": "<p>Прогресс просмотра фильма. Возвращается если указан флаг is_viewing.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
             "field": "count",
             "description": "<p>Общее количество фильмов.</p>"
           },

@@ -3151,7 +3151,7 @@ define({ "api": [
             ],
             "optional": false,
             "field": "subscribe_svod",
-            "description": "<p>Принудительно создаёт подписку megogo, если есть ассоциированный с тарифом обработчик API.</p>"
+            "description": "<p>Принудительно создаёт подписку megogo и/или start, если есть ассоциированный с тарифом обработчик API.</p>"
           },
           {
             "group": "Parameter",

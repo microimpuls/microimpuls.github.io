@@ -19861,7 +19861,7 @@ define({ "api": [
             "size": "0-100",
             "optional": true,
             "field": "limit",
-            "defaultValue": "100",
+            "defaultValue": "20",
             "description": "<p>Ограничение на количество фильмов на одну страницу выборки. Максимальное значение 100.</p>"
           },
           {

@@ -242,8 +242,27 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
+            "field": "device_model",
+            "description": "<p>Модель устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "password",
             "description": "<p>Пароль аккаунта.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "external",
+            "defaultValue": "0",
+            "description": "<p>Использовать только External API для регистрации.</p>"
           },
           {
             "group": "Parameter",
@@ -373,6 +392,12 @@
             "optional": false,
             "field": "10",
             "description": "<p>Неверный код верификации.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "11",
+            "description": "<p>Ошибка создания аккаунта через External API.</p>"
           }
         ]
       }
@@ -2372,6 +2397,361 @@
             "optional": false,
             "field": "12",
             "description": "<p>Не удается точно определить аккаунт по IP-адресу, с которого осуществляется авторизация, т.к. существует несколько аккаунтов в включенной опцией &quot;Авторизация по IP&quot; и пересекающимися IP-подсетями.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "13",
+            "description": "<p>Аккаунт по указанным параметрам не найден, но был отправлен запрос во внешний биллинг для создания аккаунта, поэтому он может быть уже создан при следующей попытке авторизации.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "15",
+            "description": "<p>Логин для устройства с данной группой не разрешён для данного аккаунта.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Authorization"
+  },
+  {
+    "type": "get",
+    "url": "/login/ext/",
+    "title": "LoginExt: создание сессии. Только внешние вызовы, без создания сессии на стороне smarty.",
+    "name": "LoginExt",
+    "group": "Authorization",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "abonement",
+            "defaultValue": "пустой",
+            "description": "<p>Абонемент (логин) аккаунта. Если для аккаунта разрешена авторизация только по абонементу, то достаточно передать только это поле.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "password",
+            "defaultValue": "пустой",
+            "description": "<p>Пароль аккаунта.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустой",
+            "description": "<p>Уникальный идентификатор устройства. Если для аккаунта разрешена авторизация только по Device UID, то достаточно передать только это поле.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_serial",
+            "defaultValue": "пустой",
+            "description": "<p>Серийный номер устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_model",
+            "defaultValue": "пустой",
+            "description": "<p>Модель устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "reset_block_status_reason",
+            "defaultValue": "0",
+            "description": "<p>Если передано значение 1, то дополнительный статус аккаунта будет переведен в состояние ACTIVE, если он был в состоянии BLOCK (заблокирован абонентом).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "api_key",
+            "description": "<p>API key.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, который будет использован при формировании сообщений для абонента.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "authkey",
+            "description": "<p>Авторизационный ключ сессии.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "utc_time",
+            "description": "<p>Текущее время в Unix Timestamp UTC+0.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "firstname",
+            "description": "<p>Имя абонента.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "lastname",
+            "description": "<p>Фамилия абонента.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "abonement",
+            "description": "<p>Номер абонемента.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "account_id",
+            "description": "<p>Идентификатор аккаунта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "customer_id",
+            "description": "<p>Идентификатор абонента.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "customer_ext_id",
+            "description": "<p>Идентификатор абонента во внешней системе - Ext ID.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "currency",
+            "description": "<p>Валюта абонента.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "ip_address",
+            "description": "<p>IP-адрес абонента (с которого на сервер Smarty пришел запрос).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "activation_days_left",
+            "description": "<p>Количество оставшихся дней подписки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "parent_code",
+            "description": "<p>Код родительского контроля.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "last_channel",
+            "description": "<p>Идентификатор последнего просмотренного телеканала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "device_uid",
+            "description": "<p>Уникальный идентификатор устройства, также добавляется в Cookie (генерируется случайным образом, если устройство не передает своего идентификатора).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "template",
+            "description": "<p>Шаблон в настройках аккаунта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "tariffs_list",
+            "description": "<p>Список тарифных пакетов, подключенных у абонента и аккаунта (через запятую).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "use_timeshift",
+            "description": "<p>Флаг, означающий включена ли в настройках аккаунта опция &quot;Просмотр LIVE со сдвигом&quot;.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contract_number",
+            "description": "<p>Номер договора абонента.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "status_reason",
+            "description": "<p>Описание статуса, системные значения: ACTIVE - активирован; DEBT - отключен из-за задолженности; BLOCK - заблокирован по заявке абонента; INACTIVE - деактивирован; WAIT - в ожидании активации в биллинговой системе.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "data_center_id",
+            "description": "<p>Идентификатор используемого дата-центра.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "data_centers",
+            "description": "<p>Список доступных дата-центров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "data_centers.id",
+            "description": "<p>Идентификатор.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "data_centers.name",
+            "description": "<p>Название.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "data_centers.location",
+            "description": "<p>Адрес.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки, авторизация прошла успешно.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Аккаунт по указанным параметрам не найден.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Аккаунт неактивен.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "3",
+            "description": "<p>Ошибка создания авторизационного ключа сессии.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "4",
+            "description": "<p>Неверный API key или client_id.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "5",
+            "description": "<p>Превышено число сессий аккаунта на базовых устройствах.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "6",
+            "description": "<p>Базовое устройство уже привязано к другому аккаунту.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "7",
+            "description": "<p>Ошибка при запросе к внешнему api.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "9",
+            "description": "<p>Абонент пытается авторизоваться из подсети, из которой ему авторизация запрещена.</p>"
           },
           {
             "group": "Коды ошибок error",

@@ -20844,6 +20844,60 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "Object",
+            "optional": false,
+            "field": "videos.price_category",
+            "description": "<p>Ценовая категория.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1",
+              "2"
+            ],
+            "optional": false,
+            "field": "videos.price_category.type",
+            "description": "<p>Тип ценовой категории. 0 - Подписка. 1 - Покупка. 2 - Бесплатно.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "videos.price_category.options",
+            "description": "<p>Варианты приобретения ценовой категории.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "videos.price_category.options.name",
+            "description": "<p>Стоимость ценовой категории.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "videos.price_category.options.action_name",
+            "description": "<p>Стоимость ценовой категории.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Decimal",
+            "optional": false,
+            "field": "videos.price_category.options.price",
+            "description": "<p>Стоимость ценовой категории.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "videos.price_category.options.period",
+            "description": "<p>Стоимость ценовой категории.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "count",

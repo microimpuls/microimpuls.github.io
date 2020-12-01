@@ -64,12 +64,12 @@ define({ "api": [
             "group": "Parameter",
             "type": "Number",
             "allowedValues": [
-              "{1",
-              "2}"
+              "1",
+              "2"
             ],
             "optional": true,
             "field": "gender",
-            "description": "<p>Пол.</p>"
+            "description": "<p>Пол. 1 - Мужской. 2 - Женский.</p>"
           },
           {
             "group": "Parameter",

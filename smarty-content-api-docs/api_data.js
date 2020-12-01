@@ -1,6 +1,296 @@
 define({ "api": [
   {
     "type": "post",
+    "url": "/actor/create/",
+    "title": "ActorCreate: создание актёра",
+    "name": "ActorCreate",
+    "group": "Actor",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>Полное имя.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name_lang1",
+            "description": "<p>Полное имя.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name_lang2",
+            "description": "<p>Полное имя.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name_lang3",
+            "description": "<p>Полное имя.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name_lang4",
+            "description": "<p>Полное имя.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name_lang5",
+            "description": "<p>Полное имя.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Date",
+            "allowedValues": [
+              "YYYY-MM-DD"
+            ],
+            "optional": true,
+            "field": "birthdate",
+            "description": "<p>Дата рождения.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "{1",
+              "2}"
+            ],
+            "optional": true,
+            "field": "gender",
+            "description": "<p>Пол.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "country",
+            "description": "<p>Страна.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "country_lang1",
+            "description": "<p>Страна.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "country_lang2",
+            "description": "<p>Страна.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "country_lang3",
+            "description": "<p>Страна.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "country_lang4",
+            "description": "<p>Страна.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "country_lang5",
+            "description": "<p>Страна.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "profession",
+            "description": "<p>Профессия.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "profession_lang1",
+            "description": "<p>Профессия.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "profession_lang2",
+            "description": "<p>Профессия.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "profession_lang3",
+            "description": "<p>Профессия.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "profession_lang4",
+            "description": "<p>Профессия.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "profession_lang5",
+            "description": "<p>Профессия.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "biography",
+            "description": "<p>Биография.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "biography_lang1",
+            "description": "<p>Биография.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "biography_lang2",
+            "description": "<p>Биография.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "biography_lang3",
+            "description": "<p>Биография.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "biography_lang4",
+            "description": "<p>Биография.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "biography_lang5",
+            "description": "<p>Биография.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name_orig",
+            "description": "<p>Оригинальное имя.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "movie_db_id",
+            "description": "<p>ID актёра в системе провайдера фильмов (кинопоиск или Cinemate).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "signature",
+            "description": "<p>Подпись.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>ID созданного актёра.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "error_message",
+            "description": "<p>Текст ошибки. Пустой, если error = 0.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../content/api.py",
+    "groupTitle": "Actor",
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "20",
+            "description": "<p>Неправильно передан параметр.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "21",
+            "description": "<p>Ошибка при валидации данных.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "22",
+            "description": "<p>Ошибка при сохранении данных.</p>"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "post",
     "url": "/radio/create/",
     "title": "RadioCreate: создание радиостанции",
     "name": "RadioCreate",

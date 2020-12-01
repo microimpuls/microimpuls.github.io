@@ -291,6 +291,93 @@ define({ "api": [
   },
   {
     "type": "post",
+    "url": "/seance/create/",
+    "title": "SeanceDelete: удаление сеанса",
+    "name": "SeanceDelete",
+    "group": "Seance",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>ID сеанса.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "signature",
+            "description": "<p>Подпись.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../content/api.py",
+    "groupTitle": "Seance",
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "error_message",
+            "description": "<p>Текст ошибки. Пустой, если error = 0.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "20",
+            "description": "<p>Неправильно передан параметр.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "21",
+            "description": "<p>Ошибка при валидации данных.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "22",
+            "description": "<p>Ошибка при сохранении данных.</p>"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "post",
     "url": "/seance/ticket/create/",
     "title": "SeanceTicketCreate: создание билета для сеанса",
     "name": "SeanceTicketCreate",
@@ -402,6 +489,93 @@ define({ "api": [
     "version": "1.40.0",
     "filename": "../../../content/api.py",
     "groupTitle": "Seance"
+  },
+  {
+    "type": "post",
+    "url": "/seance/ticket/delete/",
+    "title": "SeanceTicketDelete: удаление билета",
+    "name": "SeanceTicketDelete",
+    "group": "Seance",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>ID билета.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "signature",
+            "description": "<p>Подпись.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../content/api.py",
+    "groupTitle": "Seance",
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "error_message",
+            "description": "<p>Текст ошибки. Пустой, если error = 0.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "20",
+            "description": "<p>Неправильно передан параметр.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "21",
+            "description": "<p>Ошибка при валидации данных.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "22",
+            "description": "<p>Ошибка при сохранении данных.</p>"
+          }
+        ]
+      }
+    }
   },
   {
     "type": "post",

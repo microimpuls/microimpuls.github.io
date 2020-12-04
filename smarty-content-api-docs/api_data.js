@@ -581,7 +581,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/seance/create/",
+    "url": "/seance/delete/",
     "title": "SeanceDelete: удаление сеанса",
     "name": "SeanceDelete",
     "group": "Seance",

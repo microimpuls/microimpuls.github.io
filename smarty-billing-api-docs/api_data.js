@@ -1930,6 +1930,60 @@ define({ "api": [
           },
           {
             "group": "Parameter",
+            "type": "String",
+            "size": "..9",
+            "optional": true,
+            "field": "bank_account_blz",
+            "defaultValue": "пустое",
+            "description": "<p>BLZ банковского аккаунта абонента.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "size": "..11",
+            "optional": true,
+            "field": "bank_account_bic",
+            "defaultValue": "пустое",
+            "description": "<p>BIC банковского аккаунта абонента.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "size": "..40",
+            "optional": true,
+            "field": "bank_account_number",
+            "defaultValue": "пустое",
+            "description": "<p>Номер банковского аккаунта абонента.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "size": "..34",
+            "optional": true,
+            "field": "bank_account_iban",
+            "defaultValue": "пустое",
+            "description": "<p>IBAN банковского аккаунта абонента.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "size": "..128",
+            "optional": true,
+            "field": "bank_account_bank_name",
+            "defaultValue": "пустое",
+            "description": "<p>Название банка для банковского аккаунта абонента.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "size": "..128",
+            "optional": true,
+            "field": "bank_account_owner_name",
+            "defaultValue": "пустое",
+            "description": "<p>Имя владельца банковского аккаунта абонента.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Number",
             "optional": false,
             "field": "client_id",
@@ -2693,6 +2747,60 @@ define({ "api": [
             "field": "comment",
             "defaultValue": "пустое",
             "description": "<p>Примечание. Хотя бы одно из полей ФИО или примечание должно быть указано.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "size": "..9",
+            "optional": true,
+            "field": "bank_account_blz",
+            "defaultValue": "пустое",
+            "description": "<p>BLZ банковского аккаунта абонента.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "size": "..11",
+            "optional": true,
+            "field": "bank_account_bic",
+            "defaultValue": "пустое",
+            "description": "<p>BIC банковского аккаунта абонента.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "size": "..40",
+            "optional": true,
+            "field": "bank_account_number",
+            "defaultValue": "пустое",
+            "description": "<p>Номер банковского аккаунта абонента.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "size": "..34",
+            "optional": true,
+            "field": "bank_account_iban",
+            "defaultValue": "пустое",
+            "description": "<p>IBAN банковского аккаунта абонента.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "size": "..128",
+            "optional": true,
+            "field": "bank_account_bank_name",
+            "defaultValue": "пустое",
+            "description": "<p>Название банка для банковского аккаунта абонента.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "size": "..128",
+            "optional": true,
+            "field": "bank_account_owner_name",
+            "defaultValue": "пустое",
+            "description": "<p>Имя владельца банковского аккаунта абонента.</p>"
           },
           {
             "group": "Parameter",

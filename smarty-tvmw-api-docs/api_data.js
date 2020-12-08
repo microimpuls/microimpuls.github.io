@@ -20857,41 +20857,6 @@ define({ "api": [
           },
           {
             "group": "Ответ",
-            "type": "Object[]",
-            "optional": false,
-            "field": "videos.price_category.options",
-            "description": "<p>Варианты приобретения ценовой категории.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "videos.price_category.options.name",
-            "description": "<p>Стоимость ценовой категории.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "videos.price_category.options.action_name",
-            "description": "<p>Стоимость ценовой категории.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Decimal",
-            "optional": false,
-            "field": "videos.price_category.options.price",
-            "description": "<p>Стоимость ценовой категории.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "videos.price_category.options.period",
-            "description": "<p>Стоимость ценовой категории.</p>"
-          },
-          {
-            "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "count",

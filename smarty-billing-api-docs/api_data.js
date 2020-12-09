@@ -684,7 +684,7 @@ define({ "api": [
         "Parameter": [
           {
             "group": "Parameter",
-            "type": "String",
+            "type": "Number",
             "optional": false,
             "field": "device_id",
             "description": "<p>Идентификатор устройства.</p>"

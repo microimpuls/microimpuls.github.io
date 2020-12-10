@@ -3257,8 +3257,9 @@ define({ "api": [
               "0",
               "1"
             ],
-            "optional": false,
+            "optional": true,
             "field": "subscribe_svod",
+            "defaultValue": "0",
             "description": "<p>Принудительно создаёт подписку megogo и/или start, если есть ассоциированный с тарифом обработчик API.</p>"
           },
           {
@@ -4283,8 +4284,9 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "price",
+            "defaultValue": "0.0",
             "description": "<p>Стоимость тарифного пакета (за рассчетный период).</p>"
           },
           {
@@ -4294,8 +4296,9 @@ define({ "api": [
               "0",
               "1"
             ],
-            "optional": false,
+            "optional": true,
             "field": "enabled",
+            "defaultValue": "1",
             "description": "<p>Включен.</p>"
           },
           {
@@ -4305,8 +4308,9 @@ define({ "api": [
               "0",
               "1"
             ],
-            "optional": false,
+            "optional": true,
             "field": "assigned_by_default",
+            "defaultValue": "0",
             "description": "<p>Является тарифным пакетом, подключаемым по умолчанию.</p>"
           },
           {
@@ -4316,8 +4320,9 @@ define({ "api": [
               "0",
               "1"
             ],
-            "optional": false,
+            "optional": true,
             "field": "required",
+            "defaultValue": "0",
             "description": "<p>Обязательный. Такой пакет нельзя отключить в личном кабинете.</p>"
           },
           {
@@ -4334,8 +4339,9 @@ define({ "api": [
               "0",
               "1"
             ],
-            "optional": false,
+            "optional": true,
             "field": "ip_restriction",
+            "defaultValue": "0",
             "description": "<p>Флаг, означающий, включено ли ограничение по IP-адресу для одновременных сессий дополнительных устройств.</p>"
           },
           {
@@ -4359,8 +4365,9 @@ define({ "api": [
               "0",
               "1"
             ],
-            "optional": false,
+            "optional": true,
             "field": "available_for_inactive_accounts",
+            "defaultValue": "0",
             "description": "<p>Доступен только для неактивных аккаунтов.</p>"
           },
           {
@@ -4370,8 +4377,9 @@ define({ "api": [
               "0",
               "1"
             ],
-            "optional": false,
+            "optional": true,
             "field": "display_in_channels_widget",
+            "defaultValue": "1",
             "description": "<p>Показывать каналы из этого пакета на сайте в личном кабинете.</p>"
           },
           {
@@ -4381,8 +4389,9 @@ define({ "api": [
               "0",
               "1"
             ],
-            "optional": false,
+            "optional": true,
             "field": "used_for_channel_list",
+            "defaultValue": "1",
             "description": "<p>Используется для выборки списка каналов.</p>"
           },
           {
@@ -4392,8 +4401,9 @@ define({ "api": [
               "0",
               "1"
             ],
-            "optional": false,
+            "optional": true,
             "field": "used_for_video_list",
+            "defaultValue": "1",
             "description": "<p>Используется для выборки списка фильмов.</p>"
           },
           {
@@ -4403,8 +4413,9 @@ define({ "api": [
               "0",
               "1"
             ],
-            "optional": false,
+            "optional": true,
             "field": "used_for_radio_list",
+            "defaultValue": "1",
             "description": "<p>Используется для выборки списка радио.</p>"
           },
           {
@@ -4723,21 +4734,21 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "name",
             "description": "<p>Название тарифа.</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "period",
             "description": "<p>Период оплаты. Если 0, то тариф -- системный.</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "price",
             "description": "<p>Стоимость тарифного пакета (за рассчетный период).</p>"
           },
@@ -4748,7 +4759,7 @@ define({ "api": [
               "0",
               "1"
             ],
-            "optional": false,
+            "optional": true,
             "field": "enabled",
             "description": "<p>Включен.</p>"
           },
@@ -4759,7 +4770,7 @@ define({ "api": [
               "0",
               "1"
             ],
-            "optional": false,
+            "optional": true,
             "field": "assigned_by_default",
             "description": "<p>Является тарифным пакетом, подключаемым по умолчанию.</p>"
           },
@@ -4770,14 +4781,14 @@ define({ "api": [
               "0",
               "1"
             ],
-            "optional": false,
+            "optional": true,
             "field": "required",
             "description": "<p>Обязательный. Такой пакет нельзя отключить в личном кабинете.</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "sessions_count",
             "description": "<p>Максимальное количество одновременных сессий дополнительных устройств.</p>"
           },
@@ -4788,21 +4799,21 @@ define({ "api": [
               "0",
               "1"
             ],
-            "optional": false,
+            "optional": true,
             "field": "ip_restriction",
             "description": "<p>Флаг, означающий, включено ли ограничение по IP-адресу для одновременных сессий дополнительных устройств.</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "basic_sessions_count",
             "description": "<p>Максимальное количество привязанных базовых устройств.</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "basic_tariff_priority",
             "description": "<p>Признак базового тарифа. При значении 0 пакет не будет являться базовым тарифным пакетом, значения от 1 до 10 определяют приоритет пакета (1 - наименьший, 10 - наивысший).</p>"
           },
@@ -4813,7 +4824,7 @@ define({ "api": [
               "0",
               "1"
             ],
-            "optional": false,
+            "optional": true,
             "field": "available_for_inactive_accounts",
             "description": "<p>Доступен только для неактивных аккаунтов.</p>"
           },
@@ -4824,7 +4835,7 @@ define({ "api": [
               "0",
               "1"
             ],
-            "optional": false,
+            "optional": true,
             "field": "display_in_channels_widget",
             "description": "<p>Показывать каналы из этого пакета на сайте в личном кабинете.</p>"
           },
@@ -4835,7 +4846,7 @@ define({ "api": [
               "0",
               "1"
             ],
-            "optional": false,
+            "optional": true,
             "field": "used_for_channel_list",
             "description": "<p>Используется для выборки списка каналов.</p>"
           },
@@ -4846,7 +4857,7 @@ define({ "api": [
               "0",
               "1"
             ],
-            "optional": false,
+            "optional": true,
             "field": "used_for_video_list",
             "description": "<p>Используется для выборки списка фильмов.</p>"
           },
@@ -4857,7 +4868,7 @@ define({ "api": [
               "0",
               "1"
             ],
-            "optional": false,
+            "optional": true,
             "field": "used_for_radio_list",
             "description": "<p>Используется для выборки списка радио.</p>"
           },

@@ -273,6 +273,13 @@ define({ "api": [
           },
           {
             "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "captcha_code",
+            "description": "<p>Код верификации (если до этого был получен код error 12).</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Number",
             "optional": false,
             "field": "client_id",
@@ -327,6 +334,13 @@ define({ "api": [
             "optional": false,
             "field": "error",
             "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "captcha_url",
+            "description": "<p>Ссылка на капчу.</p>"
           }
         ]
       }
@@ -405,6 +419,24 @@ define({ "api": [
             "optional": false,
             "field": "11",
             "description": "<p>Ошибка создания аккаунта через External API.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "12",
+            "description": "<p>Была отправлена ссылка на капчу.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "13",
+            "description": "<p>Введенный код с капчи некорректен или устарел.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "14",
+            "description": "<p>Достигнут лимит на сгенерированные капчи.</p>"
           }
         ]
       }

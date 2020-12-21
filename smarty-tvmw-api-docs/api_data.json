@@ -15871,7 +15871,7 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": true,
+            "optional": false,
             "field": "code",
             "description": "<p>Код промо.</p>"
           },
@@ -15912,6 +15912,37 @@
             "field": "lang",
             "defaultValue": "пустое",
             "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "type",
+            "description": "<p>Тип промо. 0 - Добавление суммы к балансу. 1 - Активация скидки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "amount",
+            "description": "<p>Сумма пополнения баланса.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "discount",
+            "description": "<p>Размер скидки в процентах.</p>"
           }
         ]
       }

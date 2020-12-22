@@ -585,6 +585,13 @@ define({ "api": [
           },
           {
             "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "sort_after_cid",
+            "description": "<p>Поместить канал в сортировке после указанного. Если не указано, то помещается в конец.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Number[]",
             "optional": true,
             "field": "additional_categories",

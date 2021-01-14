@@ -6724,6 +6724,13 @@ define({ "api": [
           {
             "group": "Ответ",
             "type": "Number",
+            "optional": true,
+            "field": "lock_banner",
+            "description": "<p>Баннер-заглушка для режима &quot;замочка&quot;.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
             "optional": false,
             "field": "error",
             "description": "<p>Код ошибки.</p>"

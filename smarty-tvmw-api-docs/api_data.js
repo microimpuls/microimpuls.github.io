@@ -745,7 +745,7 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "biography",
-            "description": "<p>Биография.</p>"
+            "description": "<p>Биография (html)</p>"
           },
           {
             "group": "Ответ",

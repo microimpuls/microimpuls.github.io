@@ -21024,13 +21024,6 @@ define({ "api": [
           },
           {
             "group": "Ответ",
-            "type": "Object",
-            "optional": false,
-            "field": "videos.price_category",
-            "description": "<p>Ценовая категория.</p>"
-          },
-          {
-            "group": "Ответ",
             "type": "Number",
             "allowedValues": [
               "0",
@@ -21038,7 +21031,7 @@ define({ "api": [
               "2"
             ],
             "optional": false,
-            "field": "videos.price_category.type",
+            "field": "videos.price_category_type",
             "description": "<p>Тип ценовой категории. 0 - Подписка. 1 - Покупка. 2 - Бесплатно.</p>"
           },
           {

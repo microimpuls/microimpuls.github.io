@@ -11913,6 +11913,280 @@
   },
   {
     "type": "post",
+    "url": "/payment/preauth/",
+    "title": "PaymentPreAuth: предварительная аутентификация",
+    "name": "PaymentPreAuth",
+    "group": "Payment",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "merchant_type",
+            "defaultValue": "пустое",
+            "description": "<p>Тип мерчанта.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "transaction_id",
+            "description": "<p>POST параметр. Внутренний ID платежа (ID, используемый в Smarty).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "card_number",
+            "description": "<p>POST параметр. Номер карты.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "card_holder",
+            "description": "<p>POST параметр. Имя владельца карты.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "card_expire",
+            "description": "<p>POST параметр. Срок действия карты.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "card_cvv",
+            "description": "<p>POST параметр. cvv карты.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "color_depth",
+            "description": "<p>POST параметр. Глубина цветопередачи устройства клиента в битах.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "screen_height",
+            "description": "<p>POST параметр. Общая высота экрана Абонента в пикселях.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "screen_width",
+            "description": "<p>POST параметр. Общая ширина экрана Абонента в пикселях.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "window_height",
+            "description": "<p>POST параметр. Высота окна браузера Абонента в пикселях, в котором отображаются страницы сайта.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "window_width",
+            "description": "<p>POST параметр. Ширина окна браузера Абонента в пикселях, в котором отображаются страницы сайта.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "lang",
+            "description": "<p>POST параметр. Язык браузера Абонента.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "timezone",
+            "description": "<p>POST параметр. Часовой пояс Абонента в минутах.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "java_enabled",
+            "description": "<p>POST параметр. Признак возможности выполнения JavaScript в браузере Абонента.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "success",
+            "description": "<p>Флаг успешной предварительной аутентификации.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "version",
+            "description": "<p>Версия 3DS.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "iframe_kwargs.three_DS_server_trans_id",
+            "description": "<p>Идентификатор 3DS метода.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "iframe_kwargs.three_DS_method_url",
+            "description": "<p>Url для открытия скрытого iframe.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "iframe_kwargs.three_DS_method_notification_url",
+            "description": "<p>Адрес платежного шлюза для получения от ACS информации о выполнении 3DS метода.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "error_message",
+            "description": "<p>Текст ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Неизвестная ошибка.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Внутренняя ошибка платежного шлюза.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "3",
+            "description": "<p>Внешнаяя ошибка платежного шлюза (Пример - сетевая ошибка).</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "4",
+            "description": "<p>Неверные параметры запроса.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "5",
+            "description": "<p>Ошибка платежного инструмента.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "6",
+            "description": "<p>Подозрение на мошеничество.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "7",
+            "description": "<p>Недостаточно средств.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "8",
+            "description": "<p>Лимит операции.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "9",
+            "description": "<p>Ошибка авторизации.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Payment"
+  },
+  {
+    "type": "post",
     "url": "/payment/process/",
     "title": "PaymentProcess: передача платежных данных шлюзу",
     "name": "PaymentProcess",

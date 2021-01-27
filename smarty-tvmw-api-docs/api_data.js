@@ -15744,6 +15744,17 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "results.has_subscription",
+            "description": "<p>На канал есть подписка.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "results.url",

@@ -7345,6 +7345,13 @@
           },
           {
             "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "payment_sum_no_discount",
+            "description": "<p>Сумма платежа за установленный период без учёта скидки.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "payment_period",

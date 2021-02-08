@@ -11221,10 +11221,14 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "String",
+            "allowedValues": [
+              "fortebank",
+              "payture"
+            ],
             "optional": true,
             "field": "merchant_type",
             "defaultValue": "пустое",
-            "description": "<p>POST параметр. Тип мерчанта.</p>"
+            "description": "<p>POST параметр. Тип мерчанта. payture - Payture; fortebank - Fortebank.</p>"
           },
           {
             "group": "Parameter",
@@ -11335,10 +11339,18 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "String",
+            "allowedValues": [
+              "w1",
+              "w1_merchant",
+              "payture",
+              "fortebank",
+              "arca",
+              "null"
+            ],
             "optional": true,
             "field": "merchant_type",
             "defaultValue": "пустое",
-            "description": "<p>Тип мерчанта.</p>"
+            "description": "<p>Тип мерчанта. w1 - Банковская карта (WalletOne); w1_merchant - Разные способы оплаты (WalletOne); payture - Payture; fortebank - Fortebank; arca - Банковская карта (ArcaAm); null - Заглушка.</p>"
           },
           {
             "group": "Parameter",
@@ -11655,10 +11667,18 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "String",
+            "allowedValues": [
+              "w1",
+              "w1_merchant",
+              "payture",
+              "fortebank",
+              "paymaster",
+              "null"
+            ],
             "optional": true,
             "field": "merchant_type",
             "defaultValue": "пустое",
-            "description": "<p>Тип мерчанта.</p>"
+            "description": "<p>Тип мерчанта. w1 - Банковская карта (WalletOne); w1_merchant - Разные способы оплаты (WalletOne); payture - Payture; fortebank - Fortebank; paymaster - Разные способы оплаты (Paymaster); null - Заглушка.</p>"
           },
           {
             "group": "Parameter",
@@ -11796,10 +11816,13 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "String",
+            "allowedValues": [
+              "fortebank"
+            ],
             "optional": true,
             "field": "merchant_type",
             "defaultValue": "пустое",
-            "description": "<p>POST параметр. Тип мерчанта</p>"
+            "description": "<p>POST параметр. Тип мерчанта. fortebank - Fortebank.</p>"
           },
           {
             "group": "Parameter",
@@ -11930,10 +11953,13 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "String",
+            "allowedValues": [
+              "payture"
+            ],
             "optional": true,
             "field": "merchant_type",
             "defaultValue": "пустое",
-            "description": "<p>Тип мерчанта.</p>"
+            "description": "<p>Тип мерчанта. payture - Payture.</p>"
           },
           {
             "group": "Parameter",
@@ -12218,10 +12244,14 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "String",
+            "allowedValues": [
+              "w1",
+              "fortebank"
+            ],
             "optional": true,
             "field": "merchant_type",
             "defaultValue": "пустое",
-            "description": "<p>Тип мерчанта.</p>"
+            "description": "<p>Тип мерчанта. w1 - Разные способы оплаты (WalletOne); fortebank - Fortebank.</p>"
           },
           {
             "group": "Parameter",
@@ -12415,10 +12445,15 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "String",
+            "allowedValues": [
+              "payture",
+              "fortebank",
+              "null"
+            ],
             "optional": true,
             "field": "merchant_type",
             "defaultValue": "пустое",
-            "description": "<p>Тип мерчанта.</p>"
+            "description": "<p>Тип мерчанта. payture - Payture; fortebank - Fortebank; null - Заглушка.</p>"
           },
           {
             "group": "Parameter",
@@ -12513,10 +12548,15 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "String",
+            "allowedValues": [
+              "payture",
+              "fortebank",
+              "null"
+            ],
             "optional": true,
             "field": "merchant_type",
             "defaultValue": "пустое",
-            "description": "<p>Тип мерчанта.</p>"
+            "description": "<p>Тип мерчанта. payture - Payture; fortebank - Fortebank; null - Заглушка.</p>"
           },
           {
             "group": "Parameter",

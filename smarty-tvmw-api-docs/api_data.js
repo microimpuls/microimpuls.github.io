@@ -9757,6 +9757,28 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "Number",
+            "allowedValues": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ],
+            "optional": true,
+            "field": "document_type",
+            "defaultValue": "пустое",
+            "description": "<p>Тип документа. 1 - Показывать при авторизации. 2 - Показывать при регистрации. 3 - Показывать при оплате. 4 - Показывать при подключении тарифа.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "tariff_id",
+            "defaultValue": "пусто",
+            "description": "<p>Идентификатор тарифа (для документов с типом &quot;Показывать при подключении тарифа&quot;).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
             "optional": false,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
@@ -9866,6 +9888,18 @@ define({ "api": [
             "optional": false,
             "field": "0",
             "description": "<p>Нет ошибки, действие выполнено успешно.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Некорректный тип документа.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Тариф, соответствующий переданному идентификатору, не существует.</p>"
           }
         ]
       }
@@ -10011,6 +10045,80 @@ define({ "api": [
     "title": "NoAuthLegalDocumentList: список правовых документов без авторизации",
     "name": "NoAuthLegalDocumentList",
     "group": "LegalDocument",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ],
+            "optional": true,
+            "field": "document_type",
+            "defaultValue": "пустое",
+            "description": "<p>Тип документа. 1 - Показывать при авторизации. 2 - Показывать при регистрации. 3 - Показывать при оплате. 4 - Показывать при подключении тарифа.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "tariff_id",
+            "defaultValue": "пустое",
+            "description": "<p>Идентификатор тарифа (для документов с типом &quot;Показывать при подключении тарифа&quot;).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "defaultValue": "пустое",
+            "description": "<p>Авторизационный ключ сессии.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "api_key",
+            "description": "<p>API key.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    },
     "success": {
       "fields": {
         "Ответ": [
@@ -10071,57 +10179,25 @@ define({ "api": [
             "optional": false,
             "field": "0",
             "description": "<p>Нет ошибки, действие выполнено успешно.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Некорректный тип документа.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Тариф, соответствующий переданному идентификатору, не существует.</p>"
           }
         ]
       }
     },
     "version": "1.40.0",
     "filename": "../../../tvmiddleware/api.py",
-    "groupTitle": "LegalDocument",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "api_key",
-            "description": "<p>API key.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device",
-            "defaultValue": "пустое",
-            "description": "<p>Системное название типа устройства.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device_uid",
-            "defaultValue": "пустое",
-            "description": "<p>Уникальный идентификатор устройства.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "lang",
-            "defaultValue": "пустое",
-            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
-          }
-        ]
-      }
-    }
+    "groupTitle": "LegalDocument"
   },
   {
     "type": "get",

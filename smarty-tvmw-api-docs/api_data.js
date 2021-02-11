@@ -11495,29 +11495,36 @@ define({ "api": [
             "group": "Ответ",
             "type": "String",
             "optional": false,
-            "field": "payments.payment_id",
+            "field": "payment_id",
             "description": "<p>Внешний ID платежа (ID, используемый в шлюзе).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
-            "field": "payments.transaction_id",
+            "field": "transaction_id",
             "description": "<p>Внутренний ID платежа (ID, используемый в Smarty).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
-            "field": "payments.session_id",
+            "field": "session_id",
             "description": "<p>ID платёжной сессии.</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
-            "field": "payments.redirect_url",
+            "field": "redirect_url",
             "description": "<p>URL для перенаправления на форму ввода данных на платежном шлюзе.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": false,
+            "field": "form_data",
+            "description": "<p>Форма платёжного шлюза, пустой объект, если не используется.</p>"
           },
           {
             "group": "Ответ",
@@ -12327,7 +12334,7 @@ define({ "api": [
             "optional": true,
             "field": "merchant_type",
             "defaultValue": "пустое",
-            "description": "<p>Тип мерчанта. w1 - Разные способы оплаты (WalletOne); fortebank - Fortebank.</p>"
+            "description": "<p>Тип мерчанта. w1 - Банковская карта (WalletOne); fortebank - Fortebank.</p>"
           },
           {
             "group": "Parameter",

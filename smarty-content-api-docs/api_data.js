@@ -1,6 +1,93 @@
 define({ "api": [
   {
     "type": "post",
+    "url": "/actor/delete/",
+    "title": "ActorDelete: удаление актера",
+    "name": "Actor",
+    "group": "Actor",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>ID актера.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "signature",
+            "description": "<p>Подпись.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../content/api.py",
+    "groupTitle": "Actor",
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "error_message",
+            "description": "<p>Текст ошибки. Пустой, если error = 0.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "20",
+            "description": "<p>Неправильно передан параметр.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "21",
+            "description": "<p>Ошибка при валидации данных.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "22",
+            "description": "<p>Ошибка при сохранении данных.</p>"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "post",
     "url": "/actor/create/",
     "title": "ActorCreate: создание актёра",
     "name": "ActorCreate",
@@ -258,93 +345,6 @@ define({ "api": [
     "version": "1.40.0",
     "filename": "../../../content/api.py",
     "groupTitle": "Actor",
-    "error": {
-      "fields": {
-        "Коды ошибок error": [
-          {
-            "group": "Коды ошибок error",
-            "optional": false,
-            "field": "0",
-            "description": "<p>Нет ошибки.</p>"
-          },
-          {
-            "group": "Коды ошибок error",
-            "optional": false,
-            "field": "20",
-            "description": "<p>Неправильно передан параметр.</p>"
-          },
-          {
-            "group": "Коды ошибок error",
-            "optional": false,
-            "field": "21",
-            "description": "<p>Ошибка при валидации данных.</p>"
-          },
-          {
-            "group": "Коды ошибок error",
-            "optional": false,
-            "field": "22",
-            "description": "<p>Ошибка при сохранении данных.</p>"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "post",
-    "url": "/actor/delete/",
-    "title": "ActorDelete: удаление актера",
-    "name": "ActorDelete",
-    "group": "Actor",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "id",
-            "description": "<p>ID актера.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "signature",
-            "description": "<p>Подпись.</p>"
-          }
-        ]
-      }
-    },
-    "version": "1.40.0",
-    "filename": "../../../content/api.py",
-    "groupTitle": "Actor",
-    "success": {
-      "fields": {
-        "Ответ": [
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "error",
-            "description": "<p>Код ошибки.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "error_message",
-            "description": "<p>Текст ошибки. Пустой, если error = 0.</p>"
-          }
-        ]
-      }
-    },
     "error": {
       "fields": {
         "Коды ошибок error": [

@@ -11426,7 +11426,7 @@ define({ "api": [
             "optional": true,
             "field": "merchant_type",
             "defaultValue": "пустое",
-            "description": "<p>Тип мерчанта. w1 - Банковская карта (WalletOne); w1_merchant - Разные способы оплаты (WalletOne); payture - Payture; fortebank - Fortebank; arca - Банковская карта (ArcaAm); null - Заглушка.</p>"
+            "description": "<p>Тип мерчанта. w1 - Банковская карта (WalletOne); w1_merchant - Разные способы оплаты (WalletOne); payture - Payture; fortebank - Fortebank; arca - Банковская карта (ArcaAm); stripe - Stripe; null - Заглушка.</p>"
           },
           {
             "group": "Parameter",
@@ -14935,6 +14935,13 @@ define({ "api": [
             "optional": false,
             "field": "categories.icon_type",
             "description": "<p>Название типа иконки для категории.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "categories.icon",
+            "description": "<p>URL-адрес иконки.</p>"
           },
           {
             "group": "Ответ",

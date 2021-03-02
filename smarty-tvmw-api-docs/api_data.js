@@ -16555,6 +16555,26 @@ define({ "api": [
             "optional": false,
             "field": "promos.date",
             "description": "<p>Дата активации.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Date",
+            "allowedValues": [
+              "YYYY-MM-DD"
+            ],
+            "optional": false,
+            "field": "promos.valid_from",
+            "description": "<p>Промо действителен с.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Date",
+            "allowedValues": [
+              "YYYY-MM-DD"
+            ],
+            "optional": false,
+            "field": "promos.valid_until",
+            "description": "<p>Промо действителен до.</p>"
           }
         ]
       }

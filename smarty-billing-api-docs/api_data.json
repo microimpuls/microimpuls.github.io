@@ -1106,14 +1106,14 @@
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "account_id",
-            "description": "<p>Account ID.</p>"
+            "description": "<p>Account ID. Должен быть передан либо abonement, либо account_id.</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "abonement",
             "description": "<p>Номер абонемента аккаунта. Должен быть передан либо abonement, либо account_id.</p>"
           },
@@ -3265,23 +3265,23 @@
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "tariff_id",
-            "description": "<p>Идентификатор тарифного пакета в Smarty.</p>"
+            "description": "<p>Идентификатор тарифного пакета в Smarty. Необходимо передать значение, если не переданы vtariff_id или tariff_ext_id.</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "vtariff_id",
-            "description": "<p>Идентификатор виртуального тарифного пакета в Smarty.</p>"
+            "description": "<p>Идентификатор виртуального тарифного пакета в Smarty. Необходимо передать значение, если не переданы tariff_id или tariff_ext_id.</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "tariff_ext_id",
-            "description": "<p>Идентификатор виртуального или обычного тарифного пакета в Smarty.</p>"
+            "description": "<p>Идентификатор виртуального или обычного тарифного пакета в Smarty. Необходимо передать значение, если не переданы vtariff_id или tariff_id.</p>"
           },
           {
             "group": "Parameter",

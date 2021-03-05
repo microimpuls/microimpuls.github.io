@@ -1120,7 +1120,8 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "size": "..2000",
+            "optional": true,
             "field": "text",
             "description": "<p>Текст сообщения.</p>"
           },
@@ -1128,7 +1129,7 @@
             "group": "Parameter",
             "type": "String",
             "size": "..255",
-            "optional": false,
+            "optional": true,
             "field": "subject",
             "description": "<p>Тема сообщения.</p>"
           },
@@ -1139,8 +1140,9 @@
               "0",
               "1"
             ],
-            "optional": false,
+            "optional": true,
             "field": "urgent",
+            "defaultValue": "1",
             "description": "<p>Срочное.</p>"
           },
           {
@@ -1150,8 +1152,9 @@
               "0",
               "1"
             ],
-            "optional": false,
+            "optional": true,
             "field": "delete_after_reading",
+            "defaultValue": "1",
             "description": "<p>Удалить сообщение после прочтения.</p>"
           },
           {

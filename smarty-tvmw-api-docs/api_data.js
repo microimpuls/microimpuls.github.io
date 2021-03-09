@@ -16313,6 +16313,12 @@ define({ "api": [
             "optional": false,
             "field": "0",
             "description": "<p>Нет ошибки, действие выполнено успешно.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Настроенный в Smaty URL потока-заглушки для режима &quot;замочка&quot; не является валидным.</p>"
           }
         ]
       }

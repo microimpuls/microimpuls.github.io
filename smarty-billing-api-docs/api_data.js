@@ -2992,7 +2992,7 @@ define({ "api": [
             "group": "Коды ошибок error",
             "optional": false,
             "field": "3",
-            "description": "<p>Внешнаяя ошибка платежного шлюза (Пример - сетевая ошибка).</p>"
+            "description": "<p>Внешняя ошибка платежного шлюза (Пример - сетевая ошибка).</p>"
           },
           {
             "group": "Коды ошибок error",
@@ -3010,7 +3010,7 @@ define({ "api": [
             "group": "Коды ошибок error",
             "optional": false,
             "field": "6",
-            "description": "<p>Подозрение на мошеничество.</p>"
+            "description": "<p>Подозрение на мошенничество.</p>"
           },
           {
             "group": "Коды ошибок error",
@@ -3034,6 +3034,36 @@ define({ "api": [
             "group": "Коды ошибок error",
             "optional": false,
             "field": "10",
+            "description": "<p>Некорректная карта.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "11",
+            "description": "<p>Ошибка банка-эмитента.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "12",
+            "description": "<p>Пользователь не зареристрирован.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "13",
+            "description": "<p>Операция не поддерживается мерчантом.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "14",
+            "description": "<p>Ошибка при регистрации.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "100",
             "description": "<p>Абонент не найден.</p>"
           },
           {
@@ -3178,7 +3208,7 @@ define({ "api": [
             "group": "Коды ошибок error",
             "optional": false,
             "field": "3",
-            "description": "<p>Внешнаяя ошибка платежного шлюза (Пример - сетевая ошибка).</p>"
+            "description": "<p>Внешняя ошибка платежного шлюза (Пример - сетевая ошибка).</p>"
           },
           {
             "group": "Коды ошибок error",
@@ -3196,7 +3226,7 @@ define({ "api": [
             "group": "Коды ошибок error",
             "optional": false,
             "field": "6",
-            "description": "<p>Подозрение на мошеничество.</p>"
+            "description": "<p>Подозрение на мошенничество.</p>"
           },
           {
             "group": "Коды ошибок error",
@@ -3220,6 +3250,36 @@ define({ "api": [
             "group": "Коды ошибок error",
             "optional": false,
             "field": "10",
+            "description": "<p>Некорректная карта.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "11",
+            "description": "<p>Ошибка банка-эмитента.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "12",
+            "description": "<p>Пользователь не зареристрирован.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "13",
+            "description": "<p>Операция не поддерживается мерчантом.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "14",
+            "description": "<p>Ошибка при регистрации.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "100",
             "description": "<p>Абонент не найден.</p>"
           }
         ]

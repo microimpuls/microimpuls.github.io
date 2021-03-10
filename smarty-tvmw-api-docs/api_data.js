@@ -9779,6 +9779,14 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "Number",
+            "optional": true,
+            "field": "virtual_tariff_id",
+            "defaultValue": "пусто",
+            "description": "<p>Идентификатор тарифа (для документов с типом &quot;Показывать при подключении тарифа&quot;).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
             "optional": false,
             "field": "client_id",
             "description": "<p>Client ID.</p>"

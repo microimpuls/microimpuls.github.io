@@ -9607,9 +9607,17 @@ define({ "api": [
             "group": "Parameter",
             "type": "String",
             "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства. Должен быть передан либо device_uid, либо authkey.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "authkey",
             "defaultValue": "пустое",
-            "description": "<p>Авторизационный ключ сессии.</p>"
+            "description": "<p>Авторизационный ключ сессии. Должен быть передан либо device_uid, либо authkey.</p>"
           },
           {
             "group": "Parameter",
@@ -9632,14 +9640,6 @@ define({ "api": [
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device_uid",
-            "defaultValue": "пустое",
-            "description": "<p>Уникальный идентификатор устройства.</p>"
           },
           {
             "group": "Parameter",
@@ -9786,6 +9786,14 @@ define({ "api": [
           },
           {
             "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства. Должен быть передан либо device_uid, либо authkey.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Number",
             "optional": false,
             "field": "client_id",
@@ -9805,14 +9813,6 @@ define({ "api": [
             "field": "device",
             "defaultValue": "пустое",
             "description": "<p>Системное название типа устройства.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": true,
-            "field": "device_uid",
-            "defaultValue": "пустое",
-            "description": "<p>Уникальный идентификатор устройства.</p>"
           },
           {
             "group": "Parameter",

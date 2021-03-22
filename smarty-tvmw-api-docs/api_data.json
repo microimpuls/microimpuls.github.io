@@ -16735,6 +16735,17 @@
             "optional": false,
             "field": "promos.valid_until",
             "description": "<p>Промо действителен до.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "1",
+              "2"
+            ],
+            "optional": false,
+            "field": "promos.status",
+            "description": "<p>Статус промокода. 1 - Промокод назначен, но не применен. 2 - Промокод применен.</p>"
           }
         ]
       }

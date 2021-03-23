@@ -20793,6 +20793,17 @@
           {
             "group": "Ответ",
             "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "actions.is_viewed",
+            "description": "<p>Ассет просмотрен.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
             "optional": false,
             "field": "actions.periodical",
             "description": "<p>Флаг, значение 1 означает, что действие будет возобновляемым (например, ежемесячная подписка).</p>"

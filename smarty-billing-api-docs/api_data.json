@@ -4441,6 +4441,18 @@
               "1"
             ],
             "optional": true,
+            "field": "available_everywhere",
+            "defaultValue": "1",
+            "description": "<p>Доступен во всех городах и странах.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
             "field": "display_in_channels_widget",
             "defaultValue": "1",
             "description": "<p>Показывать каналы из этого пакета на сайте в личном кабинете.</p>"

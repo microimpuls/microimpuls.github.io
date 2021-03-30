@@ -11859,7 +11859,7 @@ define({ "api": [
           },
           {
             "group": "Parameter",
-            "type": "Number",
+            "type": "Double",
             "optional": false,
             "field": "amount",
             "description": "<p>POST параметр. Сумма платежа.</p>"

@@ -10791,7 +10791,7 @@ define({ "api": [
   {
     "type": "get",
     "url": "/notification/list/",
-    "title": "NotificationList: список установленных напоминаний",
+    "title": "NotificationList: список установленных напоминаний (будущие передачи с установленным раннее напоминанием и прошедшие передачи с напоминанием и доступной записью архива)",
     "name": "NotificationList",
     "group": "Notification",
     "parameter": {

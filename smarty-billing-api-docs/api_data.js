@@ -568,9 +568,8 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "String",
-            "optional": true,
+            "optional": false,
             "field": "device_uid",
-            "defaultValue": "пустое",
             "description": "<p>UID устройства.</p>"
           },
           {

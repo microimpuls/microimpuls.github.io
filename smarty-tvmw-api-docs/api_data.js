@@ -15224,6 +15224,13 @@ define({ "api": [
         "Ответ": [
           {
             "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "count",
+            "description": "<p>Всего подборок.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Object[]",
             "optional": false,
             "field": "selections",

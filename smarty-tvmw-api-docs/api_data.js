@@ -7415,6 +7415,13 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
             "size": "..256",
             "optional": true,
             "field": "firstname",

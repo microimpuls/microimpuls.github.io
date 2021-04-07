@@ -15273,8 +15273,22 @@
           },
           {
             "group": "Ответ",
-            "type": "Object",
+            "type": "Number",
             "optional": false,
+            "field": "selections.description",
+            "description": "<p>Описание передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "selections.is_available",
+            "description": "<p>Доступна ли подборка для просмотра. Может быть ситуация, при которой в подборке есть передачи из доступных пользователю каналов, однако среди каналов пользователя нет подходящего канала в архиве которого можно было бы посмотреть данную подборку.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": true,
             "field": "selections.channel",
             "description": "<p>Информация о канале.</p>"
           },

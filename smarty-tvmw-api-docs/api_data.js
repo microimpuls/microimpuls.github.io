@@ -7802,6 +7802,13 @@ define({ "api": [
           },
           {
             "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "virtual_tariff_id",
+            "description": "<p>Идентификатор виртуального тарифа. Можно передать несколько значений (через запятую).</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
             "optional": true,
             "field": "authkey",

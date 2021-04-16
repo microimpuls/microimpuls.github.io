@@ -2335,17 +2335,52 @@ define({ "api": [
           },
           {
             "group": "Ответ",
-            "type": "Number[]",
+            "type": "Object[]",
             "optional": false,
-            "field": "tariffs",
-            "description": "<p>Список идентификаторов тарифных пакетов, подключенных у абонента.</p>"
+            "field": "tariffs_info",
+            "description": "<p>Список тарифных пакетов, подключенных у абонента.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs_info.id",
+            "description": "<p>Идентификатор тарифа.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs_info.ext_id",
+            "description": "<p>Идентификатор тарифа в биллинговой системе провайдера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "vtariffs_info",
+            "description": "<p>Список виртуальных тарифных пакетов, подключенных у абонента.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "vtariffs_info.id",
+            "description": "<p>Идентификатор тарифа.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "vtariffs_info.ext_id",
+            "description": "<p>Идентификатор тарифа в биллинговой системе провайдера.</p>"
           },
           {
             "group": "Ответ",
             "type": "Number[]",
             "optional": false,
-            "field": "virtual_tariffs",
-            "description": "<p>Список идентификаторов виртуальных тарифных пакетов, подключенных у абонента.</p>"
+            "field": "tariffs",
+            "description": "<p>Deprecated. Список идентификаторов тарифных пакетов, подключенных у абонента.</p>"
           },
           {
             "group": "Ответ",

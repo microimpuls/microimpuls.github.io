@@ -2342,6 +2342,13 @@
           },
           {
             "group": "Ответ",
+            "type": "Number[]",
+            "optional": false,
+            "field": "virtual_tariffs",
+            "description": "<p>Список идентификаторов виртуальных тарифных пакетов, подключенных у абонента.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "error",

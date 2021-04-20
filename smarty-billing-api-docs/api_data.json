@@ -1986,6 +1986,15 @@
           },
           {
             "group": "Parameter",
+            "type": "String",
+            "size": "..128",
+            "optional": true,
+            "field": "contract_number",
+            "defaultValue": "пустое",
+            "description": "<p>Номер основного договора абонента.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Number",
             "optional": false,
             "field": "client_id",

@@ -1383,7 +1383,7 @@
             "type": "Number",
             "optional": false,
             "field": "appid",
-            "description": "<p>Идентификатор приложения.</p>"
+            "description": "<p>Идентификатор приложения. Может быть передан через POST</p>"
           },
           {
             "group": "Parameter",
@@ -1516,6 +1516,14 @@
             "optional": false,
             "field": "1",
             "description": "<p>Приложение с указанным ID не найдено.</p>"
+          }
+        ],
+        "Коды ошибок erorr": [
+          {
+            "group": "Коды ошибок erorr",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Неправильный ID</p>"
           }
         ]
       }

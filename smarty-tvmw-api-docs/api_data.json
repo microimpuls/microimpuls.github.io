@@ -22094,6 +22094,12 @@
             "optional": false,
             "field": "0",
             "description": "<p>Нет ошибки, действие выполнено успешно.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Видео с таким id не существует.</p>"
           }
         ]
       }

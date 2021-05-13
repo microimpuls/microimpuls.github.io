@@ -21211,6 +21211,12 @@ define({ "api": [
             "optional": false,
             "field": "1",
             "description": "<p>Нет такого видео.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Ошибка получения данных из внешней системы.</p>"
           }
         ]
       }

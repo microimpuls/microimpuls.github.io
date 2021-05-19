@@ -22046,7 +22046,7 @@ define({ "api": [
               "0",
               "1"
             ],
-            "optional": false,
+            "optional": true,
             "field": "is_favorited",
             "description": "<p>Флаг, устанавливающий, добавил ли пользователь видео в избранное.</p>"
           },
@@ -22118,6 +22118,12 @@ define({ "api": [
             "optional": false,
             "field": "1",
             "description": "<p>Видео с таким id не существует.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Некорректное значение параметра is_favorited.</p>"
           }
         ]
       }

@@ -1921,6 +1921,12 @@ define({ "api": [
             "optional": false,
             "field": "0",
             "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Ресурс недоступен.</p>"
           }
         ]
       }

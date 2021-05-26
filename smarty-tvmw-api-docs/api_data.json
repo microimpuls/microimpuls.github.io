@@ -4409,6 +4409,13 @@
           },
           {
             "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "channel_sort_id",
+            "description": "<p>Идентификатор сортировки, которую необходимо использовать. Если не передан, то используется стандартная сортировка.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
             "optional": true,
             "field": "authkey",
@@ -5217,6 +5224,12 @@
             "optional": false,
             "field": "0",
             "description": "<p>Нет ошибки, действие выполнено успешно.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Указанной сортировки не существует.</p>"
           }
         ]
       }
@@ -6643,6 +6656,106 @@
     "version": "1.40.0",
     "filename": "../../../tvmiddleware/api.py",
     "groupTitle": "Channel"
+  },
+  {
+    "type": "get",
+    "url": "/channel/sort/list/",
+    "title": "ChannelSortList: список сортировок каналов",
+    "name": "ChannelSortList",
+    "group": "Channel",
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "channel_sort",
+            "description": "<p>Список сортировок каналов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channel_sort.id",
+            "description": "<p>Идентификатор списка сортировки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channel_sort.name",
+            "description": "<p>Название списка сортировки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Channel",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    }
   },
   {
     "type": "get",
@@ -14219,6 +14332,13 @@
           },
           {
             "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "channel_sort_id",
+            "description": "<p>Идентификатор сортировки, которую необходимо использовать. Если не передан, то используется стандартная сортировка.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
             "optional": true,
             "field": "authkey",
@@ -15027,6 +15147,12 @@
             "optional": false,
             "field": "0",
             "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Указанной сортировки не существует.</p>"
           }
         ]
       }

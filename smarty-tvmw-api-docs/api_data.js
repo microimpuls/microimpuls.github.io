@@ -6912,7 +6912,7 @@ define({ "api": [
             "optional": true,
             "field": "asset_id",
             "defaultValue": "пустой",
-            "description": "<p>Идентификатор ассета/серии. Обязательно передавать это поле для content_type=video.</p>"
+            "description": "<p>Идентификатор ассета/серии. Если не передано, то удаляет позицию просмотра для всех ассетов/серий.</p>"
           },
           {
             "group": "Parameter",

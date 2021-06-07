@@ -19714,6 +19714,20 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "Number",
+            "optional": true,
+            "field": "parent_lock_channel",
+            "description": "<p>Идентификатор канала, для которого необходимо добавить родительский контроль.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "parent_unlock_channel",
+            "description": "<p>Идентификатор канала, для которого необходимо убрать родительский контроль.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
             "allowedValues": [
               "0",
               "1"

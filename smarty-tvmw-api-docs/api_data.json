@@ -20499,42 +20499,6 @@
           {
             "group": "Parameter",
             "type": "Number",
-            "allowedValues": [
-              "0",
-              "1"
-            ],
-            "optional": true,
-            "field": "get_purchased",
-            "defaultValue": "0",
-            "description": "<p>Фильтр по факту купленности. При значении 1 в выборку попадут только обьекты, которые куплены абонентом. При значении 0 факт купленности не будет проверяться.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "allowedValues": [
-              "0",
-              "1"
-            ],
-            "optional": true,
-            "field": "viewed_only",
-            "defaultValue": "0",
-            "description": "<p>Фильтр по факту просмотренности. При значении 1 в выборку попадут только обьекты, которые были просмотрены абонентом (либо начат просмотр). При значении 0 факт просмотренности не будет проверяться.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "allowedValues": [
-              "0",
-              "1"
-            ],
-            "optional": true,
-            "field": "favorited_only",
-            "defaultValue": "0",
-            "description": "<p>Фильтр по факту добавления в избранное. При значении 1 в выборку попадут только обьекты, которые были добавлены в избранное. При значении 0 факт добавления в избранное не будет проверяться.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
             "optional": true,
             "field": "year",
             "description": "<p>Фильтр по году выхода. Можно передать несколько значений.</p>"
@@ -20552,6 +20516,13 @@
             "optional": true,
             "field": "genre",
             "description": "<p>Фильтр по идентификатору жанра. Можно передать несколько значений.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "provider_id",
+            "description": "<p>ID провайдера.</p>"
           },
           {
             "group": "Parameter",

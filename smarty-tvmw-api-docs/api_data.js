@@ -17326,13 +17326,13 @@ define({ "api": [
             "group": "Ответ",
             "type": "Number",
             "allowedValues": [
-              "0",
               "1",
-              "2"
+              "2",
+              "3"
             ],
             "optional": false,
             "field": "providers.type",
-            "description": "<p>Тип провайдера: 0 - интеграция с биллингом 1 - Megogo 2 - Tvzavr 3 - START</p>"
+            "description": "<p>Тип провайдера: 1 - Megogo 2 - Tvzavr 3 - START</p>"
           },
           {
             "group": "Ответ",

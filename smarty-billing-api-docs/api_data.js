@@ -598,6 +598,18 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "reset_settings",
+            "defaultValue": "0",
+            "description": "<p>Сбросить пользовательские данные.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
             "optional": false,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
@@ -746,6 +758,129 @@ define({ "api": [
             "optional": false,
             "field": "1",
             "description": "<p>Устойство не найдено.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../billing/api.py",
+    "groupTitle": "Account"
+  },
+  {
+    "type": "post",
+    "url": "/account/device/modify/",
+    "title": "AccountDeviceModify: изменение параметров привязанного устройства",
+    "name": "AccountDeviceModify",
+    "group": "Account",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "device_id",
+            "description": "<p>Идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "device_uid",
+            "description": "<p>UID устройства. Должен быть передан либо device_uid, либо device_id.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "serial_number",
+            "defaultValue": "пустое",
+            "description": "<p>Серийный номер устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "brand_name",
+            "description": "<p>Бренд устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "diagonal",
+            "defaultValue": "пустое",
+            "description": "<p>Диагональ устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "reset_settings",
+            "defaultValue": "0",
+            "description": "<p>Сбросить пользовательские данные.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "signature",
+            "description": "<p>Подпись.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "error_message",
+            "description": "<p>Текст ошибки. Пустой, если error = 0.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Привязанное устройство не найдено.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Переданные параметры не прошли валидацию. Детали в error_message.</p>"
           }
         ]
       }
@@ -1405,6 +1540,18 @@ define({ "api": [
             "field": "subnets",
             "defaultValue": "пустое",
             "description": "<p>Список IP-подсетей, с которых разрешено авторизоваться аккаунту. Пустое значение означает 0.0.0.0/0.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "reset_device_settings",
+            "defaultValue": "0",
+            "description": "<p>Сообщает всем устройствам аккаунта о сбросе пользовательских данных.</p>"
           },
           {
             "group": "Parameter",

@@ -2579,6 +2579,13 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "Boolean",
+            "optional": false,
+            "field": "reset_settings",
+            "description": "<p>Флаг для сброса пользовательских данных, если указан параметр device_uid.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "error",

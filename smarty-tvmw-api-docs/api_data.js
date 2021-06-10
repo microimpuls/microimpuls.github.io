@@ -7391,7 +7391,7 @@ define({ "api": [
             "optional": true,
             "field": "show_virtual_tariffs",
             "defaultValue": "0",
-            "description": "<p>Выводить виртуальные тарифы в списке.</p>"
+            "description": "<p>Выводить виртуальные тарифы в списке. Eсли флаг не передается, то возвращаются все тарифы (обычные и виртуальные), кроме скрытых, отключенных и недоступных.</p>"
           },
           {
             "group": "Parameter",
@@ -7898,7 +7898,7 @@ define({ "api": [
             "optional": true,
             "field": "show_virtual_tariffs",
             "defaultValue": "0",
-            "description": "<p>Выводить виртуальные тарифы в списке.</p>"
+            "description": "<p>Выводить виртуальные тарифы в списке. Eсли флаг не передается, то возвращаются все тарифы (обычные и виртуальные), кроме скрытых, отключенных и недоступных.</p>"
           },
           {
             "group": "Parameter",
@@ -7999,6 +7999,17 @@ define({ "api": [
             "optional": false,
             "field": "tariffs.is_assigned",
             "description": "<p>Подключен.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "tariffs.is_virtual",
+            "description": "<p>Является ли тариф виртуальным.</p>"
           }
         ]
       }

@@ -21315,6 +21315,13 @@
           {
             "group": "Ответ",
             "type": "Number",
+            "optional": false,
+            "field": "actions.subscription_id",
+            "description": "<p>Идентификатор трифа-подписки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
             "allowedValues": [
               "0",
               "1"

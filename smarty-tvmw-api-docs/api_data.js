@@ -20126,6 +20126,13 @@ define({ "api": [
             "group": "Ответ",
             "type": "String",
             "optional": false,
+            "field": "ad_banner",
+            "description": "<p>URL на рекламный баннер.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
             "field": "description",
             "description": "<p>Описание фильма.</p>"
           },
@@ -20652,6 +20659,13 @@ define({ "api": [
             "optional": false,
             "field": "videos.thumbnail_big",
             "description": "<p>URL на обложку фильма большого размера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "videos.ad_banner",
+            "description": "<p>URL на рекламный баннер.</p>"
           },
           {
             "group": "Ответ",
@@ -21397,6 +21411,13 @@ define({ "api": [
             "group": "Ответ",
             "type": "String",
             "optional": false,
+            "field": "ad_banner",
+            "description": "<p>URL на рекламный баннер.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
             "field": "description",
             "description": "<p>Описание фильма.</p>"
           },
@@ -22086,6 +22107,13 @@ define({ "api": [
             "optional": false,
             "field": "videos.screenshot_b_big",
             "description": "<p>URL на размытый кадр из фильма большого размера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "videos.ad_banner",
+            "description": "<p>URL на рекламный баннер.</p>"
           },
           {
             "group": "Ответ",

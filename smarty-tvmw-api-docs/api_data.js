@@ -16180,6 +16180,17 @@ define({ "api": [
             "optional": false,
             "field": "position",
             "description": "<p>Последняя сохраненная позиция просмотра в секундах от начала передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "blocked",
+            "description": "<p>Заблокированна ли передача.</p>"
           }
         ]
       }
@@ -16401,6 +16412,17 @@ define({ "api": [
           {
             "group": "Ответ",
             "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "programs.blocked",
+            "description": "<p>Заблокированна ли передача.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
             "optional": false,
             "field": "error",
             "description": "<p>Код ошибки.</p>"
@@ -16569,6 +16591,17 @@ define({ "api": [
             "optional": false,
             "field": "results.has_record",
             "description": "<p>Существует ли запись для передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "results.blocked",
+            "description": "<p>Заблокированна ли передача.</p>"
           },
           {
             "group": "Ответ",

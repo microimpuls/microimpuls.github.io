@@ -7629,6 +7629,13 @@
           },
           {
             "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "tariffs.subscription_end_date",
+            "description": "<p>Дата окончания подписки, если абонент подписан на данный тариф.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "tariffs.channels_count",
@@ -7999,6 +8006,13 @@
             "optional": false,
             "field": "tariffs.is_assigned",
             "description": "<p>Подключен.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "tariffs.subscription_end_date",
+            "description": "<p>Дата окончания подписки, если абонент подписан на данный тариф.</p>"
           },
           {
             "group": "Ответ",

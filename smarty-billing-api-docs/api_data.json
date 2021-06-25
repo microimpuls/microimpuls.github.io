@@ -333,6 +333,13 @@
             "optional": false,
             "field": "error_message",
             "description": "<p>Текст ошибки. Пустой, если error = 0.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": false,
+            "field": "error_fields",
+            "description": "<p>Словарь сообщений об ошибках.</p>"
           }
         ]
       }
@@ -640,6 +647,13 @@
             "optional": false,
             "field": "error_message",
             "description": "<p>Текст ошибки. Пустой, если error = 0.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": false,
+            "field": "error_fields",
+            "description": "<p>Словарь сообщений об ошибках.</p>"
           }
         ]
       }
@@ -857,6 +871,13 @@
             "optional": false,
             "field": "error_message",
             "description": "<p>Текст ошибки. Пустой, если error = 0.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": false,
+            "field": "error_fields",
+            "description": "<p>Словарь сообщений об ошибках.</p>"
           }
         ]
       }
@@ -1324,6 +1345,13 @@
             "optional": false,
             "field": "error_message",
             "description": "<p>Текст ошибки. Пустой, если error = 0.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": false,
+            "field": "error_fields",
+            "description": "<p>Словарь сообщений об ошибках.</p>"
           }
         ]
       }
@@ -1586,6 +1614,13 @@
             "optional": false,
             "field": "error_message",
             "description": "<p>Текст ошибки. Пустой, если error = 0.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": false,
+            "field": "error_fields",
+            "description": "<p>Словарь сообщений об ошибках.</p>"
           }
         ]
       }
@@ -2180,6 +2215,13 @@
             "optional": false,
             "field": "error_message",
             "description": "<p>Текст ошибки. Пустой, если error = 0.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": false,
+            "field": "error_fields",
+            "description": "<p>Словарь сообщений об ошибках.</p>"
           }
         ]
       }
@@ -3035,6 +3077,13 @@
             "optional": false,
             "field": "error_message",
             "description": "<p>Текст ошибки. Пустой, если error = 0.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": false,
+            "field": "error_fields",
+            "description": "<p>Словарь сообщений об ошибках.</p>"
           }
         ]
       }
@@ -4729,6 +4778,13 @@
             "optional": false,
             "field": "error_message",
             "description": "<p>Текст ошибки. Пустой, если error = 0.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": false,
+            "field": "error_fields",
+            "description": "<p>Словарь сообщений об ошибках.</p>"
           }
         ]
       }
@@ -5183,6 +5239,13 @@
             "optional": false,
             "field": "error_message",
             "description": "<p>Текст ошибки. Пустой, если error = 0.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": false,
+            "field": "error_fields",
+            "description": "<p>Словарь сообщений об ошибках.</p>"
           }
         ]
       }

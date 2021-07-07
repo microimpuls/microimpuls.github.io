@@ -4336,6 +4336,18 @@ define({ "api": [
           },
           {
             "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "show_virtual_tariffs",
+            "defaultValue": "0",
+            "description": "<p>Выводить виртуальные тарифы. Eсли флаг не передается, то возвращаются все тарифы (обычные и виртуальные), кроме скрытых, отключенных и недоступных.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
             "optional": true,
             "field": "authkey",
@@ -4405,6 +4417,13 @@ define({ "api": [
             "optional": false,
             "field": "actions.tariff_id",
             "description": "<p>Идентификатор тарифного пакета.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "actions.is_virtual",
+            "description": "<p>Является ли тариф виртуальным.</p>"
           },
           {
             "group": "Ответ",
@@ -5466,6 +5485,391 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/channel/list/programs/",
+    "title": "ChannelListPrograms: список программ для телеканалов в определённое время",
+    "name": "ChannelListPrograms",
+    "group": "Channel",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "programs_from_ts",
+            "description": "<p>Минимальное время конца первой передачи в возвращаемом списке в UNIX timestamp.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "programs_to_ts",
+            "description": "<p>Максимальное время начала последней передачи в возвращаемом списке в UNIX timestamp.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "account_sort",
+            "defaultValue": "1",
+            "description": "<p>Флаг, если передано значение 0, то сортировка аккаунта будет сброшена.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "channel_sort_id",
+            "description": "<p>Идентификатор сортировки, которую необходимо использовать. Если не передан, то используется стандартная сортировка.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "channels",
+            "description": "<p>Список телеканалов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.id",
+            "description": "<p>Идентификатор канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.current_program_id",
+            "description": "<p>ID текущей передачи. Равна 0, если текущая передача отсутствует в списке.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.programs",
+            "description": ""
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.programs.id",
+            "description": "<p>Идентификатор текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program.name",
+            "description": "<p>Название текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.program.begin_time",
+            "description": "<p>Начало текущей передачи EPG в формате Unix Timestamp UTC+0.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.program.end_time",
+            "description": "<p>Конец текущей передачи EPG в формате Unix Timestamp UTC+0.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.program.category_id",
+            "description": "<p>Идентификатор категории EPG текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program.category",
+            "description": "<p>Название категории EPG текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program.description",
+            "description": "<p>Описание текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program.preview_url",
+            "description": "<p>URL-адрес обложки текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.program.rating",
+            "description": "<p>Возрастной рейтинг текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program.meta",
+            "description": "<p>Дополнительные расширенные данные о передаче EPG (в формате JSON).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program.meta.extra_name",
+            "description": "<p>Подзаголовок.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program.meta.extra_description",
+            "description": "<p>Дополнительное описание.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.program.meta.genres",
+            "description": "<p>Список жанров как они представлены в источнике EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "channels.program.meta.participants",
+            "description": "<p>Список участников, принимавших участие в производстве.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.program.meta.participants.actor",
+            "description": "<p>Список актеров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.program.meta.participants.composer",
+            "description": "<p>Список композиторов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.program.meta.participants.director",
+            "description": "<p>Список режиссёров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.program.meta.participants.producer",
+            "description": "<p>Список продюсеров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.program.meta.countries",
+            "description": "<p>Список стран, участвовавших в производстве.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.program.meta.productions",
+            "description": "<p>Список студий занятых производством.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program.meta.year",
+            "description": "<p>Год выпуска. Для сериалов указывается два года в формате YYYY-YYYY.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.program.meta.previews",
+            "description": "<p>Список ссылок на изображения превью.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String[]",
+            "optional": false,
+            "field": "channels.program.meta.tags",
+            "description": "<p>Список тегов как они представлены в источнике EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Boolean",
+            "optional": false,
+            "field": "channels.program.meta.live",
+            "description": "<p>Прямой эфир.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program.meta.sport_type",
+            "description": "<p>Для спортивных передач: название спорта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program.meta.championship",
+            "description": "<p>Для спортивных передач: название чемпионата.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program.meta.sport_rival1",
+            "description": "<p>Для спортивных передач: первая команда в чемпионате.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program.meta.sport_rival2",
+            "description": "<p>Для спортивных передач: вторая команда в чемпионате.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program.meta.kinopoisk",
+            "description": "<p>Рейтинг кинопоиска.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program.meta.imdb",
+            "description": "<p>Рейтинг IMDB.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "channels.program.genres",
+            "description": "<p>Список жанров текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.program.genres.genre_id",
+            "description": "<p>Идентификатор жанра EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program.genres.genre_name",
+            "description": "<p>Название жанра EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки, действие выполнено успешно.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Указанной сортировки не существует.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Channel"
+  },
+  {
+    "type": "get",
     "url": "/channel/list/search/",
     "title": "ChannelListSearch: поиск телеканалов",
     "name": "ChannelListSearch",
@@ -5534,6 +5938,13 @@ define({ "api": [
             "optional": true,
             "field": "page",
             "description": "<p>Номер страницы выборки. Если параметр не передан, результат будет возвращен целиком.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "channel_sort_id",
+            "description": "<p>Идентификатор сортировки, которую необходимо использовать. Если не передан, то используется стандартная сортировка.</p>"
           },
           {
             "group": "Parameter",
@@ -6345,6 +6756,12 @@ define({ "api": [
             "optional": false,
             "field": "0",
             "description": "<p>Нет ошибки, действие выполнено успешно.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Указанной сортировки не существует.</p>"
           }
         ]
       }
@@ -8367,12 +8784,6 @@ define({ "api": [
             "optional": false,
             "field": "0",
             "description": "<p>Нет ошибки.</p>"
-          },
-          {
-            "group": "Коды ошибок error",
-            "optional": false,
-            "field": "1",
-            "description": "<p>Данный тариф не доступен или не существует.</p>"
           }
         ]
       }
@@ -15775,6 +16186,13 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "selections.begin_time",
+            "description": "<p>Дата начала первой доступной передачи в подборке (для сортировки).</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "selections.short_name",
@@ -16191,6 +16609,17 @@ define({ "api": [
           {
             "group": "Ответ",
             "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "has_subscription",
+            "description": "<p>Есть подписка, контент доступен.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
             "optional": false,
             "field": "position",
             "description": "<p>Последняя сохраненная позиция просмотра в секундах от начала передачи.</p>"
@@ -16415,6 +16844,17 @@ define({ "api": [
             "optional": false,
             "field": "programs.has_record",
             "description": "<p>Существует ли запись передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "programs.has_subscription",
+            "description": "<p>Есть подписка, контент доступен.</p>"
           },
           {
             "group": "Ответ",
@@ -16898,7 +17338,7 @@ define({ "api": [
             "type": "Number",
             "optional": true,
             "field": "pid",
-            "description": "<p>Идентификатор программы, для которой нужно получить адрес потока. Должен быть передан либо pid, либо time. Для быстродействия рекомендуется передавать оба значения.</p>"
+            "description": "<p>Идентификатор программы, для которой нужно получить адрес потока. Должен быть передан либо pid, либо time. Для быстродействия рекомендуется передавать оба значения (в этом случае приоритет у параметра pid).</p>"
           },
           {
             "group": "Parameter",

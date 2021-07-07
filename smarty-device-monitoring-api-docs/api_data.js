@@ -14,6 +14,20 @@ define({ "api": [
             "optional": false,
             "field": "uid",
             "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "ro_build_display_id",
+            "description": "<p>Значение внутри устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "ro_build_version_incremental",
+            "description": "<p>Значение внутри устройства.</p>"
           }
         ]
       }

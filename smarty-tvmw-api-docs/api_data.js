@@ -21064,6 +21064,13 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "Number",
+            "optional": true,
+            "field": "tariff_id",
+            "description": "<p>Идентификатор тарифа. Можно передать несколько значений (через запятую).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
             "optional": false,
             "field": "client_id",
             "description": "<p>Client ID.</p>"

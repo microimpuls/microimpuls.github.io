@@ -9467,6 +9467,13 @@
           },
           {
             "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "provider_id",
+            "description": "<p>ID провайдера.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
             "optional": true,
             "field": "authkey",
@@ -9573,6 +9580,12 @@
             "optional": false,
             "field": "0",
             "description": "<p>Нет ошибки, действие выполнено успешно.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Провайдер не найден (если установлен параметр).</p>"
           }
         ]
       }
@@ -9601,6 +9614,13 @@
             "field": "categories",
             "defaultValue": "0",
             "description": "<p>При значении 0 - возвращает обычные жанры, 1 - жанры-категории</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "provider_id",
+            "description": "<p>ID провайдера.</p>"
           },
           {
             "group": "Parameter",
@@ -9703,6 +9723,12 @@
             "optional": false,
             "field": "0",
             "description": "<p>Нет ошибки, действие выполнено успешно.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Провайдер не найден (если установлен параметр).</p>"
           }
         ]
       }

@@ -3414,16 +3414,16 @@
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "city_id",
             "description": "<p>ID города.</p>"
           },
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "category_id",
-            "description": "<p>ID категории.</p>"
+            "description": "<p>ID epg категории камеры.</p>"
           },
           {
             "group": "Parameter",
@@ -3520,8 +3520,8 @@
             "group": "Ответ",
             "type": "Number",
             "optional": false,
-            "field": "cameras.city_id",
-            "description": "<p>Идентификатор категории.</p>"
+            "field": "cameras.city_name",
+            "description": "<p>Город.</p>"
           },
           {
             "group": "Ответ",
@@ -3958,7 +3958,7 @@
             "group": "Parameter",
             "type": "Number",
             "optional": true,
-            "field": "city",
+            "field": "city_id",
             "defaultValue": "пустое",
             "description": "<p>ID города.</p>"
           },

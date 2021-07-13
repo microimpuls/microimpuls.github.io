@@ -3520,6 +3520,13 @@ define({ "api": [
             "group": "Ответ",
             "type": "Number",
             "optional": false,
+            "field": "cameras.city_id",
+            "description": "<p>ID города.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
             "field": "cameras.city_name",
             "description": "<p>Город.</p>"
           },

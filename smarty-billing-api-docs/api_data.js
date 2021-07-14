@@ -4332,6 +4332,13 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "Decimal",
+            "optional": false,
+            "field": "tariffs.activation_price",
+            "description": "<p>Стоимость активации.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "tariffs.sessions_count",
@@ -4482,6 +4489,13 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "Decimal",
+            "optional": false,
+            "field": "tariffs.activation_price",
+            "description": "<p>Стоимость активации.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "tariffs.basic_tariff_priority",
@@ -4603,6 +4617,14 @@ define({ "api": [
             "field": "price",
             "defaultValue": "0.0",
             "description": "<p>Стоимость тарифного пакета (за рассчетный период).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "default_activation_price",
+            "defaultValue": "None",
+            "description": "<p>Стоимость активации по-умолчанию.</p>"
           },
           {
             "group": "Parameter",
@@ -4958,6 +4980,13 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "Decimal",
+            "optional": false,
+            "field": "tariffs.activation_price",
+            "description": "<p>Стоимость активации.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "tariffs.basic_tariff_priority",
@@ -5085,6 +5114,14 @@ define({ "api": [
             "optional": true,
             "field": "price",
             "description": "<p>Стоимость тарифного пакета (за рассчетный период).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "default_activation_price",
+            "defaultValue": "None",
+            "description": "<p>Стоимость активации по-умолчанию.</p>"
           },
           {
             "group": "Parameter",
@@ -5335,6 +5372,13 @@ define({ "api": [
             "optional": false,
             "field": "tariffs.price",
             "description": "<p>Стоимость подписки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Decimal",
+            "optional": false,
+            "field": "tariffs.activation_price",
+            "description": "<p>Стоимость активации.</p>"
           },
           {
             "group": "Ответ",

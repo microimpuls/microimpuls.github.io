@@ -8728,13 +8728,6 @@
             "group": "Ответ",
             "type": "Number",
             "optional": false,
-            "field": "subscriptions.id",
-            "description": "<p>Идентификатор подписки.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
             "field": "subscriptions.tariff_id",
             "description": "<p>Идентификатор тарифа.</p>"
           },
@@ -8770,7 +8763,7 @@
             "group": "Ответ",
             "type": "String",
             "optional": false,
-            "field": "subscriptions.is_preiodical",
+            "field": "subscriptions.is_periodical",
             "description": "<p>Является периодической.</p>"
           },
           {

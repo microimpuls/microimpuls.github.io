@@ -176,7 +176,7 @@
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "kind",
+            "field": "type",
             "description": "<p>Тип устройства.</p>"
           },
           {
@@ -397,7 +397,7 @@
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "kind",
+            "field": "type",
             "description": "<p>Тип устройства.</p>"
           },
           {
@@ -527,7 +527,7 @@
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "kind",
+            "field": "type",
             "description": "<p>Тип устройства.</p>"
           },
           {

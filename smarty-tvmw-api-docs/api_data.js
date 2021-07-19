@@ -20563,7 +20563,7 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "actions.action",
-            "description": "<p>Имя действия. Задается через ценовую категорию и используется обработчиком API поставщика. Зарезервированные возможные виды действий: get_video_url - просмотр ассета фильма; get_trailer_url - просмотр трейлера; buy_in_subscription - покупка подписки на фильм; subscribe - подписка на фильм во внешнем сервисе; unsubscribe - отписка от фильма во внешнем сервисе.</p>"
+            "description": "<p>Имя действия. Задается через ценовую категорию и используется обработчиком API поставщика. Зарезервированные возможные виды действий: get_video_url - просмотр ассета фильма; get_trailer_url - просмотр трейлера.</p>"
           },
           {
             "group": "Ответ",
@@ -20571,13 +20571,6 @@ define({ "api": [
             "optional": false,
             "field": "actions.caption",
             "description": "<p>Название действия, либо ассета.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Decimal",
-            "optional": false,
-            "field": "actions.price",
-            "description": "<p>Стоимость покупки.</p>"
           },
           {
             "group": "Ответ",
@@ -20599,6 +20592,16 @@ define({ "api": [
             "optional": false,
             "field": "actions.file_id",
             "description": "<p>Идентификатор ассета.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0"
+            ],
+            "optional": false,
+            "field": "actions.is_viewed",
+            "description": "<p>Ассет просмотрен.</p>"
           },
           {
             "group": "Ответ",

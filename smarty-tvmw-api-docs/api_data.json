@@ -177,6 +177,111 @@
   },
   {
     "type": "get",
+    "url": "/account/profile/settings/modify/",
+    "title": "AccountProfileSettingsModify: редактирование профиля аккаунта",
+    "name": "AccountProfileSettingsModify",
+    "group": "Account",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "profile_id",
+            "description": "<p>Идентификатор типа профиля.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>Имя профиля аккаунта.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Некорректное значение profile_id.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Некорректное значение name.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Account"
+  },
+  {
+    "type": "get",
     "url": "/account/register/",
     "title": "AccountRegister: регистрация аккаунта",
     "name": "AccountRegister",
@@ -555,7 +660,7 @@
   {
     "type": "get",
     "url": "/account/settings/modify/",
-    "title": "AccountSettingsModify: редактирование профиля аккаунта",
+    "title": "AccountSettingsModify: установка типа профиля для текущей сессии аккаунта",
     "name": "AccountSettingsModify",
     "group": "Account",
     "parameter": {
@@ -567,13 +672,6 @@
             "optional": false,
             "field": "profile_id",
             "description": "<p>Идентификатор типа профиля.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "name",
-            "description": "<p>Имя профиля аккаунта.</p>"
           },
           {
             "group": "Parameter",
@@ -643,12 +741,6 @@
             "optional": false,
             "field": "1",
             "description": "<p>Некорректное значение profile_id.</p>"
-          },
-          {
-            "group": "Коды ошибок error",
-            "optional": false,
-            "field": "2",
-            "description": "<p>Некорректное значение name.</p>"
           }
         ]
       }

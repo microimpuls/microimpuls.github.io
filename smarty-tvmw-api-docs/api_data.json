@@ -660,7 +660,7 @@
   {
     "type": "get",
     "url": "/account/settings/modify/",
-    "title": "AccountSettingsModify: установка типа профиля для текущей сессии аккаунта",
+    "title": "AccountSettingsModify: установка шаблона интерфейса для аккаунта",
     "name": "AccountSettingsModify",
     "group": "Account",
     "parameter": {
@@ -670,8 +670,8 @@
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": "profile_id",
-            "description": "<p>Идентификатор типа профиля.</p>"
+            "field": "template_id",
+            "description": "<p>Идентификатор шаблона интерфейса.</p>"
           },
           {
             "group": "Parameter",
@@ -740,7 +740,7 @@
             "group": "Коды ошибок error",
             "optional": false,
             "field": "1",
-            "description": "<p>Некорректное значение profile_id.</p>"
+            "description": "<p>Некорректное значение template_id.</p>"
           }
         ]
       }

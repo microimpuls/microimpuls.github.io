@@ -660,7 +660,7 @@ define({ "api": [
   {
     "type": "get",
     "url": "/account/settings/modify/",
-    "title": "AccountSettingsModify: установка шаблона интерфейса для аккаунта",
+    "title": "AccountSettingsModify: установка настроек аккаунта",
     "name": "AccountSettingsModify",
     "group": "Account",
     "parameter": {
@@ -669,9 +669,16 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
+            "field": "template_system_name",
+            "description": "<p>Системное имя шаблона интерфейса.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
             "field": "template_id",
-            "description": "<p>Идентификатор шаблона интерфейса.</p>"
+            "description": "<p>Идентификатор шаблона интерфейса. Явлеяется более приоритетным, чем template_system_name.</p>"
           },
           {
             "group": "Parameter",
@@ -740,7 +747,7 @@ define({ "api": [
             "group": "Коды ошибок error",
             "optional": false,
             "field": "1",
-            "description": "<p>Некорректное значение template_id.</p>"
+            "description": "<p>Шаблон не найден.</p>"
           }
         ]
       }

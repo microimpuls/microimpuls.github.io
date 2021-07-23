@@ -5029,6 +5029,76 @@
           },
           {
             "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.program_id",
+            "description": "<p>Идентификатор текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_name",
+            "description": "<p>Название текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.program_begin_time",
+            "description": "<p>Начало текущей передачи EPG в формате Unix Timestamp UTC+0.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.program_end_time",
+            "description": "<p>Конец текущей передачи EPG в формате Unix Timestamp UTC+0.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.program_category_id",
+            "description": "<p>Идентификатор категории EPG текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_category",
+            "description": "<p>Название категории EPG текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_description",
+            "description": "<p>Описание текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_preview_url",
+            "description": "<p>URL-адрес обложки текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.program_rating",
+            "description": "<p>Возрастной рейтинг текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.pause_live_tv_shift",
+            "description": "<p>Временной сдвиг для функции Pause Live TV.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.option1",
@@ -5165,69 +5235,6 @@
             "optional": false,
             "field": "channels.additional_categories.name",
             "description": "<p>Название доп. категории.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "channels.program_id",
-            "description": "<p>Идентификатор текущей передачи EPG.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "channels.program_name",
-            "description": "<p>Название текущей передачи EPG.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "channels.program_begin_time",
-            "description": "<p>Начало текущей передачи EPG в формате Unix Timestamp UTC+0.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "channels.program_end_time",
-            "description": "<p>Конец текущей передачи EPG в формате Unix Timestamp UTC+0.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "channels.program_category_id",
-            "description": "<p>Идентификатор категории EPG текущей передачи EPG.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "channels.program_category",
-            "description": "<p>Название категории EPG текущей передачи EPG.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "channels.program_description",
-            "description": "<p>Описание текущей передачи EPG.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "channels.program_preview_url",
-            "description": "<p>URL-адрес обложки текущей передачи EPG.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "channels.program_rating",
-            "description": "<p>Возрастной рейтинг текущей передачи EPG.</p>"
           },
           {
             "group": "Ответ",
@@ -5638,13 +5645,6 @@
             "optional": false,
             "field": "channels.show_in_all",
             "description": "<p>Отображать канал в категории Все (не возвращается при compact=1).</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "channels.pause_live_tv_shift",
-            "description": "<p>Временной сдвиг для функции Pause Live TV.</p>"
           },
           {
             "group": "Ответ",
@@ -6316,6 +6316,76 @@
           },
           {
             "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.program_id",
+            "description": "<p>Идентификатор текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_name",
+            "description": "<p>Название текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.program_begin_time",
+            "description": "<p>Начало текущей передачи EPG в формате Unix Timestamp UTC+0.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.program_end_time",
+            "description": "<p>Конец текущей передачи EPG в формате Unix Timestamp UTC+0.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.program_category_id",
+            "description": "<p>Идентификатор категории EPG текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_category",
+            "description": "<p>Название категории EPG текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_description",
+            "description": "<p>Описание текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.program_preview_url",
+            "description": "<p>URL-адрес обложки текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.program_rating",
+            "description": "<p>Возрастной рейтинг текущей передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.pause_live_tv_shift",
+            "description": "<p>Временной сдвиг для функции Pause Live TV.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.option1",
@@ -6452,69 +6522,6 @@
             "optional": false,
             "field": "channels.additional_categories.name",
             "description": "<p>Название доп. категории.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "channels.program_id",
-            "description": "<p>Идентификатор текущей передачи EPG.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "channels.program_name",
-            "description": "<p>Название текущей передачи EPG.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "channels.program_begin_time",
-            "description": "<p>Начало текущей передачи EPG в формате Unix Timestamp UTC+0.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "channels.program_end_time",
-            "description": "<p>Конец текущей передачи EPG в формате Unix Timestamp UTC+0.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "channels.program_category_id",
-            "description": "<p>Идентификатор категории EPG текущей передачи EPG.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "channels.program_category",
-            "description": "<p>Название категории EPG текущей передачи EPG.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "channels.program_description",
-            "description": "<p>Описание текущей передачи EPG.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "channels.program_preview_url",
-            "description": "<p>URL-адрес обложки текущей передачи EPG.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "channels.program_rating",
-            "description": "<p>Возрастной рейтинг текущей передачи EPG.</p>"
           },
           {
             "group": "Ответ",
@@ -6929,13 +6936,6 @@
           {
             "group": "Ответ",
             "type": "Number",
-            "optional": false,
-            "field": "channels.pause_live_tv_shift",
-            "description": "<p>Временной сдвиг для функции Pause Live TV.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
             "allowedValues": [
               "0",
               "1"
@@ -7076,22 +7076,8 @@
             "group": "Ответ",
             "type": "String",
             "optional": false,
-            "field": "premieres.icon",
-            "description": "<p>URL иконки канала (не возвращается при compact=1).</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
             "field": "premieres.id",
             "description": "<p>Идентификатор канала.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "premieres.name",
-            "description": "<p>Название канала (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -7125,13 +7111,6 @@
             "group": "Ответ",
             "type": "String",
             "optional": false,
-            "field": "premieres.program_description",
-            "description": "<p>Описание премьеры (не возвращается при compact=1).</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
             "field": "premieres.program_preview_url",
             "description": "<p>URL-адрес обложки премьеры.</p>"
           },
@@ -7141,6 +7120,27 @@
             "optional": false,
             "field": "premieres.program_rating",
             "description": "<p>Возрастной рейтинг премьеры.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "premieres.icon",
+            "description": "<p>URL иконки канала (не возвращается при compact=1).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "premieres.name",
+            "description": "<p>Название канала (не возвращается при compact=1).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "premieres.program_description",
+            "description": "<p>Описание премьеры (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -7442,20 +7442,6 @@
             "group": "Ответ",
             "type": "String",
             "optional": false,
-            "field": "programs.program_category",
-            "description": "<p>Название категории EPG передачи EPG (не возвращается при compact=1).</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "programs.program_description",
-            "description": "<p>Описание передачи EPG (не возвращается при compact=1).</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
             "field": "programs.program_preview_url",
             "description": "<p>URL-адрес обложки передачи EPG.</p>"
           },
@@ -7465,6 +7451,20 @@
             "optional": false,
             "field": "programs.program_rating",
             "description": "<p>Возрастной рейтинг передачи EPG.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.program_category",
+            "description": "<p>Название категории EPG передачи EPG (не возвращается при compact=1).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.program_description",
+            "description": "<p>Описание передачи EPG (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -15511,6 +15511,69 @@
           {
             "group": "Ответ",
             "type": "Number",
+            "optional": false,
+            "field": "programs.program_category_id",
+            "description": "<p>Идентификатор категории передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "programs.program_begin_time",
+            "description": "<p>Время начала передачи в Unix Timestamp (UTC+0).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "programs.program_end_time",
+            "description": "<p>Время окончания передачи в Unix Timestamp (UTC+0).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.program_name",
+            "description": "<p>Название передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.program_description",
+            "description": "<p>Описание передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.program_category",
+            "description": "<p>Название категории передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.program_preview_url",
+            "description": "<p>URL картинки передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "programs.program_id",
+            "description": "<p>Идентификатор передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "programs.program_rating",
+            "description": "<p>Возрастной рейтинг.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
             "allowedValues": [
               "0",
               "1"
@@ -15657,69 +15720,6 @@
             "optional": false,
             "field": "programs.additional_categories.name",
             "description": "<p>Название доп. категории.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "programs.program_category_id",
-            "description": "<p>Идентификатор категории передачи.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "programs.program_begin_time",
-            "description": "<p>Время начала передачи в Unix Timestamp (UTC+0).</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "programs.program_end_time",
-            "description": "<p>Время окончания передачи в Unix Timestamp (UTC+0).</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "programs.program_name",
-            "description": "<p>Название передачи.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "programs.program_description",
-            "description": "<p>Описание передачи.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "programs.program_category",
-            "description": "<p>Название категории передачи.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "programs.program_preview_url",
-            "description": "<p>URL картинки передачи.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "programs.program_id",
-            "description": "<p>Идентификатор передачи.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "programs.program_rating",
-            "description": "<p>Возрастной рейтинг.</p>"
           },
           {
             "group": "Ответ",

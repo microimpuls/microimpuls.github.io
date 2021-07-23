@@ -5032,63 +5032,63 @@
             "type": "String",
             "optional": false,
             "field": "channels.option1",
-            "description": "<p>Значение параметра канала Option 1.</p>"
+            "description": "<p>Значение параметра канала Option 1 (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.option2",
-            "description": "<p>Значение параметра канала Option 2.</p>"
+            "description": "<p>Значение параметра канала Option 2 (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.option3",
-            "description": "<p>Значение параметра канала Option 3.</p>"
+            "description": "<p>Значение параметра канала Option 3 (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.telemeter",
-            "description": "<p>Телеизмеритель. Если указано, а также указаны параметры измерителя в PortalSettingsList, то приложению необходимо отправлять данные статистики просмотра канала на сервер измерителя.</p>"
+            "description": "<p>Телеизмеритель (не возвращается при compact=1). Если указано, а также указаны параметры измерителя в PortalSettingsList, то приложению необходимо отправлять данные статистики просмотра канала на сервер измерителя.</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.telemeter_account_name",
-            "description": "<p>AccountName на сервере измерителя.</p>"
+            "description": "<p>AccountName на сервере измерителя (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.telemeter_tmsec_name",
-            "description": "<p>TmsecName на сервере измерителя.</p>"
+            "description": "<p>TmsecName на сервере измерителя (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.telemeter_cat_id",
-            "description": "<p>Категория контента на сервере измерителя.</p>"
+            "description": "<p>Категория контента на сервере измерителя (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.telemeter_vc_id",
-            "description": "<p>Идентификатор контента на сервере измерителя.</p>"
+            "description": "<p>Идентификатор контента на сервере измерителя (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.telemeter_vc_version",
-            "description": "<p>Версия контента на сервере измерителя.</p>"
+            "description": "<p>Версия контента на сервере измерителя (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -5101,21 +5101,21 @@
             ],
             "optional": false,
             "field": "channels.aspect_ratio",
-            "description": "<p>Соотношение сторон данного канала. 0 - Авто. 1 - 16:9. 2 - 4:3. 3 - На весь экран.</p>"
+            "description": "<p>Соотношение сторон данного канала (не возвращается при compact=1). 0 - Авто. 1 - 16:9. 2 - 4:3. 3 - На весь экран.</p>"
           },
           {
             "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "channels.lcn_number",
-            "description": "<p>Логический номер канала (LCN).</p>"
+            "description": "<p>Логический номер канала (LCN) (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "Object[]",
             "optional": false,
             "field": "channels.hbb",
-            "description": "<p>Список доступных HbbTV-провайдеров.</p>"
+            "description": "<p>Список доступных HbbTV-провайдеров (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -5150,7 +5150,7 @@
             "type": "Object[]",
             "optional": false,
             "field": "channels.additional_categories",
-            "description": "<p>Список доп. категорий канала.</p>"
+            "description": "<p>Список доп. категорий канала (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -5234,7 +5234,7 @@
             "type": "String",
             "optional": false,
             "field": "channels.program_meta",
-            "description": "<p>Дополнительные расширенные данные о передаче EPG (в формате JSON).</p>"
+            "description": "<p>Дополнительные расширенные данные о передаче EPG (в формате JSON) (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -5381,7 +5381,7 @@
             "type": "Object[]",
             "optional": false,
             "field": "channels.program_genres",
-            "description": "<p>Список жанров текущей передачи EPG.</p>"
+            "description": "<p>Список жанров текущей передачи EPG (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -5402,70 +5402,70 @@
             "type": "Number",
             "optional": false,
             "field": "channels.next_program_id",
-            "description": "<p>Идентификатор следующей передачи EPG.</p>"
+            "description": "<p>Идентификатор следующей передачи EPG (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.next_program_name",
-            "description": "<p>Название следующей передачи EPG.</p>"
+            "description": "<p>Название следующей передачи EPG (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "channels.next_program_begin_time",
-            "description": "<p>Начало следующей передачи EPG в формате Unix Timestamp UTC+0.</p>"
+            "description": "<p>Начало следующей передачи EPG в формате Unix Timestamp UTC+0 (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "channels.next_program_end_time",
-            "description": "<p>Конец следующей передачи EPG в формате Unix Timestamp UTC+0.</p>"
+            "description": "<p>Конец следующей передачи EPG в формате Unix Timestamp UTC+0 (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "channels.next_program_category_id",
-            "description": "<p>Идентификатор категории EPG следующей передачи EPG.</p>"
+            "description": "<p>Идентификатор категории EPG следующей передачи EPG (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.next_program_category",
-            "description": "<p>Название категории EPG следующей передачи EPG.</p>"
+            "description": "<p>Название категории EPG следующей передачи EPG (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.next_program_description",
-            "description": "<p>Описание следующей передачи EPG.</p>"
+            "description": "<p>Описание следующей передачи EPG (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.next_program_preview_url",
-            "description": "<p>URL-адрес обложки следующей передачи EPG.</p>"
+            "description": "<p>URL-адрес обложки следующей передачи EPG (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "channels.next_program_rating",
-            "description": "<p>Возрастной рейтинг следующей передачи EPG.</p>"
+            "description": "<p>Возрастной рейтинг следующей передачи EPG (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.next_program_meta",
-            "description": "<p>Дополнительные расширенные данные о следующей передаче EPG (в формате JSON).</p>"
+            "description": "<p>Дополнительные расширенные данные о следующей передаче EPG (в формате JSON) (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -5612,7 +5612,7 @@
             "type": "Object[]",
             "optional": false,
             "field": "channels.next_program_genres",
-            "description": "<p>Список жанров следующей передачи EPG.</p>"
+            "description": "<p>Список жанров следующей передачи EPG (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -5637,7 +5637,7 @@
             ],
             "optional": false,
             "field": "channels.show_in_all",
-            "description": "<p>Отображать канал в категории Все.</p>"
+            "description": "<p>Отображать канал в категории Все (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -5655,7 +5655,7 @@
             ],
             "optional": false,
             "field": "channels.ads_available",
-            "description": "<p>Флаг указывает что для канала на данный момент включена реклама.</p>"
+            "description": "<p>Флаг указывает что для канала на данный момент включена реклама (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -6319,63 +6319,63 @@
             "type": "String",
             "optional": false,
             "field": "channels.option1",
-            "description": "<p>Значение параметра канала Option 1.</p>"
+            "description": "<p>Значение параметра канала Option 1 (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.option2",
-            "description": "<p>Значение параметра канала Option 2.</p>"
+            "description": "<p>Значение параметра канала Option 2 (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.option3",
-            "description": "<p>Значение параметра канала Option 3.</p>"
+            "description": "<p>Значение параметра канала Option 3 (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.telemeter",
-            "description": "<p>Телеизмеритель. Если указано, а также указаны параметры измерителя в PortalSettingsList, то приложению необходимо отправлять данные статистики просмотра канала на сервер измерителя.</p>"
+            "description": "<p>Телеизмеритель (не возвращается при compact=1). Если указано, а также указаны параметры измерителя в PortalSettingsList, то приложению необходимо отправлять данные статистики просмотра канала на сервер измерителя.</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.telemeter_account_name",
-            "description": "<p>AccountName на сервере измерителя.</p>"
+            "description": "<p>AccountName на сервере измерителя (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.telemeter_tmsec_name",
-            "description": "<p>TmsecName на сервере измерителя.</p>"
+            "description": "<p>TmsecName на сервере измерителя (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.telemeter_cat_id",
-            "description": "<p>Категория контента на сервере измерителя.</p>"
+            "description": "<p>Категория контента на сервере измерителя (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.telemeter_vc_id",
-            "description": "<p>Идентификатор контента на сервере измерителя.</p>"
+            "description": "<p>Идентификатор контента на сервере измерителя (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.telemeter_vc_version",
-            "description": "<p>Версия контента на сервере измерителя.</p>"
+            "description": "<p>Версия контента на сервере измерителя (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -6388,21 +6388,21 @@
             ],
             "optional": false,
             "field": "channels.aspect_ratio",
-            "description": "<p>Соотношение сторон данного канала. 0 - Авто. 1 - 16:9. 2 - 4:3. 3 - На весь экран.</p>"
+            "description": "<p>Соотношение сторон данного канала (не возвращается при compact=1). 0 - Авто. 1 - 16:9. 2 - 4:3. 3 - На весь экран.</p>"
           },
           {
             "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "channels.lcn_number",
-            "description": "<p>Логический номер канала (LCN).</p>"
+            "description": "<p>Логический номер канала (LCN) (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "Object[]",
             "optional": false,
             "field": "channels.hbb",
-            "description": "<p>Список доступных HbbTV-провайдеров.</p>"
+            "description": "<p>Список доступных HbbTV-провайдеров (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -6437,7 +6437,7 @@
             "type": "Object[]",
             "optional": false,
             "field": "channels.additional_categories",
-            "description": "<p>Список доп. категорий канала.</p>"
+            "description": "<p>Список доп. категорий канала (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -6521,7 +6521,7 @@
             "type": "String",
             "optional": false,
             "field": "channels.program_meta",
-            "description": "<p>Дополнительные расширенные данные о передаче EPG (в формате JSON).</p>"
+            "description": "<p>Дополнительные расширенные данные о передаче EPG (в формате JSON) (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -6668,7 +6668,7 @@
             "type": "Object[]",
             "optional": false,
             "field": "channels.program_genres",
-            "description": "<p>Список жанров текущей передачи EPG.</p>"
+            "description": "<p>Список жанров текущей передачи EPG (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -6689,70 +6689,70 @@
             "type": "Number",
             "optional": false,
             "field": "channels.next_program_id",
-            "description": "<p>Идентификатор следующей передачи EPG.</p>"
+            "description": "<p>Идентификатор следующей передачи EPG (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.next_program_name",
-            "description": "<p>Название следующей передачи EPG.</p>"
+            "description": "<p>Название следующей передачи EPG (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "channels.next_program_begin_time",
-            "description": "<p>Начало следующей передачи EPG в формате Unix Timestamp UTC+0.</p>"
+            "description": "<p>Начало следующей передачи EPG в формате Unix Timestamp UTC+0 (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "channels.next_program_end_time",
-            "description": "<p>Конец следующей передачи EPG в формате Unix Timestamp UTC+0.</p>"
+            "description": "<p>Конец следующей передачи EPG в формате Unix Timestamp UTC+0 (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "channels.next_program_category_id",
-            "description": "<p>Идентификатор категории EPG следующей передачи EPG.</p>"
+            "description": "<p>Идентификатор категории EPG следующей передачи EPG (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.next_program_category",
-            "description": "<p>Название категории EPG следующей передачи EPG.</p>"
+            "description": "<p>Название категории EPG следующей передачи EPG (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.next_program_description",
-            "description": "<p>Описание следующей передачи EPG.</p>"
+            "description": "<p>Описание следующей передачи EPG (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.next_program_preview_url",
-            "description": "<p>URL-адрес обложки следующей передачи EPG.</p>"
+            "description": "<p>URL-адрес обложки следующей передачи EPG (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "channels.next_program_rating",
-            "description": "<p>Возрастной рейтинг следующей передачи EPG.</p>"
+            "description": "<p>Возрастной рейтинг следующей передачи EPG (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "channels.next_program_meta",
-            "description": "<p>Дополнительные расширенные данные о следующей передаче EPG (в формате JSON).</p>"
+            "description": "<p>Дополнительные расширенные данные о следующей передаче EPG (в формате JSON) (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -6899,7 +6899,7 @@
             "type": "Object[]",
             "optional": false,
             "field": "channels.next_program_genres",
-            "description": "<p>Список жанров следующей передачи EPG.</p>"
+            "description": "<p>Список жанров следующей передачи EPG (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -6924,7 +6924,7 @@
             ],
             "optional": false,
             "field": "channels.show_in_all",
-            "description": "<p>Отображать канал в категории Все.</p>"
+            "description": "<p>Отображать канал в категории Все (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -6942,7 +6942,7 @@
             ],
             "optional": false,
             "field": "channels.ads_available",
-            "description": "<p>Флаг указывает что для канала на данный момент включена реклама.</p>"
+            "description": "<p>Флаг указывает что для канала на данный момент включена реклама (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -7077,7 +7077,7 @@
             "type": "String",
             "optional": false,
             "field": "premieres.icon",
-            "description": "<p>URL иконки канала.</p>"
+            "description": "<p>URL иконки канала (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -7091,7 +7091,7 @@
             "type": "String",
             "optional": false,
             "field": "premieres.name",
-            "description": "<p>Название канала.</p>"
+            "description": "<p>Название канала (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -7126,7 +7126,7 @@
             "type": "String",
             "optional": false,
             "field": "premieres.program_description",
-            "description": "<p>Описание премьеры.</p>"
+            "description": "<p>Описание премьеры (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -7147,7 +7147,7 @@
             "type": "String",
             "optional": false,
             "field": "premieres.program_meta",
-            "description": "<p>Дополнительная информация о премьере в формате JSON.</p>"
+            "description": "<p>Дополнительная информация о премьере в формате JSON (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -7443,14 +7443,14 @@
             "type": "String",
             "optional": false,
             "field": "programs.program_category",
-            "description": "<p>Название категории EPG передачи EPG.</p>"
+            "description": "<p>Название категории EPG передачи EPG (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "programs.program_description",
-            "description": "<p>Описание передачи EPG.</p>"
+            "description": "<p>Описание передачи EPG (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -7471,14 +7471,14 @@
             "type": "Number",
             "optional": false,
             "field": "programs.datetime_begin",
-            "description": "<p>Начало передачи EPG в формате Unix Timestamp UTC+0 (без учета часового сдвига).</p>"
+            "description": "<p>Начало передачи EPG в формате Unix Timestamp UTC+0 (без учета часового сдвига) (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "programs.datetime_end",
-            "description": "<p>Конец передачи EPG в формате Unix Timestamp UTC+0 (без учета часового сдвига).</p>"
+            "description": "<p>Конец передачи EPG в формате Unix Timestamp UTC+0 (без учета часового сдвига) (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -15517,35 +15517,35 @@
             ],
             "optional": false,
             "field": "programs.show_in_all",
-            "description": "<p>Отображать канал в категории Все.</p>"
+            "description": "<p>Отображать канал в категории Все (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "programs.option1",
-            "description": "<p>Значение параметра канала Option 1.</p>"
+            "description": "<p>Значение параметра канала Option 1 (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "programs.option2",
-            "description": "<p>Значение параметра канала Option 2.</p>"
+            "description": "<p>Значение параметра канала Option 2 (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "programs.option3",
-            "description": "<p>Значение параметра канала Option 3.</p>"
+            "description": "<p>Значение параметра канала Option 3 (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "Object[]",
             "optional": false,
             "field": "programs.hbb",
-            "description": "<p>Список доступных HbbTV-провайдеров.</p>"
+            "description": "<p>Список доступных HbbTV-провайдеров (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -15580,42 +15580,42 @@
             "type": "String",
             "optional": false,
             "field": "programs.telemeter",
-            "description": "<p>Телеизмеритель. Если указано, а также указаны параметры измерителя в PortalSettingsList, то приложению необходимо отправлять данные статистики просмотра канала на сервер измерителя.</p>"
+            "description": "<p>Телеизмеритель (не возвращается при compact=1). Если указано, а также указаны параметры измерителя в PortalSettingsList, то приложению необходимо отправлять данные статистики просмотра канала на сервер измерителя.</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "programs.telemeter_account_name",
-            "description": "<p>AccountName на сервере измерителя.</p>"
+            "description": "<p>AccountName на сервере измерителя (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "programs.telemeter_tmsec_name",
-            "description": "<p>TmsecName на сервере измерителя.</p>"
+            "description": "<p>TmsecName на сервере измерителя (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "programs.telemeter_cat_id",
-            "description": "<p>Категория контента на сервере измерителя.</p>"
+            "description": "<p>Категория контента на сервере измерителя (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "programs.telemeter_vc_id",
-            "description": "<p>Идентификатор контента на сервере измерителя.</p>"
+            "description": "<p>Идентификатор контента на сервере измерителя (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "programs.telemeter_vc_version",
-            "description": "<p>Версия контента на сервере измерителя.</p>"
+            "description": "<p>Версия контента на сервере измерителя (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -15628,21 +15628,21 @@
             ],
             "optional": false,
             "field": "programs.aspect_ratio",
-            "description": "<p>Соотношение сторон данной передачи. 0 - Авто. 1 - 16:9. 2 - 4:3. 3 - На весь экран.</p>"
+            "description": "<p>Соотношение сторон данной передачи (не возвращается при compact=1). 0 - Авто. 1 - 16:9. 2 - 4:3. 3 - На весь экран.</p>"
           },
           {
             "group": "Ответ",
             "type": "Number",
             "optional": false,
-            "field": "channels.lcn_number",
-            "description": "<p>Логический номер канала (LCN).</p>"
+            "field": "programs.lcn_number",
+            "description": "<p>Логический номер канала (LCN) (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "Object[]",
             "optional": false,
             "field": "programs.additional_categories",
-            "description": "<p>Список доп. категорий канала.</p>"
+            "description": "<p>Список доп. категорий канала (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -15726,7 +15726,7 @@
             "type": "String",
             "optional": false,
             "field": "programs.program_meta",
-            "description": "<p>Дополнительная информация о передаче в формате JSON.</p>"
+            "description": "<p>Дополнительная информация о передаче в формате JSON (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -15873,7 +15873,7 @@
             "type": "Object[]",
             "optional": false,
             "field": "programs.program_genres",
-            "description": "<p>Список жанров передачи.</p>"
+            "description": "<p>Список жанров передачи (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -15894,70 +15894,70 @@
             "type": "Number",
             "optional": false,
             "field": "programs.next_program_category_id",
-            "description": "<p>Идентификатор категории следующей передачи.</p>"
+            "description": "<p>Идентификатор категории следующей передачи (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "programs.next_program_begin_time",
-            "description": "<p>Время начала следующей передачи в Unix Timestamp (UTC+0).</p>"
+            "description": "<p>Время начала следующей передачи в Unix Timestamp (UTC+0) (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "programs.next_program_end_time",
-            "description": "<p>Время окончания следующей передачи в Unix Timestamp (UTC+0).</p>"
+            "description": "<p>Время окончания следующей передачи в Unix Timestamp (UTC+0) (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "programs.next_program_name",
-            "description": "<p>Название следующей передачи.</p>"
+            "description": "<p>Название следующей передачи (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "programs.next_program_description",
-            "description": "<p>Описание следующей передачи.</p>"
+            "description": "<p>Описание следующей передачи (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "programs.next_program_category",
-            "description": "<p>Название категории следующей передачи.</p>"
+            "description": "<p>Название категории следующей передачи (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "programs.next_program_preview_url",
-            "description": "<p>URL картинки следующей передачи.</p>"
+            "description": "<p>URL картинки следующей передачи (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "programs.next_program_id",
-            "description": "<p>Идентификатор следующей передачи.</p>"
+            "description": "<p>Идентификатор следующей передачи (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "programs.next_program_rating",
-            "description": "<p>Возрастной рейтинг следующей передачи.</p>"
+            "description": "<p>Возрастной рейтинг следующей передачи (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "programs.next_program_meta",
-            "description": "<p>Дополнительная информация о следующей передаче в формате JSON.</p>"
+            "description": "<p>Дополнительная информация о следующей передаче в формате JSON (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -16104,7 +16104,7 @@
             "type": "Object[]",
             "optional": false,
             "field": "programs.next_program_genres",
-            "description": "<p>Список жанров следующей передачи.</p>"
+            "description": "<p>Список жанров следующей передачи (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -16125,7 +16125,7 @@
             "type": "String",
             "optional": false,
             "field": "programs.pause_live_tv_shift",
-            "description": "<p>Временной сдвиг для функции Pause Live TV.</p>"
+            "description": "<p>Временной сдвиг для функции Pause Live TV (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",
@@ -16136,7 +16136,7 @@
             ],
             "optional": false,
             "field": "programs.ads_available",
-            "description": "<p>Флаг указывает что для канала на данный момент включена реклама.</p>"
+            "description": "<p>Флаг указывает что для канала на данный момент включена реклама (не возвращается при compact=1).</p>"
           },
           {
             "group": "Ответ",

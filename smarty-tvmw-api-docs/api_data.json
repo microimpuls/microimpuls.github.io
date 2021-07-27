@@ -10541,6 +10541,14 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
+            "field": "device_model",
+            "defaultValue": "пустой",
+            "description": "<p>Модель устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "authkey",
             "defaultValue": "пустое",
             "description": "<p>Авторизационный ключ сессии. Должен быть передан либо device_uid, либо authkey.</p>"
@@ -10617,6 +10625,12 @@
             "optional": false,
             "field": "3",
             "description": "<p>Должен быть задан либо device_uid либо действительный authkey.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "120",
+            "description": "<p>Ошибка обращения ко внешнему ресурсу.</p>"
           }
         ]
       }
@@ -17657,6 +17671,13 @@
             "optional": false,
             "field": "uri",
             "description": "<p>Адрес потока.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "preview_url_mask",
+            "description": "<p>Маска url для получения превью-изображения (используется для flussonic).</p>"
           },
           {
             "group": "Ответ",

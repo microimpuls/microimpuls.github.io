@@ -7697,6 +7697,13 @@
           },
           {
             "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "archive_preview_url_mask",
+            "description": "<p>Маска url для получения превью-изображения из архива (используется для flussonic).</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Number",
             "optional": true,
             "field": "lock_banner",

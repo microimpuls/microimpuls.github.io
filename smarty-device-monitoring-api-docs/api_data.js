@@ -70,7 +70,7 @@ define({ "api": [
               "0",
               "1"
             ],
-            "optional": true,
+            "optional": false,
             "field": "command.is_mass_command",
             "description": "<p>Флаг, показывающий является ли команда массовой.</p>"
           },
@@ -121,7 +121,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Пример ответа со стороны сервера:",
-          "content": "{\n    \"error_message\": \"\",\n    \"command\": [\n        {\n            \"name\": \"install_file\",\n            \"param\": {\n                \"url\": \"/device_monitoring/uploads/download/2/36b9da28fb3ae33401e40e2cf01288b56f0df432/AppClonerPro_1.5.17.apk\" \n            }\n        }\n    ],\n    \"error\": 0\n}",
+          "content": "{\n    \"error_message\": \"\",\n    \"command\": [\n        {\n            \"name\": \"install_file\",\n            \"is_mass_command\": 1,\n            \"param\": {\n                \"url\": \"/device_monitoring/uploads/download/2/36b9da28fb3ae33401e40e2cf01288b56f0df432/AppClonerPro_1.5.17.apk\" \n            }\n        }\n    ],\n    \"error\": 0\n}",
           "type": "json"
         }
       ]

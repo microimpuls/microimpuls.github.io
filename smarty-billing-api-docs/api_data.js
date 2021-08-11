@@ -2177,6 +2177,15 @@ define({ "api": [
           },
           {
             "group": "Parameter",
+            "type": "String",
+            "size": "..255",
+            "optional": true,
+            "field": "dealer_id",
+            "defaultValue": "пустое",
+            "description": "<p>Dealer ID.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Number",
             "optional": false,
             "field": "client_id",

@@ -299,7 +299,19 @@ define({ "api": [
             "optional": true,
             "field": "send_sms",
             "defaultValue": "0",
-            "description": "<p>Отправлять или нет СМС на мобильный телефон с данными созданного аккаунта.</p>"
+            "description": "<p><span style=\"display: inline-block;color: #ffffff;background-color: #dc0000;margin: 0;padding: 2px 4px;text-transform: uppercase;\">DEPRECATED!</span><br/>Отправлять или нет СМС на мобильный телефон с данными созданного аккаунта.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "allowedValues": [
+              "\"sms\"",
+              "\"call\""
+            ],
+            "optional": true,
+            "field": "phone_confirmation_type",
+            "defaultValue": "пустое",
+            "description": "<p>Тип подтверждения номера телефона.</p>"
           },
           {
             "group": "Parameter",
@@ -555,6 +567,18 @@ define({ "api": [
             "optional": false,
             "field": "15",
             "description": "<p>Некорректное значение dealer_id.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "16",
+            "description": "<p>Было отправлено подтверждение номера телефона с помощью звонка.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "17",
+            "description": "<p>Номера телефона с помощью звонка не был подтвержден.</p>"
           }
         ]
       }

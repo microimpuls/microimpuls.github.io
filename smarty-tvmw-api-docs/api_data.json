@@ -21219,6 +21219,13 @@
           },
           {
             "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "actions.quality",
+            "description": "<p>Качество ассета.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "name",

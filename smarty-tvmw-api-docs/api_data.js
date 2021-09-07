@@ -2394,6 +2394,18 @@ define({ "api": [
         "Parameter": [
           {
             "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "auto_detect_current_city",
+            "defaultValue": "0",
+            "description": "<p>Определять город автоматически по геолокации.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
             "optional": true,
             "field": "city",

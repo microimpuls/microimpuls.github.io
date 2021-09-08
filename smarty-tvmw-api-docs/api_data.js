@@ -299,7 +299,7 @@ define({ "api": [
             "optional": true,
             "field": "send_sms",
             "defaultValue": "0",
-            "description": "<p><span style=\"display: inline-block;color: #ffffff;background-color: #dc0000;margin: 0;padding: 2px 4px;text-transform: uppercase;\">DEPRECATED!</span><br/>Отправлять или нет СМС на мобильный телефон с данными созданного аккаунта.</p>"
+            "description": "<p>Отправлять или нет СМС на мобильный телефон с данными созданного аккаунта.</p>"
           },
           {
             "group": "Parameter",

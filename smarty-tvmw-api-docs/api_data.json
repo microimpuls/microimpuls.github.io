@@ -14169,6 +14169,134 @@
   },
   {
     "type": "get",
+    "url": "/portaldashboard/list/",
+    "title": "PortalDashboardList: список доступных лент и их типов для текущего устройства и шаблона",
+    "name": "PortalDashboardList",
+    "group": "PortalDashboard",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "template",
+            "defaultValue": "пустой",
+            "description": "<p>Название шаблона UI, которое используется в данный момент на устройстве.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "portaldashboards",
+            "description": "<p>Список доступных лент.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "portaldashboards.id",
+            "description": "<p>Идентификатор ленты.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "portaldashboards.title",
+            "description": "<p>Заголовок ленты.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10"
+            ],
+            "optional": false,
+            "field": "portaldashboards.type",
+            "description": "<p>Тип ленты. Возможные значения: 0 - Главное меню; 1 - Виджеты; 2 - Телеканалы; 3 - Передачи; 4 - Фильмы; 5 - Подборка; 6 - Недавно просмотренные телеканалы; 7 - Недавно просмотренные передачи; 8 - Недавно просмотренные фильмы; 9 - Слайдер; 10 - Плеер.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "PortalDashboard"
+  },
+  {
+    "type": "get",
     "url": "/noauth/portal/client/channel/list/",
     "title": "NoAuthPortalClientChannelList: список телеканалов (доступен без авторизации)",
     "name": "NoAuthPortalClientChannelList",

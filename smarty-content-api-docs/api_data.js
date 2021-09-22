@@ -1198,26 +1198,26 @@ define({ "api": [
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "xml",
-            "description": "<p>вида: <programme external_id=\"267d3120-831d-4b39-9c71-5d581f81ea88\" start=\"2019041509\"/><br> external_id - id эфирного события (event_id), start - фактическое время начала эфирного события.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "client_id",
-            "description": "<p>Client ID.</p>"
+            "field": "external_id",
+            "description": "<p>ID эфирного события (event_id).</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "signature",
-            "description": "<p>Подпись.</p>"
+            "field": "start",
+            "description": "<p>Фактическое время начала эфирного события.</p>"
           }
         ]
       }
     },
+    "examples": [
+      {
+        "title": "Пример тела запроса: ",
+        "content": "<programme external_id=\"267d3120-831d-4b39-9c71-5d581f81ea88\" start=\"2019041509\"/>",
+        "type": "xml"
+      }
+    ],
     "version": "1.40.0",
     "filename": "../../../content/api.py",
     "groupTitle": "EPGProgram",

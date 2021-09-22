@@ -2415,6 +2415,13 @@
           {
             "group": "Parameter",
             "type": "String",
+            "optional": false,
+            "field": "api_key",
+            "description": "<p>API key.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
             "optional": true,
             "field": "authkey",
             "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"

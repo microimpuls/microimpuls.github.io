@@ -8891,6 +8891,13 @@ define({ "api": [
           },
           {
             "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "channel_id",
+            "description": "<p>Идентификатор канала, с которого произошло оформление подписки на тарифный пакет.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
             "optional": true,
             "field": "authkey",

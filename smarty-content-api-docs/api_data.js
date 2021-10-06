@@ -1188,7 +1188,7 @@ define({ "api": [
   {
     "type": "post",
     "url": "/epg/program/time/specify/",
-    "title": "EPGProgramTimeSpecify: установка точных временных меток начала передачи",
+    "title": "EPGProgramTimeSpecify: установка точных временных меток передачи",
     "name": "EPGProgramTimeSpecify",
     "group": "EPGProgram",
     "parameter": {
@@ -1207,6 +1207,13 @@ define({ "api": [
             "optional": false,
             "field": "start",
             "description": "<p>Фактическое время начала эфирного события.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "stop",
+            "description": "<p>Фактическое время окончания эфирного события.</p>"
           }
         ]
       }
@@ -1214,7 +1221,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Пример тела запроса: ",
-        "content": "<programme external_id=\"267d3120-831d-4b39-9c71-5d581f81ea88\" start=\"2019041509\"/>",
+        "content": "<?xml version=\"1.0\"?>\n<exact-time-event generator-info-name=\"EPG Service generator xmltv\" generator-info-url=\"http://www.epgservice.ru\">\n    <programme external_id=\"124a4de0-a260-4484-8bf4-419002d5c7a9\" start=\"20210928143103\" stop=\"\"/>\n    <programme external_id=\"02df8d00-bbd5-454a-bcd6-f726622c2dad\" start=\"20210928132632\" stop=\"20210928143103\"/>\n</exact-time-event>",
         "type": "xml"
       }
     ],

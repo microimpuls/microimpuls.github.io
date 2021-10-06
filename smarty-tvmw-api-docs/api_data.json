@@ -22293,6 +22293,13 @@
             "optional": false,
             "field": "error",
             "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "error_message",
+            "description": "<p>Текст ошибки.</p>"
           }
         ]
       }
@@ -24376,6 +24383,13 @@
             "optional": false,
             "field": "error",
             "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "error_message",
+            "description": "<p>Текст ошибки.</p>"
           }
         ]
       }

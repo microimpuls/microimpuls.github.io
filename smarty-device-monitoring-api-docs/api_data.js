@@ -823,7 +823,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Пример запроса со стороны клиента:",
-          "content": "{\n    \"mac\": \"A1:B2:C3:D4:E5:F6\",\n    \"uid\": \"\",\n    \"type\": \"stb\",\n    \"vendor\": \"Redbox\",\n    \"model\": \"Redbox Mini 3\",\n    \"fw\": \"01012018\",\n    \"os\": \"Android 7.0\",\n    \"cpu\": [{\"name\": \"Allwinner H3\",\"freq\": \"1.2\",\"cores\": 4}],\n    \"ram\": \"512\",\n    \"flash\": \"8192\",\n    \"netif\": [{\"name\": \"eth0\", \"speed\": \"100\", \"link\": true, \"ip\": \"X.X.X.X\", \"mac\": \"XX:XX:XX:XX:XX:XX\"}],\n    \"uptime\": 345322,\n    \"apps\": [{\"name\": \"Youtube\",\"appid\": \"com.youtube\",\"ver\": \"5.32\", \"is_system_app\": false}]\n}",
+          "content": "{\n    \"mac\": \"A1:B2:C3:D4:E5:F6\",\n    \"uid\": \"unique_id\",\n    \"type\": \"stb\",\n    \"vendor\": \"Redbox\",\n    \"model\": \"Redbox Mini 3\",\n    \"fw\": \"01012018\",\n    \"os\": \"Android 7.0\",\n    \"cpu\": [{\"name\": \"Allwinner H3\",\"freq\": \"1.2\",\"cores\": 4}],\n    \"ram\": \"512\",\n    \"flash\": \"8192\",\n    \"netif\": [{\"name\": \"eth0\", \"speed\": \"100\", \"link\": true, \"ip\": \"X.X.X.X\", \"mac\": \"XX:XX:XX:XX:XX:XX\"}],\n    \"uptime\": 345322,\n    \"apps\": [{\"name\": \"Youtube\",\"appid\": \"com.youtube\",\"ver\": \"5.32\", \"is_system_app\": false}],\n    \"client_id\": 1\n}",
           "type": "json"
         }
       ]

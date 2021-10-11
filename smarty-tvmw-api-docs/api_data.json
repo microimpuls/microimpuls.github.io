@@ -463,6 +463,13 @@
             "group": "Ответ",
             "type": "String",
             "optional": false,
+            "field": "error_message",
+            "description": "<p>Текст ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
             "field": "captcha_url",
             "description": "<p>Ссылка на капчу.</p>"
           },

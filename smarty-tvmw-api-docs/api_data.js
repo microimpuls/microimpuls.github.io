@@ -16832,7 +16832,14 @@ define({ "api": [
             "type": "Number",
             "optional": true,
             "field": "category_id",
-            "description": "<p>Идентификатор категории передач, если не передан - возвращаются все подборки.</p>"
+            "description": "<p>Идентификатор категории передач. Может быть передан либо category_id, либо genre_id.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "genre_id",
+            "description": "<p>Идентификатор жанра передач. Может быть передан либо category_id, либо genre_id.</p>"
           },
           {
             "group": "Parameter",
@@ -19502,9 +19509,16 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "selection_id",
-            "description": "<p>ID подборки</p>"
+            "description": "<p>ID подборки. Наличие либо selection_id, либо program_id в запросе обязательно.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "program_id",
+            "description": "<p>ID программы из подборки. Поиск производится только по подборкам c типом сгенерированные</p>"
           },
           {
             "group": "Parameter",
@@ -20302,9 +20316,16 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "selection_id",
-            "description": "<p>ID подборки</p>"
+            "description": "<p>ID подборки. Наличие либо selection_id, либо program_id в запросе обязательно.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "program_id",
+            "description": "<p>ID программы из подборки. Поиск производится только по подборкам c типом сгенерированные</p>"
           },
           {
             "group": "Parameter",

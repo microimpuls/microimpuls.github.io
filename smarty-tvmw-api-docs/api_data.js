@@ -22763,7 +22763,14 @@ define({ "api": [
             "type": "Decimal",
             "optional": false,
             "field": "actions.cost",
-            "description": "<p>Сумма списания с баланса при активации.</p>"
+            "description": "<p>Сумма списания с баланса при активации (только при использовании внешнего биллинга).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Decimal",
+            "optional": false,
+            "field": "actions.activation_price",
+            "description": "<p>Стоимость активации подписки с учетом периода активации пользователя.</p>"
           },
           {
             "group": "Ответ",
@@ -22824,13 +22831,6 @@ define({ "api": [
             "optional": false,
             "field": "actions.periodical",
             "description": "<p>Флаг, значение 1 означает, что действие будет возобновляемым (например, ежемесячная подписка).</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Decimal",
-            "optional": false,
-            "field": "actions.activation_price",
-            "description": "<p>Стоимость активации подписки с учетом периода активации пользователя.</p>"
           },
           {
             "group": "Ответ",

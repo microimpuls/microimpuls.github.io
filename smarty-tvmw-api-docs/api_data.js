@@ -13950,6 +13950,166 @@ define({ "api": [
     "groupTitle": "Payment"
   },
   {
+    "type": "get",
+    "url": "/payment/qrcode/",
+    "title": "PaymentQRCode: Оплата через QR-код",
+    "name": "PaymentQRCode",
+    "group": "Payment",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "amount",
+            "description": "<p>Сумма платежа.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "saved_qrcode_url",
+            "description": "<p>Ссылка на созданный QR-код.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "error_message",
+            "description": "<p>Текст ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Неизвестная ошибка.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Внутренняя ошибка платежного шлюза.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "3",
+            "description": "<p>Внешняя ошибка платежного шлюза (Пример - сетевая ошибка).</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "4",
+            "description": "<p>Неверные параметры запроса.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "5",
+            "description": "<p>Ошибка платежного инструмента.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "6",
+            "description": "<p>Подозрение на мошенничество.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "7",
+            "description": "<p>Недостаточно средств.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "8",
+            "description": "<p>Лимит операции.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "9",
+            "description": "<p>Ошибка авторизации.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "10",
+            "description": "<p>Некорректная карта.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "11",
+            "description": "<p>Ошибка банка-эмитента.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "12",
+            "description": "<p>Пользователь не зареристрирован.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "13",
+            "description": "<p>Операция не поддерживается мерчантом.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "14",
+            "description": "<p>Ошибка при регистрации.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Payment"
+  },
+  {
     "type": "post",
     "url": "/payment/saved_card/delete/",
     "title": "PaymentSavedCardDelete: удаление сохраненной карты",
@@ -19692,6 +19852,88 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.program.short_name",
+            "description": "<p>Краткое название передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.program.category",
+            "description": "<p>Название категории передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.program.preview",
+            "description": "<p>URL картинки передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.program.rating",
+            "description": "<p>Возрастной рейтинг.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.program.meta",
+            "description": "<p>Дополнительная информация о передаче в формате JSON.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.program.url",
+            "description": "<p>URL потока архивной записи передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "contents.program.has_record",
+            "description": "<p>Существует ли запись передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "contents.program.has_subscription",
+            "description": "<p>Есть подписка, контент доступен.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.program.position",
+            "description": "<p>Последняя сохраненная позиция просмотра в секундах от начала передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "contents.program.blocked",
+            "description": "<p>Заблокированна ли передача.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Object",
             "optional": true,
             "field": "contents.video",
@@ -20527,6 +20769,88 @@ define({ "api": [
             "optional": false,
             "field": "contents.program.end_time",
             "description": "<p>Время окончания передачи в Unix Timestamp (UTC+0).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.program.short_name",
+            "description": "<p>Краткое название передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.program.category",
+            "description": "<p>Название категории передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.program.preview",
+            "description": "<p>URL картинки передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.program.rating",
+            "description": "<p>Возрастной рейтинг.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.program.meta",
+            "description": "<p>Дополнительная информация о передаче в формате JSON.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.program.url",
+            "description": "<p>URL потока архивной записи передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "contents.program.has_record",
+            "description": "<p>Существует ли запись передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "contents.program.has_subscription",
+            "description": "<p>Есть подписка, контент доступен.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.program.position",
+            "description": "<p>Последняя сохраненная позиция просмотра в секундах от начала передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "contents.program.blocked",
+            "description": "<p>Заблокированна ли передача.</p>"
           },
           {
             "group": "Ответ",

@@ -22117,6 +22117,13 @@
             "group": "Ответ",
             "type": "Number",
             "optional": false,
+            "field": "ext_id",
+            "description": "<p>Внешний идентификатор.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
             "field": "error",
             "description": "<p>Код ошибки.</p>"
           }
@@ -23492,6 +23499,13 @@
             "optional": false,
             "field": "reviews.date",
             "description": "<p>Дата, когда был оставлен отзыв.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "ext_id",
+            "description": "<p>Внешний идентификатор.</p>"
           },
           {
             "group": "Ответ",

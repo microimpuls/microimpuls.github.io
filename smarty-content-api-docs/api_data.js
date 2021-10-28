@@ -2321,6 +2321,13 @@ define({ "api": [
           },
           {
             "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "video_provider",
+            "description": "<p>ID провайдера в системе Smarty.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Number[]",
             "optional": true,
             "field": "genres",

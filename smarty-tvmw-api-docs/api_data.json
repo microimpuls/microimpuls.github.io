@@ -18849,6 +18849,13 @@
           },
           {
             "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "providers.icon_url",
+            "description": "<p>URL иконки провайдера.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Number",
             "allowedValues": [
               "1",

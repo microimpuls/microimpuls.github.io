@@ -23671,7 +23671,7 @@ define({ "api": [
           },
           {
             "group": "Ответ",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "ext_id",
             "description": "<p>Внешний идентификатор.</p>"

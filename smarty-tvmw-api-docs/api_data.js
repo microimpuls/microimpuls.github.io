@@ -14613,6 +14613,112 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/portaldashboard/slider/list/",
+    "title": "PortalDashboardSliderList: список баннеров слайдера",
+    "name": "PortalDashboardSliderList",
+    "group": "PortalDashboard",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "portal_dashboard_id",
+            "description": "<p>ID ленты.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "sliders",
+            "description": "<p>Список баннеров слайдера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "sliders.url",
+            "description": "<p>Url баннера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "sliders.deep_link",
+            "description": "<p>Диплинк.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Неизвестная ошибка.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "PortalDashboard"
+  },
+  {
+    "type": "get",
     "url": "/portaldashboard/video/list/",
     "title": "PortalDashboardVideoList: список фильмов",
     "name": "PortalDashboardVideoList",

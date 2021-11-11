@@ -14432,7 +14432,7 @@ define({ "api": [
           },
           {
             "group": "Ответ",
-            "type": "Number",
+            "type": "String",
             "optional": false,
             "field": "portaldashboards.title",
             "description": "<p>Заголовок ленты.</p>"

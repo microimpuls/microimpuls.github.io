@@ -14485,6 +14485,278 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/portaldashboard/mainmenu/",
+    "title": "PortalDashboardMainMenu: порядок элементов главного меню для дашборда",
+    "name": "PortalDashboardMainMenu",
+    "group": "PortalDashboard",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "portal_dashboard_id",
+            "description": "<p>ID ленты.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "mainmenu",
+            "description": "<p>Порядок элементов главного меню для дашборда.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Пример mainmenu: ",
+          "content": "<mainmenu>\n    <item>tvchannels</item>\n    <item>archive</item>\n    <item>videocatalog</item>\n    <item>cctv</item>\n    <item>settings</item>\n    <item>profile</item>\n    <item>services</item>\n</mainmenu>",
+          "type": "xml"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Неизвестная ошибка.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "PortalDashboard"
+  },
+  {
+    "type": "get",
+    "url": "/portaldashboard/program/list/",
+    "title": "PortalDashboardProgramList: список передач",
+    "name": "PortalDashboardProgramList",
+    "group": "PortalDashboard",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "portal_dashboard_id",
+            "description": "<p>ID ленты.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "programs",
+            "description": "<p>Список передач.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "programs.id",
+            "description": "<p>Идентификатор передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.name",
+            "description": "<p>Название передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.preview",
+            "description": "<p>URL картинки передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "programs.begin_time",
+            "description": "<p>Время начала передачи в Unix Timestamp (UTC+0).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "programs.end_time",
+            "description": "<p>Время окончания передачи в Unix Timestamp (UTC+0).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "programs.rating",
+            "description": "<p>Возрастной рейтинг.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "programs.has_record",
+            "description": "<p>Существует ли запись передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "programs.channel_id",
+            "description": "<p>Идентификатор канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.channel_name",
+            "description": "<p>Название канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "error_message",
+            "description": "<p>Текст ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Неизвестная ошибка.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "PortalDashboard"
+  },
+  {
+    "type": "get",
     "url": "/portaldashboard/selection/list/last/",
     "title": "PortalDashboardSelectionListLast: список подборок последних просмотренных аккаунтом передач",
     "name": "PortalDashboardSelectionListLast",
@@ -20829,7 +21101,7 @@ define({ "api": [
             "type": "Number",
             "optional": true,
             "field": "selection_id",
-            "description": "<p>ID подборки. Наличие либо selection_id, либо program_id в запросе обязательно.</p>"
+            "description": "<p>ID подборки. Наличие либо selection_id, либо program_id, либо portal_dashboard_id в запросе обязательно.</p>"
           },
           {
             "group": "Parameter",
@@ -20837,6 +21109,13 @@ define({ "api": [
             "optional": true,
             "field": "program_id",
             "description": "<p>ID программы из подборки. Поиск производится только по подборкам c типом сгенерированные</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "portal_dashboard_id",
+            "description": "<p>ID ленты.</p>"
           },
           {
             "group": "Parameter",

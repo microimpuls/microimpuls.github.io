@@ -23159,6 +23159,34 @@ define({ "api": [
             "group": "Ответ",
             "type": "String",
             "optional": false,
+            "field": "videos.files.name",
+            "description": "<p>Название ассета.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "videos.files.duration",
+            "description": "<p>Длительность в секундах.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "videos.files.ext_id",
+            "description": "<p>Внешний ID ассета.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "videos.files.quality",
+            "description": "<p>Качество ассета. 0 - Не указано. 1 - SD. 2 - HD. 3 - FHD. 4 - UHD. 5 - 2K. 6 - 4K. 7 - 8K. 10 - 240p. 11 - 320p. 12 - 480p. 13 - 576p. 14 - 720p. 15 - 1080p.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
             "field": "videos.provider",
             "description": "<p>Поставщик фильма (например, название онлайн-кинотеатра).</p>"
           },
@@ -23717,6 +23745,13 @@ define({ "api": [
             "optional": false,
             "field": "actions.promo_image_url",
             "description": "<p>URL промо изображения ассета.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "actions.ext_id",
+            "description": "<p>Внешний ID ассета.</p>"
           },
           {
             "group": "Ответ",
@@ -24670,6 +24705,13 @@ define({ "api": [
             "optional": false,
             "field": "videos.files.duration",
             "description": "<p>Длительность в секундах.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "videos.files.ext_id",
+            "description": "<p>Внешний ID ассета.</p>"
           },
           {
             "group": "Ответ",

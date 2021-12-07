@@ -10053,6 +10053,13 @@
             "group": "Parameter",
             "type": "Number",
             "optional": true,
+            "field": "video_provider_id",
+            "description": "<p>ID видео-провайдера.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
             "field": "category_id",
             "description": "<p>ID жанра-категории. Если указано, то количество фильмов в жанре будет рассчитываться только от фильмов этой категории</p>"
           },

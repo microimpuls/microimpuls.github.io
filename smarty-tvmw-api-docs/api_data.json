@@ -23036,6 +23036,13 @@
           },
           {
             "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "videos.video_provider_id",
+            "description": "<p>ID связанного провайдера видео.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "videos.actors",
@@ -24095,6 +24102,13 @@
           },
           {
             "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "video_provider_id",
+            "description": "<p>ID связанного провайдера видео.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Date",
             "allowedValues": [
               "\"yyyy-mm-dd hh:mm\""
@@ -24544,6 +24558,13 @@
             "optional": false,
             "field": "videos.year",
             "description": "<p>Год выпуска.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "videos.video_provider_id",
+            "description": "<p>ID связанного провайдера видео.</p>"
           },
           {
             "group": "Ответ",

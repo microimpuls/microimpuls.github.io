@@ -9883,7 +9883,7 @@
             "type": "Number",
             "optional": true,
             "field": "provider_id",
-            "description": "<p>ID провайдера.</p>"
+            "description": "<p>ID интеграции API кинотеатра.</p>"
           },
           {
             "group": "Parameter",
@@ -10047,7 +10047,7 @@
             "type": "Number",
             "optional": true,
             "field": "provider_id",
-            "description": "<p>ID провайдера.</p>"
+            "description": "<p>ID интеграции API кинотеатра.</p>"
           },
           {
             "group": "Parameter",
@@ -22893,7 +22893,14 @@
             "type": "Number",
             "optional": true,
             "field": "provider_id",
-            "description": "<p>ID провайдера.</p>"
+            "description": "<p>ID интеграции API кинотеатра.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "video_provider_id",
+            "description": "<p>ID видео-провайдера.</p>"
           },
           {
             "group": "Parameter",
@@ -24403,7 +24410,7 @@
             "type": "Number",
             "optional": true,
             "field": "provider_id",
-            "description": "<p>ID провайдера. Приоритетнее, чем название, если указано оба.</p>"
+            "description": "<p>ID интеграции API кинотеатра. Приоритетнее, чем название, если указано оба.</p>"
           },
           {
             "group": "Parameter",

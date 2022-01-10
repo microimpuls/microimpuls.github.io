@@ -323,7 +323,7 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "comment",
             "description": "<p>Комментарий, будет сохранен в соответствующем поле созданного абонента.</p>"
           },

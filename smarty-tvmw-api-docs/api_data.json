@@ -24403,7 +24403,7 @@
             "optional": true,
             "field": "provider",
             "defaultValue": "пустой",
-            "description": "<p>Название провайдера.</p>"
+            "description": "<p>Название интеграции API кинотеатра.</p>"
           },
           {
             "group": "Parameter",

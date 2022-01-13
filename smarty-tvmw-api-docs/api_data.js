@@ -16212,6 +16212,31 @@ define({ "api": [
               "1"
             ],
             "optional": false,
+            "field": "premier_stat_enabled",
+            "description": "<p>Необходимо ли отправлять данные просмотров на сервер Premier для контента Premier (если настроена соответствующая интеграция).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "premier_stat_start_event_url",
+            "description": "<p>URL для события &quot;Начало просмотра&quot;.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "premier_stat_heartbeat_event_url",
+            "description": "<p>URL для события &quot;Хартбит просмотра&quot;.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
             "field": "client_uid",
             "description": "<p>UID Клиента. Используется для идентификации оператора во внешних сервисах при настройке соответствующих интеграций, например, для интеграции с Teletarget.</p>"
           },

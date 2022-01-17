@@ -603,6 +603,104 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/account/reset_password/",
+    "title": "AccountResetPassword: Запрос на сброс пароля.",
+    "name": "AccountResetPassword",
+    "group": "Account",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "email",
+            "description": "<p>Адрес email абонента.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "mobile_phone_number",
+            "description": "<p>Телефонный номер абонента.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "code",
+            "description": "<p>Код верификации (если до этого был получен код error 3).</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки, пароль успешно обновлен.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Ошибка в параметре.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Абонент не найден.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "3",
+            "description": "<p>Требуется верификация, код отправлен по указанному email/телефонному номеру.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "4",
+            "description": "<p>Данный телефонный номер присутствует у двух аккаунтов или более.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "5",
+            "description": "<p>Код верификации не корректен.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "6",
+            "description": "<p>У абонента нет аккаунтов.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Account"
+  },
+  {
+    "type": "get",
     "url": "/account/settings/list/",
     "title": "AccountSettingsList: список профилей аккаунта",
     "name": "AccountSettingsList",

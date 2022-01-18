@@ -1154,6 +1154,16 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "Date",
+            "allowedValues": [
+              "yyyy-mm-dd"
+            ],
+            "optional": false,
+            "field": "last_active",
+            "description": "<p>Дата последней активности аккаунта.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "status_reason",

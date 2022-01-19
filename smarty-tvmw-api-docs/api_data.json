@@ -722,13 +722,19 @@
             "group": "Коды ошибок error",
             "optional": false,
             "field": "5",
-            "description": "<p>Код верификации не корректен.</p>"
+            "description": "<p>Код верификации не корректен или устарел.</p>"
           },
           {
             "group": "Коды ошибок error",
             "optional": false,
             "field": "6",
             "description": "<p>У абонента нет аккаунтов.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "7",
+            "description": "<p>Код уже отправлен.</p>"
           }
         ]
       }

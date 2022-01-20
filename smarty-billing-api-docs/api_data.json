@@ -1448,6 +1448,365 @@
     "groupTitle": "Account"
   },
   {
+    "type": "get",
+    "url": "/account/list/",
+    "title": "AccountList: Список аккаунтов",
+    "name": "AccountList",
+    "group": "Account",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "status",
+            "description": "<p>Cтатус аккаунта.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "status_reason",
+            "description": "<p>Описание дополнительного статуса аккаунта.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "signature",
+            "description": "<p>Подпись.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "accounts",
+            "description": "<p>Список аккаунтов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "accounts.id",
+            "description": "<p>Идентификатор аккаунта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "accounts.active",
+            "description": "<p>Флаг активности аккаунта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "accounts.status_reason",
+            "description": "<p>Описание статуса аккаунта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "accounts.auto_activation_period",
+            "description": "<p>Количество дней, на которое будет автоматически активирован аккаунт после первой авторизации.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Date",
+            "allowedValues": [
+              "yyyy-mm-dd"
+            ],
+            "optional": false,
+            "field": "accounts.extension_date",
+            "description": "<p>Дата следующего списания средств.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Date",
+            "allowedValues": [
+              "yyyy-mm-dd"
+            ],
+            "optional": false,
+            "field": "accounts.activation_date",
+            "description": "<p>Дата активации аккаунта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Date",
+            "allowedValues": [
+              "yyyy-mm-dd"
+            ],
+            "optional": false,
+            "field": "accounts.deactivation_date",
+            "description": "<p>Дата деактивации аккаунта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "accounts.allow_multiple_login",
+            "description": "<p>Разрешить неограниченное количество одновременных подлючений для этого аккаунта с любых IP-адресов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "accounts.allow_login_by_abonement",
+            "description": "<p>Разрешить авторизацию только по логину (без пароля).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "accounts.allow_login_by_device_uid",
+            "description": "<p>Разрешить авторизацию по UID устройства (без логина и пароля).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "accounts.allow_login_by_ip",
+            "description": "<p>Разрешить авторизацию по IP-адресу (без логина и пароля).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "accounts.parent_code",
+            "description": "<p>Код родительского контроля (ПИН-код).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "accounts.use_timeshift",
+            "description": "<p>Использовать ли режим просмотра по местному времени (timeshift).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "accounts.preferred_timeshift_offset",
+            "description": "<p>Предпочитаемый сдвиг по времени.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "accounts.devices",
+            "description": "<p>Список привязанных устройств.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "accounts.devices.id",
+            "description": "<p>Идентификатор устройства.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "accounts.devices.system_name",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "accounts.devices.device_uid",
+            "description": "<p>UID / MAC-адрес.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "accounts.devices.serial_number",
+            "description": "<p>Серийный номер.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "accounts.devices.created_at",
+            "description": "<p>Дата регистрации.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "accounts.devices.is_basic",
+            "description": "<p>Является базовым.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number[]",
+            "optional": false,
+            "field": "accounts.tariffs",
+            "description": "<p>Список идентификаторов тарифных пакетов, подключенных у аккаунта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "accounts.customer_id",
+            "description": "<p>Customer ID.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "accounts.subnets",
+            "description": "<p>Список IP-подсетей, с которых разрешено авторизоваться аккаунту. Возвращается в виде последовательности масок, разделенной ';'</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "accounts.subscriptions",
+            "description": "<p>Список активных подписок.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "accounts.subscriptions.tariff_id",
+            "description": "<p>ID тарифа.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "accounts.subscriptions.api_config_id",
+            "description": "<p>ID внешнего API (null, если не задано).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "accounts.subscriptions.price",
+            "description": "<p>Стоимость подписки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Date",
+            "allowedValues": [
+              "yyyy-mm-dd"
+            ],
+            "optional": false,
+            "field": "accounts.subscriptions.start_date",
+            "description": "<p>Начало действия.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Date",
+            "allowedValues": [
+              "yyyy-mm-dd"
+            ],
+            "optional": false,
+            "field": "accounts.subscriptions.end_date",
+            "description": "<p>Окончание действия подписки (null, если подписка бесконечная).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "accounts.subscriptions.is_periodical",
+            "description": "<p>Является ли подписка периодической.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "error_message",
+            "description": "<p>Текст ошибки. Пустой, если error = 0.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../billing/api.py",
+    "groupTitle": "Account"
+  },
+  {
     "type": "post",
     "url": "/account/message/create/",
     "title": "AccountMessageCreate: Создание сообщения для аккаунта",
@@ -2818,6 +3177,288 @@
             "optional": false,
             "field": "1",
             "description": "<p>Абонент не найден.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../billing/api.py",
+    "groupTitle": "Customer"
+  },
+  {
+    "type": "get",
+    "url": "/customer/list/",
+    "title": "CustomerList: Список абонентов",
+    "name": "CustomerList",
+    "group": "Customer",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "tariff_id",
+            "description": "<p>Идентификатор тарифного пакета.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "signature",
+            "description": "<p>Подпись.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "customers",
+            "description": "<p>Список аккаунтов абонента.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "customers.id",
+            "description": "<p>Идентификатор абонента.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "customers.accounts",
+            "description": "<p>Список аккаунтов абонента.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "customers.accounts.id",
+            "description": "<p>Идентификатор аккаунта.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "customers.accounts.abonement",
+            "description": "<p>Абонемент.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "customers.accounts.activation_days_left",
+            "description": "<p>Количество оставшихся дней активации. Рассчитывается как разница между датой деактивации и датой активации. При использовании внешнего биллинга это значение можно игнорировать.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "customers.accounts.on_trial_period",
+            "description": "<p>(1-Аккаунт находится в пробном периоде, 0-нет)</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "customers.subscriptions",
+            "description": "<p>Список активных подписок.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "customers.subscriptions.tariff_id",
+            "description": "<p>ID тарифа.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "customers.subscriptions.api_config_id",
+            "description": "<p>ID внешнего API (null, если не задано).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "customers.subscriptions.price",
+            "description": "<p>Стоимость подписки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Date",
+            "allowedValues": [
+              "yyyy-mm-dd"
+            ],
+            "optional": false,
+            "field": "customers.subscriptions.start_date",
+            "description": "<p>Начало действия.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Date",
+            "allowedValues": [
+              "yyyy-mm-dd"
+            ],
+            "optional": false,
+            "field": "customers.subscriptions.end_date",
+            "description": "<p>Окончание действия подписки (null, если подписка бесконечная).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "customers.subscriptions.is_periodical",
+            "description": "<p>Является ли подписка периодической.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Date",
+            "allowedValues": [
+              "yyyy-mm-dd"
+            ],
+            "optional": false,
+            "field": "customers.subscriptions.price_expiration",
+            "description": "<p>Окончание действия цены (null, если отсутствует).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "customers.subscriptions.is_price_overridden",
+            "description": "<p>Используется ли переопределение цены.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "customers.subscriptions.is_closed",
+            "description": "<p>Является ли подписка закрытой.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "customers.balance",
+            "description": "<p>Баланс абонента.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "customers.payments_count",
+            "description": "<p>Количество всех подтвержденных транзакций.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "customers.tariffs_info",
+            "description": "<p>Список тарифных пакетов, подключенных у абонента.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "customers.tariffs_info.id",
+            "description": "<p>Идентификатор тарифа.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "customers.tariffs_info.ext_id",
+            "description": "<p>Идентификатор тарифа в биллинговой системе провайдера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "customers.vtariffs_info",
+            "description": "<p>Список виртуальных тарифных пакетов, подключенных у абонента.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "customers.vtariffs_info.id",
+            "description": "<p>Идентификатор тарифа.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "customers.vtariffs_info.ext_id",
+            "description": "<p>Идентификатор тарифа в биллинговой системе провайдера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number[]",
+            "optional": false,
+            "field": "customers.tariffs",
+            "description": "<p>Deprecated. Список идентификаторов тарифных пакетов, подключенных у абонента.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "error_message",
+            "description": "<p>Текст ошибки. Пустой, если error = 0.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Тариф не найден.</p>"
           }
         ]
       }

@@ -23920,6 +23920,20 @@ define({ "api": [
           {
             "group": "Ответ",
             "type": "Number",
+            "optional": false,
+            "field": "actions.option_id",
+            "description": "<p>Идентификатор опции-подписки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "actions.tariff_id",
+            "description": "<p>Идентификатор тарифа, который будет подключен данной опцией.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
             "allowedValues": [
               "0",
               "1"

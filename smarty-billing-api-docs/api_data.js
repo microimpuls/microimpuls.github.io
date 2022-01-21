@@ -1485,6 +1485,24 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "Number",
+            "size": "0-100",
+            "optional": true,
+            "field": "limit",
+            "defaultValue": "100",
+            "description": "<p>Ограничение на количество операций на одну страницу выборки. Максимальное значение 100.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "size": "1..",
+            "optional": true,
+            "field": "page",
+            "defaultValue": "1",
+            "description": "<p>Номер страницы выборки.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
             "optional": false,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
@@ -3200,6 +3218,24 @@ define({ "api": [
             "optional": true,
             "field": "tariff_id",
             "description": "<p>Идентификатор тарифного пакета.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "size": "0-100",
+            "optional": true,
+            "field": "limit",
+            "defaultValue": "100",
+            "description": "<p>Ограничение на количество операций на одну страницу выборки. Максимальное значение 100.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "size": "1..",
+            "optional": true,
+            "field": "page",
+            "defaultValue": "1",
+            "description": "<p>Номер страницы выборки.</p>"
           },
           {
             "group": "Parameter",

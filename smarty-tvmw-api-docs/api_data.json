@@ -24291,6 +24291,34 @@
           },
           {
             "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "seasons",
+            "description": "<p>Список сезонов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "seasons.id",
+            "description": "<p>Идентификатор сезона.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "seasons.name",
+            "description": "<p>Название сезона.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "seasons.number",
+            "description": "<p>Порядоковый номер сезона.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "video_provider_id",
@@ -24348,6 +24376,365 @@
       }
     },
     "version": "1.40.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Video"
+  },
+  {
+    "type": "get",
+    "url": "/video/episode/detail/",
+    "title": "VideoEpisodeDetail: Информация о серии",
+    "name": "VideoEpisodeDetail",
+    "group": "Video",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "episode_id",
+            "description": "<p>Идентификатор серии.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Идентификатор серии.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "description",
+            "description": "<p>Описание.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "duration",
+            "description": "<p>Длительность серии в минутах (для отображения).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "preview_url",
+            "description": "<p>Превью-изображение.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "video_id",
+            "description": "<p>Идентификатор видео.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "files",
+            "description": "<p>Список ассетов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "files.id",
+            "description": "<p>Идентификатор ассета.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "files.promo_image",
+            "description": "<p>URL-адрес промо-изображения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "files.name",
+            "description": "<p>Название ассета.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "files.duration",
+            "description": "<p>Длительность в секундах.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "files.ext_id",
+            "description": "<p>Внешний ID ассета.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "files.quality",
+            "description": "<p>Качество ассета. 0 - Не указано. 1 - SD. 2 - HD. 3 - FHD. 4 - UHD. 5 - 2K. 6 - 4K. 7 - 8K. 10 - 240p. 11 - 320p. 12 - 480p. 13 - 576p. 14 - 720p. 15 - 1080p.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Серия не найдена.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "Video"
+  },
+  {
+    "type": "get",
+    "url": "/video/episode/list/",
+    "title": "VideoEpisodeList:  Cписок серий для сезона сериала",
+    "name": "VideoEpisodeList",
+    "group": "Video",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "season_id",
+            "description": "<p>Идентификатор сезона.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "episodes",
+            "description": "<p>Список серий.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "episodes.id",
+            "description": "<p>Идентификатор серии.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "episodes.description",
+            "description": "<p>Описание.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "episodes.duration",
+            "description": "<p>Длительность серии в минутах (для отображения).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "episodes.preview_url",
+            "description": "<p>Превью-изображение.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "episodes.video_id",
+            "description": "<p>Идентификатор видео.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "episodes.files",
+            "description": "<p>Список ассетов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "episodes.files.id",
+            "description": "<p>Идентификатор ассета.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "episodes.files.promo_image",
+            "description": "<p>URL-адрес промо-изображения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "episodes.files.name",
+            "description": "<p>Название ассета.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "episodes.files.duration",
+            "description": "<p>Длительность в секундах.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "episodes.files.ext_id",
+            "description": "<p>Внешний ID ассета.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "episodes.files.quality",
+            "description": "<p>Качество ассета. 0 - Не указано. 1 - SD. 2 - HD. 3 - FHD. 4 - UHD. 5 - 2K. 6 - 4K. 7 - 8K. 10 - 240p. 11 - 320p. 12 - 480p. 13 - 576p. 14 - 720p. 15 - 1080p.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Сезон не найден.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
     "filename": "../../../tvmiddleware/api.py",
     "groupTitle": "Video"
   },

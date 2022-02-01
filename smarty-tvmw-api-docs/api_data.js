@@ -15051,7 +15051,7 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "Number",
-            "optional": false,
+            "optional": true,
             "field": "portal_dashboard_id",
             "description": "<p>ID ленты.</p>"
           },

@@ -303,18 +303,6 @@
           },
           {
             "group": "Parameter",
-            "type": "String",
-            "allowedValues": [
-              "\"sms\"",
-              "\"call\""
-            ],
-            "optional": true,
-            "field": "phone_confirmation_type",
-            "defaultValue": "пустое",
-            "description": "<p>Тип подтверждения номера телефона.</p>"
-          },
-          {
-            "group": "Parameter",
             "type": "Number",
             "optional": true,
             "field": "auto_activation_period",
@@ -1552,6 +1540,13 @@
             "group": "Ответ",
             "type": "Number",
             "optional": false,
+            "field": "count",
+            "description": "<p>Общее количество актеров.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
             "field": "error",
             "description": "<p>Код ошибки.</p>"
           }
@@ -1713,6 +1708,13 @@
             "optional": false,
             "field": "actors.birthdate",
             "description": "<p>Дата рождения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "count",
+            "description": "<p>Общее количество актеров.</p>"
           },
           {
             "group": "Ответ",
@@ -2567,6 +2569,14 @@
             "field": "city",
             "defaultValue": "пустое",
             "description": "<p>Идентификатор города, для которого нужно вернуть погоду.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "ext_city_id",
+            "defaultValue": "пустое",
+            "description": "<p>Идентификатор города в сервисе прогноза погоды.</p>"
           },
           {
             "group": "Parameter",
@@ -8996,6 +9006,17 @@
             "optional": false,
             "field": "tariffs.is_virtual",
             "description": "<p>Является ли тариф виртуальным.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "tariffs.available_to_unsubscribe",
+            "description": "<p>Доступен ли тариф для отключения через TVMW API.</p>"
           }
         ]
       }
@@ -9481,6 +9502,12 @@
             "optional": false,
             "field": "4",
             "description": "<p>Неправильно настроен внутренний api.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "5",
+            "description": "<p>Один из переданных тарифов недоступен для отключения через TVMW API.</p>"
           },
           {
             "group": "Коды ошибок error",

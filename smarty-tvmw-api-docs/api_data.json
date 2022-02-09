@@ -1080,6 +1080,24 @@
               "1"
             ],
             "optional": false,
+            "field": "command.user_confirmation",
+            "description": "<p>Флаг, показывающий, необходимо ли запрашивать подтверждение пользователя.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "command.accompanying_text_to_command",
+            "description": "<p>Сопроводительное сообщение к команде.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
             "field": "channel_list_changed",
             "description": "<p>Флаг, означающий были ли изменения списка телеканалов для этого аккаунта. Необходимо использовать для обновления списка каналов только в том случае, если в нем были изменения.</p>"
           },

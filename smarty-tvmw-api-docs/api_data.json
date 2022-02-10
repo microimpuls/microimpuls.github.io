@@ -14169,6 +14169,14 @@
           },
           {
             "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "template",
+            "defaultValue": "пустое",
+            "description": "<p>Имя шаблона (если есть поддержка шлюзом).</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Number",
             "optional": false,
             "field": "amount",

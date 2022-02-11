@@ -15019,6 +15019,13 @@ define({ "api": [
             "group": "Ответ",
             "type": "String",
             "optional": false,
+            "field": "selections.program_begin_time",
+            "description": "<p>Время начала передачи в Unix Timestamp (UTC+0)</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
             "field": "selections.channel_id",
             "description": "<p>Идентификатор канала передачи.</p>"
           },

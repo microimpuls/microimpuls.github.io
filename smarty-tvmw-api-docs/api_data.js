@@ -24508,6 +24508,13 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "name",
+            "description": "<p>Название серии.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "description",
@@ -24681,6 +24688,13 @@ define({ "api": [
             "optional": false,
             "field": "episodes",
             "description": "<p>Список серий.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "episodes.name",
+            "description": "<p>Название серии.</p>"
           },
           {
             "group": "Ответ",

@@ -467,6 +467,13 @@
             "optional": false,
             "field": "confirmation_phone",
             "description": "<p>Номер телефона, на который должен осуществить звонок абонент для подтверждения своего номера телефона.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "confirmation_phone_qrcode_url",
+            "description": "<p>URL QR-кода с номером телефона, на который должен осуществить звонок абонент для подтверждения своего номера телефона..</p>"
           }
         ]
       }

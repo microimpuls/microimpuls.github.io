@@ -393,6 +393,18 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "generate_confirmation_phone_qrcode",
+            "defaultValue": "0",
+            "description": "<p>Генерировать или нет, QR-код с номером телефонa, на который должен осуществить звонок абонент для подтверждения своего номера телефона.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
             "optional": false,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
@@ -473,7 +485,7 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "confirmation_phone_qrcode_url",
-            "description": "<p>URL QR-кода с номером телефона, на который должен осуществить звонок абонент для подтверждения своего номера телефона..</p>"
+            "description": "<p>URL QR-кода с номером телефона, на который должен осуществить звонок абонент для подтверждения своего номера телефона.</p>"
           }
         ]
       }

@@ -5654,6 +5654,18 @@
           {
             "group": "Parameter",
             "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "available_to_unsubscribe",
+            "defaultValue": "1",
+            "description": "<p>Доступен для отключения через TVMW API.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
             "optional": false,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
@@ -6126,6 +6138,18 @@
             "optional": true,
             "field": "used_for_radio_list",
             "description": "<p>Используется для выборки списка радио.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "available_to_unsubscribe",
+            "defaultValue": "1",
+            "description": "<p>Доступен для отключения через TVMW API.</p>"
           },
           {
             "group": "Parameter",

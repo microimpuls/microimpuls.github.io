@@ -3545,6 +3545,13 @@
             "group": "Parameter",
             "type": "String",
             "optional": true,
+            "field": "episode_id",
+            "description": "<p>ID серии, для которого создается ассет.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
             "field": "name_lang1",
             "description": "<p>Название.</p>"
           },

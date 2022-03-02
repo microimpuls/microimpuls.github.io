@@ -2762,6 +2762,30 @@
           {
             "group": "Parameter",
             "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "send_sms_messages",
+            "defaultValue": "1",
+            "description": "<p>Отправлять уведомления через sms.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "send_email_messages",
+            "defaultValue": "1",
+            "description": "<p>Отправлять уведомления через email.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
             "optional": false,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
@@ -3927,6 +3951,28 @@
             "field": "bank_account_owner_name",
             "defaultValue": "пустое",
             "description": "<p>Имя владельца банковского аккаунта абонента.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "send_sms_messages",
+            "description": "<p>Отправлять уведомления через sms.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "send_email_messages",
+            "description": "<p>Отправлять уведомления через email.</p>"
           },
           {
             "group": "Parameter",

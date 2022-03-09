@@ -5949,13 +5949,22 @@
     "groupTitle": "Channel"
   },
   {
-    "type": "get",
+    "type": "post",
     "url": "/channel/list/programs/",
     "title": "ChannelListPrograms: список программ для телеканалов в определённое время",
     "name": "ChannelListPrograms",
     "group": "Channel",
     "parameter": {
       "fields": {
+        "POST": [
+          {
+            "group": "POST",
+            "type": "Number[]",
+            "optional": true,
+            "field": "channel_id",
+            "description": "<p>Список каналов, для которых необходимо получить список программ. Если не передано, то возвращаются все каналы.</p>"
+          }
+        ],
         "Parameter": [
           {
             "group": "Parameter",

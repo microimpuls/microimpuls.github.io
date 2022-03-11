@@ -1546,7 +1546,7 @@ define({ "api": [
             "type": "Number",
             "optional": true,
             "field": "sort_after_eid",
-            "description": "<p>Поместить серию в сортировке после указанной. Если не указано, то помещается в конец.</p>"
+            "description": "<p>ID серии. Поместить серию в сортировке после указанной. Если не указано, то помещается в конец.</p>"
           },
           {
             "group": "Parameter",
@@ -1825,7 +1825,7 @@ define({ "api": [
             "type": "Number",
             "optional": true,
             "field": "sort_after_eid",
-            "description": "<p>Поместить серию в сортировке после указанной.</p>"
+            "description": "<p>ID серии. Поместить серию в сортировке после указанной.</p>"
           },
           {
             "group": "Parameter",
@@ -2626,7 +2626,7 @@ define({ "api": [
             "type": "Number",
             "optional": true,
             "field": "sort_after_sid",
-            "description": "<p>Поместить сезон в сортировке после указанного. Если не указано, то помещается в конец.</p>"
+            "description": "<p>ID сезона. Поместить сезон в сортировке после указанного. Если не указано, то помещается в конец.</p>"
           },
           {
             "group": "Parameter",
@@ -2856,7 +2856,7 @@ define({ "api": [
             "type": "Number",
             "optional": true,
             "field": "sort_after_sid",
-            "description": "<p>Поместить сезон в сортировке после указанного.</p>"
+            "description": "<p>ID сезона. Поместить сезон в сортировке после указанного.</p>"
           },
           {
             "group": "Parameter",

@@ -2778,6 +2778,14 @@ define({ "api": [
           },
           {
             "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "phone_number",
+            "defaultValue": "пустой",
+            "description": "<p>Номер телефона абонента.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
             "optional": true,
             "field": "password",

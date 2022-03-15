@@ -5964,9 +5964,9 @@ define({ "api": [
     "group": "Channel",
     "parameter": {
       "fields": {
-        "POST": [
+        "JSON": [
           {
-            "group": "POST",
+            "group": "JSON",
             "type": "Number[]",
             "optional": true,
             "field": "channel_id",

@@ -5964,9 +5964,9 @@
     "group": "Channel",
     "parameter": {
       "fields": {
-        "JSON": [
+        "POST": [
           {
-            "group": "JSON",
+            "group": "POST",
             "type": "Number[]",
             "optional": true,
             "field": "channel_id",

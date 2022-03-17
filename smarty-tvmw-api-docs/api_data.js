@@ -5969,7 +5969,7 @@ define({ "api": [
             "group": "POST",
             "type": "Number[]",
             "optional": true,
-            "field": "channel_id",
+            "field": "channel_ids",
             "description": "<p>Список каналов, для которых необходимо получить список программ. Если не передано, то возвращаются все каналы.</p>"
           }
         ],

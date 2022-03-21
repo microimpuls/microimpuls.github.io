@@ -1782,7 +1782,7 @@ define({ "api": [
   {
     "type": "get",
     "url": "/ads/list/",
-    "title": "AdsList: список рекламных блоков для канала",
+    "title": "AdsList: список рекламных блоков для канала или фильма",
     "name": "AdsList",
     "group": "Ads",
     "parameter": {
@@ -1791,8 +1791,9 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "channel_id",
+            "defaultValue": "пустое",
             "description": "<p>ID канала, для которого запрашиваются рекламные блоки</p>"
           },
           {
@@ -1802,6 +1803,14 @@ define({ "api": [
             "field": "mediahills_id",
             "defaultValue": "пустое",
             "description": "<p>MediaHills ID канала, для которого запрашиваются рекламные блоки</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "video_id",
+            "defaultValue": "пустое",
+            "description": "<p>ID фильма, для которого запрашиваются рекламные блоки</p>"
           },
           {
             "group": "Parameter",
@@ -1979,7 +1988,7 @@ define({ "api": [
             "group": "Коды ошибок error",
             "optional": false,
             "field": "1",
-            "description": "<p>Не передан channel_id.</p>"
+            "description": "<p>Не передан channel_id или video_id .</p>"
           },
           {
             "group": "Коды ошибок error",
@@ -2004,6 +2013,12 @@ define({ "api": [
             "optional": false,
             "field": "5",
             "description": "<p>Неправильный формат параметра timezone.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "6",
+            "description": "<p>Одновременно переданы channel_id и video_id.</p>"
           }
         ]
       }
@@ -24442,6 +24457,17 @@ define({ "api": [
             "optional": false,
             "field": "ext_id",
             "description": "<p>Внешний идентификатор.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": false,
+            "field": "ads_available",
+            "description": "<p>Флаг указывает что для фильма на данный момент включена реклама.</p>"
           },
           {
             "group": "Ответ",

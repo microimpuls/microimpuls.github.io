@@ -1484,6 +1484,14 @@
           },
           {
             "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "abonement_regexp",
+            "defaultValue": "пустое",
+            "description": "<p>Регулярное выражение для фильтрации аккаунтов.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Number",
             "size": "0-100",
             "optional": true,
@@ -3242,6 +3250,14 @@
             "optional": true,
             "field": "tariff_id",
             "description": "<p>Идентификатор тарифного пакета.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "abonement_regexp",
+            "defaultValue": "пустое",
+            "description": "<p>Регулярное выражение для фильтрации аккаунтов.</p>"
           },
           {
             "group": "Parameter",

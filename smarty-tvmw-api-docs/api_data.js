@@ -2993,13 +2993,6 @@ define({ "api": [
           },
           {
             "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "tariffs_list",
-            "description": "<p>Список тарифных пакетов, подключенных у абонента и аккаунта (через запятую).</p>"
-          },
-          {
-            "group": "Ответ",
             "type": "Number",
             "allowedValues": [
               "0",
@@ -3382,13 +3375,6 @@ define({ "api": [
             "optional": false,
             "field": "template",
             "description": "<p>Шаблон в настройках аккаунта.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "tariffs_list",
-            "description": "<p>Список тарифных пакетов, подключенных у абонента и аккаунта (через запятую).</p>"
           },
           {
             "group": "Ответ",

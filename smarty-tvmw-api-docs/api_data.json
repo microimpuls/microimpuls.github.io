@@ -19399,7 +19399,7 @@
             ],
             "optional": false,
             "field": "type",
-            "description": "<p>Тип промо. 0 - Добавление суммы к балансу. 1 - Активация скидки.</p>"
+            "description": "<p>Тип промо (deprecated). 0 - Добавление суммы к балансу. 1 - Активация скидки.</p>"
           },
           {
             "group": "Ответ",
@@ -19414,6 +19414,13 @@
             "optional": false,
             "field": "discount",
             "description": "<p>Размер скидки в процентах.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "free_tariffs",
+            "description": "<p>Список id бесплатных тарифных пакетов (через запятую).</p>"
           }
         ]
       }
@@ -19558,7 +19565,7 @@
             ],
             "optional": false,
             "field": "promos.type",
-            "description": "<p>Тип промо. 0 - Добавление суммы к балансу. 1 - Активация скидки.</p>"
+            "description": "<p>Тип промо (deprecated). 0 - Добавление суммы к балансу. 1 - Активация скидки.</p>"
           },
           {
             "group": "Ответ",
@@ -19573,6 +19580,13 @@
             "optional": false,
             "field": "promos.discount",
             "description": "<p>Размер скидки в процентах.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "free_tariffs",
+            "description": "<p>Список id бесплатных тарифных пакетов (через запятую).</p>"
           },
           {
             "group": "Ответ",

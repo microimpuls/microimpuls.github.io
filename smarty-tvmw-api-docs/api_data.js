@@ -8693,6 +8693,13 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.is_periodical",
+            "description": "<p>Является периодической.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Object[]",
             "optional": false,
             "field": "subscriptions",
@@ -9078,6 +9085,20 @@ define({ "api": [
             "optional": false,
             "field": "tariffs.available_to_unsubscribe",
             "description": "<p>Доступен ли тариф для отключения через TVMW API.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.channels_count",
+            "description": "<p>Количество каналов в пакете, -1 если каналов нет.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.is_periodical",
+            "description": "<p>Является периодической.</p>"
           }
         ]
       }

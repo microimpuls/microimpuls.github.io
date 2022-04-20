@@ -8682,7 +8682,7 @@ define({ "api": [
             "type": "Number",
             "optional": false,
             "field": "tariffs.channels_count",
-            "description": "<p>Количество каналов в пакете, -1 если каналов нет.</p>"
+            "description": "<p>Количество каналов в пакете, -1 если тариф не используется для выборки списка тарифов.</p>"
           },
           {
             "group": "Ответ",
@@ -9091,7 +9091,7 @@ define({ "api": [
             "type": "Number",
             "optional": false,
             "field": "tariffs.channels_count",
-            "description": "<p>Количество каналов в пакете, -1 если каналов нет.</p>"
+            "description": "<p>Количество каналов в пакете, -1 если тариф не используется для выборки списка тарифов.</p>"
           },
           {
             "group": "Ответ",
@@ -15600,7 +15600,7 @@ define({ "api": [
             "type": "Number",
             "optional": false,
             "field": "tariffs.channels_count",
-            "description": "<p>Количество каналов, доступных по тарифу.</p>"
+            "description": "<p>Количество каналов в пакете, -1 если тариф не используется для выборки списка тарифов.</p>"
           },
           {
             "group": "Ответ",

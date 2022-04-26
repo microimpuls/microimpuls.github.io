@@ -1814,6 +1814,14 @@
           },
           {
             "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "program_id",
+            "defaultValue": "пустое",
+            "description": "<p>ID передачи</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Object[]",
             "optional": true,
             "field": "ad_context",
@@ -1971,6 +1979,34 @@
             "optional": false,
             "field": "ads.movies.provider_options",
             "description": "<p>Дополнительные опции от провайдера.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "ads.movies.skipoffset",
+            "description": "<p>Через сколько времени можно пропустить креатив.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "ads.events",
+            "description": "<p>Список событий.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "ads.events.type",
+            "description": "<p>Тип события.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "ads.events.url",
+            "description": "<p>Url события.</p>"
           }
         ]
       }

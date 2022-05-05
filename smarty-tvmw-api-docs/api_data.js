@@ -1822,6 +1822,14 @@ define({ "api": [
           },
           {
             "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "movie_width",
+            "defaultValue": "пустое",
+            "description": "<p>Ширина ролика</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Object[]",
             "optional": true,
             "field": "ad_context",
@@ -1965,6 +1973,13 @@ define({ "api": [
             "optional": false,
             "field": "ads.movies.url",
             "description": "<p>Адрес ролика для воспроизведения.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "ads.movies.width",
+            "description": "<p>Ширина ролика.</p>"
           },
           {
             "group": "Ответ",

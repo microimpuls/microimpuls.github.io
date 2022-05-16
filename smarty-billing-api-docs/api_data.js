@@ -5124,15 +5124,22 @@ define({ "api": [
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": "account_id",
-            "description": "<p>Account ID.</p>"
+            "field": "id",
+            "description": "<p>PromoCode ID.</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
             "field": "code",
-            "description": "<p>Код промо.</p>"
+            "description": "<p>Код промо. Должен быть передан либо code, либо id.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "account_id",
+            "description": "<p>Account ID.</p>"
           },
           {
             "group": "Parameter",
@@ -5174,6 +5181,13 @@ define({ "api": [
             "optional": false,
             "field": "free_tariffs",
             "description": "<p>Список id бесплатных тарифных пакетов (через запятую).</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
           }
         ]
       }
@@ -5221,7 +5235,7 @@ define({ "api": [
             "group": "Коды ошибок error",
             "optional": false,
             "field": "6",
-            "description": "<p>Неизвестная ошибка. Неизвестная ошибка.</p>"
+            "description": "<p>Неизвестная ошибка.</p>"
           }
         ]
       }
@@ -5245,6 +5259,21 @@ define({ "api": [
             "optional": true,
             "field": "account_id",
             "description": "<p>Account ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "length",
+            "description": "<p>Длина кода.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "count",
+            "defaultValue": "1",
+            "description": "<p>Количество промо-кодов.</p>"
           },
           {
             "group": "Parameter",
@@ -5288,6 +5317,13 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "Number",
+            "optional": false,
+            "field": "discount",
+            "description": "<p>Размер скидки в процентах. Должен быть передан либо discount, либо другие типы промо.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
             "allowedValues": [
               "0",
               "1"
@@ -5308,6 +5344,20 @@ define({ "api": [
             "group": "Parameter",
             "type": "Number",
             "optional": false,
+            "field": "amount",
+            "description": "<p>Сумма пополнения баланса, если скидка не указана.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "free_tariffs",
+            "description": "<p>Список id бесплатных тарифных пакетов (через запятую), если скидка не указана.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
           },
@@ -5318,31 +5368,63 @@ define({ "api": [
             "field": "signature",
             "description": "<p>Подпись.</p>"
           }
-        ],
+        ]
+      }
+    },
+    "success": {
+      "fields": {
         "Ответ": [
           {
             "group": "Ответ",
             "type": "Number",
-            "optional": true,
-            "field": "discount",
-            "description": "<p>Размер скидки в процентах. Должен быть передан либо discount, либо другие типы промо.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": true,
-            "field": "amount",
-            "description": "<p>Сумма пополнения баланса, если скидка не указана.</p>"
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
-            "optional": true,
-            "field": "free_tariffs",
-            "description": "<p>Список id бесплатных тарифных пакетов (через запятую), если скидка не указана.</p>"
+            "optional": false,
+            "field": "error_message",
+            "description": "<p>Текст ошибки. Пустой, если error = 0.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": false,
+            "field": "error_fields",
+            "description": "<p>Словарь сообщений об ошибках.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "promo_codes",
+            "description": "<p>Список промо-кодов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "promo_codes.id",
+            "description": "<p>ID промо-кода.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "promo_codes.code",
+            "description": "<p>Код промо-кода.</p>"
           }
         ]
-      }
+      },
+      "examples": [
+        {
+          "title": "Пример ответа:",
+          "content": "{\n    \"error\": 0,\n    \"error_message\": \"\",\n    \"error_fields\": {},\n    \"promo_codes\": [\n        {\n            \"id\": 1,\n            \"code\": \"LDO899\"\n        },\n        {\n            \"id\": 2,\n            \"code\": \"EJ9Z53\"\n        }\n    ]            \n}",
+          "type": "json"
+        }
+      ]
     },
     "error": {
       "fields": {

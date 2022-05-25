@@ -17747,6 +17747,18 @@
           },
           {
             "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "consider_program_category",
+            "defaultValue": "1",
+            "description": "<p>Пропустить пустые категории</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
             "optional": true,
             "field": "authkey",

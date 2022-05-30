@@ -5305,33 +5305,9 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "Number",
-            "allowedValues": [
-              "0",
-              "1"
-            ],
-            "optional": true,
-            "field": "use_discount",
-            "defaultValue": "0",
-            "description": "<p>Использовать скидку.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
             "optional": false,
             "field": "discount",
             "description": "<p>Размер скидки в процентах. Должен быть передан либо discount, либо другие типы промо.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "allowedValues": [
-              "0",
-              "1"
-            ],
-            "optional": true,
-            "field": "link_discount_only_to_tariff_activation",
-            "defaultValue": "0",
-            "description": "<p>Привязать скидку только к активации тарифов.</p>"
           },
           {
             "group": "Parameter",

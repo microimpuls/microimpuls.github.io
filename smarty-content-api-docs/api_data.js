@@ -3520,6 +3520,160 @@ define({ "api": [
   },
   {
     "type": "post",
+    "url": "/video/file/modify/",
+    "title": "VideoFileModify: редактирование ассета фильма",
+    "name": "VideoFileModify",
+    "group": "Video",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>ID ассета фильма.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name",
+            "description": "<p>Название.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name_lang1",
+            "description": "<p>Название.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name_lang2",
+            "description": "<p>Название.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name_lang3",
+            "description": "<p>Название.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name_lang4",
+            "description": "<p>Название.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name_lang5",
+            "description": "<p>Название.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "is_trailer",
+            "description": "<p>Является трейлером.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "duration",
+            "description": "<p>Продолжительность.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "episode_id",
+            "description": "<p>ID серии, для которой создается ассет.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "signature",
+            "description": "<p>Подпись.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../content/api.py",
+    "groupTitle": "Video",
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "error_message",
+            "description": "<p>Текст ошибки. Пустой, если error = 0.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "20",
+            "description": "<p>Неправильно передан параметр.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "21",
+            "description": "<p>Ошибка при валидации данных.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "22",
+            "description": "<p>Ошибка при сохранении данных.</p>"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "post",
     "url": "/video/file/create/",
     "title": "VideofileCreate: создание ассета фильма",
     "name": "VideofileCreate",

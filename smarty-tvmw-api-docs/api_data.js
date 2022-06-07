@@ -2045,7 +2045,7 @@ define({ "api": [
             "group": "Коды ошибок error",
             "optional": false,
             "field": "2",
-            "description": "<p>Модуль Ads не подключен.</p>"
+            "description": "<p>Модуль Ads не подключен или отключена опция TVMIDDLEWARE_ADS_ENABLED.</p>"
           },
           {
             "group": "Коды ошибок error",
@@ -14760,6 +14760,13 @@ define({ "api": [
             "optional": false,
             "field": "portaldashboards.title",
             "description": "<p>Заголовок ленты.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Object",
+            "optional": false,
+            "field": "portaldashboards.attributes",
+            "description": "<p>Словарь атрибутов. Зависит от типа ленты.</p>"
           },
           {
             "group": "Ответ",

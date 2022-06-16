@@ -14813,6 +14813,119 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/portaldashboard/channel/list/",
+    "title": "PortalDashboardChannelList: список каналов",
+    "name": "PortalDashboardChannelList",
+    "group": "PortalDashboard",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "portal_dashboard_id",
+            "description": "<p>ID ленты.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey",
+            "description": "<p>Ключ сессии. Необязателен, если ключ присутствует в Cookies.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device",
+            "defaultValue": "пустое",
+            "description": "<p>Системное название типа устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "device_uid",
+            "defaultValue": "пустое",
+            "description": "<p>Уникальный идентификатор устройства.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "lang",
+            "defaultValue": "пустое",
+            "description": "<p>Язык, на котором необходимо вернуть переводимые поля. Должен совпадать со значением из параметра Smarty SMARTY_ADDITIONAL_LANGUAGES.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Object[]",
+            "optional": false,
+            "field": "channels",
+            "description": "<p>Список последних просмотренных аккаунтом каналов.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "channels.id",
+            "description": "<p>Идентификатор канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.name",
+            "description": "<p>Название канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "channels.icon",
+            "description": "<p>URL-адрес иконки канала.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Неизвестная ошибка.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "../../../tvmiddleware/api.py",
+    "groupTitle": "PortalDashboard"
+  },
+  {
+    "type": "get",
     "url": "/portaldashboard/list/",
     "title": "PortalDashboardList: список доступных лент и их типов для текущего устройства и шаблона",
     "name": "PortalDashboardList",

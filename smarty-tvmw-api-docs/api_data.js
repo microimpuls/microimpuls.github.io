@@ -15690,6 +15690,13 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "videos.description",
+            "description": "<p>Описание фильма.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "videos.provider",

@@ -3578,6 +3578,13 @@
           },
           {
             "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "filename",
+            "description": "<p>Название файла.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Number",
             "allowedValues": [
               "0",
@@ -3600,6 +3607,29 @@
             "optional": true,
             "field": "episode_id",
             "description": "<p>ID серии, для которой создается ассет.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "11",
+              "12",
+              "13"
+            ],
+            "optional": true,
+            "field": "quality",
+            "description": "<p>Качество. 0 - Не указывать качество. 1 - SD. 2 - HD. 3 - FHD. 4 - UHD. 5 - 2K. 6 - 4K. 7 - 8K. 8 - 240p. 9 - 320p. 10 - 480p. 11 - 576p. 12 - 720p. 13 - 1080p.</p>"
           },
           {
             "group": "Parameter",
@@ -3775,6 +3805,29 @@
             "optional": true,
             "field": "sort_after_vfid",
             "description": "<p>Поместить ассет в сортировке после указанного. Если не указано, то помещается в конец.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "11",
+              "12",
+              "13"
+            ],
+            "optional": true,
+            "field": "quality",
+            "description": "<p>Качество. 0 - Не указывать качество. 1 - SD. 2 - HD. 3 - FHD. 4 - UHD. 5 - 2K. 6 - 4K. 7 - 8K. 8 - 240p. 9 - 320p. 10 - 480p. 11 - 576p. 12 - 720p. 13 - 1080p.</p>"
           },
           {
             "group": "Parameter",

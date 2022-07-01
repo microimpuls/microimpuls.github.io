@@ -18014,7 +18014,7 @@ define({ "api": [
             "optional": true,
             "field": "consider_program_category",
             "defaultValue": "1",
-            "description": "<p>Пропустить пустые категории</p>"
+            "description": "<p>Не фильтровать пустые категории</p>"
           },
           {
             "group": "Parameter",

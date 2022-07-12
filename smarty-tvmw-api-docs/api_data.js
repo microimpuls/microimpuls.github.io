@@ -16418,12 +16418,6 @@ define({ "api": [
             "optional": false,
             "field": "0",
             "description": "<p>Нет ошибки.</p>"
-          },
-          {
-            "group": "Коды ошибок error",
-            "optional": false,
-            "field": "1",
-            "description": "<p>Client ID не найден или не верный api_key.</p>"
           }
         ]
       }
@@ -17045,12 +17039,6 @@ define({ "api": [
             "optional": false,
             "field": "0",
             "description": "<p>Нет ошибки.</p>"
-          },
-          {
-            "group": "Коды ошибок error",
-            "optional": false,
-            "field": "1",
-            "description": "<p>Client ID не найден.</p>"
           },
           {
             "group": "Коды ошибок error",

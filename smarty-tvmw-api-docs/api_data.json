@@ -15459,6 +15459,13 @@
           },
           {
             "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "programs.channel_icon_url",
+            "description": "<p>URL-адрес иконки канала.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "error",

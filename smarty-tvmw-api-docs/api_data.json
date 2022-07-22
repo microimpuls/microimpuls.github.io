@@ -18925,6 +18925,13 @@
           },
           {
             "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "pid_from",
+            "description": "<p>Идентификатор передачи, дата начала которой будет считаться, как дата начала диапазона выборки.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
             "optional": true,
             "field": "authkey",
@@ -19109,6 +19116,12 @@
             "optional": false,
             "field": "0",
             "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Передачи, соответствующей pid_from, не существует.</p>"
           }
         ]
       }

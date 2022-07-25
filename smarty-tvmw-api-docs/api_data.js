@@ -8639,7 +8639,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "customer/billing_details_notify/",
+    "url": "/customer/billing_details_notify/",
     "title": "BillingDetailsNotify: Отправка пользователю детализации финансовых операций",
     "group": "Customer",
     "name": "BillingDetailsNotify",
@@ -8727,7 +8727,13 @@ define({ "api": [
             "group": "Коды ошибок error",
             "optional": false,
             "field": "1",
-            "description": "<p>Ошибка.</p>"
+            "description": "<p>Неизвестная ошибка.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Данный email уже используется другим пользователем.</p>"
           }
         ]
       }
@@ -15932,6 +15938,13 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "Number",
+            "optional": true,
+            "field": "channel_sort_id",
+            "description": "<p>Идентификатор сортировки, которую необходимо использовать. Если не передан, то используется стандартная сортировка.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
             "optional": false,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
@@ -16025,6 +16038,12 @@ define({ "api": [
             "optional": false,
             "field": "1",
             "description": "<p>Параметр tariff_id не передан или задан некорректно.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Параметр channel_sort_id задан некорректно.</p>"
           }
         ]
       }

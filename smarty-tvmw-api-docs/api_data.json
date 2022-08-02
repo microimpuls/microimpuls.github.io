@@ -484,6 +484,13 @@
           },
           {
             "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "parent_code",
+            "description": "<p>ПИН-код аккаунта.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Number",
             "allowedValues": [
               "0",

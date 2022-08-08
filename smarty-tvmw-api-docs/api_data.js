@@ -4846,7 +4846,7 @@ define({ "api": [
             "type": "Number",
             "optional": false,
             "field": "tariff_id",
-            "description": "<p>Тариф, по которому производится по.</p>"
+            "description": "<p>Тариф, по которому производится проверка доступности действия над каналом.</p>"
           },
           {
             "group": "Parameter",

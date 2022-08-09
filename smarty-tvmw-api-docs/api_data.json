@@ -15114,9 +15114,8 @@
           {
             "group": "Parameter",
             "type": "String",
-            "optional": true,
+            "optional": false,
             "field": "template",
-            "defaultValue": "пустой",
             "description": "<p>Название шаблона UI, которое используется в данный момент на устройстве.</p>"
           },
           {
@@ -15229,6 +15228,12 @@
             "optional": false,
             "field": "0",
             "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Шаблон не найден.</p>"
           }
         ]
       }

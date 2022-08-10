@@ -3009,6 +3009,18 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "try_login_by_phone",
+            "defaultValue": "0",
+            "description": "<p>Если передано значение 1, то будет произведена попытка авторизации через телефон - кодом подтверждения СМС или звонком, в случае, если невозможна авторизация другими способами.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
             "optional": false,
             "field": "client_id",
             "description": "<p>Client ID.</p>"
@@ -3042,6 +3054,14 @@ define({ "api": [
             "field": "lang",
             "defaultValue": "пустое",
             "description": "<p>Язык, который будет использован при формировании сообщений для абонента.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "validation_code",
+            "defaultValue": "пустое",
+            "description": "<p>Код или номер валидации.</p>"
           }
         ]
       }
@@ -3227,6 +3247,13 @@ define({ "api": [
             "optional": false,
             "field": "error",
             "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "confirmation_phone",
+            "description": "<p>Номер телефона для подтверждения (только код 19).</p>"
           }
         ]
       }
@@ -3329,6 +3356,30 @@ define({ "api": [
             "optional": false,
             "field": "16",
             "description": "<p>Превышено число сессий аккаунта для данной группы устройств.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "17",
+            "description": "<p>Код подтверждения выслан.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "18",
+            "description": "<p>Некорректный код подтверждения.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "19",
+            "description": "<p>Было отправлено подтверждение номера телефона с помощью звонка.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "20",
+            "description": "<p>Ожидается подтверждение номера телефона с помощью звонка.</p>"
           }
         ]
       }

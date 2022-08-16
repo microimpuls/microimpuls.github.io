@@ -394,6 +394,41 @@
           },
           {
             "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name_lang1",
+            "description": "<p>Локализованное название (язык 1).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name_lang2",
+            "description": "<p>Локализованное название (язык 2).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name_lang3",
+            "description": "<p>Локализованное название (язык 3).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name_lang4",
+            "description": "<p>Локализованное название (язык 4).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name_lang5",
+            "description": "<p>Локализованное название (язык 5).</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Number",
             "optional": true,
             "field": "category",
@@ -706,6 +741,41 @@
             "optional": true,
             "field": "name",
             "description": "<p>Название.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name_lang1",
+            "description": "<p>Локализованное название (язык 1).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name_lang2",
+            "description": "<p>Локализованное название (язык 2).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name_lang3",
+            "description": "<p>Локализованное название (язык 3).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name_lang4",
+            "description": "<p>Локализованное название (язык 4).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name_lang5",
+            "description": "<p>Локализованное название (язык 5).</p>"
           },
           {
             "group": "Parameter",
@@ -1981,6 +2051,41 @@
             "optional": true,
             "field": "description",
             "description": "<p>Описание.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "description_lang1",
+            "description": "<p>Локализованное описание (язык 1).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "description_lang2",
+            "description": "<p>Локализованное описание (язык 2).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "description_lang3",
+            "description": "<p>Локализованное описание (язык 3).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "description_lang4",
+            "description": "<p>Локализованное описание (язык 4).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "description_lang5",
+            "description": "<p>Локализованное описание (язык 5).</p>"
           },
           {
             "group": "Parameter",

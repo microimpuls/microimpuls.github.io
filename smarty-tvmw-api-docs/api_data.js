@@ -21372,6 +21372,27 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.program.channel_id",
+            "description": "<p>Идентификатор канала передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.program.channel_name",
+            "description": "<p>Название канала передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.program.channel_icon_url",
+            "description": "<p>URL-адрес иконки канала передачи.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Object",
             "optional": true,
             "field": "contents.video",
@@ -22296,6 +22317,27 @@ define({ "api": [
             "optional": false,
             "field": "contents.program.blocked",
             "description": "<p>Заблокированна ли передача.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "contents.program.channel_id",
+            "description": "<p>Идентификатор канала передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.program.channel_name",
+            "description": "<p>Название канала передачи.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.program.channel_icon_url",
+            "description": "<p>URL-адрес иконки канала передачи.</p>"
           },
           {
             "group": "Ответ",

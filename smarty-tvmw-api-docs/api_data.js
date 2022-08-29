@@ -21362,6 +21362,13 @@ define({ "api": [
           },
           {
             "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.channel.icon_url",
+            "description": "<p>URL-адрес иконки канала.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Object",
             "optional": true,
             "field": "contents.program",
@@ -22307,6 +22314,13 @@ define({ "api": [
             "optional": false,
             "field": "contents.channel.name",
             "description": "<p>Название канала.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "contents.channel.icon_url",
+            "description": "<p>URL-адрес иконки канала.</p>"
           },
           {
             "group": "Ответ",

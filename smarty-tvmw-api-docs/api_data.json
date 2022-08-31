@@ -2895,6 +2895,13 @@
           },
           {
             "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "city",
+            "description": "<p>Название города.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Number",
             "optional": false,
             "field": "error",

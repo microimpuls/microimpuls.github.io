@@ -21371,7 +21371,7 @@
             "group": "Ответ",
             "type": "String",
             "optional": false,
-            "field": "contents.channel.icon_url",
+            "field": "contents.channel.icon",
             "description": "<p>URL-адрес иконки канала.</p>"
           },
           {
@@ -22326,7 +22326,7 @@
             "group": "Ответ",
             "type": "String",
             "optional": false,
-            "field": "contents.channel.icon_url",
+            "field": "contents.channel.icon",
             "description": "<p>URL-адрес иконки канала.</p>"
           },
           {

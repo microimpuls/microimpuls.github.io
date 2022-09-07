@@ -3825,6 +3825,25 @@ define({ "api": [
           },
           {
             "group": "Parameter",
+            "type": "Number",
+            "allowedValues": [
+              "0",
+              "1"
+            ],
+            "optional": true,
+            "field": "load_meta",
+            "defaultValue": "0",
+            "description": "<p>Флаг для обновления меты (кинопоиск).</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "kinopoisk_id",
+            "description": "<p>ID фильма в системе кинопоиска.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
             "optional": false,
             "field": "name",
@@ -4063,7 +4082,7 @@ define({ "api": [
             "optional": true,
             "field": "duration",
             "defaultValue": "0",
-            "description": "<p>Длительность в минутах.</p> <h1>@apiParam {Number} [kinopoisk_id] ID фильма в системе кинопоиска.</h1>"
+            "description": "<p>Длительность в минутах.</p>"
           },
           {
             "group": "Parameter",
@@ -4082,32 +4101,39 @@ define({ "api": [
         ]
       }
     },
-    "version": "1.40.0",
-    "filename": "../../../content/api.py",
-    "groupTitle": "Video",
-    "success": {
-      "fields": {
-        "Ответ": [
-          {
-            "group": "Ответ",
-            "type": "Number",
-            "optional": false,
-            "field": "error",
-            "description": "<p>Код ошибки.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "error_message",
-            "description": "<p>Текст ошибки. Пустой, если error = 0.</p>"
-          }
-        ]
-      }
-    },
     "error": {
       "fields": {
         "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Ошибка подключения.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Загрузка заблокирована Кинопоиском.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "3",
+            "description": "<p>Неверный идентификатор.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "4",
+            "description": "<p>Ошибка обработки данных.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "5",
+            "description": "<p>Ошибка загрузки.</p>"
+          },
           {
             "group": "Коды ошибок error",
             "optional": false,
@@ -4131,6 +4157,29 @@ define({ "api": [
             "optional": false,
             "field": "22",
             "description": "<p>Ошибка при сохранении данных.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../content/api.py",
+    "groupTitle": "Video",
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "error_message",
+            "description": "<p>Текст ошибки. Пустой, если error = 0.</p>"
           }
         ]
       }

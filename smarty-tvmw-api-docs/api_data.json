@@ -20413,6 +20413,13 @@
           },
           {
             "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "providers.movie_label_icon",
+            "description": "<p>URL изображения для маркировки обложек фильмов.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Number",
             "allowedValues": [
               "1",

@@ -98,9 +98,9 @@ define({ "api": [
           {
             "group": "Parameter",
             "type": "String",
-            "optional": false,
+            "optional": true,
             "field": "name",
-            "description": "<p>Полное имя.</p>"
+            "description": "<p>Полное имя. Необязателен, если присутствует movie_db_id.</p>"
           },
           {
             "group": "Parameter",
@@ -296,7 +296,7 @@ define({ "api": [
             "type": "Number",
             "optional": true,
             "field": "movie_db_id",
-            "description": "<p>ID актёра в системе провайдера фильмов (кинопоиск или Cinemate).</p>"
+            "description": "<p>ID актёра в системе провайдера фильмов (кинопоиск, или tmdb, или Cinemate).</p>"
           },
           {
             "group": "Parameter",
@@ -342,12 +342,39 @@ define({ "api": [
         ]
       }
     },
-    "version": "1.40.0",
-    "filename": "../../../content/api.py",
-    "groupTitle": "Actor",
     "error": {
       "fields": {
         "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Ошибка подключения.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Загрузка заблокирована.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "3",
+            "description": "<p>Неверный идентификатор.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "4",
+            "description": "<p>Ошибка обработки данных.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "5",
+            "description": "<p>Ошибка загрузки.</p>"
+          },
           {
             "group": "Коды ошибок error",
             "optional": false,
@@ -374,7 +401,10 @@ define({ "api": [
           }
         ]
       }
-    }
+    },
+    "version": "1.40.0",
+    "filename": "../../../content/api.py",
+    "groupTitle": "Actor"
   },
   {
     "type": "post",

@@ -296,7 +296,7 @@
             "type": "Number",
             "optional": true,
             "field": "movie_db_id",
-            "description": "<p>ID актёра в системе провайдера фильмов (кинопоиск, или tmdb, или Cinemate).</p>"
+            "description": "<p>ID актёра в системе провайдера фильмов (кинопоиск, или tmdb, или Cinemate). При передаче данного параметра будет выполнена автоматическая загрузка данных.</p>"
           },
           {
             "group": "Parameter",

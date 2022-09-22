@@ -23690,6 +23690,13 @@ define({ "api": [
           {
             "group": "Ответ",
             "type": "Number",
+            "optional": false,
+            "field": "position_season_id",
+            "description": "<p>Идентификатор сезона, в котором содержится последний просмотренный ассет.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
             "allowedValues": [
               "1",
               "2",
@@ -25098,6 +25105,13 @@ define({ "api": [
             "optional": false,
             "field": "position_asset_id",
             "description": "<p>Идентификатор ассета/серии, для которого сохранена позиция.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "position_season_id",
+            "description": "<p>Идентификатор сезона, в котором содержится последний просмотренный ассет.</p>"
           },
           {
             "group": "Ответ",

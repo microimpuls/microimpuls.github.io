@@ -8913,6 +8913,12 @@ define({ "api": [
             "optional": false,
             "field": "2",
             "description": "<p>Данный email уже используется другим пользователем.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "3",
+            "description": "<p>Нет записей за указанный период</p>"
           }
         ]
       }

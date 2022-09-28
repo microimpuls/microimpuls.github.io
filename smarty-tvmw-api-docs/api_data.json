@@ -20426,6 +20426,13 @@
           },
           {
             "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "providers.movie_label_icon_black_bg",
+            "description": "<p>URL изображения для маркировки обложек фильмов для тёмного фона.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Number",
             "allowedValues": [
               "1",

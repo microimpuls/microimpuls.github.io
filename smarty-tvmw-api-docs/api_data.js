@@ -1597,12 +1597,13 @@ define({ "api": [
             "type": "String",
             "allowedValues": [
               "name",
-              "birthdate"
+              "birthdate",
+              "film_count"
             ],
             "optional": true,
             "field": "order",
             "defaultValue": "name",
-            "description": "<p>Сортировка, birthdate - по дате рождения, сначала самые старые; -birthdate - по дате рождения, сначала самые новые; name - по имени, в алфавитном порядке; -name - по имени, в обратном алфавитном порядке; cyrillic-first - по имени, с приоритетом на имена в кириллице;</p>"
+            "description": "<p>Сортировка, birthdate - по дате рождения, сначала самые старые; -birthdate - по дате рождения, сначала самые новые; name - по имени, в алфавитном порядке; -name - по имени, в обратном алфавитном порядке; film_count - по количеству фильмов с участием актёра, в порядке возрастания; -film_count - по количеству фильмов с участием актёра, в порядке убывания; cyrillic-first - по имени, с приоритетом на имена в кириллице;</p>"
           },
           {
             "group": "Parameter",
@@ -1770,12 +1771,13 @@ define({ "api": [
             "type": "String",
             "allowedValues": [
               "name",
-              "birthdate"
+              "birthdate",
+              "film_count"
             ],
             "optional": true,
             "field": "order",
             "defaultValue": "name",
-            "description": "<p>Сортировка, birthdate - по дате рождения, сначала самые старые; -birthdate - по дате рождения, сначала самые новые; name - по имени, в алфавитном порядке; -name - по имени, в обратном алфавитном порядке; cyrillic-first - по имени, с приоритетом на имена в кириллице;</p>"
+            "description": "<p>Сортировка, birthdate - по дате рождения, сначала самые старые; -birthdate - по дате рождения, сначала самые новые; name - по имени, в алфавитном порядке; -name - по имени, в обратном алфавитном порядке; film_count - по количеству фильмов с участием актёра, в порядке возрастания; -film_count - по количеству фильмов с участием актёра, в порядке убывания; cyrillic-first - по имени, с приоритетом на имена в кириллице;</p>"
           },
           {
             "group": "Parameter",
@@ -23406,6 +23408,19 @@ define({ "api": [
           },
           {
             "group": "Parameter",
+            "type": "String",
+            "allowedValues": [
+              "name",
+              "birthdate",
+              "film_count"
+            ],
+            "optional": true,
+            "field": "actors_order",
+            "defaultValue": "",
+            "description": "<p>Сортировка актёров, birthdate - по дате рождения, сначала самые старые; -birthdate - по дате рождения, сначала самые новые; name - по имени, в алфавитном порядке; -name - по имени, в обратном алфавитном порядке; film_count - по количеству фильмов с участием актёра, в порядке возрастания; -film_count - по количеству фильмов с участием актёра, в порядке убывания;</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Number",
             "optional": false,
             "field": "client_id",
@@ -24700,6 +24715,19 @@ define({ "api": [
             "field": "show_reviews",
             "defaultValue": "0",
             "description": "<p>Показывать отзывы от стороннего провайдера.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "allowedValues": [
+              "name",
+              "birthdate",
+              "film_count"
+            ],
+            "optional": true,
+            "field": "actors_order",
+            "defaultValue": "",
+            "description": "<p>Сортировка актёров, birthdate - по дате рождения, сначала самые старые; -birthdate - по дате рождения, сначала самые новые; name - по имени, в алфавитном порядке; -name - по имени, в обратном алфавитном порядке; film_count - по количеству фильмов с участием актёра, в порядке возрастания; -film_count - по количеству фильмов с участием актёра, в порядке убывания;</p>"
           },
           {
             "group": "Parameter",

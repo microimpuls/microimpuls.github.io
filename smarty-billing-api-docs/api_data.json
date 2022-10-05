@@ -2238,6 +2238,87 @@
   },
   {
     "type": "post",
+    "url": "/authkey/delete/",
+    "title": "AuthkeyDelete: удаление сессии",
+    "name": "AccountModify",
+    "group": "Account",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": true,
+            "field": "authkey_id",
+            "description": "<p>ID ключа.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "authkey_key",
+            "description": "<p>Строка ключа. Должен быть передан либо ID, либо ключ.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "client_id",
+            "description": "<p>Client ID.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "signature",
+            "description": "<p>Подпись.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Ответ": [
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "error",
+            "description": "<p>Код ошибки.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Коды ошибок error": [
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "0",
+            "description": "<p>Нет ошибки.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "1",
+            "description": "<p>Ошибка валидации данных.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "2",
+            "description": "<p>Ошибка валидации данных.</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.40.0",
+    "filename": "../../../billing/api.py",
+    "groupTitle": "Account"
+  },
+  {
+    "type": "post",
     "url": "/account/tariff/assign/",
     "title": "AccountTariffAssign: подключение тарифного пакета аккаунта",
     "name": "AccountTariffAssign",

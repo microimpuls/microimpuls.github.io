@@ -732,6 +732,12 @@ define({ "api": [
             "optional": false,
             "field": "17",
             "description": "<p>Ожидается подтверждение номера телефона с помощью звонка.</p>"
+          },
+          {
+            "group": "Коды ошибок error",
+            "optional": false,
+            "field": "18",
+            "description": "<p>Отключена возможность регистрации.</p>"
           }
         ]
       }

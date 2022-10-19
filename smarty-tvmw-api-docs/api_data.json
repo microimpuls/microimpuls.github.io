@@ -1244,6 +1244,13 @@
             "group": "Ответ",
             "type": "String",
             "optional": false,
+            "field": "command.deep_link",
+            "description": "<p>Диплинк.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
             "field": "command.accompanying_text_to_command",
             "description": "<p>Сопроводительное сообщение к команде.</p>"
           },
@@ -25989,7 +25996,7 @@
             "optional": true,
             "field": "order",
             "defaultValue": "пустой",
-            "description": "<p>Сортировка, возможные параметры:<br/> <code>-created_at</code> - по дате добавления в каталог, сначала самые новые;<br/> <code>created_at</code> - по дате добавления в каталог, сначала самые старые;<br/> <code>-premiere_date</code> - по дате премьеры, сначала самые новые;<br/> <code>premiere_date</code> - по дате премьеры, сначала самые старые;<br/> <code>-year</code> - по дате выхода фильма, сначала самые новые;<br/> <code>year</code> - по дате выхода фильма, сначала самые старые;<br/> <code>-name</code> - по названию, в обратном алфавитном порядке;<br/> <code>name</code> - по названию, в алфавитном порядке;<br/> <code>-average_customers_rating</code> - по рейтингу абонентов, сначала самые популярные;<br/> <code>average_customers_rating</code> - по рейтингу абонентов, сначала самые непопулярные;<br/> <code>-kinopoisk_rating</code> - по рейтингу Кинопоиска, сначала самые популярные;<br/> <code>kinopoisk_rating</code> - по рейтингу Кинопоиска, сначала самые непопулярные;<br/> <code>-imdb_rating</code> - по рейтингу IMDB, сначала самые популярные;<br/> <code>imdb_rating</code> - по рейтингу IMDB, сначала самые непопулярные;<br/> <code>-view_datetime</code> - по дате проcмотра, сначала самые ранние (только при запросе с флагом <code>viewed_only=1</code> или <code>is_viewing=1</code>);<br/> <code>view_datetime</code> - по дате проcмотра, сначала самые поздние (только при запросе с флагом <code>viewed_only=1</code> или <code>is_viewing=1</code>).</p>"
+            "description": "<p>Сортировка, возможные параметры:<br/> <code>-created_at</code> - по дате добавления в каталог, сначала самые новые;<br/> <code>created_at</code> - по дате добавления в каталог, сначала самые старые;<br/> <code>-updated_at</code> - по дате изменения, сначала самые новые;<br/> <code>updated_at</code> - по дате изменения, сначала самые старые;<br/> <code>-premiere_date</code> - по дате премьеры, сначала самые новые;<br/> <code>premiere_date</code> - по дате премьеры, сначала самые старые;<br/> <code>-year</code> - по дате выхода фильма, сначала самые новые;<br/> <code>year</code> - по дате выхода фильма, сначала самые старые;<br/> <code>-name</code> - по названию, в обратном алфавитном порядке;<br/> <code>name</code> - по названию, в алфавитном порядке;<br/> <code>-average_customers_rating</code> - по рейтингу абонентов, сначала самые популярные;<br/> <code>average_customers_rating</code> - по рейтингу абонентов, сначала самые непопулярные;<br/> <code>-kinopoisk_rating</code> - по рейтингу Кинопоиска, сначала самые популярные;<br/> <code>kinopoisk_rating</code> - по рейтингу Кинопоиска, сначала самые непопулярные;<br/> <code>-imdb_rating</code> - по рейтингу IMDB, сначала самые популярные;<br/> <code>imdb_rating</code> - по рейтингу IMDB, сначала самые непопулярные;<br/> <code>-view_datetime</code> - по дате проcмотра, сначала самые ранние (только при запросе с флагом <code>viewed_only=1</code> или <code>is_viewing=1</code>);<br/> <code>view_datetime</code> - по дате проcмотра, сначала самые поздние (только при запросе с флагом <code>viewed_only=1</code> или <code>is_viewing=1</code>).</p>"
           },
           {
             "group": "Parameter",

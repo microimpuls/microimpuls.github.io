@@ -4198,6 +4198,13 @@ define({ "api": [
         "Ответ": [
           {
             "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "count",
+            "description": "<p>Количество камер.</p>"
+          },
+          {
+            "group": "Ответ",
             "type": "Object[]",
             "optional": false,
             "field": "cameras",

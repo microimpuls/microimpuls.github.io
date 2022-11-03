@@ -3030,6 +3030,14 @@
           },
           {
             "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "brand_name",
+            "defaultValue": "пустой",
+            "description": "<p>Производитель устройства.</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "Number",
             "allowedValues": [
               "0",

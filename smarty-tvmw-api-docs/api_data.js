@@ -18497,7 +18497,14 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "categories.icon_type",
-            "description": "<p>Название типа иконки для категории.</p>"
+            "description": "<p>Название типа иконки категории для мобильных устройств.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "categories.icon_type_tv",
+            "description": "<p>Название типа иконки категории для STB и Smart TV.</p>"
           },
           {
             "group": "Ответ",

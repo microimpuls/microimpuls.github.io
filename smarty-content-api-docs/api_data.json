@@ -1131,7 +1131,8 @@
             "type": "Number",
             "optional": true,
             "field": "recording_days",
-            "description": ""
+            "defaultValue": "0",
+            "description": "<p>Длительность хранения записей.</p>"
           },
           {
             "group": "Parameter",

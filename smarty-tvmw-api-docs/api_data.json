@@ -9273,6 +9273,13 @@
             "group": "Ответ",
             "type": "Number",
             "optional": false,
+            "field": "tariffs.price_after_activation",
+            "description": "<p>Стоимость покупки за полный период.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
             "field": "tariffs.period",
             "description": "<p>Период подписки.</p>"
           },
@@ -9659,6 +9666,13 @@
             "optional": false,
             "field": "tariffs.price",
             "description": "<p>Стоимость подписки.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "Number",
+            "optional": false,
+            "field": "tariffs.price_after_activation",
+            "description": "<p>Стоимость покупки за полный период.</p>"
           },
           {
             "group": "Ответ",
@@ -18533,21 +18547,21 @@
             "type": "String",
             "optional": false,
             "field": "categories.icon_type",
-            "description": "<p>Название типа иконки категории для мобильных устройств.</p>"
-          },
-          {
-            "group": "Ответ",
-            "type": "String",
-            "optional": false,
-            "field": "categories.icon_type_tv",
-            "description": "<p>Название типа иконки категории для STB и Smart TV.</p>"
+            "description": "<p>Название типа иконки категории.</p>"
           },
           {
             "group": "Ответ",
             "type": "String",
             "optional": false,
             "field": "categories.icon",
-            "description": "<p>URL-адрес иконки.</p>"
+            "description": "<p>URL-адрес иконки для мобильных устройств.</p>"
+          },
+          {
+            "group": "Ответ",
+            "type": "String",
+            "optional": false,
+            "field": "categories.icon_tv",
+            "description": "<p>URL-адрес иконки для STB и Smart TV.</p>"
           },
           {
             "group": "Ответ",

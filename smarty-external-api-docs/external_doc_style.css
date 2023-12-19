@@ -1,0 +1,75 @@
+body {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 130%;
+    color: #777;
+}
+
+pre {
+    background: #2d2d2d;
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
+    color: #ccc;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 1em;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre code {
+    color: #ccc;
+}
+
+code {
+    color: #0088cc;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 0 20px 0;
+}
+
+table {
+    background-color: transparent;
+}
+
+th {
+    background-color: #777;
+    color: #fff;
+    text-align: left;
+    padding: 5px 8px;
+    border: 1px solid #777;
+}
+
+td.code {
+    font-family: "Source Code Pro", monospace;
+    font-weight: 600;
+}
+
+td {
+    padding: 5px;
+    border: 1px solid #777;
+}

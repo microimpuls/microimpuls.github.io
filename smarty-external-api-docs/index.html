@@ -402,6 +402,45 @@
 </tbody>
 </table>
 <p>Возвращаемое значение <code>AccountRegisterResponse</code>: Результат регистрации.</p>
+<h2><code>validate_registration_params</code></h2>
+<p>Описание: Проверка параметров регистрации во внешнем биллинге.</p>
+<p>Аргументы:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Имя</th>
+<th style="text-align: center;">Тип</th>
+<th style="text-align: center;">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">register_params</td>
+<td style="text-align: center;"><code>RegisterParams</code></td>
+<td style="text-align: center;">Параметры регистрации.</td>
+</tr>
+</tbody>
+</table>
+<p>Возвращаемое значение <code>None</code>: Ничего не возвращает, в случае ошибки вызывает ExternalApiException.</p>
+<h2><code>post_account_registration</code></h2>
+<p>Описание: Выполнение действие с аккаунтом после регистрации.</p>
+<p>Аргументы:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Имя</th>
+<th style="text-align: center;">Тип</th>
+<th style="text-align: center;">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">account</td>
+<td style="text-align: center;"><code>Account</code></td>
+<td style="text-align: center;">Объект аккаунта.</td>
+</tr>
+</tbody>
+</table>
 <h2><code>get_account</code></h2>
 <p>Описание: Возвращает аккаунт во время авторизации, позволяет подменять логику авторизации.</p>
 <p>Аргументы:</p>

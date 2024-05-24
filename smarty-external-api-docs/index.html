@@ -548,8 +548,19 @@
 <td style="text-align: center;"><code>Tariff</code></td>
 <td style="text-align: center;">Объект тарифа.</td>
 </tr>
+<tr>
+<td style="text-align: center;">is_free</td>
+<td style="text-align: center;"><code>bool</code></td>
+<td style="text-align: center;">Флаг для бесплатного подключения тарифа.</td>
+</tr>
+<tr>
+<td style="text-align: center;">free_for_inactive</td>
+<td style="text-align: center;"><code>bool</code></td>
+<td style="text-align: center;">Флаг бесплатного подключения тарифа для неактивных абонентов.</td>
+</tr>
 </tbody>
 </table>
+<p>Возвращаемое значение <code>TariffAssignResponse</code>: Объект TariffAssignResponse.</p>
 <h2><code>customer_change_basic_tariff</code></h2>
 <p>Описание: Подключает базовый тариф.</p>
 <p>Аргументы:</p>
@@ -572,110 +583,7 @@
 <td style="text-align: center;"><code>Tariff</code></td>
 <td style="text-align: center;">Объект тарифа.</td>
 </tr>
-<tr>
-<td style="text-align: center;">check_balance</td>
-<td style="text-align: center;"><code>bool</code></td>
-<td style="text-align: center;">Флаг проверки баланса при подключении тарифа</td>
-</tr>
 </tbody>
 </table>
-<h2><code>customer_unassign_nonbasic_tariff</code></h2>
-<p>Описание: Отключает дополнительный тариф.</p>
-<p>Аргументы:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Имя</th>
-<th style="text-align: center;">Тип</th>
-<th style="text-align: center;">Описание</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">customer</td>
-<td style="text-align: center;"><code>Customer</code></td>
-<td style="text-align: center;">Объект абонента.</td>
-</tr>
-<tr>
-<td style="text-align: center;">tariff</td>
-<td style="text-align: center;"><code>Tariff</code></td>
-<td style="text-align: center;">Объект тарифа.</td>
-</tr>
-</tbody>
-</table>
-<h2><code>get_customer_tariff_list</code></h2>
-<p>Описание: Возвращает список тарифов абонента.</p>
-<p>Аргументы:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Имя</th>
-<th style="text-align: center;">Тип</th>
-<th style="text-align: center;">Описание</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">customer</td>
-<td style="text-align: center;"><code>Customer</code></td>
-<td style="text-align: center;">Объект абонента.</td>
-</tr>
-</tbody>
-</table>
-<p>Возвращаемое значение <code>GetCustomerTariffListResponse</code>: Список тарифов абонента.</p>
-<h2><code>on_tariff_add</code></h2>
-<p>Описание: Колбэк, который вызывается при подключении тарифов.</p>
-<p>Аргументы:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Имя</th>
-<th style="text-align: center;">Тип</th>
-<th style="text-align: center;">Описание</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">customer</td>
-<td style="text-align: center;"><code>Customer</code></td>
-<td style="text-align: center;">Объект абонента.</td>
-</tr>
-<tr>
-<td style="text-align: center;">pk_set</td>
-<td style="text-align: center;"><code>Set[int]</code></td>
-<td style="text-align: center;">Список id тарифов.</td>
-</tr>
-</tbody>
-</table>
-<h2><code>get_authkey</code></h2>
-<p>Описание: Возвращает ключ авторизации. Позволяет использовать ключ, сгенерированный другим сервисом.</p>
-<p>Аргументы:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Имя</th>
-<th style="text-align: center;">Тип</th>
-<th style="text-align: center;">Описание</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">account</td>
-<td style="text-align: center;"><code>Account</code></td>
-<td style="text-align: center;">Объект аккаунта.</td>
-</tr>
-<tr>
-<td style="text-align: center;">params</td>
-<td style="text-align: center;"><code>TVMiddlewareApiParams</code></td>
-<td style="text-align: center;">Параметры API.</td>
-</tr>
-<tr>
-<td style="text-align: center;">login_params</td>
-<td style="text-align: center;"><code>LoginParams</code></td>
-<td style="text-align: center;">Параметры авторизации.</td>
-</tr>
-</tbody>
-</table>
-<p>Возвращаемое значение <code>Tuple[str, bool]</code>: Ключ авторизации и флаг возможности продолжения авторизации штатными методами Smarty.</p>
 </body>
 </html>

@@ -421,7 +421,118 @@
 </tr>
 </tbody>
 </table>
-<p>Возвращаемое значение <code>None</code>: Ничего не возвращает, в случае ошибки вызывает ExternalApiException.</p>
+<p>Возвращаемое значение <code>None</code>: Ничего не возвращает, в случае ошибки вызывает исключение. В зависимости от исключения, TVMW API метод AccountRegister вернет определенный код ошибки:</p>
+<p>Исключения:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Имя</th>
+<th style="text-align: center;">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Exception</td>
+<td style="text-align: center;">error = 1</td>
+</tr>
+<tr>
+<td style="text-align: center;">AccountRegisterException.RegistrationNotAllowedForClient</td>
+<td style="text-align: center;">error = 2</td>
+</tr>
+<tr>
+<td style="text-align: center;">AccountRegisterException.IPLimitExceeded</td>
+<td style="text-align: center;">error = 3</td>
+</tr>
+<tr>
+<td style="text-align: center;">AccountRegisterException.AutoActivationPeriodInvalid</td>
+<td style="text-align: center;">error = 4</td>
+</tr>
+<tr>
+<td style="text-align: center;">AccountRegisterException.InvalidPhoneNumber</td>
+<td style="text-align: center;">error = 5</td>
+</tr>
+<tr>
+<td style="text-align: center;">AccountRegisterException.PhoneBusyError</td>
+<td style="text-align: center;">error = 6</td>
+</tr>
+<tr>
+<td style="text-align: center;">AccountRegisterException.PhoneOrDeviceUIDIsRequired</td>
+<td style="text-align: center;">error = 7</td>
+</tr>
+<tr>
+<td style="text-align: center;">ExternalApiException</td>
+<td style="text-align: center;">error = 8</td>
+</tr>
+<tr>
+<td style="text-align: center;">ConfirmationError.VerificationCodeWasSent</td>
+<td style="text-align: center;">error = 9</td>
+</tr>
+<tr>
+<td style="text-align: center;">ConfirmationError.VerificationCodeIsWrong</td>
+<td style="text-align: center;">error = 10</td>
+</tr>
+<tr>
+<td style="text-align: center;">AccountRegisterException.ExternalApiWasNotCreated</td>
+<td style="text-align: center;">error = 11</td>
+</tr>
+<tr>
+<td style="text-align: center;">AccountRegisterException.CaptchaRequired</td>
+<td style="text-align: center;">error = 12</td>
+</tr>
+<tr>
+<td style="text-align: center;">AccountRegisterException.InvalidCaptcha</td>
+<td style="text-align: center;">error = 13</td>
+</tr>
+<tr>
+<td style="text-align: center;">AccountRegisterException.CaptchaLimitExceeded</td>
+<td style="text-align: center;">error = 14</td>
+</tr>
+<tr>
+<td style="text-align: center;">AccountRegisterException.InvalidDealerId</td>
+<td style="text-align: center;">error = 15</td>
+</tr>
+<tr>
+<td style="text-align: center;">ConfirmationError.ConfirmPhoneWithCall</td>
+<td style="text-align: center;">error = 16</td>
+</tr>
+<tr>
+<td style="text-align: center;">ConfirmationError.PhoneWithCallConfirmationWaiting</td>
+<td style="text-align: center;">error = 17</td>
+</tr>
+<tr>
+<td style="text-align: center;">AccountRegisterException.RegistrationNotAllowed</td>
+<td style="text-align: center;">error = 18</td>
+</tr>
+<tr>
+<td style="text-align: center;">ConfirmationError.VerificationCodeWithPhoneNumberWasSent</td>
+<td style="text-align: center;">error = 19</td>
+</tr>
+<tr>
+<td style="text-align: center;">ConfirmationError.VerificationCodeWithPhoneNumberIsWrong</td>
+<td style="text-align: center;">error = 20</td>
+</tr>
+<tr>
+<td style="text-align: center;">ConfirmationError.VerificationWithCodeConfirmationWaiting</td>
+<td style="text-align: center;">error = 21</td>
+</tr>
+<tr>
+<td style="text-align: center;">ConfirmationError.VerificationWithPhoneNumberConfirmationWaiting</td>
+<td style="text-align: center;">error = 22</td>
+</tr>
+<tr>
+<td style="text-align: center;">AccountRegisterException.InvalidBillingApiId</td>
+<td style="text-align: center;">error = 23</td>
+</tr>
+<tr>
+<td style="text-align: center;">AccountRegisterException.PhoneNumberDoesntMatch</td>
+<td style="text-align: center;">error = 24</td>
+</tr>
+<tr>
+<td style="text-align: center;">ConfirmationError.VerificationCodeSendingFrequencyExceeded</td>
+<td style="text-align: center;">error = 25</td>
+</tr>
+</tbody>
+</table>
 <h2><code>post_account_registration</code></h2>
 <p>Описание: Выполнение действие с аккаунтом после регистрации.</p>
 <p>Аргументы:</p>

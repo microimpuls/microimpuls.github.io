@@ -695,6 +695,219 @@
 <td style="text-align: center;"><code>Tariff</code></td>
 <td style="text-align: center;">Объект тарифа.</td>
 </tr>
+<tr>
+<td style="text-align: center;">check_balance</td>
+<td style="text-align: center;"><code>bool</code></td>
+<td style="text-align: center;">Флаг проверки баланса при подключении тарифа.</td>
+</tr>
+<tr>
+<td style="text-align: center;">is_free</td>
+<td style="text-align: center;"><code>bool</code></td>
+<td style="text-align: center;">Флаг для бесплатного подключения тарифа.</td>
+</tr>
+<tr>
+<td style="text-align: center;">free_for_inactive</td>
+<td style="text-align: center;"><code>bool</code></td>
+<td style="text-align: center;">Флаг бесплатного подключения тарифа для неактивных абонентов.</td>
+</tr>
+</tbody>
+</table>
+<p>Возвращаемое значение <code>TariffAssignResponse</code>: Объект TariffAssignResponse.</p>
+<h2><code>customer_unassign_nonbasic_tariff</code></h2>
+<p>Описание: Отключает дополнительный тариф.</p>
+<p>Аргументы:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Имя</th>
+<th style="text-align: center;">Тип</th>
+<th style="text-align: center;">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">customer</td>
+<td style="text-align: center;"><code>Customer</code></td>
+<td style="text-align: center;">Объект абонента.</td>
+</tr>
+<tr>
+<td style="text-align: center;">tariff</td>
+<td style="text-align: center;"><code>Tariff</code></td>
+<td style="text-align: center;">Объект тарифа.</td>
+</tr>
+</tbody>
+</table>
+<p>Возвращаемое значение <code>None</code>: </p>
+<h2><code>get_customer_tariff_list</code></h2>
+<p>Описание: Возвращает список тарифов абонента.</p>
+<p>Аргументы:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Имя</th>
+<th style="text-align: center;">Тип</th>
+<th style="text-align: center;">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">customer</td>
+<td style="text-align: center;"><code>Customer</code></td>
+<td style="text-align: center;">Объект абонента.</td>
+</tr>
+</tbody>
+</table>
+<p>Возвращаемое значение <code>GetCustomerTariffListResponse</code>: Список тарифов абонента.</p>
+<h2><code>on_tariff_add</code></h2>
+<p>Описание: Колбэк, который вызывается при подключении тарифов.</p>
+<p>Аргументы:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Имя</th>
+<th style="text-align: center;">Тип</th>
+<th style="text-align: center;">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">customer</td>
+<td style="text-align: center;"><code>Customer</code></td>
+<td style="text-align: center;">Объект абонента.</td>
+</tr>
+<tr>
+<td style="text-align: center;">pk_set</td>
+<td style="text-align: center;"><code>Set[int]</code></td>
+<td style="text-align: center;">Список id тарифов.</td>
+</tr>
+</tbody>
+</table>
+<p>Возвращаемое значение <code>None</code>: </p>
+<h2><code>get_authkey</code></h2>
+<p>Описание: Возвращает ключ авторизации. Позволяет использовать ключ, сгенерированный другим сервисом.</p>
+<p>Аргументы:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Имя</th>
+<th style="text-align: center;">Тип</th>
+<th style="text-align: center;">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">account</td>
+<td style="text-align: center;"><code>Account</code></td>
+<td style="text-align: center;">Объект аккаунта.</td>
+</tr>
+<tr>
+<td style="text-align: center;">params</td>
+<td style="text-align: center;"><code>TVMiddlewareApiParams</code></td>
+<td style="text-align: center;">Параметры API.</td>
+</tr>
+<tr>
+<td style="text-align: center;">login_params</td>
+<td style="text-align: center;"><code>LoginParams</code></td>
+<td style="text-align: center;">Параметры авторизации.</td>
+</tr>
+</tbody>
+</table>
+<p>Возвращаемое значение <code>Tuple[str, bool]</code>: Ключ авторизации и флаг возможности продолжения авторизации штатными методами Smarty.</p>
+<h2><code>disable_autopayment</code></h2>
+<p>Описание: Отключение автоплатежа у абонента.</p>
+<p>Аргументы:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Имя</th>
+<th style="text-align: center;">Тип</th>
+<th style="text-align: center;">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">customer</td>
+<td style="text-align: center;"><code>Customer</code></td>
+<td style="text-align: center;">Объект абонента.</td>
+</tr>
+</tbody>
+</table>
+<p>Возвращаемое значение <code>None</code>: </p>
+<h2><code>post_payment_complete</code></h2>
+<p>Описание: Действие после успешного получения статуса транзакции.<br/>
+Описание объекта CustomerTransaction<br/>
+transaсtion.customer (tvmiddleware.models.Customer) - Объект абонента, от имени которого осуществляется транзакция.<br/>
+transaсtion.amount (Decimal) - сумма транзакции. Может принимать положительные значения (пополнение баланса) и отрицательные (списание с баланса).<br/>
+transaction.datetime (datetime) - дата и время создания транзакции.<br/>
+transaction.source (int) - тип платежного шлюза, через который осуществляется транзакция<br/>
+0 - Wallet One<br/>
+1 - Wallet One Card<br/>
+2 - PayPal<br/>
+3 - API (транзакция создана через Billing API)<br/>
+4 - Manual (транзакция создана вручную через панель администрирования Smarty)<br/>
+5 - Internal (внутренний биллинг Smarty)<br/>
+6 - Armenian Card<br/>
+7 - Paymaster<br/>
+8 - Paymaster Card<br/>
+9 - Square Up<br/>
+10 - Payture<br/>
+11 - Null (только для тестов)<br/>
+12 - Fortebank<br/>
+13 - Stripe<br/>
+14 - Sber<br/>
+transaction.status (int) - статус транзакции. Принимает значения:<br/>
+0 - не обработана, статус неизвестен<br/>
+1 - обработана, транзакция прошла успешно<br/>
+2 - ошибка, транзакция не прошла<br/>
+transaction.is_autopayment (bool) - флаг указывающий, является ли транзакция автоплатежом (рекуррентным).<br/>
+Описание объекта TVMiddlewareApiParams<br/>
+params.request (django.http.request.HttpRequest) - объект запроса к TVMW API методу PaymentComplete.<br/>
+params.params_dict (dict) - словарь, содержащий GET и POST параметры запроса, в зависимости от http метода.<br/>
+params.ip (str) - IP-адрес с которого производится запрос.<br/>
+params.authkey (str) - authkey запроса.<br/>
+params.client (clients.models.Client) - объект клиента Smarty.<br/>
+params.account (tvmiddleware.models.Account) - объект аккаунта, от лица которого осуществляется запрос.<br/>
+params.device_uid (str) - uid устройства, с которого осуществляется запрос.<br/>
+params.auth (bool) - флаг указывающий, авторизован ли аккаунт.<br/>
+params.lang (str) - код языка источника запроса.<br/>
+Описание объекта PaymentSource<br/>
+source.payment_type (int) - тип платежного шлюза. Может принимать значения<br/>
+0 - Wallet One<br/>
+1 - Wallet One Card<br/>
+2 - PayPal<br/>
+3 - Armenian Card<br/>
+4 - Paymaster<br/>
+5 - Paymaster Card<br/>
+6 - Square Up<br/>
+7 - Payture<br/>
+8 - Null (только для тестов)<br/>
+9 - Fortebank<br/>
+10 - Stripe<br/></p>
+<p>Аргументы:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Имя</th>
+<th style="text-align: center;">Тип</th>
+<th style="text-align: center;">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">transaction</td>
+<td style="text-align: center;"><code>CustomerTransaction</code></td>
+<td style="text-align: center;">(billing.models.CustomerTransaction) Объект транзакции с актуальным статусом.</td>
+</tr>
+<tr>
+<td style="text-align: center;">params</td>
+<td style="text-align: center;"><code>TVMiddlewareApiParams</code></td>
+<td style="text-align: center;">(tvmiddleware.api_base.TVMiddlewareApiParams) Параметры API запроса.</td>
+</tr>
+<tr>
+<td style="text-align: center;">source</td>
+<td style="text-align: center;"><code>PaymentSource</code></td>
+<td style="text-align: center;">(billing.payment.PaymentSource) Объект источника платежа, соответствующий используемому платежному шлюзу.</td>
+</tr>
 </tbody>
 </table>
 </body>

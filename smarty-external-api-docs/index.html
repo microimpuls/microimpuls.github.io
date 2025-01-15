@@ -25,7 +25,7 @@
         self.param2 = param2
         super(SmartyBilling, self).__init__(**kwargs)
 
-    def get_customer_balance(self, params):
+    def get_customer_balance(self, params, *args, **kwargs):
         # Получение баланса.
         customer = params.account.customer
 
@@ -34,6 +34,7 @@
         balance = request(self.param1, self.param2, customer.ext_id)
         return balance, payment, customer.id
 </code></pre>
+<p>Реализованные методы должны принимать позиционные и именованные аргументы (<em>args и </em>*kwargs).</p>
 <p>Также, класс необходимо зарегистрировать операцией:</p>
 <pre><code>external_api.registry.add('custom_billing_client', CustomBillingClient)
 </code></pre>
@@ -76,16 +77,6 @@
 <td style="text-align: center;"><code>TVMiddlewareApiParams</code></td>
 <td style="text-align: center;">Параметры API.</td>
 </tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
-</tr>
 </tbody>
 </table>
 <p>Возвращаемое значение <code>bool</code>: Является ли билет активным.</p>
@@ -105,16 +96,6 @@
 <td style="text-align: center;">params</td>
 <td style="text-align: center;"><code>TVMiddlewareApiParams</code></td>
 <td style="text-align: center;">Параметры API.</td>
-</tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
 </tr>
 </tbody>
 </table>
@@ -145,16 +126,6 @@
 <td style="text-align: center;">params</td>
 <td style="text-align: center;"><code>TVMiddlewareApiParams</code></td>
 <td style="text-align: center;">Параметры API.</td>
-</tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
 </tr>
 </tbody>
 </table>
@@ -188,16 +159,6 @@
 <td style="text-align: center;">params</td>
 <td style="text-align: center;"><code>TVMiddlewareApiParams</code></td>
 <td style="text-align: center;">Параметры API.</td>
-</tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
 </tr>
 </tbody>
 </table>
@@ -234,16 +195,6 @@
 <td style="text-align: center;"><code>TVMiddlewareApiParams</code></td>
 <td style="text-align: center;">Параметры API.</td>
 </tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
-</tr>
 </tbody>
 </table>
 <h2><code>activate_account</code></h2>
@@ -273,16 +224,6 @@
 <td style="text-align: center;"><code>TVMiddlewareApiParams</code></td>
 <td style="text-align: center;">Параметры API.</td>
 </tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
-</tr>
 </tbody>
 </table>
 <p>Возвращаемое значение <code>str</code>: Сообщение о результате или ошибке.</p>
@@ -302,16 +243,6 @@
 <td style="text-align: center;">account</td>
 <td style="text-align: center;"><code>Account</code></td>
 <td style="text-align: center;">Объект аккаунта.</td>
-</tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
 </tr>
 </tbody>
 </table>
@@ -352,16 +283,6 @@
 <td style="text-align: center;">login_params</td>
 <td style="text-align: center;"><code>LoginParams</code></td>
 <td style="text-align: center;">Параметры авторизации.</td>
-</tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
 </tr>
 </tbody>
 </table>
@@ -413,16 +334,6 @@
 <td style="text-align: center;"><code>TVMiddlewareApiParams</code></td>
 <td style="text-align: center;">Параметры API.</td>
 </tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
-</tr>
 </tbody>
 </table>
 <p>Возвращаемое значение <code>str</code>: Ничего не возвращает, при ошибке авторизации (ExternalApiException) возвращает error = 3.</p>
@@ -464,16 +375,6 @@
 <td style="text-align: center;"><code>TVMiddlewareApiParams</code></td>
 <td style="text-align: center;">Параметры API.</td>
 </tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
-</tr>
 </tbody>
 </table>
 <p>Возвращаемое значение <code>str</code>: Сообщение о результате или ошибке.</p>
@@ -499,16 +400,6 @@
 <td style="text-align: center;"><code>TVMiddlewareApiParams</code></td>
 <td style="text-align: center;">Параметры API.</td>
 </tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
-</tr>
 </tbody>
 </table>
 <p>Возвращаемое значение <code>AccountRegisterResponse</code>: Результат регистрации.</p>
@@ -530,19 +421,9 @@
 <td style="text-align: center;"><code>RegisterParams</code></td>
 <td style="text-align: center;">Параметры регистрации.</td>
 </tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
-</tr>
 </tbody>
 </table>
-<p>Возвращаемое значение <code>None</code>: Ничего не возвращает, в случае ошибки вызывает исключение.</p>
+<p>Возвращаемое значение ``: Ничего не возвращает, в случае ошибки вызывает исключение.</p>
 <p>Исключения:</p>
 <table>
 <thead>
@@ -671,16 +552,6 @@
 <td style="text-align: center;"><code>Account</code></td>
 <td style="text-align: center;">Объект аккаунта.</td>
 </tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
-</tr>
 </tbody>
 </table>
 <h2><code>get_account</code></h2>
@@ -725,16 +596,6 @@
 <td style="text-align: center;"><code>Optional[str]</code></td>
 <td style="text-align: center;">IP-адрес абонента.</td>
 </tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
-</tr>
 </tbody>
 </table>
 <p>Возвращаемое значение <code>GetAccountResponse</code>: Результат авторизации.</p>
@@ -755,16 +616,6 @@
 <td style="text-align: center;"><code>LegalAcceptParams</code></td>
 <td style="text-align: center;">Параметры подтверждения.</td>
 </tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
-</tr>
 </tbody>
 </table>
 <p>Возвращаемое значение <code>LegalAcceptResponse</code>: Результат подтверждения.</p>
@@ -784,16 +635,6 @@
 <td style="text-align: center;">invoice_complete_params</td>
 <td style="text-align: center;"><code>InvoiceCompleteParams</code></td>
 <td style="text-align: center;">Параметры обработки.</td>
-</tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
 </tr>
 </tbody>
 </table>
@@ -829,16 +670,6 @@
 <td style="text-align: center;">free_for_inactive</td>
 <td style="text-align: center;"><code>bool</code></td>
 <td style="text-align: center;">Флаг бесплатного подключения тарифа для неактивных абонентов.</td>
-</tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
 </tr>
 </tbody>
 </table>
@@ -880,16 +711,6 @@
 <td style="text-align: center;"><code>bool</code></td>
 <td style="text-align: center;">Флаг бесплатного подключения тарифа для неактивных абонентов.</td>
 </tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
-</tr>
 </tbody>
 </table>
 <p>Возвращаемое значение <code>TariffAssignResponse</code>: Объект TariffAssignResponse.</p>
@@ -915,19 +736,9 @@
 <td style="text-align: center;"><code>Tariff</code></td>
 <td style="text-align: center;">Объект тарифа.</td>
 </tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
-</tr>
 </tbody>
 </table>
-<p>Возвращаемое значение <code>None</code>: </p>
+<p>Возвращаемое значение ``: </p>
 <h2><code>get_customer_tariff_list</code></h2>
 <p>Описание: Возвращает список тарифов абонента.</p>
 <p>Аргументы:</p>
@@ -960,16 +771,6 @@
 <td style="text-align: center;"><code>geo_models.City</code></td>
 <td style="text-align: center;">Объект города с которого выполняется запрос.</td>
 </tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
-</tr>
 </tbody>
 </table>
 <p>Возвращаемое значение <code>GetCustomerTariffListResponse</code>: Список тарифов абонента.</p>
@@ -995,19 +796,9 @@
 <td style="text-align: center;"><code>Set[int]</code></td>
 <td style="text-align: center;">Список id тарифов.</td>
 </tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
-</tr>
 </tbody>
 </table>
-<p>Возвращаемое значение <code>None</code>: </p>
+<p>Возвращаемое значение ``: </p>
 <h2><code>get_authkey</code></h2>
 <p>Описание: Возвращает ключ авторизации. Позволяет использовать ключ, сгенерированный другим сервисом.</p>
 <p>Аргументы:</p>
@@ -1035,16 +826,6 @@
 <td style="text-align: center;"><code>LoginParams</code></td>
 <td style="text-align: center;">Параметры авторизации.</td>
 </tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
-</tr>
 </tbody>
 </table>
 <p>Возвращаемое значение <code>Tuple[str, bool]</code>: Ключ авторизации и флаг возможности продолжения авторизации штатными методами Smarty.</p>
@@ -1065,19 +846,9 @@
 <td style="text-align: center;"><code>Customer</code></td>
 <td style="text-align: center;">Объект абонента.</td>
 </tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
-</tr>
 </tbody>
 </table>
-<p>Возвращаемое значение <code>None</code>: </p>
+<p>Возвращаемое значение ``: </p>
 <h2><code>post_payment_complete</code></h2>
 <p>Описание: Действие после успешного получения статуса транзакции.<br/>
 Описание объекта CustomerTransaction<br/>
@@ -1153,16 +924,6 @@ source.payment_type (int) - тип платежного шлюза. Может �
 <td style="text-align: center;"><code>PaymentSource</code></td>
 <td style="text-align: center;">(billing.payment.PaymentSource) Объект источника платежа, соответствующий используемому платежному шлюзу.</td>
 </tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
-</tr>
 </tbody>
 </table>
 <h2><code>get_tariff_price</code></h2>
@@ -1181,16 +942,6 @@ source.payment_type (int) - тип платежного шлюза. Может �
 <td style="text-align: center;">tariff</td>
 <td style="text-align: center;"><code>Tariff</code></td>
 <td style="text-align: center;">Объект тарифа.</td>
-</tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
 </tr>
 </tbody>
 </table>
@@ -1211,16 +962,6 @@ source.payment_type (int) - тип платежного шлюза. Может �
 <td style="text-align: center;"><code>CustomerBillingCompat</code></td>
 <td style="text-align: center;">Объект CustomerBillingCompat.</td>
 </tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
-</tr>
 </tbody>
 </table>
 <h2><code>get_payment_sum_no_discount</code></h2>
@@ -1240,16 +981,6 @@ source.payment_type (int) - тип платежного шлюза. Может �
 <td style="text-align: center;"><code>CustomerBillingCompat</code></td>
 <td style="text-align: center;">Объект CustomerBillingCompat.</td>
 </tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
-</tr>
 </tbody>
 </table>
 <h2><code>customer_payment_info</code></h2>
@@ -1268,16 +999,6 @@ source.payment_type (int) - тип платежного шлюза. Может �
 <td style="text-align: center;">api_request_params</td>
 <td style="text-align: center;"><code>CustomerPaymentInfoParams</code></td>
 <td style="text-align: center;">Параметры детализации.</td>
-</tr>
-<tr>
-<td style="text-align: center;">*args</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные позиционные аргументы.</td>
-</tr>
-<tr>
-<td style="text-align: center;">**kwargs</td>
-<td style="text-align: center;"><code></code></td>
-<td style="text-align: center;">Дополнительные именованные аргументы.</td>
 </tr>
 </tbody>
 </table>

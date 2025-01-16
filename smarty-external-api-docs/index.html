@@ -34,7 +34,7 @@
         balance = request(self.param1, self.param2, customer.ext_id)
         return balance, payment, customer.id
 </code></pre>
-<p>Реализованные методы должны принимать позиционные и именованные аргументы (<em>args и </em>*kwargs).</p>
+<p>Реализованные методы должны принимать позиционные и именованные аргументы <code>(*args и **kwargs)</code>.</p>
 <p>Также, класс необходимо зарегистрировать операцией:</p>
 <pre><code>external_api.registry.add('custom_billing_client', CustomBillingClient)
 </code></pre>

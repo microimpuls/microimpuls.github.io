@@ -167,7 +167,7 @@ Signature: 7e4210d744341f4e3bbdf1d779bd4142
 <p>GET \u0437\u0430\u043F\u0440\u043E\u0441 CustomerList:</p>
 <p><code>curl -X GET -i 'http://smarty.example.com/billing/api/customer/list/?client_id=1&amp;signature=123'</code></p>
 <p>POST \u0437\u0430\u043F\u0440\u043E\u0441 TransactionCreate:</p>
-<p><code>curl -X POST -H 'Content-Type: application/x-www-form-urlencoded' -i 'http://smarty.example.com/billing/api/transaction/create' --data 'amount=1;client_id=1;customer_id=1;signature=123'</code></p>
+<p><code>curl -X POST -H 'Content-Type: application/x-www-form-urlencoded' -i 'http://smarty.example.com/billing/api/transaction/create' --data 'amount=1&amp;client_id=1&amp;customer_id=1&amp;signature=123'</code></p>
 <h2>\u041E\u0431\u0449\u0438\u0435 \u043A\u043E\u0434\u044B \u043E\u0448\u0438\u0431\u043E\u043A</h2>
 <p>\u041A\u043E\u0434\u044B \u043E\u0448\u0438\u0431\u043E\u043A (\u043F\u043E\u043B\u0435 <code>error</code>) \u0438 \u0438\u0445 \u043E\u043F\u0438\u0441\u0430\u043D\u0438\u044F, \u0432\u043E\u0437\u0432\u0440\u0430\u0449\u0430\u0435\u043C\u044B\u0435 \u043A\u0430\u0436\u0434\u044B\u043C \u043C\u0435\u0442\u043E\u0434\u043E\u043C API, \u0443\u043A\u0430\u0437\u0430\u043D\u044B \u0432 \u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0438 \u0441\u043E\u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u044E\u0449\u0435\u0433\u043E \u043C\u0435\u0442\u043E\u0434\u0430.
 \u0415\u0441\u0442\u044C \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E \u043E\u0431\u0449\u0438\u0445 \u043A\u043E\u0434\u043E\u0432 \u043E\u0448\u0438\u0431\u043E\u043A, \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u043C\u043E\u0436\u0435\u0442 \u0432\u0435\u0440\u043D\u0443\u0442\u044C \u043B\u044E\u0431\u043E\u0439 \u043C\u0435\u0442\u043E\u0434:</p>

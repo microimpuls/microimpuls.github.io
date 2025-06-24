@@ -1003,5 +1003,30 @@ source.payment_type (int) - тип платежного шлюза. Может �
 </tbody>
 </table>
 <p>Возвращаемое значение <code>CustomerPaymentInfoResponse</code>: Детализация платежа</p>
+<h2><code>get_account_by_phone_number_1</code></h2>
+<p>Описание: Возвращает аккаунт по полю phone_number_1.</p>
+<p>Аргументы:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Имя</th>
+<th style="text-align: center;">Тип</th>
+<th style="text-align: center;">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">client</td>
+<td style="text-align: center;"><code>Client</code></td>
+<td style="text-align: center;">Клиент.</td>
+</tr>
+<tr>
+<td style="text-align: center;">phone_number</td>
+<td style="text-align: center;"><code>Optional[str]</code></td>
+<td style="text-align: center;">Номер телефона.</td>
+</tr>
+</tbody>
+</table>
+<p>Возвращаемое значение <code>QuerySet[Account]</code>: результат запроса к таблице модели Account</p>
 </body>
 </html>

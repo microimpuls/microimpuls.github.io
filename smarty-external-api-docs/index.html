@@ -130,6 +130,33 @@
 </tbody>
 </table>
 <p>Возвращаемое значение <code>List[dict]</code>: Список транзакций пользователя за период в фиксированном формате.</p>
+<h2><code>get_channel_actions_list</code></h2>
+<p>Описание: Возвращает массив вариантов действий с каналом.
+Если канал недоступен, то это может быть возможность подключения.
+Если доступен - запрос ссылки.</p>
+<p>Аргументы:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Имя</th>
+<th style="text-align: center;">Тип</th>
+<th style="text-align: center;">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">channel</td>
+<td style="text-align: center;"><code>Channel</code></td>
+<td style="text-align: center;">Объект канала.</td>
+</tr>
+<tr>
+<td style="text-align: center;">params</td>
+<td style="text-align: center;"><code>TVMiddlewareApiParams</code></td>
+<td style="text-align: center;">Параметры API.</td>
+</tr>
+</tbody>
+</table>
+<p>Возвращаемое значение <code>List[dict]</code>: Массив вариантов действий с каналом в фиксированном формате.</p>
 <h2><code>get_video_actions_list</code></h2>
 <p>Описание: Возвращает массив вариантов действий с видео.
 Если видео не куплено это может быть возможность покупки или аренды в разных форматах.
